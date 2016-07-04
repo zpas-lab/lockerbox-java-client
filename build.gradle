@@ -1,0 +1,86 @@
+apply plugin: 'java'
+apply plugin: 'application'
+apply plugin: 'idea'
+apply plugin: 'eclipse'
+apply plugin: 'com.google.protobuf'
+
+sourceCompatibility = 1.6
+version = '0.0.1'
+mainClassName = "com.zpaslab.reporting.PaymentsMain"
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.google.protobuf:protobuf-gradle-plugin:0.7.7'
+    }
+}
+
+protobuf {
+    generatedFilesBaseDir = "$projectDir/src/generated"
+}
+
+sourceSets {
+    main {
+        proto {
+            srcDir 'src/resources/proto'
+        }
+        java {
+            // include self written and generated code
+            srcDirs 'src/main/java', 'src/generated/main/java'
+        }
+    }
+}
+
+jar {
+    manifest {
+        attributes 'Implementation-Title': 'Lockerbox (Pochtomat) client for Payment reports',
+                   'Implementation-Version': version
+    }
+}
+
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+    mavenCentral()
+}
+
+dependencies {
+    compile group: 'commons-collections', name: 'commons-collections', version: '3.2.2'
+
+    compile group: 'oauth', name: 'google-http-client', version: '1.21.0'
+    compile group: 'oauth', name: 'google-http-client-jackson2', version: '1.21.0'
+    compile group: 'oauth', name: 'google-oauth-client', version: '1.21.0'
+    compile group: 'oauth', name: 'jackson-core', version: '2.1.3'
+
+    compile group: 'protobuf', name: 'protobuf-java', 'version': '2.6.1'
+    //compile group: 'protobuf', name: 'protobuf-java', 'version': '3.0.0-beta-3'
+    //compile group: 'protobuf', name: 'protobuf-java-util', 'version': '3.0.0-beta-3'
+
+    // com/google/code/gson/gson/2.7/
+    //compile group: 'json', name: 'gson', 'version': '2.7'
+    compile group: 'json', name: 'protobuf-java-format', 'version': '1.4'
+
+    testCompile group: 'junit', name: 'junit', version: '4.+'
+}
+
+test {
+    systemProperties 'property': 'value'
+}
+
+run {
+    if ( project.hasProperty("appArgs") ) {
+        args Eval.me(appArgs)
+    }
+}
+
+uploadArchives {
+    repositories {
+       flatDir {
+           dirs 'repos'
+       }
+    }
+}
+

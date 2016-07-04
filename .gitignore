@@ -1,0 +1,6 @@
+localdev.properties
+belpost.cert.properties
+
+.gradle/
+.idea/
+
