@@ -12,6 +12,7 @@ Generated Java file: src/generated/main/java/com/zpaslab/lockerbox/LockerboxProt
 ### Running the application
 Configuration:
 1. configure **config.properties** file
+
     ```
     # Authorization server settings
     oauth-server=https://localhost:8080/oauth/token
