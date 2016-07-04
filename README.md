@@ -10,9 +10,8 @@ Proto definition file: src/resources/proto/lockerbox.proto
 Generated Java file: src/generated/main/java/com/zpaslab/lockerbox/LockerboxProtos.java
 
 ### Running the application
-Configuration:
-1. configure **config.properties** file
 
+1. Configure **config.properties** file
     ```
     # Authorization server settings
     oauth-server=https://localhost:8080/oauth/token
@@ -23,7 +22,7 @@ Configuration:
     root-ca=
     ```
    (NOTE: please contact system admins/dev for testing/production server address & IDs)
-
+   
 2. Run application:
 
     ```
