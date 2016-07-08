@@ -35,6 +35,9 @@ Generated Java file: src/generated/main/java/com/zpaslab/lockerbox/LockerboxProt
 
     # List details of payment eb056e53fe4db9438a1dad0c717e26 and it's associated charges
     $> ./gradlew run -PappArgs="['/payment/eb056e53fe4db9438a1dad0c717e26/charge']"
+
+    # List details of single parcel ABC1235 (value of charge.parcel_ref):
+    gradle run -PappArgs="['/parcel/ABC1235']"
     ```
 
     ```

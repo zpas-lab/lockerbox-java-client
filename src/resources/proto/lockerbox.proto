@@ -9,6 +9,45 @@ option java_package = "com.zpaslab.lockerbox";
 option java_outer_classname = "LockerboxProtos";
 
 
+message Address {
+    optional string href = 1;
+    // Address related info
+    // For private persons, usually name1 should be enough (first name, last name),
+    // but can be used as name1=firstname, name2=lastname and so on.
+    //
+    // For organizations, we recommend to put the contact person as the name1
+    // adn the organization name as name2.
+    optional string name1 = 2;
+    optional string name2 = 3;
+    // true if the address is an organization
+    optional bool   organization = 4;
+    // address details
+    optional string street = 5;
+    optional string house_no = 6;
+    optional string apartment_no = 7;
+    optional string city = 8;
+    optional string postal_code = 9;
+    // more address details - more administrative ones
+    // consecutive levels of administrative division, depending on the country
+    // For Poland: adm_top = województwo, adm_second = powiat, adm_third = gmina
+    // For Belarus: adm_top = oblast, adm_second = raion
+    optional string adm_top = 10;
+    optional string adm_second = 11;
+    optional string adm_third = 12;
+    optional string adm_fourth = 13;
+    // country and country iso code
+    optional string country = 14;
+    optional string country_iso = 15;
+
+    // phone and email to reach the person or organization
+    optional string phone = 16;
+    optional string email = 17;
+
+    // gps coordinates
+    optional double gps_lat = 18;
+    optional double gps_lng = 19;
+}
+
 // Represents amount of money.
 message Money {
     // Amount of represented money described in the smallest unit available for the given currency.
@@ -30,6 +69,227 @@ message Charges {
     optional Money total_amount = 2;
     optional Payment payment = 3;
     // TODO(mateuszc): add flexible extra data for receipt printing
+}
+
+// Single parcel / package represents either existing or yet-to-be existing physical package.
+message Parcel {
+    enum State {
+        // The parcel is created in the system (has a code assigned), but either payment is not yet done,
+        // or one of send/delivery points are not yet verified.
+        // NOTE: payment and delivery point might be pre-set but they're just not verified yet.
+        CREATED = 1;
+        // The parcel is paid.
+        PAID = 2;
+        // Both send and delivery point (with dates) are verified.
+        // The sending point is now waiting for the parcel to be delivered by the user.
+        // Change of dates might require paying for the package again (depends on the business flag).
+        RESERVED = 3;
+        // Either send or delivery point reservation has expired.
+        RESERVATION_EXPIRED = 4;
+        // The parcel is delivered to the send point, either to the machine or postal office.
+        // (it's the automatic state if the SEND_FROM is an address).
+        HANDED_OVER = 5;
+
+        EN_ROUTE = 6;
+        // Customer can now pickup the package from the primary (defined in the initial request)
+        // pickup point.
+        PICKUP_READY = 7;
+        // Client has picked up the parcel. We're done.
+        PICKED_UP = 8;
+        // Time for the pickup is overdue. Courier will move the package to nearest post office.
+        OVERDUE = 9;
+        // The parcel is overdue and now is waiting for the client for pickup in the post office for N (n=14) days.
+        // After that, it will be returend to the sender (with sender paying for the return).
+        // NOTE: in case of missing communication from the logistics system, it might be the last state.
+        OVERDUE_POST_OFFICE = 10;
+        // In the process of returning back to sender.
+        SENDER_RETURN = 11;
+        // Sender has picked up the package.
+        SENDER_PICKED_UP = 12;
+        // Sender has abandoned the package.
+        SENDER_ABANDONED = 13;
+    }
+    ;
+
+    enum Size {
+        A = 1;
+        B = 2;
+        C = 3;
+        D = 4;
+    }
+
+    optional string href = 11;
+    optional string code = 1;
+    optional State state = 2;
+    optional Size size = 3;
+    optional Weight weight = 4;
+    optional DeliveryPoint sender = 5;
+    optional DeliveryPoint receiver = 6;
+    optional Shipment shipment = 7;
+    optional Charges sender_charges = 8;
+    // NOTE: In receiver_charges, payment must be empty.
+    // FIXME(mateuszc): add validation in code for the above requirement
+    optional Charges receiver_charges = 9;
+
+    repeated Property prop = 10;
+}
+
+message Weight {
+    enum Unit {
+        KILOGRAM = 1;
+        GRAM = 2;
+        MILLIGRAM = 3;
+        MICROGRAM = 4;
+    }
+    // exact weigh described in chosen unit.
+    // If the weight is present, then also unit is required.
+    // Weight_kg might be present then, but only for convenience - weight + unit are arbitrary.
+    //
+    // If the weight is not present, then the weight_kg must be present.
+    optional int64 weight = 1;
+    optional Unit unit = 2;
+    // weight in kilograms, might be rounded
+    optional double weight_kg = 3;
+}
+
+message ParcelList {
+    repeated Parcel parcel = 1;
+    optional int32 total = 2;
+}
+
+message DeliveryPoint {
+    enum Role {
+        SENDER = 1;
+        RECEIVER = 2;
+    }
+    enum Method {
+        LOCKERBOX = 1;
+        POST_OFFICE = 2;
+        ADDRESS = 3;
+    }
+
+    message Lockerbox {
+        optional string name = 1;
+
+        // This field can be used only when lockerbox is used inside delivery point.
+        // (when box is used to tell about details of sender/receier delivery point).
+        optional string pin = 2;
+    }
+
+    // Courier pickup/delivery details (when courier will come to collect / deliver the parcel)
+    message Instructions {
+        // Should be HH:mm format (e.g. 10:00 or 11:30)
+        optional string hour_start = 1;
+        optional string hour_due = 2;
+        // Notes for courier.
+        optional string notes = 3;
+    }
+
+    optional Method method = 1;
+    // TODO(pawelb): remove?
+    optional Role role = 2;
+
+    // if type == LOCKERBOX
+    optional Lockerbox lockerbox = 4;
+    // if type == POST_OFFICE
+    optional PostOffice post_office = 5;
+    // if type == ADDRESS
+    // Additional information to help the courier successfully obtain/deliver the parcel.
+    optional Instructions instructions = 6;
+
+    // Sender/Receiver contact and address information.
+    //
+    // address.email will be used to match the sender/receiver with existing system account, if exists.
+    // If there is no non-temporary account with given email, system will create a temporary account for this parcel.
+    //
+    // Required data to be filled (other fields are optional):
+    // - for lockerbox: sender/recipient email, phone
+    // - for post office: ???
+    // - for address: name1, street, numbers, city,
+    // Data set in request will overwrite default values for the account.
+    // Note: this is *not* lockerbox's address nor post office's address. It is
+    // information about the *person* who delivers/picks the parcel.
+    // TODO(pawelb): check if doesn't need to be sent for sender sender=api_key.account
+    optional Address address = 7;
+
+    // Reservations fields.
+    // start_date = when the reservation begins (from the user perspective). Parcel cannot be loaded (by the user)
+    //      or picked up beforet the start_date
+    // due_date = when the reservation ends (from the user perspective). Parcel cannot be loaded (by the user)
+    //      or picked up after the due_date
+    optional string start_date = 8;
+    optional string due_date = 9;
+}
+
+message PostOffice {
+    optional string name = 1;
+    optional string description = 2;
+    optional string street = 3;
+    optional string house_no = 4;
+    optional string apartment_no = 5;
+    optional string city = 6;
+    optional string postal_code = 7;
+}
+
+// Details about moving the parcel from sender to receiver delivery points.
+message Shipment {
+    enum EventType {
+        SENDER_IN = 1;
+        // client decided to reopen the locker.
+        SENDER_REOPEN = 2;
+        SENDER_OUT = 3;
+        // general enroute event
+        EN_ROUTE = 4;
+        RECEIVER_IN = 5;
+        RECEIVER_OUT = 6;
+        RECEIVER_REOPEN = 7;
+        RECEIVER_REMOVE = 8;
+    }
+
+    enum EventSubtype {
+        LOCKER_OPENING = 1;
+        LOCKER_OPEN = 2;
+        LOCKER_CLOSE = 3;
+        // mail center (sorting center, distribution center, logistics center) is a large unit/facility
+        // that sort mail/parcels into batches and send to delivery offices.
+        MAIL_CENTER_IN = 4;
+        MAIL_CENTER_OUT = 5;
+        // Placeholder for all event subtypes that we didn't anticipate or didn't want to classify separately.
+        // TODO(pawelb): assign lower value once we figure out all 'typical' subtypes.
+        OTHER = 100;
+    }
+
+    message Event {
+        optional EventType type = 1;
+        optional EventSubtype subtype = 2;
+        optional string date = 3;
+        optional string details = 4;
+    }
+
+    optional string tracking_code = 1;
+    repeated Event event = 2;
+}
+
+// Physical device that stores parcels.
+message Lockerbox {
+    enum State {
+        // Lockerbox is active and can be used for new reservations and res. updates
+        ACTIVE = 1;
+        // Lockerbox is temporary inactive. Cannot be use for new reservations and updates.
+        INACTIVE = 2;
+        // Lockerbox is off. Kept in listing only for historic reasons (and only when asked explicitly).
+        OFF = 3;
+    }
+
+    optional string name = 1;
+    optional string href = 2;
+    optional State state = 3;
+    optional Address address = 6;
+}
+
+message LockerboxList {
+    repeated Lockerbox lockerbox = 1;
+    optional int32 total = 2;
 }
 
 // Charge is sth that user is paying for (e.g. increasing the balance, or for parcel batch).
@@ -58,15 +318,6 @@ message Charge {
         // Charge used to increase internal account balance.
         // Requires the Transferee to be set to account.
         ACCOUNT_BALANCE = 6;
-        // Represents money which was taken from user, although we didn't want to.
-        // The money is marked to be transferred to user's mobile phone account.
-        // Known cases include:
-        //  - user paid too much with cash but we couldn't return change
-        //  - user paid too little with cash but we couldn't return it
-        //  - user double-paid for a parcel (it was paid in overmind, but agent had no connection, then again
-        //    paid in agent while still disconnected)
-        // The Transferee.Account should be set.
-        OVERPAY_MOBILE = 7;
     }
 
     message Transferee {
@@ -76,10 +327,6 @@ message Charge {
         optional string wire = 2;
         // additional details for the transfer
         optional string details = 3;
-        // phone information - to be used in OVERPAY_MOBILE
-        optional string name = 4;
-        optional string phone = 5;
-        optional string phone_carrier = 6;
     }
 
     enum Status {
@@ -103,11 +350,13 @@ message Charge {
     optional string href = 2;
     // tag is used to match Charges with Payment.
     //
-    // Tag value will be:
-    // - equal to Charge.Code, if there is 1-to-1 relationship between Charges and Payment
-    // - same, account-unique value in all Charges, if there is many-to-1 relationship between Charges and Payment
+    // For many-to-1 relationship between Charges and Payment, tag should be set to the same, account-unique value in every Charge.
+    // The same value should be then set in Payment.charge_tag. Once they Payment is successful, it will be applied to all Charges
+    // with the tag.
     //
-    // Payment.charge_tag should be set to the final tag value (either unique or copied from Charge.code).
+    // For 1-to-1 relationship between Charge and Payment, tag can be either set to account-unique value or left empty.
+    // If left empty, tag value will be copied from Charge.code (making the 1-to-1 relationship the default one).
+    // Payment.charge_tag should be set to the final tag value (either assigned by user or copied from Charge.code).
     optional string tag = 3;
     optional Category category = 4;
 
@@ -119,7 +368,7 @@ message Charge {
     optional string type = 5;
     // human readable description of type
     optional string description = 6;
-    // required for category = COD, TAX, CUSTOMS, ACCOUNT_BALANCE, OVERPAY_MOBILE
+    // required for category = COD, TAX, CUSTOMS
     optional Transferee transferee = 7;
 
     optional Money amount = 8;
@@ -128,7 +377,7 @@ message Charge {
     optional Status status = 9;
     optional string expiration_date = 10;
 
-    // if the Charge is created because of a parcel (charge for parcel or overpay), it should have the parcel_ref
+    // if the Charge is created because of parce (charge for parcel), it should have the parcel_ref
     // set to parcel.Code.
     optional string parcel_ref = 11;
 }
@@ -150,7 +399,6 @@ message ChargeList {
 // - using prepaid account (amount will be subtracted from the account balance)
 // - paying online via online gateway (user will have to open given link in his browser and authorize the payment with online payment operator).
 // TODO(pawelb): embed matched Charges?
-// Next id: 14
 message Payment {
     enum Method {
         BALANCE = 1;
@@ -170,7 +418,7 @@ message Payment {
         EXPIRED = 6;
     }
 
-    // Details for ONLINE payment method.
+    // Details for Online payment method.
     // TODO(pawelb): so far, I am modelling this object using bluemedia workflow.
     // OTOH, browser_link and return_link seems quite general, so I am not creating separate subtype now.
     message Online {
@@ -180,24 +428,6 @@ message Payment {
         optional string browser_url = 2;
         // Where should the user browser go, once the payment is processed?
         optional string return_url = 3;
-    }
-
-    // Details for CREDIT_CARD payment method.
-    message CreditCard {
-        // e.g. MasterCard, Visa (optionally issuer's code, e.g. 51 or 4)
-        optional string issuer = 1;
-        // Usually PAN (Primary Account Number), see e.g.:
-        // https://en.wikipedia.org/wiki/Primary_Account_Number
-        optional string card_number = 2;
-        optional string terminal_id = 3;
-        optional string authorization_code = 4;
-        // [Wikipedia: Retrieval Reference Number, a key to uniquely identify a
-        // card transaction based on the ISO 8583 standard]
-        optional string rrn = 5;
-        // TODO(mateuszc): add 'ordinary_number'? or is it common counter with
-        // CASH payments? when should it be issued, on receipt printing or on
-        // money accepted? should failed transactions also be included in
-        // counting?
     }
 
     message HistoryItem {
@@ -226,7 +456,6 @@ message Payment {
 
     optional Method method = 6;
     optional Online online = 7;
-    optional CreditCard credit_card = 12;
 
     // Status of the payment
     optional Status status = 8;
@@ -234,18 +463,21 @@ message Payment {
     optional string status_details = 9;
 
     repeated HistoryItem history = 10;
-
-    // Point in time when the payment was done by user (money was deposited).
-    optional string deposit_date = 11;
-    // Point in time when the payment was acknowledged by overmind
-    //
-    // conslidation_date will be set only for finalized payments (status = SUCCESS, APPLIED, FAILED, EXPIRED)
-    optional string consolidation_date = 13;
 }
 
 message PaymentList {
     repeated Payment payment = 1;
     optional int32 total = 2;
+}
+
+// Property allows adding untyped metadata.
+message Property {
+    // tag can be used as multiple-keys
+    optional string key = 1;
+    optional string value = 2;
+    // nested property allows to build multilayered structure with custom data
+    // that can be stored in general database, still modelling custom part of the system.
+    repeated Property prop = 3;
 }
 
 message Error {

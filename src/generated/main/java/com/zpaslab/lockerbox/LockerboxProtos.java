@@ -8,6 +8,3459 @@ public final class LockerboxProtos {
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistry registry) {
   }
+  public interface AddressOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:lockerbox.Address)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional string href = 1;</code>
+     */
+    boolean hasHref();
+    /**
+     * <code>optional string href = 1;</code>
+     */
+    java.lang.String getHref();
+    /**
+     * <code>optional string href = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getHrefBytes();
+
+    /**
+     * <code>optional string name1 = 2;</code>
+     *
+     * <pre>
+     * Address related info
+     * For private persons, usually name1 should be enough (first name, last name),
+     * but can be used as name1=firstname, name2=lastname and so on.
+     * For organizations, we recommend to put the contact person as the name1
+     * adn the organization name as name2.
+     * </pre>
+     */
+    boolean hasName1();
+    /**
+     * <code>optional string name1 = 2;</code>
+     *
+     * <pre>
+     * Address related info
+     * For private persons, usually name1 should be enough (first name, last name),
+     * but can be used as name1=firstname, name2=lastname and so on.
+     * For organizations, we recommend to put the contact person as the name1
+     * adn the organization name as name2.
+     * </pre>
+     */
+    java.lang.String getName1();
+    /**
+     * <code>optional string name1 = 2;</code>
+     *
+     * <pre>
+     * Address related info
+     * For private persons, usually name1 should be enough (first name, last name),
+     * but can be used as name1=firstname, name2=lastname and so on.
+     * For organizations, we recommend to put the contact person as the name1
+     * adn the organization name as name2.
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getName1Bytes();
+
+    /**
+     * <code>optional string name2 = 3;</code>
+     */
+    boolean hasName2();
+    /**
+     * <code>optional string name2 = 3;</code>
+     */
+    java.lang.String getName2();
+    /**
+     * <code>optional string name2 = 3;</code>
+     */
+    com.google.protobuf.ByteString
+        getName2Bytes();
+
+    /**
+     * <code>optional bool organization = 4;</code>
+     *
+     * <pre>
+     * true if the address is an organization
+     * </pre>
+     */
+    boolean hasOrganization();
+    /**
+     * <code>optional bool organization = 4;</code>
+     *
+     * <pre>
+     * true if the address is an organization
+     * </pre>
+     */
+    boolean getOrganization();
+
+    /**
+     * <code>optional string street = 5;</code>
+     *
+     * <pre>
+     * address details
+     * </pre>
+     */
+    boolean hasStreet();
+    /**
+     * <code>optional string street = 5;</code>
+     *
+     * <pre>
+     * address details
+     * </pre>
+     */
+    java.lang.String getStreet();
+    /**
+     * <code>optional string street = 5;</code>
+     *
+     * <pre>
+     * address details
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getStreetBytes();
+
+    /**
+     * <code>optional string house_no = 6;</code>
+     */
+    boolean hasHouseNo();
+    /**
+     * <code>optional string house_no = 6;</code>
+     */
+    java.lang.String getHouseNo();
+    /**
+     * <code>optional string house_no = 6;</code>
+     */
+    com.google.protobuf.ByteString
+        getHouseNoBytes();
+
+    /**
+     * <code>optional string apartment_no = 7;</code>
+     */
+    boolean hasApartmentNo();
+    /**
+     * <code>optional string apartment_no = 7;</code>
+     */
+    java.lang.String getApartmentNo();
+    /**
+     * <code>optional string apartment_no = 7;</code>
+     */
+    com.google.protobuf.ByteString
+        getApartmentNoBytes();
+
+    /**
+     * <code>optional string city = 8;</code>
+     */
+    boolean hasCity();
+    /**
+     * <code>optional string city = 8;</code>
+     */
+    java.lang.String getCity();
+    /**
+     * <code>optional string city = 8;</code>
+     */
+    com.google.protobuf.ByteString
+        getCityBytes();
+
+    /**
+     * <code>optional string postal_code = 9;</code>
+     */
+    boolean hasPostalCode();
+    /**
+     * <code>optional string postal_code = 9;</code>
+     */
+    java.lang.String getPostalCode();
+    /**
+     * <code>optional string postal_code = 9;</code>
+     */
+    com.google.protobuf.ByteString
+        getPostalCodeBytes();
+
+    /**
+     * <code>optional string adm_top = 10;</code>
+     *
+     * <pre>
+     * more address details - more administrative ones
+     * consecutive levels of administrative division, depending on the country
+     * For Poland: adm_top = województwo, adm_second = powiat, adm_third = gmina
+     * For Belarus: adm_top = oblast, adm_second = raion
+     * </pre>
+     */
+    boolean hasAdmTop();
+    /**
+     * <code>optional string adm_top = 10;</code>
+     *
+     * <pre>
+     * more address details - more administrative ones
+     * consecutive levels of administrative division, depending on the country
+     * For Poland: adm_top = województwo, adm_second = powiat, adm_third = gmina
+     * For Belarus: adm_top = oblast, adm_second = raion
+     * </pre>
+     */
+    java.lang.String getAdmTop();
+    /**
+     * <code>optional string adm_top = 10;</code>
+     *
+     * <pre>
+     * more address details - more administrative ones
+     * consecutive levels of administrative division, depending on the country
+     * For Poland: adm_top = województwo, adm_second = powiat, adm_third = gmina
+     * For Belarus: adm_top = oblast, adm_second = raion
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getAdmTopBytes();
+
+    /**
+     * <code>optional string adm_second = 11;</code>
+     */
+    boolean hasAdmSecond();
+    /**
+     * <code>optional string adm_second = 11;</code>
+     */
+    java.lang.String getAdmSecond();
+    /**
+     * <code>optional string adm_second = 11;</code>
+     */
+    com.google.protobuf.ByteString
+        getAdmSecondBytes();
+
+    /**
+     * <code>optional string adm_third = 12;</code>
+     */
+    boolean hasAdmThird();
+    /**
+     * <code>optional string adm_third = 12;</code>
+     */
+    java.lang.String getAdmThird();
+    /**
+     * <code>optional string adm_third = 12;</code>
+     */
+    com.google.protobuf.ByteString
+        getAdmThirdBytes();
+
+    /**
+     * <code>optional string adm_fourth = 13;</code>
+     */
+    boolean hasAdmFourth();
+    /**
+     * <code>optional string adm_fourth = 13;</code>
+     */
+    java.lang.String getAdmFourth();
+    /**
+     * <code>optional string adm_fourth = 13;</code>
+     */
+    com.google.protobuf.ByteString
+        getAdmFourthBytes();
+
+    /**
+     * <code>optional string country = 14;</code>
+     *
+     * <pre>
+     * country and country iso code
+     * </pre>
+     */
+    boolean hasCountry();
+    /**
+     * <code>optional string country = 14;</code>
+     *
+     * <pre>
+     * country and country iso code
+     * </pre>
+     */
+    java.lang.String getCountry();
+    /**
+     * <code>optional string country = 14;</code>
+     *
+     * <pre>
+     * country and country iso code
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getCountryBytes();
+
+    /**
+     * <code>optional string country_iso = 15;</code>
+     */
+    boolean hasCountryIso();
+    /**
+     * <code>optional string country_iso = 15;</code>
+     */
+    java.lang.String getCountryIso();
+    /**
+     * <code>optional string country_iso = 15;</code>
+     */
+    com.google.protobuf.ByteString
+        getCountryIsoBytes();
+
+    /**
+     * <code>optional string phone = 16;</code>
+     *
+     * <pre>
+     * phone and email to reach the person or organization
+     * </pre>
+     */
+    boolean hasPhone();
+    /**
+     * <code>optional string phone = 16;</code>
+     *
+     * <pre>
+     * phone and email to reach the person or organization
+     * </pre>
+     */
+    java.lang.String getPhone();
+    /**
+     * <code>optional string phone = 16;</code>
+     *
+     * <pre>
+     * phone and email to reach the person or organization
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getPhoneBytes();
+
+    /**
+     * <code>optional string email = 17;</code>
+     */
+    boolean hasEmail();
+    /**
+     * <code>optional string email = 17;</code>
+     */
+    java.lang.String getEmail();
+    /**
+     * <code>optional string email = 17;</code>
+     */
+    com.google.protobuf.ByteString
+        getEmailBytes();
+
+    /**
+     * <code>optional double gps_lat = 18;</code>
+     *
+     * <pre>
+     * gps coordinates
+     * </pre>
+     */
+    boolean hasGpsLat();
+    /**
+     * <code>optional double gps_lat = 18;</code>
+     *
+     * <pre>
+     * gps coordinates
+     * </pre>
+     */
+    double getGpsLat();
+
+    /**
+     * <code>optional double gps_lng = 19;</code>
+     */
+    boolean hasGpsLng();
+    /**
+     * <code>optional double gps_lng = 19;</code>
+     */
+    double getGpsLng();
+  }
+  /**
+   * Protobuf type {@code lockerbox.Address}
+   */
+  public static final class Address extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:lockerbox.Address)
+      AddressOrBuilder {
+    // Use Address.newBuilder() to construct.
+    private Address(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private Address(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final Address defaultInstance;
+    public static Address getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public Address getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Address(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              href_ = bs;
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000002;
+              name1_ = bs;
+              break;
+            }
+            case 26: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000004;
+              name2_ = bs;
+              break;
+            }
+            case 32: {
+              bitField0_ |= 0x00000008;
+              organization_ = input.readBool();
+              break;
+            }
+            case 42: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000010;
+              street_ = bs;
+              break;
+            }
+            case 50: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000020;
+              houseNo_ = bs;
+              break;
+            }
+            case 58: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000040;
+              apartmentNo_ = bs;
+              break;
+            }
+            case 66: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000080;
+              city_ = bs;
+              break;
+            }
+            case 74: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000100;
+              postalCode_ = bs;
+              break;
+            }
+            case 82: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000200;
+              admTop_ = bs;
+              break;
+            }
+            case 90: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000400;
+              admSecond_ = bs;
+              break;
+            }
+            case 98: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000800;
+              admThird_ = bs;
+              break;
+            }
+            case 106: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00001000;
+              admFourth_ = bs;
+              break;
+            }
+            case 114: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00002000;
+              country_ = bs;
+              break;
+            }
+            case 122: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00004000;
+              countryIso_ = bs;
+              break;
+            }
+            case 130: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00008000;
+              phone_ = bs;
+              break;
+            }
+            case 138: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00010000;
+              email_ = bs;
+              break;
+            }
+            case 145: {
+              bitField0_ |= 0x00020000;
+              gpsLat_ = input.readDouble();
+              break;
+            }
+            case 153: {
+              bitField0_ |= 0x00040000;
+              gpsLng_ = input.readDouble();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.zpaslab.lockerbox.LockerboxProtos.internal_static_lockerbox_Address_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.zpaslab.lockerbox.LockerboxProtos.internal_static_lockerbox_Address_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.zpaslab.lockerbox.LockerboxProtos.Address.class, com.zpaslab.lockerbox.LockerboxProtos.Address.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<Address> PARSER =
+        new com.google.protobuf.AbstractParser<Address>() {
+      public Address parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Address(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Address> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    public static final int HREF_FIELD_NUMBER = 1;
+    private java.lang.Object href_;
+    /**
+     * <code>optional string href = 1;</code>
+     */
+    public boolean hasHref() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional string href = 1;</code>
+     */
+    public java.lang.String getHref() {
+      java.lang.Object ref = href_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          href_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string href = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getHrefBytes() {
+      java.lang.Object ref = href_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        href_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NAME1_FIELD_NUMBER = 2;
+    private java.lang.Object name1_;
+    /**
+     * <code>optional string name1 = 2;</code>
+     *
+     * <pre>
+     * Address related info
+     * For private persons, usually name1 should be enough (first name, last name),
+     * but can be used as name1=firstname, name2=lastname and so on.
+     * For organizations, we recommend to put the contact person as the name1
+     * adn the organization name as name2.
+     * </pre>
+     */
+    public boolean hasName1() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional string name1 = 2;</code>
+     *
+     * <pre>
+     * Address related info
+     * For private persons, usually name1 should be enough (first name, last name),
+     * but can be used as name1=firstname, name2=lastname and so on.
+     * For organizations, we recommend to put the contact person as the name1
+     * adn the organization name as name2.
+     * </pre>
+     */
+    public java.lang.String getName1() {
+      java.lang.Object ref = name1_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          name1_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string name1 = 2;</code>
+     *
+     * <pre>
+     * Address related info
+     * For private persons, usually name1 should be enough (first name, last name),
+     * but can be used as name1=firstname, name2=lastname and so on.
+     * For organizations, we recommend to put the contact person as the name1
+     * adn the organization name as name2.
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getName1Bytes() {
+      java.lang.Object ref = name1_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name1_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NAME2_FIELD_NUMBER = 3;
+    private java.lang.Object name2_;
+    /**
+     * <code>optional string name2 = 3;</code>
+     */
+    public boolean hasName2() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>optional string name2 = 3;</code>
+     */
+    public java.lang.String getName2() {
+      java.lang.Object ref = name2_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          name2_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string name2 = 3;</code>
+     */
+    public com.google.protobuf.ByteString
+        getName2Bytes() {
+      java.lang.Object ref = name2_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name2_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ORGANIZATION_FIELD_NUMBER = 4;
+    private boolean organization_;
+    /**
+     * <code>optional bool organization = 4;</code>
+     *
+     * <pre>
+     * true if the address is an organization
+     * </pre>
+     */
+    public boolean hasOrganization() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
+    }
+    /**
+     * <code>optional bool organization = 4;</code>
+     *
+     * <pre>
+     * true if the address is an organization
+     * </pre>
+     */
+    public boolean getOrganization() {
+      return organization_;
+    }
+
+    public static final int STREET_FIELD_NUMBER = 5;
+    private java.lang.Object street_;
+    /**
+     * <code>optional string street = 5;</code>
+     *
+     * <pre>
+     * address details
+     * </pre>
+     */
+    public boolean hasStreet() {
+      return ((bitField0_ & 0x00000010) == 0x00000010);
+    }
+    /**
+     * <code>optional string street = 5;</code>
+     *
+     * <pre>
+     * address details
+     * </pre>
+     */
+    public java.lang.String getStreet() {
+      java.lang.Object ref = street_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          street_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string street = 5;</code>
+     *
+     * <pre>
+     * address details
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getStreetBytes() {
+      java.lang.Object ref = street_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        street_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int HOUSE_NO_FIELD_NUMBER = 6;
+    private java.lang.Object houseNo_;
+    /**
+     * <code>optional string house_no = 6;</code>
+     */
+    public boolean hasHouseNo() {
+      return ((bitField0_ & 0x00000020) == 0x00000020);
+    }
+    /**
+     * <code>optional string house_no = 6;</code>
+     */
+    public java.lang.String getHouseNo() {
+      java.lang.Object ref = houseNo_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          houseNo_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string house_no = 6;</code>
+     */
+    public com.google.protobuf.ByteString
+        getHouseNoBytes() {
+      java.lang.Object ref = houseNo_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        houseNo_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int APARTMENT_NO_FIELD_NUMBER = 7;
+    private java.lang.Object apartmentNo_;
+    /**
+     * <code>optional string apartment_no = 7;</code>
+     */
+    public boolean hasApartmentNo() {
+      return ((bitField0_ & 0x00000040) == 0x00000040);
+    }
+    /**
+     * <code>optional string apartment_no = 7;</code>
+     */
+    public java.lang.String getApartmentNo() {
+      java.lang.Object ref = apartmentNo_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          apartmentNo_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string apartment_no = 7;</code>
+     */
+    public com.google.protobuf.ByteString
+        getApartmentNoBytes() {
+      java.lang.Object ref = apartmentNo_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        apartmentNo_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CITY_FIELD_NUMBER = 8;
+    private java.lang.Object city_;
+    /**
+     * <code>optional string city = 8;</code>
+     */
+    public boolean hasCity() {
+      return ((bitField0_ & 0x00000080) == 0x00000080);
+    }
+    /**
+     * <code>optional string city = 8;</code>
+     */
+    public java.lang.String getCity() {
+      java.lang.Object ref = city_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          city_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string city = 8;</code>
+     */
+    public com.google.protobuf.ByteString
+        getCityBytes() {
+      java.lang.Object ref = city_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        city_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int POSTAL_CODE_FIELD_NUMBER = 9;
+    private java.lang.Object postalCode_;
+    /**
+     * <code>optional string postal_code = 9;</code>
+     */
+    public boolean hasPostalCode() {
+      return ((bitField0_ & 0x00000100) == 0x00000100);
+    }
+    /**
+     * <code>optional string postal_code = 9;</code>
+     */
+    public java.lang.String getPostalCode() {
+      java.lang.Object ref = postalCode_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          postalCode_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string postal_code = 9;</code>
+     */
+    public com.google.protobuf.ByteString
+        getPostalCodeBytes() {
+      java.lang.Object ref = postalCode_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        postalCode_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ADM_TOP_FIELD_NUMBER = 10;
+    private java.lang.Object admTop_;
+    /**
+     * <code>optional string adm_top = 10;</code>
+     *
+     * <pre>
+     * more address details - more administrative ones
+     * consecutive levels of administrative division, depending on the country
+     * For Poland: adm_top = województwo, adm_second = powiat, adm_third = gmina
+     * For Belarus: adm_top = oblast, adm_second = raion
+     * </pre>
+     */
+    public boolean hasAdmTop() {
+      return ((bitField0_ & 0x00000200) == 0x00000200);
+    }
+    /**
+     * <code>optional string adm_top = 10;</code>
+     *
+     * <pre>
+     * more address details - more administrative ones
+     * consecutive levels of administrative division, depending on the country
+     * For Poland: adm_top = województwo, adm_second = powiat, adm_third = gmina
+     * For Belarus: adm_top = oblast, adm_second = raion
+     * </pre>
+     */
+    public java.lang.String getAdmTop() {
+      java.lang.Object ref = admTop_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          admTop_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string adm_top = 10;</code>
+     *
+     * <pre>
+     * more address details - more administrative ones
+     * consecutive levels of administrative division, depending on the country
+     * For Poland: adm_top = województwo, adm_second = powiat, adm_third = gmina
+     * For Belarus: adm_top = oblast, adm_second = raion
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getAdmTopBytes() {
+      java.lang.Object ref = admTop_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        admTop_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ADM_SECOND_FIELD_NUMBER = 11;
+    private java.lang.Object admSecond_;
+    /**
+     * <code>optional string adm_second = 11;</code>
+     */
+    public boolean hasAdmSecond() {
+      return ((bitField0_ & 0x00000400) == 0x00000400);
+    }
+    /**
+     * <code>optional string adm_second = 11;</code>
+     */
+    public java.lang.String getAdmSecond() {
+      java.lang.Object ref = admSecond_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          admSecond_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string adm_second = 11;</code>
+     */
+    public com.google.protobuf.ByteString
+        getAdmSecondBytes() {
+      java.lang.Object ref = admSecond_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        admSecond_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ADM_THIRD_FIELD_NUMBER = 12;
+    private java.lang.Object admThird_;
+    /**
+     * <code>optional string adm_third = 12;</code>
+     */
+    public boolean hasAdmThird() {
+      return ((bitField0_ & 0x00000800) == 0x00000800);
+    }
+    /**
+     * <code>optional string adm_third = 12;</code>
+     */
+    public java.lang.String getAdmThird() {
+      java.lang.Object ref = admThird_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          admThird_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string adm_third = 12;</code>
+     */
+    public com.google.protobuf.ByteString
+        getAdmThirdBytes() {
+      java.lang.Object ref = admThird_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        admThird_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ADM_FOURTH_FIELD_NUMBER = 13;
+    private java.lang.Object admFourth_;
+    /**
+     * <code>optional string adm_fourth = 13;</code>
+     */
+    public boolean hasAdmFourth() {
+      return ((bitField0_ & 0x00001000) == 0x00001000);
+    }
+    /**
+     * <code>optional string adm_fourth = 13;</code>
+     */
+    public java.lang.String getAdmFourth() {
+      java.lang.Object ref = admFourth_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          admFourth_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string adm_fourth = 13;</code>
+     */
+    public com.google.protobuf.ByteString
+        getAdmFourthBytes() {
+      java.lang.Object ref = admFourth_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        admFourth_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int COUNTRY_FIELD_NUMBER = 14;
+    private java.lang.Object country_;
+    /**
+     * <code>optional string country = 14;</code>
+     *
+     * <pre>
+     * country and country iso code
+     * </pre>
+     */
+    public boolean hasCountry() {
+      return ((bitField0_ & 0x00002000) == 0x00002000);
+    }
+    /**
+     * <code>optional string country = 14;</code>
+     *
+     * <pre>
+     * country and country iso code
+     * </pre>
+     */
+    public java.lang.String getCountry() {
+      java.lang.Object ref = country_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          country_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string country = 14;</code>
+     *
+     * <pre>
+     * country and country iso code
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getCountryBytes() {
+      java.lang.Object ref = country_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        country_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int COUNTRY_ISO_FIELD_NUMBER = 15;
+    private java.lang.Object countryIso_;
+    /**
+     * <code>optional string country_iso = 15;</code>
+     */
+    public boolean hasCountryIso() {
+      return ((bitField0_ & 0x00004000) == 0x00004000);
+    }
+    /**
+     * <code>optional string country_iso = 15;</code>
+     */
+    public java.lang.String getCountryIso() {
+      java.lang.Object ref = countryIso_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          countryIso_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string country_iso = 15;</code>
+     */
+    public com.google.protobuf.ByteString
+        getCountryIsoBytes() {
+      java.lang.Object ref = countryIso_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        countryIso_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PHONE_FIELD_NUMBER = 16;
+    private java.lang.Object phone_;
+    /**
+     * <code>optional string phone = 16;</code>
+     *
+     * <pre>
+     * phone and email to reach the person or organization
+     * </pre>
+     */
+    public boolean hasPhone() {
+      return ((bitField0_ & 0x00008000) == 0x00008000);
+    }
+    /**
+     * <code>optional string phone = 16;</code>
+     *
+     * <pre>
+     * phone and email to reach the person or organization
+     * </pre>
+     */
+    public java.lang.String getPhone() {
+      java.lang.Object ref = phone_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          phone_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string phone = 16;</code>
+     *
+     * <pre>
+     * phone and email to reach the person or organization
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getPhoneBytes() {
+      java.lang.Object ref = phone_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        phone_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int EMAIL_FIELD_NUMBER = 17;
+    private java.lang.Object email_;
+    /**
+     * <code>optional string email = 17;</code>
+     */
+    public boolean hasEmail() {
+      return ((bitField0_ & 0x00010000) == 0x00010000);
+    }
+    /**
+     * <code>optional string email = 17;</code>
+     */
+    public java.lang.String getEmail() {
+      java.lang.Object ref = email_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          email_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string email = 17;</code>
+     */
+    public com.google.protobuf.ByteString
+        getEmailBytes() {
+      java.lang.Object ref = email_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        email_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int GPS_LAT_FIELD_NUMBER = 18;
+    private double gpsLat_;
+    /**
+     * <code>optional double gps_lat = 18;</code>
+     *
+     * <pre>
+     * gps coordinates
+     * </pre>
+     */
+    public boolean hasGpsLat() {
+      return ((bitField0_ & 0x00020000) == 0x00020000);
+    }
+    /**
+     * <code>optional double gps_lat = 18;</code>
+     *
+     * <pre>
+     * gps coordinates
+     * </pre>
+     */
+    public double getGpsLat() {
+      return gpsLat_;
+    }
+
+    public static final int GPS_LNG_FIELD_NUMBER = 19;
+    private double gpsLng_;
+    /**
+     * <code>optional double gps_lng = 19;</code>
+     */
+    public boolean hasGpsLng() {
+      return ((bitField0_ & 0x00040000) == 0x00040000);
+    }
+    /**
+     * <code>optional double gps_lng = 19;</code>
+     */
+    public double getGpsLng() {
+      return gpsLng_;
+    }
+
+    private void initFields() {
+      href_ = "";
+      name1_ = "";
+      name2_ = "";
+      organization_ = false;
+      street_ = "";
+      houseNo_ = "";
+      apartmentNo_ = "";
+      city_ = "";
+      postalCode_ = "";
+      admTop_ = "";
+      admSecond_ = "";
+      admThird_ = "";
+      admFourth_ = "";
+      country_ = "";
+      countryIso_ = "";
+      phone_ = "";
+      email_ = "";
+      gpsLat_ = 0D;
+      gpsLng_ = 0D;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeBytes(1, getHrefBytes());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeBytes(2, getName1Bytes());
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeBytes(3, getName2Bytes());
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        output.writeBool(4, organization_);
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        output.writeBytes(5, getStreetBytes());
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        output.writeBytes(6, getHouseNoBytes());
+      }
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        output.writeBytes(7, getApartmentNoBytes());
+      }
+      if (((bitField0_ & 0x00000080) == 0x00000080)) {
+        output.writeBytes(8, getCityBytes());
+      }
+      if (((bitField0_ & 0x00000100) == 0x00000100)) {
+        output.writeBytes(9, getPostalCodeBytes());
+      }
+      if (((bitField0_ & 0x00000200) == 0x00000200)) {
+        output.writeBytes(10, getAdmTopBytes());
+      }
+      if (((bitField0_ & 0x00000400) == 0x00000400)) {
+        output.writeBytes(11, getAdmSecondBytes());
+      }
+      if (((bitField0_ & 0x00000800) == 0x00000800)) {
+        output.writeBytes(12, getAdmThirdBytes());
+      }
+      if (((bitField0_ & 0x00001000) == 0x00001000)) {
+        output.writeBytes(13, getAdmFourthBytes());
+      }
+      if (((bitField0_ & 0x00002000) == 0x00002000)) {
+        output.writeBytes(14, getCountryBytes());
+      }
+      if (((bitField0_ & 0x00004000) == 0x00004000)) {
+        output.writeBytes(15, getCountryIsoBytes());
+      }
+      if (((bitField0_ & 0x00008000) == 0x00008000)) {
+        output.writeBytes(16, getPhoneBytes());
+      }
+      if (((bitField0_ & 0x00010000) == 0x00010000)) {
+        output.writeBytes(17, getEmailBytes());
+      }
+      if (((bitField0_ & 0x00020000) == 0x00020000)) {
+        output.writeDouble(18, gpsLat_);
+      }
+      if (((bitField0_ & 0x00040000) == 0x00040000)) {
+        output.writeDouble(19, gpsLng_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, getHrefBytes());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, getName1Bytes());
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(3, getName2Bytes());
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(4, organization_);
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(5, getStreetBytes());
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(6, getHouseNoBytes());
+      }
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(7, getApartmentNoBytes());
+      }
+      if (((bitField0_ & 0x00000080) == 0x00000080)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(8, getCityBytes());
+      }
+      if (((bitField0_ & 0x00000100) == 0x00000100)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(9, getPostalCodeBytes());
+      }
+      if (((bitField0_ & 0x00000200) == 0x00000200)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(10, getAdmTopBytes());
+      }
+      if (((bitField0_ & 0x00000400) == 0x00000400)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(11, getAdmSecondBytes());
+      }
+      if (((bitField0_ & 0x00000800) == 0x00000800)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(12, getAdmThirdBytes());
+      }
+      if (((bitField0_ & 0x00001000) == 0x00001000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(13, getAdmFourthBytes());
+      }
+      if (((bitField0_ & 0x00002000) == 0x00002000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(14, getCountryBytes());
+      }
+      if (((bitField0_ & 0x00004000) == 0x00004000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(15, getCountryIsoBytes());
+      }
+      if (((bitField0_ & 0x00008000) == 0x00008000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(16, getPhoneBytes());
+      }
+      if (((bitField0_ & 0x00010000) == 0x00010000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(17, getEmailBytes());
+      }
+      if (((bitField0_ & 0x00020000) == 0x00020000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeDoubleSize(18, gpsLat_);
+      }
+      if (((bitField0_ & 0x00040000) == 0x00040000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeDoubleSize(19, gpsLng_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static com.zpaslab.lockerbox.LockerboxProtos.Address parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.zpaslab.lockerbox.LockerboxProtos.Address parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.zpaslab.lockerbox.LockerboxProtos.Address parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.zpaslab.lockerbox.LockerboxProtos.Address parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.zpaslab.lockerbox.LockerboxProtos.Address parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.zpaslab.lockerbox.LockerboxProtos.Address parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.zpaslab.lockerbox.LockerboxProtos.Address parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.zpaslab.lockerbox.LockerboxProtos.Address parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.zpaslab.lockerbox.LockerboxProtos.Address parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.zpaslab.lockerbox.LockerboxProtos.Address parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(com.zpaslab.lockerbox.LockerboxProtos.Address prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code lockerbox.Address}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:lockerbox.Address)
+        com.zpaslab.lockerbox.LockerboxProtos.AddressOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.zpaslab.lockerbox.LockerboxProtos.internal_static_lockerbox_Address_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.zpaslab.lockerbox.LockerboxProtos.internal_static_lockerbox_Address_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.zpaslab.lockerbox.LockerboxProtos.Address.class, com.zpaslab.lockerbox.LockerboxProtos.Address.Builder.class);
+      }
+
+      // Construct using com.zpaslab.lockerbox.LockerboxProtos.Address.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        href_ = "";
+        bitField0_ = (bitField0_ & ~0x00000001);
+        name1_ = "";
+        bitField0_ = (bitField0_ & ~0x00000002);
+        name2_ = "";
+        bitField0_ = (bitField0_ & ~0x00000004);
+        organization_ = false;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        street_ = "";
+        bitField0_ = (bitField0_ & ~0x00000010);
+        houseNo_ = "";
+        bitField0_ = (bitField0_ & ~0x00000020);
+        apartmentNo_ = "";
+        bitField0_ = (bitField0_ & ~0x00000040);
+        city_ = "";
+        bitField0_ = (bitField0_ & ~0x00000080);
+        postalCode_ = "";
+        bitField0_ = (bitField0_ & ~0x00000100);
+        admTop_ = "";
+        bitField0_ = (bitField0_ & ~0x00000200);
+        admSecond_ = "";
+        bitField0_ = (bitField0_ & ~0x00000400);
+        admThird_ = "";
+        bitField0_ = (bitField0_ & ~0x00000800);
+        admFourth_ = "";
+        bitField0_ = (bitField0_ & ~0x00001000);
+        country_ = "";
+        bitField0_ = (bitField0_ & ~0x00002000);
+        countryIso_ = "";
+        bitField0_ = (bitField0_ & ~0x00004000);
+        phone_ = "";
+        bitField0_ = (bitField0_ & ~0x00008000);
+        email_ = "";
+        bitField0_ = (bitField0_ & ~0x00010000);
+        gpsLat_ = 0D;
+        bitField0_ = (bitField0_ & ~0x00020000);
+        gpsLng_ = 0D;
+        bitField0_ = (bitField0_ & ~0x00040000);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.zpaslab.lockerbox.LockerboxProtos.internal_static_lockerbox_Address_descriptor;
+      }
+
+      public com.zpaslab.lockerbox.LockerboxProtos.Address getDefaultInstanceForType() {
+        return com.zpaslab.lockerbox.LockerboxProtos.Address.getDefaultInstance();
+      }
+
+      public com.zpaslab.lockerbox.LockerboxProtos.Address build() {
+        com.zpaslab.lockerbox.LockerboxProtos.Address result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.zpaslab.lockerbox.LockerboxProtos.Address buildPartial() {
+        com.zpaslab.lockerbox.LockerboxProtos.Address result = new com.zpaslab.lockerbox.LockerboxProtos.Address(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.href_ = href_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.name1_ = name1_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.name2_ = name2_;
+        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        result.organization_ = organization_;
+        if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
+          to_bitField0_ |= 0x00000010;
+        }
+        result.street_ = street_;
+        if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
+          to_bitField0_ |= 0x00000020;
+        }
+        result.houseNo_ = houseNo_;
+        if (((from_bitField0_ & 0x00000040) == 0x00000040)) {
+          to_bitField0_ |= 0x00000040;
+        }
+        result.apartmentNo_ = apartmentNo_;
+        if (((from_bitField0_ & 0x00000080) == 0x00000080)) {
+          to_bitField0_ |= 0x00000080;
+        }
+        result.city_ = city_;
+        if (((from_bitField0_ & 0x00000100) == 0x00000100)) {
+          to_bitField0_ |= 0x00000100;
+        }
+        result.postalCode_ = postalCode_;
+        if (((from_bitField0_ & 0x00000200) == 0x00000200)) {
+          to_bitField0_ |= 0x00000200;
+        }
+        result.admTop_ = admTop_;
+        if (((from_bitField0_ & 0x00000400) == 0x00000400)) {
+          to_bitField0_ |= 0x00000400;
+        }
+        result.admSecond_ = admSecond_;
+        if (((from_bitField0_ & 0x00000800) == 0x00000800)) {
+          to_bitField0_ |= 0x00000800;
+        }
+        result.admThird_ = admThird_;
+        if (((from_bitField0_ & 0x00001000) == 0x00001000)) {
+          to_bitField0_ |= 0x00001000;
+        }
+        result.admFourth_ = admFourth_;
+        if (((from_bitField0_ & 0x00002000) == 0x00002000)) {
+          to_bitField0_ |= 0x00002000;
+        }
+        result.country_ = country_;
+        if (((from_bitField0_ & 0x00004000) == 0x00004000)) {
+          to_bitField0_ |= 0x00004000;
+        }
+        result.countryIso_ = countryIso_;
+        if (((from_bitField0_ & 0x00008000) == 0x00008000)) {
+          to_bitField0_ |= 0x00008000;
+        }
+        result.phone_ = phone_;
+        if (((from_bitField0_ & 0x00010000) == 0x00010000)) {
+          to_bitField0_ |= 0x00010000;
+        }
+        result.email_ = email_;
+        if (((from_bitField0_ & 0x00020000) == 0x00020000)) {
+          to_bitField0_ |= 0x00020000;
+        }
+        result.gpsLat_ = gpsLat_;
+        if (((from_bitField0_ & 0x00040000) == 0x00040000)) {
+          to_bitField0_ |= 0x00040000;
+        }
+        result.gpsLng_ = gpsLng_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.zpaslab.lockerbox.LockerboxProtos.Address) {
+          return mergeFrom((com.zpaslab.lockerbox.LockerboxProtos.Address)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.zpaslab.lockerbox.LockerboxProtos.Address other) {
+        if (other == com.zpaslab.lockerbox.LockerboxProtos.Address.getDefaultInstance()) return this;
+        if (other.hasHref()) {
+          bitField0_ |= 0x00000001;
+          href_ = other.href_;
+          onChanged();
+        }
+        if (other.hasName1()) {
+          bitField0_ |= 0x00000002;
+          name1_ = other.name1_;
+          onChanged();
+        }
+        if (other.hasName2()) {
+          bitField0_ |= 0x00000004;
+          name2_ = other.name2_;
+          onChanged();
+        }
+        if (other.hasOrganization()) {
+          setOrganization(other.getOrganization());
+        }
+        if (other.hasStreet()) {
+          bitField0_ |= 0x00000010;
+          street_ = other.street_;
+          onChanged();
+        }
+        if (other.hasHouseNo()) {
+          bitField0_ |= 0x00000020;
+          houseNo_ = other.houseNo_;
+          onChanged();
+        }
+        if (other.hasApartmentNo()) {
+          bitField0_ |= 0x00000040;
+          apartmentNo_ = other.apartmentNo_;
+          onChanged();
+        }
+        if (other.hasCity()) {
+          bitField0_ |= 0x00000080;
+          city_ = other.city_;
+          onChanged();
+        }
+        if (other.hasPostalCode()) {
+          bitField0_ |= 0x00000100;
+          postalCode_ = other.postalCode_;
+          onChanged();
+        }
+        if (other.hasAdmTop()) {
+          bitField0_ |= 0x00000200;
+          admTop_ = other.admTop_;
+          onChanged();
+        }
+        if (other.hasAdmSecond()) {
+          bitField0_ |= 0x00000400;
+          admSecond_ = other.admSecond_;
+          onChanged();
+        }
+        if (other.hasAdmThird()) {
+          bitField0_ |= 0x00000800;
+          admThird_ = other.admThird_;
+          onChanged();
+        }
+        if (other.hasAdmFourth()) {
+          bitField0_ |= 0x00001000;
+          admFourth_ = other.admFourth_;
+          onChanged();
+        }
+        if (other.hasCountry()) {
+          bitField0_ |= 0x00002000;
+          country_ = other.country_;
+          onChanged();
+        }
+        if (other.hasCountryIso()) {
+          bitField0_ |= 0x00004000;
+          countryIso_ = other.countryIso_;
+          onChanged();
+        }
+        if (other.hasPhone()) {
+          bitField0_ |= 0x00008000;
+          phone_ = other.phone_;
+          onChanged();
+        }
+        if (other.hasEmail()) {
+          bitField0_ |= 0x00010000;
+          email_ = other.email_;
+          onChanged();
+        }
+        if (other.hasGpsLat()) {
+          setGpsLat(other.getGpsLat());
+        }
+        if (other.hasGpsLng()) {
+          setGpsLng(other.getGpsLng());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.zpaslab.lockerbox.LockerboxProtos.Address parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.zpaslab.lockerbox.LockerboxProtos.Address) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object href_ = "";
+      /**
+       * <code>optional string href = 1;</code>
+       */
+      public boolean hasHref() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional string href = 1;</code>
+       */
+      public java.lang.String getHref() {
+        java.lang.Object ref = href_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            href_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string href = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getHrefBytes() {
+        java.lang.Object ref = href_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          href_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string href = 1;</code>
+       */
+      public Builder setHref(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        href_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string href = 1;</code>
+       */
+      public Builder clearHref() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        href_ = getDefaultInstance().getHref();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string href = 1;</code>
+       */
+      public Builder setHrefBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        href_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object name1_ = "";
+      /**
+       * <code>optional string name1 = 2;</code>
+       *
+       * <pre>
+       * Address related info
+       * For private persons, usually name1 should be enough (first name, last name),
+       * but can be used as name1=firstname, name2=lastname and so on.
+       * For organizations, we recommend to put the contact person as the name1
+       * adn the organization name as name2.
+       * </pre>
+       */
+      public boolean hasName1() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional string name1 = 2;</code>
+       *
+       * <pre>
+       * Address related info
+       * For private persons, usually name1 should be enough (first name, last name),
+       * but can be used as name1=firstname, name2=lastname and so on.
+       * For organizations, we recommend to put the contact person as the name1
+       * adn the organization name as name2.
+       * </pre>
+       */
+      public java.lang.String getName1() {
+        java.lang.Object ref = name1_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            name1_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string name1 = 2;</code>
+       *
+       * <pre>
+       * Address related info
+       * For private persons, usually name1 should be enough (first name, last name),
+       * but can be used as name1=firstname, name2=lastname and so on.
+       * For organizations, we recommend to put the contact person as the name1
+       * adn the organization name as name2.
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getName1Bytes() {
+        java.lang.Object ref = name1_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name1_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string name1 = 2;</code>
+       *
+       * <pre>
+       * Address related info
+       * For private persons, usually name1 should be enough (first name, last name),
+       * but can be used as name1=firstname, name2=lastname and so on.
+       * For organizations, we recommend to put the contact person as the name1
+       * adn the organization name as name2.
+       * </pre>
+       */
+      public Builder setName1(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        name1_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string name1 = 2;</code>
+       *
+       * <pre>
+       * Address related info
+       * For private persons, usually name1 should be enough (first name, last name),
+       * but can be used as name1=firstname, name2=lastname and so on.
+       * For organizations, we recommend to put the contact person as the name1
+       * adn the organization name as name2.
+       * </pre>
+       */
+      public Builder clearName1() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        name1_ = getDefaultInstance().getName1();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string name1 = 2;</code>
+       *
+       * <pre>
+       * Address related info
+       * For private persons, usually name1 should be enough (first name, last name),
+       * but can be used as name1=firstname, name2=lastname and so on.
+       * For organizations, we recommend to put the contact person as the name1
+       * adn the organization name as name2.
+       * </pre>
+       */
+      public Builder setName1Bytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        name1_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object name2_ = "";
+      /**
+       * <code>optional string name2 = 3;</code>
+       */
+      public boolean hasName2() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional string name2 = 3;</code>
+       */
+      public java.lang.String getName2() {
+        java.lang.Object ref = name2_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            name2_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string name2 = 3;</code>
+       */
+      public com.google.protobuf.ByteString
+          getName2Bytes() {
+        java.lang.Object ref = name2_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name2_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string name2 = 3;</code>
+       */
+      public Builder setName2(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        name2_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string name2 = 3;</code>
+       */
+      public Builder clearName2() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        name2_ = getDefaultInstance().getName2();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string name2 = 3;</code>
+       */
+      public Builder setName2Bytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        name2_ = value;
+        onChanged();
+        return this;
+      }
+
+      private boolean organization_ ;
+      /**
+       * <code>optional bool organization = 4;</code>
+       *
+       * <pre>
+       * true if the address is an organization
+       * </pre>
+       */
+      public boolean hasOrganization() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>optional bool organization = 4;</code>
+       *
+       * <pre>
+       * true if the address is an organization
+       * </pre>
+       */
+      public boolean getOrganization() {
+        return organization_;
+      }
+      /**
+       * <code>optional bool organization = 4;</code>
+       *
+       * <pre>
+       * true if the address is an organization
+       * </pre>
+       */
+      public Builder setOrganization(boolean value) {
+        bitField0_ |= 0x00000008;
+        organization_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool organization = 4;</code>
+       *
+       * <pre>
+       * true if the address is an organization
+       * </pre>
+       */
+      public Builder clearOrganization() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        organization_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object street_ = "";
+      /**
+       * <code>optional string street = 5;</code>
+       *
+       * <pre>
+       * address details
+       * </pre>
+       */
+      public boolean hasStreet() {
+        return ((bitField0_ & 0x00000010) == 0x00000010);
+      }
+      /**
+       * <code>optional string street = 5;</code>
+       *
+       * <pre>
+       * address details
+       * </pre>
+       */
+      public java.lang.String getStreet() {
+        java.lang.Object ref = street_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            street_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string street = 5;</code>
+       *
+       * <pre>
+       * address details
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getStreetBytes() {
+        java.lang.Object ref = street_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          street_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string street = 5;</code>
+       *
+       * <pre>
+       * address details
+       * </pre>
+       */
+      public Builder setStreet(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000010;
+        street_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string street = 5;</code>
+       *
+       * <pre>
+       * address details
+       * </pre>
+       */
+      public Builder clearStreet() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        street_ = getDefaultInstance().getStreet();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string street = 5;</code>
+       *
+       * <pre>
+       * address details
+       * </pre>
+       */
+      public Builder setStreetBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000010;
+        street_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object houseNo_ = "";
+      /**
+       * <code>optional string house_no = 6;</code>
+       */
+      public boolean hasHouseNo() {
+        return ((bitField0_ & 0x00000020) == 0x00000020);
+      }
+      /**
+       * <code>optional string house_no = 6;</code>
+       */
+      public java.lang.String getHouseNo() {
+        java.lang.Object ref = houseNo_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            houseNo_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string house_no = 6;</code>
+       */
+      public com.google.protobuf.ByteString
+          getHouseNoBytes() {
+        java.lang.Object ref = houseNo_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          houseNo_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string house_no = 6;</code>
+       */
+      public Builder setHouseNo(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000020;
+        houseNo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string house_no = 6;</code>
+       */
+      public Builder clearHouseNo() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        houseNo_ = getDefaultInstance().getHouseNo();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string house_no = 6;</code>
+       */
+      public Builder setHouseNoBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000020;
+        houseNo_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object apartmentNo_ = "";
+      /**
+       * <code>optional string apartment_no = 7;</code>
+       */
+      public boolean hasApartmentNo() {
+        return ((bitField0_ & 0x00000040) == 0x00000040);
+      }
+      /**
+       * <code>optional string apartment_no = 7;</code>
+       */
+      public java.lang.String getApartmentNo() {
+        java.lang.Object ref = apartmentNo_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            apartmentNo_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string apartment_no = 7;</code>
+       */
+      public com.google.protobuf.ByteString
+          getApartmentNoBytes() {
+        java.lang.Object ref = apartmentNo_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          apartmentNo_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string apartment_no = 7;</code>
+       */
+      public Builder setApartmentNo(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000040;
+        apartmentNo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string apartment_no = 7;</code>
+       */
+      public Builder clearApartmentNo() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        apartmentNo_ = getDefaultInstance().getApartmentNo();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string apartment_no = 7;</code>
+       */
+      public Builder setApartmentNoBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000040;
+        apartmentNo_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object city_ = "";
+      /**
+       * <code>optional string city = 8;</code>
+       */
+      public boolean hasCity() {
+        return ((bitField0_ & 0x00000080) == 0x00000080);
+      }
+      /**
+       * <code>optional string city = 8;</code>
+       */
+      public java.lang.String getCity() {
+        java.lang.Object ref = city_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            city_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string city = 8;</code>
+       */
+      public com.google.protobuf.ByteString
+          getCityBytes() {
+        java.lang.Object ref = city_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          city_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string city = 8;</code>
+       */
+      public Builder setCity(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000080;
+        city_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string city = 8;</code>
+       */
+      public Builder clearCity() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        city_ = getDefaultInstance().getCity();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string city = 8;</code>
+       */
+      public Builder setCityBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000080;
+        city_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object postalCode_ = "";
+      /**
+       * <code>optional string postal_code = 9;</code>
+       */
+      public boolean hasPostalCode() {
+        return ((bitField0_ & 0x00000100) == 0x00000100);
+      }
+      /**
+       * <code>optional string postal_code = 9;</code>
+       */
+      public java.lang.String getPostalCode() {
+        java.lang.Object ref = postalCode_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            postalCode_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string postal_code = 9;</code>
+       */
+      public com.google.protobuf.ByteString
+          getPostalCodeBytes() {
+        java.lang.Object ref = postalCode_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          postalCode_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string postal_code = 9;</code>
+       */
+      public Builder setPostalCode(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000100;
+        postalCode_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string postal_code = 9;</code>
+       */
+      public Builder clearPostalCode() {
+        bitField0_ = (bitField0_ & ~0x00000100);
+        postalCode_ = getDefaultInstance().getPostalCode();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string postal_code = 9;</code>
+       */
+      public Builder setPostalCodeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000100;
+        postalCode_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object admTop_ = "";
+      /**
+       * <code>optional string adm_top = 10;</code>
+       *
+       * <pre>
+       * more address details - more administrative ones
+       * consecutive levels of administrative division, depending on the country
+       * For Poland: adm_top = województwo, adm_second = powiat, adm_third = gmina
+       * For Belarus: adm_top = oblast, adm_second = raion
+       * </pre>
+       */
+      public boolean hasAdmTop() {
+        return ((bitField0_ & 0x00000200) == 0x00000200);
+      }
+      /**
+       * <code>optional string adm_top = 10;</code>
+       *
+       * <pre>
+       * more address details - more administrative ones
+       * consecutive levels of administrative division, depending on the country
+       * For Poland: adm_top = województwo, adm_second = powiat, adm_third = gmina
+       * For Belarus: adm_top = oblast, adm_second = raion
+       * </pre>
+       */
+      public java.lang.String getAdmTop() {
+        java.lang.Object ref = admTop_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            admTop_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string adm_top = 10;</code>
+       *
+       * <pre>
+       * more address details - more administrative ones
+       * consecutive levels of administrative division, depending on the country
+       * For Poland: adm_top = województwo, adm_second = powiat, adm_third = gmina
+       * For Belarus: adm_top = oblast, adm_second = raion
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getAdmTopBytes() {
+        java.lang.Object ref = admTop_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          admTop_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string adm_top = 10;</code>
+       *
+       * <pre>
+       * more address details - more administrative ones
+       * consecutive levels of administrative division, depending on the country
+       * For Poland: adm_top = województwo, adm_second = powiat, adm_third = gmina
+       * For Belarus: adm_top = oblast, adm_second = raion
+       * </pre>
+       */
+      public Builder setAdmTop(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000200;
+        admTop_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string adm_top = 10;</code>
+       *
+       * <pre>
+       * more address details - more administrative ones
+       * consecutive levels of administrative division, depending on the country
+       * For Poland: adm_top = województwo, adm_second = powiat, adm_third = gmina
+       * For Belarus: adm_top = oblast, adm_second = raion
+       * </pre>
+       */
+      public Builder clearAdmTop() {
+        bitField0_ = (bitField0_ & ~0x00000200);
+        admTop_ = getDefaultInstance().getAdmTop();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string adm_top = 10;</code>
+       *
+       * <pre>
+       * more address details - more administrative ones
+       * consecutive levels of administrative division, depending on the country
+       * For Poland: adm_top = województwo, adm_second = powiat, adm_third = gmina
+       * For Belarus: adm_top = oblast, adm_second = raion
+       * </pre>
+       */
+      public Builder setAdmTopBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000200;
+        admTop_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object admSecond_ = "";
+      /**
+       * <code>optional string adm_second = 11;</code>
+       */
+      public boolean hasAdmSecond() {
+        return ((bitField0_ & 0x00000400) == 0x00000400);
+      }
+      /**
+       * <code>optional string adm_second = 11;</code>
+       */
+      public java.lang.String getAdmSecond() {
+        java.lang.Object ref = admSecond_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            admSecond_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string adm_second = 11;</code>
+       */
+      public com.google.protobuf.ByteString
+          getAdmSecondBytes() {
+        java.lang.Object ref = admSecond_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          admSecond_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string adm_second = 11;</code>
+       */
+      public Builder setAdmSecond(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000400;
+        admSecond_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string adm_second = 11;</code>
+       */
+      public Builder clearAdmSecond() {
+        bitField0_ = (bitField0_ & ~0x00000400);
+        admSecond_ = getDefaultInstance().getAdmSecond();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string adm_second = 11;</code>
+       */
+      public Builder setAdmSecondBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000400;
+        admSecond_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object admThird_ = "";
+      /**
+       * <code>optional string adm_third = 12;</code>
+       */
+      public boolean hasAdmThird() {
+        return ((bitField0_ & 0x00000800) == 0x00000800);
+      }
+      /**
+       * <code>optional string adm_third = 12;</code>
+       */
+      public java.lang.String getAdmThird() {
+        java.lang.Object ref = admThird_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            admThird_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string adm_third = 12;</code>
+       */
+      public com.google.protobuf.ByteString
+          getAdmThirdBytes() {
+        java.lang.Object ref = admThird_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          admThird_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string adm_third = 12;</code>
+       */
+      public Builder setAdmThird(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000800;
+        admThird_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string adm_third = 12;</code>
+       */
+      public Builder clearAdmThird() {
+        bitField0_ = (bitField0_ & ~0x00000800);
+        admThird_ = getDefaultInstance().getAdmThird();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string adm_third = 12;</code>
+       */
+      public Builder setAdmThirdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000800;
+        admThird_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object admFourth_ = "";
+      /**
+       * <code>optional string adm_fourth = 13;</code>
+       */
+      public boolean hasAdmFourth() {
+        return ((bitField0_ & 0x00001000) == 0x00001000);
+      }
+      /**
+       * <code>optional string adm_fourth = 13;</code>
+       */
+      public java.lang.String getAdmFourth() {
+        java.lang.Object ref = admFourth_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            admFourth_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string adm_fourth = 13;</code>
+       */
+      public com.google.protobuf.ByteString
+          getAdmFourthBytes() {
+        java.lang.Object ref = admFourth_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          admFourth_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string adm_fourth = 13;</code>
+       */
+      public Builder setAdmFourth(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00001000;
+        admFourth_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string adm_fourth = 13;</code>
+       */
+      public Builder clearAdmFourth() {
+        bitField0_ = (bitField0_ & ~0x00001000);
+        admFourth_ = getDefaultInstance().getAdmFourth();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string adm_fourth = 13;</code>
+       */
+      public Builder setAdmFourthBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00001000;
+        admFourth_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object country_ = "";
+      /**
+       * <code>optional string country = 14;</code>
+       *
+       * <pre>
+       * country and country iso code
+       * </pre>
+       */
+      public boolean hasCountry() {
+        return ((bitField0_ & 0x00002000) == 0x00002000);
+      }
+      /**
+       * <code>optional string country = 14;</code>
+       *
+       * <pre>
+       * country and country iso code
+       * </pre>
+       */
+      public java.lang.String getCountry() {
+        java.lang.Object ref = country_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            country_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string country = 14;</code>
+       *
+       * <pre>
+       * country and country iso code
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getCountryBytes() {
+        java.lang.Object ref = country_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          country_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string country = 14;</code>
+       *
+       * <pre>
+       * country and country iso code
+       * </pre>
+       */
+      public Builder setCountry(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00002000;
+        country_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string country = 14;</code>
+       *
+       * <pre>
+       * country and country iso code
+       * </pre>
+       */
+      public Builder clearCountry() {
+        bitField0_ = (bitField0_ & ~0x00002000);
+        country_ = getDefaultInstance().getCountry();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string country = 14;</code>
+       *
+       * <pre>
+       * country and country iso code
+       * </pre>
+       */
+      public Builder setCountryBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00002000;
+        country_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object countryIso_ = "";
+      /**
+       * <code>optional string country_iso = 15;</code>
+       */
+      public boolean hasCountryIso() {
+        return ((bitField0_ & 0x00004000) == 0x00004000);
+      }
+      /**
+       * <code>optional string country_iso = 15;</code>
+       */
+      public java.lang.String getCountryIso() {
+        java.lang.Object ref = countryIso_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            countryIso_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string country_iso = 15;</code>
+       */
+      public com.google.protobuf.ByteString
+          getCountryIsoBytes() {
+        java.lang.Object ref = countryIso_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          countryIso_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string country_iso = 15;</code>
+       */
+      public Builder setCountryIso(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00004000;
+        countryIso_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string country_iso = 15;</code>
+       */
+      public Builder clearCountryIso() {
+        bitField0_ = (bitField0_ & ~0x00004000);
+        countryIso_ = getDefaultInstance().getCountryIso();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string country_iso = 15;</code>
+       */
+      public Builder setCountryIsoBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00004000;
+        countryIso_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object phone_ = "";
+      /**
+       * <code>optional string phone = 16;</code>
+       *
+       * <pre>
+       * phone and email to reach the person or organization
+       * </pre>
+       */
+      public boolean hasPhone() {
+        return ((bitField0_ & 0x00008000) == 0x00008000);
+      }
+      /**
+       * <code>optional string phone = 16;</code>
+       *
+       * <pre>
+       * phone and email to reach the person or organization
+       * </pre>
+       */
+      public java.lang.String getPhone() {
+        java.lang.Object ref = phone_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            phone_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string phone = 16;</code>
+       *
+       * <pre>
+       * phone and email to reach the person or organization
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getPhoneBytes() {
+        java.lang.Object ref = phone_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          phone_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string phone = 16;</code>
+       *
+       * <pre>
+       * phone and email to reach the person or organization
+       * </pre>
+       */
+      public Builder setPhone(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00008000;
+        phone_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string phone = 16;</code>
+       *
+       * <pre>
+       * phone and email to reach the person or organization
+       * </pre>
+       */
+      public Builder clearPhone() {
+        bitField0_ = (bitField0_ & ~0x00008000);
+        phone_ = getDefaultInstance().getPhone();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string phone = 16;</code>
+       *
+       * <pre>
+       * phone and email to reach the person or organization
+       * </pre>
+       */
+      public Builder setPhoneBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00008000;
+        phone_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object email_ = "";
+      /**
+       * <code>optional string email = 17;</code>
+       */
+      public boolean hasEmail() {
+        return ((bitField0_ & 0x00010000) == 0x00010000);
+      }
+      /**
+       * <code>optional string email = 17;</code>
+       */
+      public java.lang.String getEmail() {
+        java.lang.Object ref = email_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            email_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string email = 17;</code>
+       */
+      public com.google.protobuf.ByteString
+          getEmailBytes() {
+        java.lang.Object ref = email_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          email_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string email = 17;</code>
+       */
+      public Builder setEmail(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00010000;
+        email_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string email = 17;</code>
+       */
+      public Builder clearEmail() {
+        bitField0_ = (bitField0_ & ~0x00010000);
+        email_ = getDefaultInstance().getEmail();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string email = 17;</code>
+       */
+      public Builder setEmailBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00010000;
+        email_ = value;
+        onChanged();
+        return this;
+      }
+
+      private double gpsLat_ ;
+      /**
+       * <code>optional double gps_lat = 18;</code>
+       *
+       * <pre>
+       * gps coordinates
+       * </pre>
+       */
+      public boolean hasGpsLat() {
+        return ((bitField0_ & 0x00020000) == 0x00020000);
+      }
+      /**
+       * <code>optional double gps_lat = 18;</code>
+       *
+       * <pre>
+       * gps coordinates
+       * </pre>
+       */
+      public double getGpsLat() {
+        return gpsLat_;
+      }
+      /**
+       * <code>optional double gps_lat = 18;</code>
+       *
+       * <pre>
+       * gps coordinates
+       * </pre>
+       */
+      public Builder setGpsLat(double value) {
+        bitField0_ |= 0x00020000;
+        gpsLat_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional double gps_lat = 18;</code>
+       *
+       * <pre>
+       * gps coordinates
+       * </pre>
+       */
+      public Builder clearGpsLat() {
+        bitField0_ = (bitField0_ & ~0x00020000);
+        gpsLat_ = 0D;
+        onChanged();
+        return this;
+      }
+
+      private double gpsLng_ ;
+      /**
+       * <code>optional double gps_lng = 19;</code>
+       */
+      public boolean hasGpsLng() {
+        return ((bitField0_ & 0x00040000) == 0x00040000);
+      }
+      /**
+       * <code>optional double gps_lng = 19;</code>
+       */
+      public double getGpsLng() {
+        return gpsLng_;
+      }
+      /**
+       * <code>optional double gps_lng = 19;</code>
+       */
+      public Builder setGpsLng(double value) {
+        bitField0_ |= 0x00040000;
+        gpsLng_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional double gps_lng = 19;</code>
+       */
+      public Builder clearGpsLng() {
+        bitField0_ = (bitField0_ & ~0x00040000);
+        gpsLng_ = 0D;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:lockerbox.Address)
+    }
+
+    static {
+      defaultInstance = new Address(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:lockerbox.Address)
+  }
+
   public interface MoneyOrBuilder extends
       // @@protoc_insertion_point(interface_extends:lockerbox.Money)
       com.google.protobuf.MessageOrBuilder {
@@ -2028,6 +5481,13294 @@ public final class LockerboxProtos {
     // @@protoc_insertion_point(class_scope:lockerbox.Charges)
   }
 
+  public interface ParcelOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:lockerbox.Parcel)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional string href = 11;</code>
+     */
+    boolean hasHref();
+    /**
+     * <code>optional string href = 11;</code>
+     */
+    java.lang.String getHref();
+    /**
+     * <code>optional string href = 11;</code>
+     */
+    com.google.protobuf.ByteString
+        getHrefBytes();
+
+    /**
+     * <code>optional string code = 1;</code>
+     */
+    boolean hasCode();
+    /**
+     * <code>optional string code = 1;</code>
+     */
+    java.lang.String getCode();
+    /**
+     * <code>optional string code = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getCodeBytes();
+
+    /**
+     * <code>optional .lockerbox.Parcel.State state = 2;</code>
+     */
+    boolean hasState();
+    /**
+     * <code>optional .lockerbox.Parcel.State state = 2;</code>
+     */
+    com.zpaslab.lockerbox.LockerboxProtos.Parcel.State getState();
+
+    /**
+     * <code>optional .lockerbox.Parcel.Size size = 3;</code>
+     */
+    boolean hasSize();
+    /**
+     * <code>optional .lockerbox.Parcel.Size size = 3;</code>
+     */
+    com.zpaslab.lockerbox.LockerboxProtos.Parcel.Size getSize();
+
+    /**
+     * <code>optional .lockerbox.Weight weight = 4;</code>
+     */
+    boolean hasWeight();
+    /**
+     * <code>optional .lockerbox.Weight weight = 4;</code>
+     */
+    com.zpaslab.lockerbox.LockerboxProtos.Weight getWeight();
+    /**
+     * <code>optional .lockerbox.Weight weight = 4;</code>
+     */
+    com.zpaslab.lockerbox.LockerboxProtos.WeightOrBuilder getWeightOrBuilder();
+
+    /**
+     * <code>optional .lockerbox.DeliveryPoint sender = 5;</code>
+     */
+    boolean hasSender();
+    /**
+     * <code>optional .lockerbox.DeliveryPoint sender = 5;</code>
+     */
+    com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint getSender();
+    /**
+     * <code>optional .lockerbox.DeliveryPoint sender = 5;</code>
+     */
+    com.zpaslab.lockerbox.LockerboxProtos.DeliveryPointOrBuilder getSenderOrBuilder();
+
+    /**
+     * <code>optional .lockerbox.DeliveryPoint receiver = 6;</code>
+     */
+    boolean hasReceiver();
+    /**
+     * <code>optional .lockerbox.DeliveryPoint receiver = 6;</code>
+     */
+    com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint getReceiver();
+    /**
+     * <code>optional .lockerbox.DeliveryPoint receiver = 6;</code>
+     */
+    com.zpaslab.lockerbox.LockerboxProtos.DeliveryPointOrBuilder getReceiverOrBuilder();
+
+    /**
+     * <code>optional .lockerbox.Shipment shipment = 7;</code>
+     */
+    boolean hasShipment();
+    /**
+     * <code>optional .lockerbox.Shipment shipment = 7;</code>
+     */
+    com.zpaslab.lockerbox.LockerboxProtos.Shipment getShipment();
+    /**
+     * <code>optional .lockerbox.Shipment shipment = 7;</code>
+     */
+    com.zpaslab.lockerbox.LockerboxProtos.ShipmentOrBuilder getShipmentOrBuilder();
+
+    /**
+     * <code>optional .lockerbox.Charges sender_charges = 8;</code>
+     */
+    boolean hasSenderCharges();
+    /**
+     * <code>optional .lockerbox.Charges sender_charges = 8;</code>
+     */
+    com.zpaslab.lockerbox.LockerboxProtos.Charges getSenderCharges();
+    /**
+     * <code>optional .lockerbox.Charges sender_charges = 8;</code>
+     */
+    com.zpaslab.lockerbox.LockerboxProtos.ChargesOrBuilder getSenderChargesOrBuilder();
+
+    /**
+     * <code>optional .lockerbox.Charges receiver_charges = 9;</code>
+     *
+     * <pre>
+     * NOTE: In receiver_charges, payment must be empty.
+     * FIXME(mateuszc): add validation in code for the above requirement
+     * </pre>
+     */
+    boolean hasReceiverCharges();
+    /**
+     * <code>optional .lockerbox.Charges receiver_charges = 9;</code>
+     *
+     * <pre>
+     * NOTE: In receiver_charges, payment must be empty.
+     * FIXME(mateuszc): add validation in code for the above requirement
+     * </pre>
+     */
+    com.zpaslab.lockerbox.LockerboxProtos.Charges getReceiverCharges();
+    /**
+     * <code>optional .lockerbox.Charges receiver_charges = 9;</code>
+     *
+     * <pre>
+     * NOTE: In receiver_charges, payment must be empty.
+     * FIXME(mateuszc): add validation in code for the above requirement
+     * </pre>
+     */
+    com.zpaslab.lockerbox.LockerboxProtos.ChargesOrBuilder getReceiverChargesOrBuilder();
+
+    /**
+     * <code>repeated .lockerbox.Property prop = 10;</code>
+     */
+    java.util.List<com.zpaslab.lockerbox.LockerboxProtos.Property> 
+        getPropList();
+    /**
+     * <code>repeated .lockerbox.Property prop = 10;</code>
+     */
+    com.zpaslab.lockerbox.LockerboxProtos.Property getProp(int index);
+    /**
+     * <code>repeated .lockerbox.Property prop = 10;</code>
+     */
+    int getPropCount();
+    /**
+     * <code>repeated .lockerbox.Property prop = 10;</code>
+     */
+    java.util.List<? extends com.zpaslab.lockerbox.LockerboxProtos.PropertyOrBuilder> 
+        getPropOrBuilderList();
+    /**
+     * <code>repeated .lockerbox.Property prop = 10;</code>
+     */
+    com.zpaslab.lockerbox.LockerboxProtos.PropertyOrBuilder getPropOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code lockerbox.Parcel}
+   *
+   * <pre>
+   * Single parcel / package represents either existing or yet-to-be existing physical package.
+   * </pre>
+   */
+  public static final class Parcel extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:lockerbox.Parcel)
+      ParcelOrBuilder {
+    // Use Parcel.newBuilder() to construct.
+    private Parcel(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private Parcel(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final Parcel defaultInstance;
+    public static Parcel getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public Parcel getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Parcel(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000002;
+              code_ = bs;
+              break;
+            }
+            case 16: {
+              int rawValue = input.readEnum();
+              com.zpaslab.lockerbox.LockerboxProtos.Parcel.State value = com.zpaslab.lockerbox.LockerboxProtos.Parcel.State.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(2, rawValue);
+              } else {
+                bitField0_ |= 0x00000004;
+                state_ = value;
+              }
+              break;
+            }
+            case 24: {
+              int rawValue = input.readEnum();
+              com.zpaslab.lockerbox.LockerboxProtos.Parcel.Size value = com.zpaslab.lockerbox.LockerboxProtos.Parcel.Size.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(3, rawValue);
+              } else {
+                bitField0_ |= 0x00000008;
+                size_ = value;
+              }
+              break;
+            }
+            case 34: {
+              com.zpaslab.lockerbox.LockerboxProtos.Weight.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000010) == 0x00000010)) {
+                subBuilder = weight_.toBuilder();
+              }
+              weight_ = input.readMessage(com.zpaslab.lockerbox.LockerboxProtos.Weight.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(weight_);
+                weight_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000010;
+              break;
+            }
+            case 42: {
+              com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000020) == 0x00000020)) {
+                subBuilder = sender_.toBuilder();
+              }
+              sender_ = input.readMessage(com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(sender_);
+                sender_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000020;
+              break;
+            }
+            case 50: {
+              com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000040) == 0x00000040)) {
+                subBuilder = receiver_.toBuilder();
+              }
+              receiver_ = input.readMessage(com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(receiver_);
+                receiver_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000040;
+              break;
+            }
+            case 58: {
+              com.zpaslab.lockerbox.LockerboxProtos.Shipment.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000080) == 0x00000080)) {
+                subBuilder = shipment_.toBuilder();
+              }
+              shipment_ = input.readMessage(com.zpaslab.lockerbox.LockerboxProtos.Shipment.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(shipment_);
+                shipment_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000080;
+              break;
+            }
+            case 66: {
+              com.zpaslab.lockerbox.LockerboxProtos.Charges.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000100) == 0x00000100)) {
+                subBuilder = senderCharges_.toBuilder();
+              }
+              senderCharges_ = input.readMessage(com.zpaslab.lockerbox.LockerboxProtos.Charges.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(senderCharges_);
+                senderCharges_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000100;
+              break;
+            }
+            case 74: {
+              com.zpaslab.lockerbox.LockerboxProtos.Charges.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000200) == 0x00000200)) {
+                subBuilder = receiverCharges_.toBuilder();
+              }
+              receiverCharges_ = input.readMessage(com.zpaslab.lockerbox.LockerboxProtos.Charges.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(receiverCharges_);
+                receiverCharges_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000200;
+              break;
+            }
+            case 82: {
+              if (!((mutable_bitField0_ & 0x00000400) == 0x00000400)) {
+                prop_ = new java.util.ArrayList<com.zpaslab.lockerbox.LockerboxProtos.Property>();
+                mutable_bitField0_ |= 0x00000400;
+              }
+              prop_.add(input.readMessage(com.zpaslab.lockerbox.LockerboxProtos.Property.PARSER, extensionRegistry));
+              break;
+            }
+            case 90: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              href_ = bs;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000400) == 0x00000400)) {
+          prop_ = java.util.Collections.unmodifiableList(prop_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.zpaslab.lockerbox.LockerboxProtos.internal_static_lockerbox_Parcel_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.zpaslab.lockerbox.LockerboxProtos.internal_static_lockerbox_Parcel_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.zpaslab.lockerbox.LockerboxProtos.Parcel.class, com.zpaslab.lockerbox.LockerboxProtos.Parcel.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<Parcel> PARSER =
+        new com.google.protobuf.AbstractParser<Parcel>() {
+      public Parcel parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Parcel(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Parcel> getParserForType() {
+      return PARSER;
+    }
+
+    /**
+     * Protobuf enum {@code lockerbox.Parcel.State}
+     */
+    public enum State
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>CREATED = 1;</code>
+       *
+       * <pre>
+       * The parcel is created in the system (has a code assigned), but either payment is not yet done,
+       * or one of send/delivery points are not yet verified.
+       * NOTE: payment and delivery point might be pre-set but they're just not verified yet.
+       * </pre>
+       */
+      CREATED(0, 1),
+      /**
+       * <code>PAID = 2;</code>
+       *
+       * <pre>
+       * The parcel is paid.
+       * </pre>
+       */
+      PAID(1, 2),
+      /**
+       * <code>RESERVED = 3;</code>
+       *
+       * <pre>
+       * Both send and delivery point (with dates) are verified.
+       * The sending point is now waiting for the parcel to be delivered by the user.
+       * Change of dates might require paying for the package again (depends on the business flag).
+       * </pre>
+       */
+      RESERVED(2, 3),
+      /**
+       * <code>RESERVATION_EXPIRED = 4;</code>
+       *
+       * <pre>
+       * Either send or delivery point reservation has expired.
+       * </pre>
+       */
+      RESERVATION_EXPIRED(3, 4),
+      /**
+       * <code>HANDED_OVER = 5;</code>
+       *
+       * <pre>
+       * The parcel is delivered to the send point, either to the machine or postal office.
+       * (it's the automatic state if the SEND_FROM is an address).
+       * </pre>
+       */
+      HANDED_OVER(4, 5),
+      /**
+       * <code>EN_ROUTE = 6;</code>
+       */
+      EN_ROUTE(5, 6),
+      /**
+       * <code>PICKUP_READY = 7;</code>
+       *
+       * <pre>
+       * Customer can now pickup the package from the primary (defined in the initial request)
+       * pickup point.
+       * </pre>
+       */
+      PICKUP_READY(6, 7),
+      /**
+       * <code>PICKED_UP = 8;</code>
+       *
+       * <pre>
+       * Client has picked up the parcel. We're done.
+       * </pre>
+       */
+      PICKED_UP(7, 8),
+      /**
+       * <code>OVERDUE = 9;</code>
+       *
+       * <pre>
+       * Time for the pickup is overdue. Courier will move the package to nearest post office.
+       * </pre>
+       */
+      OVERDUE(8, 9),
+      /**
+       * <code>OVERDUE_POST_OFFICE = 10;</code>
+       *
+       * <pre>
+       * The parcel is overdue and now is waiting for the client for pickup in the post office for N (n=14) days.
+       * After that, it will be returend to the sender (with sender paying for the return).
+       * NOTE: in case of missing communication from the logistics system, it might be the last state.
+       * </pre>
+       */
+      OVERDUE_POST_OFFICE(9, 10),
+      /**
+       * <code>SENDER_RETURN = 11;</code>
+       *
+       * <pre>
+       * In the process of returning back to sender.
+       * </pre>
+       */
+      SENDER_RETURN(10, 11),
+      /**
+       * <code>SENDER_PICKED_UP = 12;</code>
+       *
+       * <pre>
+       * Sender has picked up the package.
+       * </pre>
+       */
+      SENDER_PICKED_UP(11, 12),
+      /**
+       * <code>SENDER_ABANDONED = 13;</code>
+       *
+       * <pre>
+       * Sender has abandoned the package.
+       * </pre>
+       */
+      SENDER_ABANDONED(12, 13),
+      ;
+
+      /**
+       * <code>CREATED = 1;</code>
+       *
+       * <pre>
+       * The parcel is created in the system (has a code assigned), but either payment is not yet done,
+       * or one of send/delivery points are not yet verified.
+       * NOTE: payment and delivery point might be pre-set but they're just not verified yet.
+       * </pre>
+       */
+      public static final int CREATED_VALUE = 1;
+      /**
+       * <code>PAID = 2;</code>
+       *
+       * <pre>
+       * The parcel is paid.
+       * </pre>
+       */
+      public static final int PAID_VALUE = 2;
+      /**
+       * <code>RESERVED = 3;</code>
+       *
+       * <pre>
+       * Both send and delivery point (with dates) are verified.
+       * The sending point is now waiting for the parcel to be delivered by the user.
+       * Change of dates might require paying for the package again (depends on the business flag).
+       * </pre>
+       */
+      public static final int RESERVED_VALUE = 3;
+      /**
+       * <code>RESERVATION_EXPIRED = 4;</code>
+       *
+       * <pre>
+       * Either send or delivery point reservation has expired.
+       * </pre>
+       */
+      public static final int RESERVATION_EXPIRED_VALUE = 4;
+      /**
+       * <code>HANDED_OVER = 5;</code>
+       *
+       * <pre>
+       * The parcel is delivered to the send point, either to the machine or postal office.
+       * (it's the automatic state if the SEND_FROM is an address).
+       * </pre>
+       */
+      public static final int HANDED_OVER_VALUE = 5;
+      /**
+       * <code>EN_ROUTE = 6;</code>
+       */
+      public static final int EN_ROUTE_VALUE = 6;
+      /**
+       * <code>PICKUP_READY = 7;</code>
+       *
+       * <pre>
+       * Customer can now pickup the package from the primary (defined in the initial request)
+       * pickup point.
+       * </pre>
+       */
+      public static final int PICKUP_READY_VALUE = 7;
+      /**
+       * <code>PICKED_UP = 8;</code>
+       *
+       * <pre>
+       * Client has picked up the parcel. We're done.
+       * </pre>
+       */
+      public static final int PICKED_UP_VALUE = 8;
+      /**
+       * <code>OVERDUE = 9;</code>
+       *
+       * <pre>
+       * Time for the pickup is overdue. Courier will move the package to nearest post office.
+       * </pre>
+       */
+      public static final int OVERDUE_VALUE = 9;
+      /**
+       * <code>OVERDUE_POST_OFFICE = 10;</code>
+       *
+       * <pre>
+       * The parcel is overdue and now is waiting for the client for pickup in the post office for N (n=14) days.
+       * After that, it will be returend to the sender (with sender paying for the return).
+       * NOTE: in case of missing communication from the logistics system, it might be the last state.
+       * </pre>
+       */
+      public static final int OVERDUE_POST_OFFICE_VALUE = 10;
+      /**
+       * <code>SENDER_RETURN = 11;</code>
+       *
+       * <pre>
+       * In the process of returning back to sender.
+       * </pre>
+       */
+      public static final int SENDER_RETURN_VALUE = 11;
+      /**
+       * <code>SENDER_PICKED_UP = 12;</code>
+       *
+       * <pre>
+       * Sender has picked up the package.
+       * </pre>
+       */
+      public static final int SENDER_PICKED_UP_VALUE = 12;
+      /**
+       * <code>SENDER_ABANDONED = 13;</code>
+       *
+       * <pre>
+       * Sender has abandoned the package.
+       * </pre>
+       */
+      public static final int SENDER_ABANDONED_VALUE = 13;
+
+
+      public final int getNumber() { return value; }
+
+      public static State valueOf(int value) {
+        switch (value) {
+          case 1: return CREATED;
+          case 2: return PAID;
+          case 3: return RESERVED;
+          case 4: return RESERVATION_EXPIRED;
+          case 5: return HANDED_OVER;
+          case 6: return EN_ROUTE;
+          case 7: return PICKUP_READY;
+          case 8: return PICKED_UP;
+          case 9: return OVERDUE;
+          case 10: return OVERDUE_POST_OFFICE;
+          case 11: return SENDER_RETURN;
+          case 12: return SENDER_PICKED_UP;
+          case 13: return SENDER_ABANDONED;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<State>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static com.google.protobuf.Internal.EnumLiteMap<State>
+          internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<State>() {
+              public State findValueByNumber(int number) {
+                return State.valueOf(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        return getDescriptor().getValues().get(index);
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return com.zpaslab.lockerbox.LockerboxProtos.Parcel.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final State[] VALUES = values();
+
+      public static State valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int index;
+      private final int value;
+
+      private State(int index, int value) {
+        this.index = index;
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:lockerbox.Parcel.State)
+    }
+
+    /**
+     * Protobuf enum {@code lockerbox.Parcel.Size}
+     */
+    public enum Size
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>A = 1;</code>
+       */
+      A(0, 1),
+      /**
+       * <code>B = 2;</code>
+       */
+      B(1, 2),
+      /**
+       * <code>C = 3;</code>
+       */
+      C(2, 3),
+      /**
+       * <code>D = 4;</code>
+       */
+      D(3, 4),
+      ;
+
+      /**
+       * <code>A = 1;</code>
+       */
+      public static final int A_VALUE = 1;
+      /**
+       * <code>B = 2;</code>
+       */
+      public static final int B_VALUE = 2;
+      /**
+       * <code>C = 3;</code>
+       */
+      public static final int C_VALUE = 3;
+      /**
+       * <code>D = 4;</code>
+       */
+      public static final int D_VALUE = 4;
+
+
+      public final int getNumber() { return value; }
+
+      public static Size valueOf(int value) {
+        switch (value) {
+          case 1: return A;
+          case 2: return B;
+          case 3: return C;
+          case 4: return D;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<Size>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static com.google.protobuf.Internal.EnumLiteMap<Size>
+          internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<Size>() {
+              public Size findValueByNumber(int number) {
+                return Size.valueOf(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        return getDescriptor().getValues().get(index);
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return com.zpaslab.lockerbox.LockerboxProtos.Parcel.getDescriptor().getEnumTypes().get(1);
+      }
+
+      private static final Size[] VALUES = values();
+
+      public static Size valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int index;
+      private final int value;
+
+      private Size(int index, int value) {
+        this.index = index;
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:lockerbox.Parcel.Size)
+    }
+
+    private int bitField0_;
+    public static final int HREF_FIELD_NUMBER = 11;
+    private java.lang.Object href_;
+    /**
+     * <code>optional string href = 11;</code>
+     */
+    public boolean hasHref() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional string href = 11;</code>
+     */
+    public java.lang.String getHref() {
+      java.lang.Object ref = href_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          href_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string href = 11;</code>
+     */
+    public com.google.protobuf.ByteString
+        getHrefBytes() {
+      java.lang.Object ref = href_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        href_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CODE_FIELD_NUMBER = 1;
+    private java.lang.Object code_;
+    /**
+     * <code>optional string code = 1;</code>
+     */
+    public boolean hasCode() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional string code = 1;</code>
+     */
+    public java.lang.String getCode() {
+      java.lang.Object ref = code_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          code_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string code = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getCodeBytes() {
+      java.lang.Object ref = code_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        code_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int STATE_FIELD_NUMBER = 2;
+    private com.zpaslab.lockerbox.LockerboxProtos.Parcel.State state_;
+    /**
+     * <code>optional .lockerbox.Parcel.State state = 2;</code>
+     */
+    public boolean hasState() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>optional .lockerbox.Parcel.State state = 2;</code>
+     */
+    public com.zpaslab.lockerbox.LockerboxProtos.Parcel.State getState() {
+      return state_;
+    }
+
+    public static final int SIZE_FIELD_NUMBER = 3;
+    private com.zpaslab.lockerbox.LockerboxProtos.Parcel.Size size_;
+    /**
+     * <code>optional .lockerbox.Parcel.Size size = 3;</code>
+     */
+    public boolean hasSize() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
+    }
+    /**
+     * <code>optional .lockerbox.Parcel.Size size = 3;</code>
+     */
+    public com.zpaslab.lockerbox.LockerboxProtos.Parcel.Size getSize() {
+      return size_;
+    }
+
+    public static final int WEIGHT_FIELD_NUMBER = 4;
+    private com.zpaslab.lockerbox.LockerboxProtos.Weight weight_;
+    /**
+     * <code>optional .lockerbox.Weight weight = 4;</code>
+     */
+    public boolean hasWeight() {
+      return ((bitField0_ & 0x00000010) == 0x00000010);
+    }
+    /**
+     * <code>optional .lockerbox.Weight weight = 4;</code>
+     */
+    public com.zpaslab.lockerbox.LockerboxProtos.Weight getWeight() {
+      return weight_;
+    }
+    /**
+     * <code>optional .lockerbox.Weight weight = 4;</code>
+     */
+    public com.zpaslab.lockerbox.LockerboxProtos.WeightOrBuilder getWeightOrBuilder() {
+      return weight_;
+    }
+
+    public static final int SENDER_FIELD_NUMBER = 5;
+    private com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint sender_;
+    /**
+     * <code>optional .lockerbox.DeliveryPoint sender = 5;</code>
+     */
+    public boolean hasSender() {
+      return ((bitField0_ & 0x00000020) == 0x00000020);
+    }
+    /**
+     * <code>optional .lockerbox.DeliveryPoint sender = 5;</code>
+     */
+    public com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint getSender() {
+      return sender_;
+    }
+    /**
+     * <code>optional .lockerbox.DeliveryPoint sender = 5;</code>
+     */
+    public com.zpaslab.lockerbox.LockerboxProtos.DeliveryPointOrBuilder getSenderOrBuilder() {
+      return sender_;
+    }
+
+    public static final int RECEIVER_FIELD_NUMBER = 6;
+    private com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint receiver_;
+    /**
+     * <code>optional .lockerbox.DeliveryPoint receiver = 6;</code>
+     */
+    public boolean hasReceiver() {
+      return ((bitField0_ & 0x00000040) == 0x00000040);
+    }
+    /**
+     * <code>optional .lockerbox.DeliveryPoint receiver = 6;</code>
+     */
+    public com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint getReceiver() {
+      return receiver_;
+    }
+    /**
+     * <code>optional .lockerbox.DeliveryPoint receiver = 6;</code>
+     */
+    public com.zpaslab.lockerbox.LockerboxProtos.DeliveryPointOrBuilder getReceiverOrBuilder() {
+      return receiver_;
+    }
+
+    public static final int SHIPMENT_FIELD_NUMBER = 7;
+    private com.zpaslab.lockerbox.LockerboxProtos.Shipment shipment_;
+    /**
+     * <code>optional .lockerbox.Shipment shipment = 7;</code>
+     */
+    public boolean hasShipment() {
+      return ((bitField0_ & 0x00000080) == 0x00000080);
+    }
+    /**
+     * <code>optional .lockerbox.Shipment shipment = 7;</code>
+     */
+    public com.zpaslab.lockerbox.LockerboxProtos.Shipment getShipment() {
+      return shipment_;
+    }
+    /**
+     * <code>optional .lockerbox.Shipment shipment = 7;</code>
+     */
+    public com.zpaslab.lockerbox.LockerboxProtos.ShipmentOrBuilder getShipmentOrBuilder() {
+      return shipment_;
+    }
+
+    public static final int SENDER_CHARGES_FIELD_NUMBER = 8;
+    private com.zpaslab.lockerbox.LockerboxProtos.Charges senderCharges_;
+    /**
+     * <code>optional .lockerbox.Charges sender_charges = 8;</code>
+     */
+    public boolean hasSenderCharges() {
+      return ((bitField0_ & 0x00000100) == 0x00000100);
+    }
+    /**
+     * <code>optional .lockerbox.Charges sender_charges = 8;</code>
+     */
+    public com.zpaslab.lockerbox.LockerboxProtos.Charges getSenderCharges() {
+      return senderCharges_;
+    }
+    /**
+     * <code>optional .lockerbox.Charges sender_charges = 8;</code>
+     */
+    public com.zpaslab.lockerbox.LockerboxProtos.ChargesOrBuilder getSenderChargesOrBuilder() {
+      return senderCharges_;
+    }
+
+    public static final int RECEIVER_CHARGES_FIELD_NUMBER = 9;
+    private com.zpaslab.lockerbox.LockerboxProtos.Charges receiverCharges_;
+    /**
+     * <code>optional .lockerbox.Charges receiver_charges = 9;</code>
+     *
+     * <pre>
+     * NOTE: In receiver_charges, payment must be empty.
+     * FIXME(mateuszc): add validation in code for the above requirement
+     * </pre>
+     */
+    public boolean hasReceiverCharges() {
+      return ((bitField0_ & 0x00000200) == 0x00000200);
+    }
+    /**
+     * <code>optional .lockerbox.Charges receiver_charges = 9;</code>
+     *
+     * <pre>
+     * NOTE: In receiver_charges, payment must be empty.
+     * FIXME(mateuszc): add validation in code for the above requirement
+     * </pre>
+     */
+    public com.zpaslab.lockerbox.LockerboxProtos.Charges getReceiverCharges() {
+      return receiverCharges_;
+    }
+    /**
+     * <code>optional .lockerbox.Charges receiver_charges = 9;</code>
+     *
+     * <pre>
+     * NOTE: In receiver_charges, payment must be empty.
+     * FIXME(mateuszc): add validation in code for the above requirement
+     * </pre>
+     */
+    public com.zpaslab.lockerbox.LockerboxProtos.ChargesOrBuilder getReceiverChargesOrBuilder() {
+      return receiverCharges_;
+    }
+
+    public static final int PROP_FIELD_NUMBER = 10;
+    private java.util.List<com.zpaslab.lockerbox.LockerboxProtos.Property> prop_;
+    /**
+     * <code>repeated .lockerbox.Property prop = 10;</code>
+     */
+    public java.util.List<com.zpaslab.lockerbox.LockerboxProtos.Property> getPropList() {
+      return prop_;
+    }
+    /**
+     * <code>repeated .lockerbox.Property prop = 10;</code>
+     */
+    public java.util.List<? extends com.zpaslab.lockerbox.LockerboxProtos.PropertyOrBuilder> 
+        getPropOrBuilderList() {
+      return prop_;
+    }
+    /**
+     * <code>repeated .lockerbox.Property prop = 10;</code>
+     */
+    public int getPropCount() {
+      return prop_.size();
+    }
+    /**
+     * <code>repeated .lockerbox.Property prop = 10;</code>
+     */
+    public com.zpaslab.lockerbox.LockerboxProtos.Property getProp(int index) {
+      return prop_.get(index);
+    }
+    /**
+     * <code>repeated .lockerbox.Property prop = 10;</code>
+     */
+    public com.zpaslab.lockerbox.LockerboxProtos.PropertyOrBuilder getPropOrBuilder(
+        int index) {
+      return prop_.get(index);
+    }
+
+    private void initFields() {
+      href_ = "";
+      code_ = "";
+      state_ = com.zpaslab.lockerbox.LockerboxProtos.Parcel.State.CREATED;
+      size_ = com.zpaslab.lockerbox.LockerboxProtos.Parcel.Size.A;
+      weight_ = com.zpaslab.lockerbox.LockerboxProtos.Weight.getDefaultInstance();
+      sender_ = com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.getDefaultInstance();
+      receiver_ = com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.getDefaultInstance();
+      shipment_ = com.zpaslab.lockerbox.LockerboxProtos.Shipment.getDefaultInstance();
+      senderCharges_ = com.zpaslab.lockerbox.LockerboxProtos.Charges.getDefaultInstance();
+      receiverCharges_ = com.zpaslab.lockerbox.LockerboxProtos.Charges.getDefaultInstance();
+      prop_ = java.util.Collections.emptyList();
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeBytes(1, getCodeBytes());
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeEnum(2, state_.getNumber());
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        output.writeEnum(3, size_.getNumber());
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        output.writeMessage(4, weight_);
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        output.writeMessage(5, sender_);
+      }
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        output.writeMessage(6, receiver_);
+      }
+      if (((bitField0_ & 0x00000080) == 0x00000080)) {
+        output.writeMessage(7, shipment_);
+      }
+      if (((bitField0_ & 0x00000100) == 0x00000100)) {
+        output.writeMessage(8, senderCharges_);
+      }
+      if (((bitField0_ & 0x00000200) == 0x00000200)) {
+        output.writeMessage(9, receiverCharges_);
+      }
+      for (int i = 0; i < prop_.size(); i++) {
+        output.writeMessage(10, prop_.get(i));
+      }
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeBytes(11, getHrefBytes());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, getCodeBytes());
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(2, state_.getNumber());
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(3, size_.getNumber());
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, weight_);
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, sender_);
+      }
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, receiver_);
+      }
+      if (((bitField0_ & 0x00000080) == 0x00000080)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, shipment_);
+      }
+      if (((bitField0_ & 0x00000100) == 0x00000100)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(8, senderCharges_);
+      }
+      if (((bitField0_ & 0x00000200) == 0x00000200)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(9, receiverCharges_);
+      }
+      for (int i = 0; i < prop_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(10, prop_.get(i));
+      }
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(11, getHrefBytes());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static com.zpaslab.lockerbox.LockerboxProtos.Parcel parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.zpaslab.lockerbox.LockerboxProtos.Parcel parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.zpaslab.lockerbox.LockerboxProtos.Parcel parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.zpaslab.lockerbox.LockerboxProtos.Parcel parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.zpaslab.lockerbox.LockerboxProtos.Parcel parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.zpaslab.lockerbox.LockerboxProtos.Parcel parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.zpaslab.lockerbox.LockerboxProtos.Parcel parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.zpaslab.lockerbox.LockerboxProtos.Parcel parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.zpaslab.lockerbox.LockerboxProtos.Parcel parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.zpaslab.lockerbox.LockerboxProtos.Parcel parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(com.zpaslab.lockerbox.LockerboxProtos.Parcel prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code lockerbox.Parcel}
+     *
+     * <pre>
+     * Single parcel / package represents either existing or yet-to-be existing physical package.
+     * </pre>
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:lockerbox.Parcel)
+        com.zpaslab.lockerbox.LockerboxProtos.ParcelOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.zpaslab.lockerbox.LockerboxProtos.internal_static_lockerbox_Parcel_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.zpaslab.lockerbox.LockerboxProtos.internal_static_lockerbox_Parcel_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.zpaslab.lockerbox.LockerboxProtos.Parcel.class, com.zpaslab.lockerbox.LockerboxProtos.Parcel.Builder.class);
+      }
+
+      // Construct using com.zpaslab.lockerbox.LockerboxProtos.Parcel.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getWeightFieldBuilder();
+          getSenderFieldBuilder();
+          getReceiverFieldBuilder();
+          getShipmentFieldBuilder();
+          getSenderChargesFieldBuilder();
+          getReceiverChargesFieldBuilder();
+          getPropFieldBuilder();
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        href_ = "";
+        bitField0_ = (bitField0_ & ~0x00000001);
+        code_ = "";
+        bitField0_ = (bitField0_ & ~0x00000002);
+        state_ = com.zpaslab.lockerbox.LockerboxProtos.Parcel.State.CREATED;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        size_ = com.zpaslab.lockerbox.LockerboxProtos.Parcel.Size.A;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        if (weightBuilder_ == null) {
+          weight_ = com.zpaslab.lockerbox.LockerboxProtos.Weight.getDefaultInstance();
+        } else {
+          weightBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000010);
+        if (senderBuilder_ == null) {
+          sender_ = com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.getDefaultInstance();
+        } else {
+          senderBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000020);
+        if (receiverBuilder_ == null) {
+          receiver_ = com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.getDefaultInstance();
+        } else {
+          receiverBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000040);
+        if (shipmentBuilder_ == null) {
+          shipment_ = com.zpaslab.lockerbox.LockerboxProtos.Shipment.getDefaultInstance();
+        } else {
+          shipmentBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000080);
+        if (senderChargesBuilder_ == null) {
+          senderCharges_ = com.zpaslab.lockerbox.LockerboxProtos.Charges.getDefaultInstance();
+        } else {
+          senderChargesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000100);
+        if (receiverChargesBuilder_ == null) {
+          receiverCharges_ = com.zpaslab.lockerbox.LockerboxProtos.Charges.getDefaultInstance();
+        } else {
+          receiverChargesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000200);
+        if (propBuilder_ == null) {
+          prop_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000400);
+        } else {
+          propBuilder_.clear();
+        }
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.zpaslab.lockerbox.LockerboxProtos.internal_static_lockerbox_Parcel_descriptor;
+      }
+
+      public com.zpaslab.lockerbox.LockerboxProtos.Parcel getDefaultInstanceForType() {
+        return com.zpaslab.lockerbox.LockerboxProtos.Parcel.getDefaultInstance();
+      }
+
+      public com.zpaslab.lockerbox.LockerboxProtos.Parcel build() {
+        com.zpaslab.lockerbox.LockerboxProtos.Parcel result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.zpaslab.lockerbox.LockerboxProtos.Parcel buildPartial() {
+        com.zpaslab.lockerbox.LockerboxProtos.Parcel result = new com.zpaslab.lockerbox.LockerboxProtos.Parcel(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.href_ = href_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.code_ = code_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.state_ = state_;
+        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        result.size_ = size_;
+        if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
+          to_bitField0_ |= 0x00000010;
+        }
+        if (weightBuilder_ == null) {
+          result.weight_ = weight_;
+        } else {
+          result.weight_ = weightBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
+          to_bitField0_ |= 0x00000020;
+        }
+        if (senderBuilder_ == null) {
+          result.sender_ = sender_;
+        } else {
+          result.sender_ = senderBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000040) == 0x00000040)) {
+          to_bitField0_ |= 0x00000040;
+        }
+        if (receiverBuilder_ == null) {
+          result.receiver_ = receiver_;
+        } else {
+          result.receiver_ = receiverBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000080) == 0x00000080)) {
+          to_bitField0_ |= 0x00000080;
+        }
+        if (shipmentBuilder_ == null) {
+          result.shipment_ = shipment_;
+        } else {
+          result.shipment_ = shipmentBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000100) == 0x00000100)) {
+          to_bitField0_ |= 0x00000100;
+        }
+        if (senderChargesBuilder_ == null) {
+          result.senderCharges_ = senderCharges_;
+        } else {
+          result.senderCharges_ = senderChargesBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000200) == 0x00000200)) {
+          to_bitField0_ |= 0x00000200;
+        }
+        if (receiverChargesBuilder_ == null) {
+          result.receiverCharges_ = receiverCharges_;
+        } else {
+          result.receiverCharges_ = receiverChargesBuilder_.build();
+        }
+        if (propBuilder_ == null) {
+          if (((bitField0_ & 0x00000400) == 0x00000400)) {
+            prop_ = java.util.Collections.unmodifiableList(prop_);
+            bitField0_ = (bitField0_ & ~0x00000400);
+          }
+          result.prop_ = prop_;
+        } else {
+          result.prop_ = propBuilder_.build();
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.zpaslab.lockerbox.LockerboxProtos.Parcel) {
+          return mergeFrom((com.zpaslab.lockerbox.LockerboxProtos.Parcel)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.zpaslab.lockerbox.LockerboxProtos.Parcel other) {
+        if (other == com.zpaslab.lockerbox.LockerboxProtos.Parcel.getDefaultInstance()) return this;
+        if (other.hasHref()) {
+          bitField0_ |= 0x00000001;
+          href_ = other.href_;
+          onChanged();
+        }
+        if (other.hasCode()) {
+          bitField0_ |= 0x00000002;
+          code_ = other.code_;
+          onChanged();
+        }
+        if (other.hasState()) {
+          setState(other.getState());
+        }
+        if (other.hasSize()) {
+          setSize(other.getSize());
+        }
+        if (other.hasWeight()) {
+          mergeWeight(other.getWeight());
+        }
+        if (other.hasSender()) {
+          mergeSender(other.getSender());
+        }
+        if (other.hasReceiver()) {
+          mergeReceiver(other.getReceiver());
+        }
+        if (other.hasShipment()) {
+          mergeShipment(other.getShipment());
+        }
+        if (other.hasSenderCharges()) {
+          mergeSenderCharges(other.getSenderCharges());
+        }
+        if (other.hasReceiverCharges()) {
+          mergeReceiverCharges(other.getReceiverCharges());
+        }
+        if (propBuilder_ == null) {
+          if (!other.prop_.isEmpty()) {
+            if (prop_.isEmpty()) {
+              prop_ = other.prop_;
+              bitField0_ = (bitField0_ & ~0x00000400);
+            } else {
+              ensurePropIsMutable();
+              prop_.addAll(other.prop_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.prop_.isEmpty()) {
+            if (propBuilder_.isEmpty()) {
+              propBuilder_.dispose();
+              propBuilder_ = null;
+              prop_ = other.prop_;
+              bitField0_ = (bitField0_ & ~0x00000400);
+              propBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   getPropFieldBuilder() : null;
+            } else {
+              propBuilder_.addAllMessages(other.prop_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.zpaslab.lockerbox.LockerboxProtos.Parcel parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.zpaslab.lockerbox.LockerboxProtos.Parcel) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object href_ = "";
+      /**
+       * <code>optional string href = 11;</code>
+       */
+      public boolean hasHref() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional string href = 11;</code>
+       */
+      public java.lang.String getHref() {
+        java.lang.Object ref = href_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            href_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string href = 11;</code>
+       */
+      public com.google.protobuf.ByteString
+          getHrefBytes() {
+        java.lang.Object ref = href_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          href_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string href = 11;</code>
+       */
+      public Builder setHref(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        href_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string href = 11;</code>
+       */
+      public Builder clearHref() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        href_ = getDefaultInstance().getHref();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string href = 11;</code>
+       */
+      public Builder setHrefBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        href_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object code_ = "";
+      /**
+       * <code>optional string code = 1;</code>
+       */
+      public boolean hasCode() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional string code = 1;</code>
+       */
+      public java.lang.String getCode() {
+        java.lang.Object ref = code_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            code_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string code = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getCodeBytes() {
+        java.lang.Object ref = code_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          code_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string code = 1;</code>
+       */
+      public Builder setCode(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        code_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string code = 1;</code>
+       */
+      public Builder clearCode() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        code_ = getDefaultInstance().getCode();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string code = 1;</code>
+       */
+      public Builder setCodeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        code_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.zpaslab.lockerbox.LockerboxProtos.Parcel.State state_ = com.zpaslab.lockerbox.LockerboxProtos.Parcel.State.CREATED;
+      /**
+       * <code>optional .lockerbox.Parcel.State state = 2;</code>
+       */
+      public boolean hasState() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional .lockerbox.Parcel.State state = 2;</code>
+       */
+      public com.zpaslab.lockerbox.LockerboxProtos.Parcel.State getState() {
+        return state_;
+      }
+      /**
+       * <code>optional .lockerbox.Parcel.State state = 2;</code>
+       */
+      public Builder setState(com.zpaslab.lockerbox.LockerboxProtos.Parcel.State value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000004;
+        state_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .lockerbox.Parcel.State state = 2;</code>
+       */
+      public Builder clearState() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        state_ = com.zpaslab.lockerbox.LockerboxProtos.Parcel.State.CREATED;
+        onChanged();
+        return this;
+      }
+
+      private com.zpaslab.lockerbox.LockerboxProtos.Parcel.Size size_ = com.zpaslab.lockerbox.LockerboxProtos.Parcel.Size.A;
+      /**
+       * <code>optional .lockerbox.Parcel.Size size = 3;</code>
+       */
+      public boolean hasSize() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>optional .lockerbox.Parcel.Size size = 3;</code>
+       */
+      public com.zpaslab.lockerbox.LockerboxProtos.Parcel.Size getSize() {
+        return size_;
+      }
+      /**
+       * <code>optional .lockerbox.Parcel.Size size = 3;</code>
+       */
+      public Builder setSize(com.zpaslab.lockerbox.LockerboxProtos.Parcel.Size value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000008;
+        size_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .lockerbox.Parcel.Size size = 3;</code>
+       */
+      public Builder clearSize() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        size_ = com.zpaslab.lockerbox.LockerboxProtos.Parcel.Size.A;
+        onChanged();
+        return this;
+      }
+
+      private com.zpaslab.lockerbox.LockerboxProtos.Weight weight_ = com.zpaslab.lockerbox.LockerboxProtos.Weight.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          com.zpaslab.lockerbox.LockerboxProtos.Weight, com.zpaslab.lockerbox.LockerboxProtos.Weight.Builder, com.zpaslab.lockerbox.LockerboxProtos.WeightOrBuilder> weightBuilder_;
+      /**
+       * <code>optional .lockerbox.Weight weight = 4;</code>
+       */
+      public boolean hasWeight() {
+        return ((bitField0_ & 0x00000010) == 0x00000010);
+      }
+      /**
+       * <code>optional .lockerbox.Weight weight = 4;</code>
+       */
+      public com.zpaslab.lockerbox.LockerboxProtos.Weight getWeight() {
+        if (weightBuilder_ == null) {
+          return weight_;
+        } else {
+          return weightBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .lockerbox.Weight weight = 4;</code>
+       */
+      public Builder setWeight(com.zpaslab.lockerbox.LockerboxProtos.Weight value) {
+        if (weightBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          weight_ = value;
+          onChanged();
+        } else {
+          weightBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000010;
+        return this;
+      }
+      /**
+       * <code>optional .lockerbox.Weight weight = 4;</code>
+       */
+      public Builder setWeight(
+          com.zpaslab.lockerbox.LockerboxProtos.Weight.Builder builderForValue) {
+        if (weightBuilder_ == null) {
+          weight_ = builderForValue.build();
+          onChanged();
+        } else {
+          weightBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000010;
+        return this;
+      }
+      /**
+       * <code>optional .lockerbox.Weight weight = 4;</code>
+       */
+      public Builder mergeWeight(com.zpaslab.lockerbox.LockerboxProtos.Weight value) {
+        if (weightBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) == 0x00000010) &&
+              weight_ != com.zpaslab.lockerbox.LockerboxProtos.Weight.getDefaultInstance()) {
+            weight_ =
+              com.zpaslab.lockerbox.LockerboxProtos.Weight.newBuilder(weight_).mergeFrom(value).buildPartial();
+          } else {
+            weight_ = value;
+          }
+          onChanged();
+        } else {
+          weightBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000010;
+        return this;
+      }
+      /**
+       * <code>optional .lockerbox.Weight weight = 4;</code>
+       */
+      public Builder clearWeight() {
+        if (weightBuilder_ == null) {
+          weight_ = com.zpaslab.lockerbox.LockerboxProtos.Weight.getDefaultInstance();
+          onChanged();
+        } else {
+          weightBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000010);
+        return this;
+      }
+      /**
+       * <code>optional .lockerbox.Weight weight = 4;</code>
+       */
+      public com.zpaslab.lockerbox.LockerboxProtos.Weight.Builder getWeightBuilder() {
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return getWeightFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .lockerbox.Weight weight = 4;</code>
+       */
+      public com.zpaslab.lockerbox.LockerboxProtos.WeightOrBuilder getWeightOrBuilder() {
+        if (weightBuilder_ != null) {
+          return weightBuilder_.getMessageOrBuilder();
+        } else {
+          return weight_;
+        }
+      }
+      /**
+       * <code>optional .lockerbox.Weight weight = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          com.zpaslab.lockerbox.LockerboxProtos.Weight, com.zpaslab.lockerbox.LockerboxProtos.Weight.Builder, com.zpaslab.lockerbox.LockerboxProtos.WeightOrBuilder> 
+          getWeightFieldBuilder() {
+        if (weightBuilder_ == null) {
+          weightBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              com.zpaslab.lockerbox.LockerboxProtos.Weight, com.zpaslab.lockerbox.LockerboxProtos.Weight.Builder, com.zpaslab.lockerbox.LockerboxProtos.WeightOrBuilder>(
+                  getWeight(),
+                  getParentForChildren(),
+                  isClean());
+          weight_ = null;
+        }
+        return weightBuilder_;
+      }
+
+      private com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint sender_ = com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint, com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Builder, com.zpaslab.lockerbox.LockerboxProtos.DeliveryPointOrBuilder> senderBuilder_;
+      /**
+       * <code>optional .lockerbox.DeliveryPoint sender = 5;</code>
+       */
+      public boolean hasSender() {
+        return ((bitField0_ & 0x00000020) == 0x00000020);
+      }
+      /**
+       * <code>optional .lockerbox.DeliveryPoint sender = 5;</code>
+       */
+      public com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint getSender() {
+        if (senderBuilder_ == null) {
+          return sender_;
+        } else {
+          return senderBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .lockerbox.DeliveryPoint sender = 5;</code>
+       */
+      public Builder setSender(com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint value) {
+        if (senderBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          sender_ = value;
+          onChanged();
+        } else {
+          senderBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000020;
+        return this;
+      }
+      /**
+       * <code>optional .lockerbox.DeliveryPoint sender = 5;</code>
+       */
+      public Builder setSender(
+          com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Builder builderForValue) {
+        if (senderBuilder_ == null) {
+          sender_ = builderForValue.build();
+          onChanged();
+        } else {
+          senderBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000020;
+        return this;
+      }
+      /**
+       * <code>optional .lockerbox.DeliveryPoint sender = 5;</code>
+       */
+      public Builder mergeSender(com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint value) {
+        if (senderBuilder_ == null) {
+          if (((bitField0_ & 0x00000020) == 0x00000020) &&
+              sender_ != com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.getDefaultInstance()) {
+            sender_ =
+              com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.newBuilder(sender_).mergeFrom(value).buildPartial();
+          } else {
+            sender_ = value;
+          }
+          onChanged();
+        } else {
+          senderBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000020;
+        return this;
+      }
+      /**
+       * <code>optional .lockerbox.DeliveryPoint sender = 5;</code>
+       */
+      public Builder clearSender() {
+        if (senderBuilder_ == null) {
+          sender_ = com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.getDefaultInstance();
+          onChanged();
+        } else {
+          senderBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000020);
+        return this;
+      }
+      /**
+       * <code>optional .lockerbox.DeliveryPoint sender = 5;</code>
+       */
+      public com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Builder getSenderBuilder() {
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return getSenderFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .lockerbox.DeliveryPoint sender = 5;</code>
+       */
+      public com.zpaslab.lockerbox.LockerboxProtos.DeliveryPointOrBuilder getSenderOrBuilder() {
+        if (senderBuilder_ != null) {
+          return senderBuilder_.getMessageOrBuilder();
+        } else {
+          return sender_;
+        }
+      }
+      /**
+       * <code>optional .lockerbox.DeliveryPoint sender = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint, com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Builder, com.zpaslab.lockerbox.LockerboxProtos.DeliveryPointOrBuilder> 
+          getSenderFieldBuilder() {
+        if (senderBuilder_ == null) {
+          senderBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint, com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Builder, com.zpaslab.lockerbox.LockerboxProtos.DeliveryPointOrBuilder>(
+                  getSender(),
+                  getParentForChildren(),
+                  isClean());
+          sender_ = null;
+        }
+        return senderBuilder_;
+      }
+
+      private com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint receiver_ = com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint, com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Builder, com.zpaslab.lockerbox.LockerboxProtos.DeliveryPointOrBuilder> receiverBuilder_;
+      /**
+       * <code>optional .lockerbox.DeliveryPoint receiver = 6;</code>
+       */
+      public boolean hasReceiver() {
+        return ((bitField0_ & 0x00000040) == 0x00000040);
+      }
+      /**
+       * <code>optional .lockerbox.DeliveryPoint receiver = 6;</code>
+       */
+      public com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint getReceiver() {
+        if (receiverBuilder_ == null) {
+          return receiver_;
+        } else {
+          return receiverBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .lockerbox.DeliveryPoint receiver = 6;</code>
+       */
+      public Builder setReceiver(com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint value) {
+        if (receiverBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          receiver_ = value;
+          onChanged();
+        } else {
+          receiverBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000040;
+        return this;
+      }
+      /**
+       * <code>optional .lockerbox.DeliveryPoint receiver = 6;</code>
+       */
+      public Builder setReceiver(
+          com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Builder builderForValue) {
+        if (receiverBuilder_ == null) {
+          receiver_ = builderForValue.build();
+          onChanged();
+        } else {
+          receiverBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000040;
+        return this;
+      }
+      /**
+       * <code>optional .lockerbox.DeliveryPoint receiver = 6;</code>
+       */
+      public Builder mergeReceiver(com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint value) {
+        if (receiverBuilder_ == null) {
+          if (((bitField0_ & 0x00000040) == 0x00000040) &&
+              receiver_ != com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.getDefaultInstance()) {
+            receiver_ =
+              com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.newBuilder(receiver_).mergeFrom(value).buildPartial();
+          } else {
+            receiver_ = value;
+          }
+          onChanged();
+        } else {
+          receiverBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000040;
+        return this;
+      }
+      /**
+       * <code>optional .lockerbox.DeliveryPoint receiver = 6;</code>
+       */
+      public Builder clearReceiver() {
+        if (receiverBuilder_ == null) {
+          receiver_ = com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.getDefaultInstance();
+          onChanged();
+        } else {
+          receiverBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000040);
+        return this;
+      }
+      /**
+       * <code>optional .lockerbox.DeliveryPoint receiver = 6;</code>
+       */
+      public com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Builder getReceiverBuilder() {
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return getReceiverFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .lockerbox.DeliveryPoint receiver = 6;</code>
+       */
+      public com.zpaslab.lockerbox.LockerboxProtos.DeliveryPointOrBuilder getReceiverOrBuilder() {
+        if (receiverBuilder_ != null) {
+          return receiverBuilder_.getMessageOrBuilder();
+        } else {
+          return receiver_;
+        }
+      }
+      /**
+       * <code>optional .lockerbox.DeliveryPoint receiver = 6;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint, com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Builder, com.zpaslab.lockerbox.LockerboxProtos.DeliveryPointOrBuilder> 
+          getReceiverFieldBuilder() {
+        if (receiverBuilder_ == null) {
+          receiverBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint, com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Builder, com.zpaslab.lockerbox.LockerboxProtos.DeliveryPointOrBuilder>(
+                  getReceiver(),
+                  getParentForChildren(),
+                  isClean());
+          receiver_ = null;
+        }
+        return receiverBuilder_;
+      }
+
+      private com.zpaslab.lockerbox.LockerboxProtos.Shipment shipment_ = com.zpaslab.lockerbox.LockerboxProtos.Shipment.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          com.zpaslab.lockerbox.LockerboxProtos.Shipment, com.zpaslab.lockerbox.LockerboxProtos.Shipment.Builder, com.zpaslab.lockerbox.LockerboxProtos.ShipmentOrBuilder> shipmentBuilder_;
+      /**
+       * <code>optional .lockerbox.Shipment shipment = 7;</code>
+       */
+      public boolean hasShipment() {
+        return ((bitField0_ & 0x00000080) == 0x00000080);
+      }
+      /**
+       * <code>optional .lockerbox.Shipment shipment = 7;</code>
+       */
+      public com.zpaslab.lockerbox.LockerboxProtos.Shipment getShipment() {
+        if (shipmentBuilder_ == null) {
+          return shipment_;
+        } else {
+          return shipmentBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .lockerbox.Shipment shipment = 7;</code>
+       */
+      public Builder setShipment(com.zpaslab.lockerbox.LockerboxProtos.Shipment value) {
+        if (shipmentBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          shipment_ = value;
+          onChanged();
+        } else {
+          shipmentBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000080;
+        return this;
+      }
+      /**
+       * <code>optional .lockerbox.Shipment shipment = 7;</code>
+       */
+      public Builder setShipment(
+          com.zpaslab.lockerbox.LockerboxProtos.Shipment.Builder builderForValue) {
+        if (shipmentBuilder_ == null) {
+          shipment_ = builderForValue.build();
+          onChanged();
+        } else {
+          shipmentBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000080;
+        return this;
+      }
+      /**
+       * <code>optional .lockerbox.Shipment shipment = 7;</code>
+       */
+      public Builder mergeShipment(com.zpaslab.lockerbox.LockerboxProtos.Shipment value) {
+        if (shipmentBuilder_ == null) {
+          if (((bitField0_ & 0x00000080) == 0x00000080) &&
+              shipment_ != com.zpaslab.lockerbox.LockerboxProtos.Shipment.getDefaultInstance()) {
+            shipment_ =
+              com.zpaslab.lockerbox.LockerboxProtos.Shipment.newBuilder(shipment_).mergeFrom(value).buildPartial();
+          } else {
+            shipment_ = value;
+          }
+          onChanged();
+        } else {
+          shipmentBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000080;
+        return this;
+      }
+      /**
+       * <code>optional .lockerbox.Shipment shipment = 7;</code>
+       */
+      public Builder clearShipment() {
+        if (shipmentBuilder_ == null) {
+          shipment_ = com.zpaslab.lockerbox.LockerboxProtos.Shipment.getDefaultInstance();
+          onChanged();
+        } else {
+          shipmentBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000080);
+        return this;
+      }
+      /**
+       * <code>optional .lockerbox.Shipment shipment = 7;</code>
+       */
+      public com.zpaslab.lockerbox.LockerboxProtos.Shipment.Builder getShipmentBuilder() {
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return getShipmentFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .lockerbox.Shipment shipment = 7;</code>
+       */
+      public com.zpaslab.lockerbox.LockerboxProtos.ShipmentOrBuilder getShipmentOrBuilder() {
+        if (shipmentBuilder_ != null) {
+          return shipmentBuilder_.getMessageOrBuilder();
+        } else {
+          return shipment_;
+        }
+      }
+      /**
+       * <code>optional .lockerbox.Shipment shipment = 7;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          com.zpaslab.lockerbox.LockerboxProtos.Shipment, com.zpaslab.lockerbox.LockerboxProtos.Shipment.Builder, com.zpaslab.lockerbox.LockerboxProtos.ShipmentOrBuilder> 
+          getShipmentFieldBuilder() {
+        if (shipmentBuilder_ == null) {
+          shipmentBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              com.zpaslab.lockerbox.LockerboxProtos.Shipment, com.zpaslab.lockerbox.LockerboxProtos.Shipment.Builder, com.zpaslab.lockerbox.LockerboxProtos.ShipmentOrBuilder>(
+                  getShipment(),
+                  getParentForChildren(),
+                  isClean());
+          shipment_ = null;
+        }
+        return shipmentBuilder_;
+      }
+
+      private com.zpaslab.lockerbox.LockerboxProtos.Charges senderCharges_ = com.zpaslab.lockerbox.LockerboxProtos.Charges.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          com.zpaslab.lockerbox.LockerboxProtos.Charges, com.zpaslab.lockerbox.LockerboxProtos.Charges.Builder, com.zpaslab.lockerbox.LockerboxProtos.ChargesOrBuilder> senderChargesBuilder_;
+      /**
+       * <code>optional .lockerbox.Charges sender_charges = 8;</code>
+       */
+      public boolean hasSenderCharges() {
+        return ((bitField0_ & 0x00000100) == 0x00000100);
+      }
+      /**
+       * <code>optional .lockerbox.Charges sender_charges = 8;</code>
+       */
+      public com.zpaslab.lockerbox.LockerboxProtos.Charges getSenderCharges() {
+        if (senderChargesBuilder_ == null) {
+          return senderCharges_;
+        } else {
+          return senderChargesBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .lockerbox.Charges sender_charges = 8;</code>
+       */
+      public Builder setSenderCharges(com.zpaslab.lockerbox.LockerboxProtos.Charges value) {
+        if (senderChargesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          senderCharges_ = value;
+          onChanged();
+        } else {
+          senderChargesBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000100;
+        return this;
+      }
+      /**
+       * <code>optional .lockerbox.Charges sender_charges = 8;</code>
+       */
+      public Builder setSenderCharges(
+          com.zpaslab.lockerbox.LockerboxProtos.Charges.Builder builderForValue) {
+        if (senderChargesBuilder_ == null) {
+          senderCharges_ = builderForValue.build();
+          onChanged();
+        } else {
+          senderChargesBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000100;
+        return this;
+      }
+      /**
+       * <code>optional .lockerbox.Charges sender_charges = 8;</code>
+       */
+      public Builder mergeSenderCharges(com.zpaslab.lockerbox.LockerboxProtos.Charges value) {
+        if (senderChargesBuilder_ == null) {
+          if (((bitField0_ & 0x00000100) == 0x00000100) &&
+              senderCharges_ != com.zpaslab.lockerbox.LockerboxProtos.Charges.getDefaultInstance()) {
+            senderCharges_ =
+              com.zpaslab.lockerbox.LockerboxProtos.Charges.newBuilder(senderCharges_).mergeFrom(value).buildPartial();
+          } else {
+            senderCharges_ = value;
+          }
+          onChanged();
+        } else {
+          senderChargesBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000100;
+        return this;
+      }
+      /**
+       * <code>optional .lockerbox.Charges sender_charges = 8;</code>
+       */
+      public Builder clearSenderCharges() {
+        if (senderChargesBuilder_ == null) {
+          senderCharges_ = com.zpaslab.lockerbox.LockerboxProtos.Charges.getDefaultInstance();
+          onChanged();
+        } else {
+          senderChargesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000100);
+        return this;
+      }
+      /**
+       * <code>optional .lockerbox.Charges sender_charges = 8;</code>
+       */
+      public com.zpaslab.lockerbox.LockerboxProtos.Charges.Builder getSenderChargesBuilder() {
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return getSenderChargesFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .lockerbox.Charges sender_charges = 8;</code>
+       */
+      public com.zpaslab.lockerbox.LockerboxProtos.ChargesOrBuilder getSenderChargesOrBuilder() {
+        if (senderChargesBuilder_ != null) {
+          return senderChargesBuilder_.getMessageOrBuilder();
+        } else {
+          return senderCharges_;
+        }
+      }
+      /**
+       * <code>optional .lockerbox.Charges sender_charges = 8;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          com.zpaslab.lockerbox.LockerboxProtos.Charges, com.zpaslab.lockerbox.LockerboxProtos.Charges.Builder, com.zpaslab.lockerbox.LockerboxProtos.ChargesOrBuilder> 
+          getSenderChargesFieldBuilder() {
+        if (senderChargesBuilder_ == null) {
+          senderChargesBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              com.zpaslab.lockerbox.LockerboxProtos.Charges, com.zpaslab.lockerbox.LockerboxProtos.Charges.Builder, com.zpaslab.lockerbox.LockerboxProtos.ChargesOrBuilder>(
+                  getSenderCharges(),
+                  getParentForChildren(),
+                  isClean());
+          senderCharges_ = null;
+        }
+        return senderChargesBuilder_;
+      }
+
+      private com.zpaslab.lockerbox.LockerboxProtos.Charges receiverCharges_ = com.zpaslab.lockerbox.LockerboxProtos.Charges.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          com.zpaslab.lockerbox.LockerboxProtos.Charges, com.zpaslab.lockerbox.LockerboxProtos.Charges.Builder, com.zpaslab.lockerbox.LockerboxProtos.ChargesOrBuilder> receiverChargesBuilder_;
+      /**
+       * <code>optional .lockerbox.Charges receiver_charges = 9;</code>
+       *
+       * <pre>
+       * NOTE: In receiver_charges, payment must be empty.
+       * FIXME(mateuszc): add validation in code for the above requirement
+       * </pre>
+       */
+      public boolean hasReceiverCharges() {
+        return ((bitField0_ & 0x00000200) == 0x00000200);
+      }
+      /**
+       * <code>optional .lockerbox.Charges receiver_charges = 9;</code>
+       *
+       * <pre>
+       * NOTE: In receiver_charges, payment must be empty.
+       * FIXME(mateuszc): add validation in code for the above requirement
+       * </pre>
+       */
+      public com.zpaslab.lockerbox.LockerboxProtos.Charges getReceiverCharges() {
+        if (receiverChargesBuilder_ == null) {
+          return receiverCharges_;
+        } else {
+          return receiverChargesBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .lockerbox.Charges receiver_charges = 9;</code>
+       *
+       * <pre>
+       * NOTE: In receiver_charges, payment must be empty.
+       * FIXME(mateuszc): add validation in code for the above requirement
+       * </pre>
+       */
+      public Builder setReceiverCharges(com.zpaslab.lockerbox.LockerboxProtos.Charges value) {
+        if (receiverChargesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          receiverCharges_ = value;
+          onChanged();
+        } else {
+          receiverChargesBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000200;
+        return this;
+      }
+      /**
+       * <code>optional .lockerbox.Charges receiver_charges = 9;</code>
+       *
+       * <pre>
+       * NOTE: In receiver_charges, payment must be empty.
+       * FIXME(mateuszc): add validation in code for the above requirement
+       * </pre>
+       */
+      public Builder setReceiverCharges(
+          com.zpaslab.lockerbox.LockerboxProtos.Charges.Builder builderForValue) {
+        if (receiverChargesBuilder_ == null) {
+          receiverCharges_ = builderForValue.build();
+          onChanged();
+        } else {
+          receiverChargesBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000200;
+        return this;
+      }
+      /**
+       * <code>optional .lockerbox.Charges receiver_charges = 9;</code>
+       *
+       * <pre>
+       * NOTE: In receiver_charges, payment must be empty.
+       * FIXME(mateuszc): add validation in code for the above requirement
+       * </pre>
+       */
+      public Builder mergeReceiverCharges(com.zpaslab.lockerbox.LockerboxProtos.Charges value) {
+        if (receiverChargesBuilder_ == null) {
+          if (((bitField0_ & 0x00000200) == 0x00000200) &&
+              receiverCharges_ != com.zpaslab.lockerbox.LockerboxProtos.Charges.getDefaultInstance()) {
+            receiverCharges_ =
+              com.zpaslab.lockerbox.LockerboxProtos.Charges.newBuilder(receiverCharges_).mergeFrom(value).buildPartial();
+          } else {
+            receiverCharges_ = value;
+          }
+          onChanged();
+        } else {
+          receiverChargesBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000200;
+        return this;
+      }
+      /**
+       * <code>optional .lockerbox.Charges receiver_charges = 9;</code>
+       *
+       * <pre>
+       * NOTE: In receiver_charges, payment must be empty.
+       * FIXME(mateuszc): add validation in code for the above requirement
+       * </pre>
+       */
+      public Builder clearReceiverCharges() {
+        if (receiverChargesBuilder_ == null) {
+          receiverCharges_ = com.zpaslab.lockerbox.LockerboxProtos.Charges.getDefaultInstance();
+          onChanged();
+        } else {
+          receiverChargesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000200);
+        return this;
+      }
+      /**
+       * <code>optional .lockerbox.Charges receiver_charges = 9;</code>
+       *
+       * <pre>
+       * NOTE: In receiver_charges, payment must be empty.
+       * FIXME(mateuszc): add validation in code for the above requirement
+       * </pre>
+       */
+      public com.zpaslab.lockerbox.LockerboxProtos.Charges.Builder getReceiverChargesBuilder() {
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return getReceiverChargesFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .lockerbox.Charges receiver_charges = 9;</code>
+       *
+       * <pre>
+       * NOTE: In receiver_charges, payment must be empty.
+       * FIXME(mateuszc): add validation in code for the above requirement
+       * </pre>
+       */
+      public com.zpaslab.lockerbox.LockerboxProtos.ChargesOrBuilder getReceiverChargesOrBuilder() {
+        if (receiverChargesBuilder_ != null) {
+          return receiverChargesBuilder_.getMessageOrBuilder();
+        } else {
+          return receiverCharges_;
+        }
+      }
+      /**
+       * <code>optional .lockerbox.Charges receiver_charges = 9;</code>
+       *
+       * <pre>
+       * NOTE: In receiver_charges, payment must be empty.
+       * FIXME(mateuszc): add validation in code for the above requirement
+       * </pre>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          com.zpaslab.lockerbox.LockerboxProtos.Charges, com.zpaslab.lockerbox.LockerboxProtos.Charges.Builder, com.zpaslab.lockerbox.LockerboxProtos.ChargesOrBuilder> 
+          getReceiverChargesFieldBuilder() {
+        if (receiverChargesBuilder_ == null) {
+          receiverChargesBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              com.zpaslab.lockerbox.LockerboxProtos.Charges, com.zpaslab.lockerbox.LockerboxProtos.Charges.Builder, com.zpaslab.lockerbox.LockerboxProtos.ChargesOrBuilder>(
+                  getReceiverCharges(),
+                  getParentForChildren(),
+                  isClean());
+          receiverCharges_ = null;
+        }
+        return receiverChargesBuilder_;
+      }
+
+      private java.util.List<com.zpaslab.lockerbox.LockerboxProtos.Property> prop_ =
+        java.util.Collections.emptyList();
+      private void ensurePropIsMutable() {
+        if (!((bitField0_ & 0x00000400) == 0x00000400)) {
+          prop_ = new java.util.ArrayList<com.zpaslab.lockerbox.LockerboxProtos.Property>(prop_);
+          bitField0_ |= 0x00000400;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          com.zpaslab.lockerbox.LockerboxProtos.Property, com.zpaslab.lockerbox.LockerboxProtos.Property.Builder, com.zpaslab.lockerbox.LockerboxProtos.PropertyOrBuilder> propBuilder_;
+
+      /**
+       * <code>repeated .lockerbox.Property prop = 10;</code>
+       */
+      public java.util.List<com.zpaslab.lockerbox.LockerboxProtos.Property> getPropList() {
+        if (propBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(prop_);
+        } else {
+          return propBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .lockerbox.Property prop = 10;</code>
+       */
+      public int getPropCount() {
+        if (propBuilder_ == null) {
+          return prop_.size();
+        } else {
+          return propBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .lockerbox.Property prop = 10;</code>
+       */
+      public com.zpaslab.lockerbox.LockerboxProtos.Property getProp(int index) {
+        if (propBuilder_ == null) {
+          return prop_.get(index);
+        } else {
+          return propBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .lockerbox.Property prop = 10;</code>
+       */
+      public Builder setProp(
+          int index, com.zpaslab.lockerbox.LockerboxProtos.Property value) {
+        if (propBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePropIsMutable();
+          prop_.set(index, value);
+          onChanged();
+        } else {
+          propBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lockerbox.Property prop = 10;</code>
+       */
+      public Builder setProp(
+          int index, com.zpaslab.lockerbox.LockerboxProtos.Property.Builder builderForValue) {
+        if (propBuilder_ == null) {
+          ensurePropIsMutable();
+          prop_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          propBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lockerbox.Property prop = 10;</code>
+       */
+      public Builder addProp(com.zpaslab.lockerbox.LockerboxProtos.Property value) {
+        if (propBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePropIsMutable();
+          prop_.add(value);
+          onChanged();
+        } else {
+          propBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lockerbox.Property prop = 10;</code>
+       */
+      public Builder addProp(
+          int index, com.zpaslab.lockerbox.LockerboxProtos.Property value) {
+        if (propBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePropIsMutable();
+          prop_.add(index, value);
+          onChanged();
+        } else {
+          propBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lockerbox.Property prop = 10;</code>
+       */
+      public Builder addProp(
+          com.zpaslab.lockerbox.LockerboxProtos.Property.Builder builderForValue) {
+        if (propBuilder_ == null) {
+          ensurePropIsMutable();
+          prop_.add(builderForValue.build());
+          onChanged();
+        } else {
+          propBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lockerbox.Property prop = 10;</code>
+       */
+      public Builder addProp(
+          int index, com.zpaslab.lockerbox.LockerboxProtos.Property.Builder builderForValue) {
+        if (propBuilder_ == null) {
+          ensurePropIsMutable();
+          prop_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          propBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lockerbox.Property prop = 10;</code>
+       */
+      public Builder addAllProp(
+          java.lang.Iterable<? extends com.zpaslab.lockerbox.LockerboxProtos.Property> values) {
+        if (propBuilder_ == null) {
+          ensurePropIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, prop_);
+          onChanged();
+        } else {
+          propBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lockerbox.Property prop = 10;</code>
+       */
+      public Builder clearProp() {
+        if (propBuilder_ == null) {
+          prop_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000400);
+          onChanged();
+        } else {
+          propBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lockerbox.Property prop = 10;</code>
+       */
+      public Builder removeProp(int index) {
+        if (propBuilder_ == null) {
+          ensurePropIsMutable();
+          prop_.remove(index);
+          onChanged();
+        } else {
+          propBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lockerbox.Property prop = 10;</code>
+       */
+      public com.zpaslab.lockerbox.LockerboxProtos.Property.Builder getPropBuilder(
+          int index) {
+        return getPropFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .lockerbox.Property prop = 10;</code>
+       */
+      public com.zpaslab.lockerbox.LockerboxProtos.PropertyOrBuilder getPropOrBuilder(
+          int index) {
+        if (propBuilder_ == null) {
+          return prop_.get(index);  } else {
+          return propBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .lockerbox.Property prop = 10;</code>
+       */
+      public java.util.List<? extends com.zpaslab.lockerbox.LockerboxProtos.PropertyOrBuilder> 
+           getPropOrBuilderList() {
+        if (propBuilder_ != null) {
+          return propBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(prop_);
+        }
+      }
+      /**
+       * <code>repeated .lockerbox.Property prop = 10;</code>
+       */
+      public com.zpaslab.lockerbox.LockerboxProtos.Property.Builder addPropBuilder() {
+        return getPropFieldBuilder().addBuilder(
+            com.zpaslab.lockerbox.LockerboxProtos.Property.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .lockerbox.Property prop = 10;</code>
+       */
+      public com.zpaslab.lockerbox.LockerboxProtos.Property.Builder addPropBuilder(
+          int index) {
+        return getPropFieldBuilder().addBuilder(
+            index, com.zpaslab.lockerbox.LockerboxProtos.Property.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .lockerbox.Property prop = 10;</code>
+       */
+      public java.util.List<com.zpaslab.lockerbox.LockerboxProtos.Property.Builder> 
+           getPropBuilderList() {
+        return getPropFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          com.zpaslab.lockerbox.LockerboxProtos.Property, com.zpaslab.lockerbox.LockerboxProtos.Property.Builder, com.zpaslab.lockerbox.LockerboxProtos.PropertyOrBuilder> 
+          getPropFieldBuilder() {
+        if (propBuilder_ == null) {
+          propBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              com.zpaslab.lockerbox.LockerboxProtos.Property, com.zpaslab.lockerbox.LockerboxProtos.Property.Builder, com.zpaslab.lockerbox.LockerboxProtos.PropertyOrBuilder>(
+                  prop_,
+                  ((bitField0_ & 0x00000400) == 0x00000400),
+                  getParentForChildren(),
+                  isClean());
+          prop_ = null;
+        }
+        return propBuilder_;
+      }
+
+      // @@protoc_insertion_point(builder_scope:lockerbox.Parcel)
+    }
+
+    static {
+      defaultInstance = new Parcel(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:lockerbox.Parcel)
+  }
+
+  public interface WeightOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:lockerbox.Weight)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional int64 weight = 1;</code>
+     *
+     * <pre>
+     * exact weigh described in chosen unit.
+     * If the weight is present, then also unit is required.
+     * Weight_kg might be present then, but only for convenience - weight + unit are arbitrary.
+     * If the weight is not present, then the weight_kg must be present.
+     * </pre>
+     */
+    boolean hasWeight();
+    /**
+     * <code>optional int64 weight = 1;</code>
+     *
+     * <pre>
+     * exact weigh described in chosen unit.
+     * If the weight is present, then also unit is required.
+     * Weight_kg might be present then, but only for convenience - weight + unit are arbitrary.
+     * If the weight is not present, then the weight_kg must be present.
+     * </pre>
+     */
+    long getWeight();
+
+    /**
+     * <code>optional .lockerbox.Weight.Unit unit = 2;</code>
+     */
+    boolean hasUnit();
+    /**
+     * <code>optional .lockerbox.Weight.Unit unit = 2;</code>
+     */
+    com.zpaslab.lockerbox.LockerboxProtos.Weight.Unit getUnit();
+
+    /**
+     * <code>optional double weight_kg = 3;</code>
+     *
+     * <pre>
+     * weight in kilograms, might be rounded
+     * </pre>
+     */
+    boolean hasWeightKg();
+    /**
+     * <code>optional double weight_kg = 3;</code>
+     *
+     * <pre>
+     * weight in kilograms, might be rounded
+     * </pre>
+     */
+    double getWeightKg();
+  }
+  /**
+   * Protobuf type {@code lockerbox.Weight}
+   */
+  public static final class Weight extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:lockerbox.Weight)
+      WeightOrBuilder {
+    // Use Weight.newBuilder() to construct.
+    private Weight(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private Weight(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final Weight defaultInstance;
+    public static Weight getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public Weight getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Weight(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              weight_ = input.readInt64();
+              break;
+            }
+            case 16: {
+              int rawValue = input.readEnum();
+              com.zpaslab.lockerbox.LockerboxProtos.Weight.Unit value = com.zpaslab.lockerbox.LockerboxProtos.Weight.Unit.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(2, rawValue);
+              } else {
+                bitField0_ |= 0x00000002;
+                unit_ = value;
+              }
+              break;
+            }
+            case 25: {
+              bitField0_ |= 0x00000004;
+              weightKg_ = input.readDouble();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.zpaslab.lockerbox.LockerboxProtos.internal_static_lockerbox_Weight_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.zpaslab.lockerbox.LockerboxProtos.internal_static_lockerbox_Weight_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.zpaslab.lockerbox.LockerboxProtos.Weight.class, com.zpaslab.lockerbox.LockerboxProtos.Weight.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<Weight> PARSER =
+        new com.google.protobuf.AbstractParser<Weight>() {
+      public Weight parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Weight(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Weight> getParserForType() {
+      return PARSER;
+    }
+
+    /**
+     * Protobuf enum {@code lockerbox.Weight.Unit}
+     */
+    public enum Unit
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>KILOGRAM = 1;</code>
+       */
+      KILOGRAM(0, 1),
+      /**
+       * <code>GRAM = 2;</code>
+       */
+      GRAM(1, 2),
+      /**
+       * <code>MILLIGRAM = 3;</code>
+       */
+      MILLIGRAM(2, 3),
+      /**
+       * <code>MICROGRAM = 4;</code>
+       */
+      MICROGRAM(3, 4),
+      ;
+
+      /**
+       * <code>KILOGRAM = 1;</code>
+       */
+      public static final int KILOGRAM_VALUE = 1;
+      /**
+       * <code>GRAM = 2;</code>
+       */
+      public static final int GRAM_VALUE = 2;
+      /**
+       * <code>MILLIGRAM = 3;</code>
+       */
+      public static final int MILLIGRAM_VALUE = 3;
+      /**
+       * <code>MICROGRAM = 4;</code>
+       */
+      public static final int MICROGRAM_VALUE = 4;
+
+
+      public final int getNumber() { return value; }
+
+      public static Unit valueOf(int value) {
+        switch (value) {
+          case 1: return KILOGRAM;
+          case 2: return GRAM;
+          case 3: return MILLIGRAM;
+          case 4: return MICROGRAM;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<Unit>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static com.google.protobuf.Internal.EnumLiteMap<Unit>
+          internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<Unit>() {
+              public Unit findValueByNumber(int number) {
+                return Unit.valueOf(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        return getDescriptor().getValues().get(index);
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return com.zpaslab.lockerbox.LockerboxProtos.Weight.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final Unit[] VALUES = values();
+
+      public static Unit valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int index;
+      private final int value;
+
+      private Unit(int index, int value) {
+        this.index = index;
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:lockerbox.Weight.Unit)
+    }
+
+    private int bitField0_;
+    public static final int WEIGHT_FIELD_NUMBER = 1;
+    private long weight_;
+    /**
+     * <code>optional int64 weight = 1;</code>
+     *
+     * <pre>
+     * exact weigh described in chosen unit.
+     * If the weight is present, then also unit is required.
+     * Weight_kg might be present then, but only for convenience - weight + unit are arbitrary.
+     * If the weight is not present, then the weight_kg must be present.
+     * </pre>
+     */
+    public boolean hasWeight() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional int64 weight = 1;</code>
+     *
+     * <pre>
+     * exact weigh described in chosen unit.
+     * If the weight is present, then also unit is required.
+     * Weight_kg might be present then, but only for convenience - weight + unit are arbitrary.
+     * If the weight is not present, then the weight_kg must be present.
+     * </pre>
+     */
+    public long getWeight() {
+      return weight_;
+    }
+
+    public static final int UNIT_FIELD_NUMBER = 2;
+    private com.zpaslab.lockerbox.LockerboxProtos.Weight.Unit unit_;
+    /**
+     * <code>optional .lockerbox.Weight.Unit unit = 2;</code>
+     */
+    public boolean hasUnit() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional .lockerbox.Weight.Unit unit = 2;</code>
+     */
+    public com.zpaslab.lockerbox.LockerboxProtos.Weight.Unit getUnit() {
+      return unit_;
+    }
+
+    public static final int WEIGHT_KG_FIELD_NUMBER = 3;
+    private double weightKg_;
+    /**
+     * <code>optional double weight_kg = 3;</code>
+     *
+     * <pre>
+     * weight in kilograms, might be rounded
+     * </pre>
+     */
+    public boolean hasWeightKg() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>optional double weight_kg = 3;</code>
+     *
+     * <pre>
+     * weight in kilograms, might be rounded
+     * </pre>
+     */
+    public double getWeightKg() {
+      return weightKg_;
+    }
+
+    private void initFields() {
+      weight_ = 0L;
+      unit_ = com.zpaslab.lockerbox.LockerboxProtos.Weight.Unit.KILOGRAM;
+      weightKg_ = 0D;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeInt64(1, weight_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeEnum(2, unit_.getNumber());
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeDouble(3, weightKg_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(1, weight_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(2, unit_.getNumber());
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeDoubleSize(3, weightKg_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static com.zpaslab.lockerbox.LockerboxProtos.Weight parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.zpaslab.lockerbox.LockerboxProtos.Weight parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.zpaslab.lockerbox.LockerboxProtos.Weight parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.zpaslab.lockerbox.LockerboxProtos.Weight parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.zpaslab.lockerbox.LockerboxProtos.Weight parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.zpaslab.lockerbox.LockerboxProtos.Weight parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.zpaslab.lockerbox.LockerboxProtos.Weight parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.zpaslab.lockerbox.LockerboxProtos.Weight parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.zpaslab.lockerbox.LockerboxProtos.Weight parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.zpaslab.lockerbox.LockerboxProtos.Weight parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(com.zpaslab.lockerbox.LockerboxProtos.Weight prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code lockerbox.Weight}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:lockerbox.Weight)
+        com.zpaslab.lockerbox.LockerboxProtos.WeightOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.zpaslab.lockerbox.LockerboxProtos.internal_static_lockerbox_Weight_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.zpaslab.lockerbox.LockerboxProtos.internal_static_lockerbox_Weight_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.zpaslab.lockerbox.LockerboxProtos.Weight.class, com.zpaslab.lockerbox.LockerboxProtos.Weight.Builder.class);
+      }
+
+      // Construct using com.zpaslab.lockerbox.LockerboxProtos.Weight.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        weight_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        unit_ = com.zpaslab.lockerbox.LockerboxProtos.Weight.Unit.KILOGRAM;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        weightKg_ = 0D;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.zpaslab.lockerbox.LockerboxProtos.internal_static_lockerbox_Weight_descriptor;
+      }
+
+      public com.zpaslab.lockerbox.LockerboxProtos.Weight getDefaultInstanceForType() {
+        return com.zpaslab.lockerbox.LockerboxProtos.Weight.getDefaultInstance();
+      }
+
+      public com.zpaslab.lockerbox.LockerboxProtos.Weight build() {
+        com.zpaslab.lockerbox.LockerboxProtos.Weight result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.zpaslab.lockerbox.LockerboxProtos.Weight buildPartial() {
+        com.zpaslab.lockerbox.LockerboxProtos.Weight result = new com.zpaslab.lockerbox.LockerboxProtos.Weight(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.weight_ = weight_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.unit_ = unit_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.weightKg_ = weightKg_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.zpaslab.lockerbox.LockerboxProtos.Weight) {
+          return mergeFrom((com.zpaslab.lockerbox.LockerboxProtos.Weight)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.zpaslab.lockerbox.LockerboxProtos.Weight other) {
+        if (other == com.zpaslab.lockerbox.LockerboxProtos.Weight.getDefaultInstance()) return this;
+        if (other.hasWeight()) {
+          setWeight(other.getWeight());
+        }
+        if (other.hasUnit()) {
+          setUnit(other.getUnit());
+        }
+        if (other.hasWeightKg()) {
+          setWeightKg(other.getWeightKg());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.zpaslab.lockerbox.LockerboxProtos.Weight parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.zpaslab.lockerbox.LockerboxProtos.Weight) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private long weight_ ;
+      /**
+       * <code>optional int64 weight = 1;</code>
+       *
+       * <pre>
+       * exact weigh described in chosen unit.
+       * If the weight is present, then also unit is required.
+       * Weight_kg might be present then, but only for convenience - weight + unit are arbitrary.
+       * If the weight is not present, then the weight_kg must be present.
+       * </pre>
+       */
+      public boolean hasWeight() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional int64 weight = 1;</code>
+       *
+       * <pre>
+       * exact weigh described in chosen unit.
+       * If the weight is present, then also unit is required.
+       * Weight_kg might be present then, but only for convenience - weight + unit are arbitrary.
+       * If the weight is not present, then the weight_kg must be present.
+       * </pre>
+       */
+      public long getWeight() {
+        return weight_;
+      }
+      /**
+       * <code>optional int64 weight = 1;</code>
+       *
+       * <pre>
+       * exact weigh described in chosen unit.
+       * If the weight is present, then also unit is required.
+       * Weight_kg might be present then, but only for convenience - weight + unit are arbitrary.
+       * If the weight is not present, then the weight_kg must be present.
+       * </pre>
+       */
+      public Builder setWeight(long value) {
+        bitField0_ |= 0x00000001;
+        weight_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int64 weight = 1;</code>
+       *
+       * <pre>
+       * exact weigh described in chosen unit.
+       * If the weight is present, then also unit is required.
+       * Weight_kg might be present then, but only for convenience - weight + unit are arbitrary.
+       * If the weight is not present, then the weight_kg must be present.
+       * </pre>
+       */
+      public Builder clearWeight() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        weight_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private com.zpaslab.lockerbox.LockerboxProtos.Weight.Unit unit_ = com.zpaslab.lockerbox.LockerboxProtos.Weight.Unit.KILOGRAM;
+      /**
+       * <code>optional .lockerbox.Weight.Unit unit = 2;</code>
+       */
+      public boolean hasUnit() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional .lockerbox.Weight.Unit unit = 2;</code>
+       */
+      public com.zpaslab.lockerbox.LockerboxProtos.Weight.Unit getUnit() {
+        return unit_;
+      }
+      /**
+       * <code>optional .lockerbox.Weight.Unit unit = 2;</code>
+       */
+      public Builder setUnit(com.zpaslab.lockerbox.LockerboxProtos.Weight.Unit value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000002;
+        unit_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .lockerbox.Weight.Unit unit = 2;</code>
+       */
+      public Builder clearUnit() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        unit_ = com.zpaslab.lockerbox.LockerboxProtos.Weight.Unit.KILOGRAM;
+        onChanged();
+        return this;
+      }
+
+      private double weightKg_ ;
+      /**
+       * <code>optional double weight_kg = 3;</code>
+       *
+       * <pre>
+       * weight in kilograms, might be rounded
+       * </pre>
+       */
+      public boolean hasWeightKg() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional double weight_kg = 3;</code>
+       *
+       * <pre>
+       * weight in kilograms, might be rounded
+       * </pre>
+       */
+      public double getWeightKg() {
+        return weightKg_;
+      }
+      /**
+       * <code>optional double weight_kg = 3;</code>
+       *
+       * <pre>
+       * weight in kilograms, might be rounded
+       * </pre>
+       */
+      public Builder setWeightKg(double value) {
+        bitField0_ |= 0x00000004;
+        weightKg_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional double weight_kg = 3;</code>
+       *
+       * <pre>
+       * weight in kilograms, might be rounded
+       * </pre>
+       */
+      public Builder clearWeightKg() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        weightKg_ = 0D;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:lockerbox.Weight)
+    }
+
+    static {
+      defaultInstance = new Weight(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:lockerbox.Weight)
+  }
+
+  public interface ParcelListOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:lockerbox.ParcelList)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .lockerbox.Parcel parcel = 1;</code>
+     */
+    java.util.List<com.zpaslab.lockerbox.LockerboxProtos.Parcel> 
+        getParcelList();
+    /**
+     * <code>repeated .lockerbox.Parcel parcel = 1;</code>
+     */
+    com.zpaslab.lockerbox.LockerboxProtos.Parcel getParcel(int index);
+    /**
+     * <code>repeated .lockerbox.Parcel parcel = 1;</code>
+     */
+    int getParcelCount();
+    /**
+     * <code>repeated .lockerbox.Parcel parcel = 1;</code>
+     */
+    java.util.List<? extends com.zpaslab.lockerbox.LockerboxProtos.ParcelOrBuilder> 
+        getParcelOrBuilderList();
+    /**
+     * <code>repeated .lockerbox.Parcel parcel = 1;</code>
+     */
+    com.zpaslab.lockerbox.LockerboxProtos.ParcelOrBuilder getParcelOrBuilder(
+        int index);
+
+    /**
+     * <code>optional int32 total = 2;</code>
+     */
+    boolean hasTotal();
+    /**
+     * <code>optional int32 total = 2;</code>
+     */
+    int getTotal();
+  }
+  /**
+   * Protobuf type {@code lockerbox.ParcelList}
+   */
+  public static final class ParcelList extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:lockerbox.ParcelList)
+      ParcelListOrBuilder {
+    // Use ParcelList.newBuilder() to construct.
+    private ParcelList(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private ParcelList(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final ParcelList defaultInstance;
+    public static ParcelList getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public ParcelList getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ParcelList(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                parcel_ = new java.util.ArrayList<com.zpaslab.lockerbox.LockerboxProtos.Parcel>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              parcel_.add(input.readMessage(com.zpaslab.lockerbox.LockerboxProtos.Parcel.PARSER, extensionRegistry));
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000001;
+              total_ = input.readInt32();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          parcel_ = java.util.Collections.unmodifiableList(parcel_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.zpaslab.lockerbox.LockerboxProtos.internal_static_lockerbox_ParcelList_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.zpaslab.lockerbox.LockerboxProtos.internal_static_lockerbox_ParcelList_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.zpaslab.lockerbox.LockerboxProtos.ParcelList.class, com.zpaslab.lockerbox.LockerboxProtos.ParcelList.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<ParcelList> PARSER =
+        new com.google.protobuf.AbstractParser<ParcelList>() {
+      public ParcelList parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ParcelList(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ParcelList> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    public static final int PARCEL_FIELD_NUMBER = 1;
+    private java.util.List<com.zpaslab.lockerbox.LockerboxProtos.Parcel> parcel_;
+    /**
+     * <code>repeated .lockerbox.Parcel parcel = 1;</code>
+     */
+    public java.util.List<com.zpaslab.lockerbox.LockerboxProtos.Parcel> getParcelList() {
+      return parcel_;
+    }
+    /**
+     * <code>repeated .lockerbox.Parcel parcel = 1;</code>
+     */
+    public java.util.List<? extends com.zpaslab.lockerbox.LockerboxProtos.ParcelOrBuilder> 
+        getParcelOrBuilderList() {
+      return parcel_;
+    }
+    /**
+     * <code>repeated .lockerbox.Parcel parcel = 1;</code>
+     */
+    public int getParcelCount() {
+      return parcel_.size();
+    }
+    /**
+     * <code>repeated .lockerbox.Parcel parcel = 1;</code>
+     */
+    public com.zpaslab.lockerbox.LockerboxProtos.Parcel getParcel(int index) {
+      return parcel_.get(index);
+    }
+    /**
+     * <code>repeated .lockerbox.Parcel parcel = 1;</code>
+     */
+    public com.zpaslab.lockerbox.LockerboxProtos.ParcelOrBuilder getParcelOrBuilder(
+        int index) {
+      return parcel_.get(index);
+    }
+
+    public static final int TOTAL_FIELD_NUMBER = 2;
+    private int total_;
+    /**
+     * <code>optional int32 total = 2;</code>
+     */
+    public boolean hasTotal() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional int32 total = 2;</code>
+     */
+    public int getTotal() {
+      return total_;
+    }
+
+    private void initFields() {
+      parcel_ = java.util.Collections.emptyList();
+      total_ = 0;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      for (int i = 0; i < parcel_.size(); i++) {
+        output.writeMessage(1, parcel_.get(i));
+      }
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeInt32(2, total_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < parcel_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, parcel_.get(i));
+      }
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, total_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static com.zpaslab.lockerbox.LockerboxProtos.ParcelList parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.zpaslab.lockerbox.LockerboxProtos.ParcelList parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.zpaslab.lockerbox.LockerboxProtos.ParcelList parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.zpaslab.lockerbox.LockerboxProtos.ParcelList parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.zpaslab.lockerbox.LockerboxProtos.ParcelList parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.zpaslab.lockerbox.LockerboxProtos.ParcelList parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.zpaslab.lockerbox.LockerboxProtos.ParcelList parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.zpaslab.lockerbox.LockerboxProtos.ParcelList parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.zpaslab.lockerbox.LockerboxProtos.ParcelList parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.zpaslab.lockerbox.LockerboxProtos.ParcelList parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(com.zpaslab.lockerbox.LockerboxProtos.ParcelList prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code lockerbox.ParcelList}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:lockerbox.ParcelList)
+        com.zpaslab.lockerbox.LockerboxProtos.ParcelListOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.zpaslab.lockerbox.LockerboxProtos.internal_static_lockerbox_ParcelList_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.zpaslab.lockerbox.LockerboxProtos.internal_static_lockerbox_ParcelList_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.zpaslab.lockerbox.LockerboxProtos.ParcelList.class, com.zpaslab.lockerbox.LockerboxProtos.ParcelList.Builder.class);
+      }
+
+      // Construct using com.zpaslab.lockerbox.LockerboxProtos.ParcelList.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getParcelFieldBuilder();
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        if (parcelBuilder_ == null) {
+          parcel_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          parcelBuilder_.clear();
+        }
+        total_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.zpaslab.lockerbox.LockerboxProtos.internal_static_lockerbox_ParcelList_descriptor;
+      }
+
+      public com.zpaslab.lockerbox.LockerboxProtos.ParcelList getDefaultInstanceForType() {
+        return com.zpaslab.lockerbox.LockerboxProtos.ParcelList.getDefaultInstance();
+      }
+
+      public com.zpaslab.lockerbox.LockerboxProtos.ParcelList build() {
+        com.zpaslab.lockerbox.LockerboxProtos.ParcelList result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.zpaslab.lockerbox.LockerboxProtos.ParcelList buildPartial() {
+        com.zpaslab.lockerbox.LockerboxProtos.ParcelList result = new com.zpaslab.lockerbox.LockerboxProtos.ParcelList(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (parcelBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+            parcel_ = java.util.Collections.unmodifiableList(parcel_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.parcel_ = parcel_;
+        } else {
+          result.parcel_ = parcelBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.total_ = total_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.zpaslab.lockerbox.LockerboxProtos.ParcelList) {
+          return mergeFrom((com.zpaslab.lockerbox.LockerboxProtos.ParcelList)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.zpaslab.lockerbox.LockerboxProtos.ParcelList other) {
+        if (other == com.zpaslab.lockerbox.LockerboxProtos.ParcelList.getDefaultInstance()) return this;
+        if (parcelBuilder_ == null) {
+          if (!other.parcel_.isEmpty()) {
+            if (parcel_.isEmpty()) {
+              parcel_ = other.parcel_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureParcelIsMutable();
+              parcel_.addAll(other.parcel_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.parcel_.isEmpty()) {
+            if (parcelBuilder_.isEmpty()) {
+              parcelBuilder_.dispose();
+              parcelBuilder_ = null;
+              parcel_ = other.parcel_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              parcelBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   getParcelFieldBuilder() : null;
+            } else {
+              parcelBuilder_.addAllMessages(other.parcel_);
+            }
+          }
+        }
+        if (other.hasTotal()) {
+          setTotal(other.getTotal());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.zpaslab.lockerbox.LockerboxProtos.ParcelList parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.zpaslab.lockerbox.LockerboxProtos.ParcelList) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.zpaslab.lockerbox.LockerboxProtos.Parcel> parcel_ =
+        java.util.Collections.emptyList();
+      private void ensureParcelIsMutable() {
+        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+          parcel_ = new java.util.ArrayList<com.zpaslab.lockerbox.LockerboxProtos.Parcel>(parcel_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          com.zpaslab.lockerbox.LockerboxProtos.Parcel, com.zpaslab.lockerbox.LockerboxProtos.Parcel.Builder, com.zpaslab.lockerbox.LockerboxProtos.ParcelOrBuilder> parcelBuilder_;
+
+      /**
+       * <code>repeated .lockerbox.Parcel parcel = 1;</code>
+       */
+      public java.util.List<com.zpaslab.lockerbox.LockerboxProtos.Parcel> getParcelList() {
+        if (parcelBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(parcel_);
+        } else {
+          return parcelBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .lockerbox.Parcel parcel = 1;</code>
+       */
+      public int getParcelCount() {
+        if (parcelBuilder_ == null) {
+          return parcel_.size();
+        } else {
+          return parcelBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .lockerbox.Parcel parcel = 1;</code>
+       */
+      public com.zpaslab.lockerbox.LockerboxProtos.Parcel getParcel(int index) {
+        if (parcelBuilder_ == null) {
+          return parcel_.get(index);
+        } else {
+          return parcelBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .lockerbox.Parcel parcel = 1;</code>
+       */
+      public Builder setParcel(
+          int index, com.zpaslab.lockerbox.LockerboxProtos.Parcel value) {
+        if (parcelBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureParcelIsMutable();
+          parcel_.set(index, value);
+          onChanged();
+        } else {
+          parcelBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lockerbox.Parcel parcel = 1;</code>
+       */
+      public Builder setParcel(
+          int index, com.zpaslab.lockerbox.LockerboxProtos.Parcel.Builder builderForValue) {
+        if (parcelBuilder_ == null) {
+          ensureParcelIsMutable();
+          parcel_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          parcelBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lockerbox.Parcel parcel = 1;</code>
+       */
+      public Builder addParcel(com.zpaslab.lockerbox.LockerboxProtos.Parcel value) {
+        if (parcelBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureParcelIsMutable();
+          parcel_.add(value);
+          onChanged();
+        } else {
+          parcelBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lockerbox.Parcel parcel = 1;</code>
+       */
+      public Builder addParcel(
+          int index, com.zpaslab.lockerbox.LockerboxProtos.Parcel value) {
+        if (parcelBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureParcelIsMutable();
+          parcel_.add(index, value);
+          onChanged();
+        } else {
+          parcelBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lockerbox.Parcel parcel = 1;</code>
+       */
+      public Builder addParcel(
+          com.zpaslab.lockerbox.LockerboxProtos.Parcel.Builder builderForValue) {
+        if (parcelBuilder_ == null) {
+          ensureParcelIsMutable();
+          parcel_.add(builderForValue.build());
+          onChanged();
+        } else {
+          parcelBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lockerbox.Parcel parcel = 1;</code>
+       */
+      public Builder addParcel(
+          int index, com.zpaslab.lockerbox.LockerboxProtos.Parcel.Builder builderForValue) {
+        if (parcelBuilder_ == null) {
+          ensureParcelIsMutable();
+          parcel_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          parcelBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lockerbox.Parcel parcel = 1;</code>
+       */
+      public Builder addAllParcel(
+          java.lang.Iterable<? extends com.zpaslab.lockerbox.LockerboxProtos.Parcel> values) {
+        if (parcelBuilder_ == null) {
+          ensureParcelIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, parcel_);
+          onChanged();
+        } else {
+          parcelBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lockerbox.Parcel parcel = 1;</code>
+       */
+      public Builder clearParcel() {
+        if (parcelBuilder_ == null) {
+          parcel_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          parcelBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lockerbox.Parcel parcel = 1;</code>
+       */
+      public Builder removeParcel(int index) {
+        if (parcelBuilder_ == null) {
+          ensureParcelIsMutable();
+          parcel_.remove(index);
+          onChanged();
+        } else {
+          parcelBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lockerbox.Parcel parcel = 1;</code>
+       */
+      public com.zpaslab.lockerbox.LockerboxProtos.Parcel.Builder getParcelBuilder(
+          int index) {
+        return getParcelFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .lockerbox.Parcel parcel = 1;</code>
+       */
+      public com.zpaslab.lockerbox.LockerboxProtos.ParcelOrBuilder getParcelOrBuilder(
+          int index) {
+        if (parcelBuilder_ == null) {
+          return parcel_.get(index);  } else {
+          return parcelBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .lockerbox.Parcel parcel = 1;</code>
+       */
+      public java.util.List<? extends com.zpaslab.lockerbox.LockerboxProtos.ParcelOrBuilder> 
+           getParcelOrBuilderList() {
+        if (parcelBuilder_ != null) {
+          return parcelBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(parcel_);
+        }
+      }
+      /**
+       * <code>repeated .lockerbox.Parcel parcel = 1;</code>
+       */
+      public com.zpaslab.lockerbox.LockerboxProtos.Parcel.Builder addParcelBuilder() {
+        return getParcelFieldBuilder().addBuilder(
+            com.zpaslab.lockerbox.LockerboxProtos.Parcel.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .lockerbox.Parcel parcel = 1;</code>
+       */
+      public com.zpaslab.lockerbox.LockerboxProtos.Parcel.Builder addParcelBuilder(
+          int index) {
+        return getParcelFieldBuilder().addBuilder(
+            index, com.zpaslab.lockerbox.LockerboxProtos.Parcel.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .lockerbox.Parcel parcel = 1;</code>
+       */
+      public java.util.List<com.zpaslab.lockerbox.LockerboxProtos.Parcel.Builder> 
+           getParcelBuilderList() {
+        return getParcelFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          com.zpaslab.lockerbox.LockerboxProtos.Parcel, com.zpaslab.lockerbox.LockerboxProtos.Parcel.Builder, com.zpaslab.lockerbox.LockerboxProtos.ParcelOrBuilder> 
+          getParcelFieldBuilder() {
+        if (parcelBuilder_ == null) {
+          parcelBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              com.zpaslab.lockerbox.LockerboxProtos.Parcel, com.zpaslab.lockerbox.LockerboxProtos.Parcel.Builder, com.zpaslab.lockerbox.LockerboxProtos.ParcelOrBuilder>(
+                  parcel_,
+                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  getParentForChildren(),
+                  isClean());
+          parcel_ = null;
+        }
+        return parcelBuilder_;
+      }
+
+      private int total_ ;
+      /**
+       * <code>optional int32 total = 2;</code>
+       */
+      public boolean hasTotal() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional int32 total = 2;</code>
+       */
+      public int getTotal() {
+        return total_;
+      }
+      /**
+       * <code>optional int32 total = 2;</code>
+       */
+      public Builder setTotal(int value) {
+        bitField0_ |= 0x00000002;
+        total_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 total = 2;</code>
+       */
+      public Builder clearTotal() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        total_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:lockerbox.ParcelList)
+    }
+
+    static {
+      defaultInstance = new ParcelList(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:lockerbox.ParcelList)
+  }
+
+  public interface DeliveryPointOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:lockerbox.DeliveryPoint)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional .lockerbox.DeliveryPoint.Method method = 1;</code>
+     */
+    boolean hasMethod();
+    /**
+     * <code>optional .lockerbox.DeliveryPoint.Method method = 1;</code>
+     */
+    com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Method getMethod();
+
+    /**
+     * <code>optional .lockerbox.DeliveryPoint.Role role = 2;</code>
+     *
+     * <pre>
+     * TODO(pawelb): remove?
+     * </pre>
+     */
+    boolean hasRole();
+    /**
+     * <code>optional .lockerbox.DeliveryPoint.Role role = 2;</code>
+     *
+     * <pre>
+     * TODO(pawelb): remove?
+     * </pre>
+     */
+    com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Role getRole();
+
+    /**
+     * <code>optional .lockerbox.DeliveryPoint.Lockerbox lockerbox = 4;</code>
+     *
+     * <pre>
+     * if type == LOCKERBOX
+     * </pre>
+     */
+    boolean hasLockerbox();
+    /**
+     * <code>optional .lockerbox.DeliveryPoint.Lockerbox lockerbox = 4;</code>
+     *
+     * <pre>
+     * if type == LOCKERBOX
+     * </pre>
+     */
+    com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Lockerbox getLockerbox();
+    /**
+     * <code>optional .lockerbox.DeliveryPoint.Lockerbox lockerbox = 4;</code>
+     *
+     * <pre>
+     * if type == LOCKERBOX
+     * </pre>
+     */
+    com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.LockerboxOrBuilder getLockerboxOrBuilder();
+
+    /**
+     * <code>optional .lockerbox.PostOffice post_office = 5;</code>
+     *
+     * <pre>
+     * if type == POST_OFFICE
+     * </pre>
+     */
+    boolean hasPostOffice();
+    /**
+     * <code>optional .lockerbox.PostOffice post_office = 5;</code>
+     *
+     * <pre>
+     * if type == POST_OFFICE
+     * </pre>
+     */
+    com.zpaslab.lockerbox.LockerboxProtos.PostOffice getPostOffice();
+    /**
+     * <code>optional .lockerbox.PostOffice post_office = 5;</code>
+     *
+     * <pre>
+     * if type == POST_OFFICE
+     * </pre>
+     */
+    com.zpaslab.lockerbox.LockerboxProtos.PostOfficeOrBuilder getPostOfficeOrBuilder();
+
+    /**
+     * <code>optional .lockerbox.DeliveryPoint.Instructions instructions = 6;</code>
+     *
+     * <pre>
+     * if type == ADDRESS
+     * Additional information to help the courier successfully obtain/deliver the parcel.
+     * </pre>
+     */
+    boolean hasInstructions();
+    /**
+     * <code>optional .lockerbox.DeliveryPoint.Instructions instructions = 6;</code>
+     *
+     * <pre>
+     * if type == ADDRESS
+     * Additional information to help the courier successfully obtain/deliver the parcel.
+     * </pre>
+     */
+    com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Instructions getInstructions();
+    /**
+     * <code>optional .lockerbox.DeliveryPoint.Instructions instructions = 6;</code>
+     *
+     * <pre>
+     * if type == ADDRESS
+     * Additional information to help the courier successfully obtain/deliver the parcel.
+     * </pre>
+     */
+    com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.InstructionsOrBuilder getInstructionsOrBuilder();
+
+    /**
+     * <code>optional .lockerbox.Address address = 7;</code>
+     *
+     * <pre>
+     * Sender/Receiver contact and address information.
+     * address.email will be used to match the sender/receiver with existing system account, if exists.
+     * If there is no non-temporary account with given email, system will create a temporary account for this parcel.
+     * Required data to be filled (other fields are optional):
+     * - for lockerbox: sender/recipient email, phone
+     * - for post office: ???
+     * - for address: name1, street, numbers, city,
+     * Data set in request will overwrite default values for the account.
+     * Note: this is *not* lockerbox's address nor post office's address. It is
+     * information about the *person* who delivers/picks the parcel.
+     * TODO(pawelb): check if doesn't need to be sent for sender sender=api_key.account
+     * </pre>
+     */
+    boolean hasAddress();
+    /**
+     * <code>optional .lockerbox.Address address = 7;</code>
+     *
+     * <pre>
+     * Sender/Receiver contact and address information.
+     * address.email will be used to match the sender/receiver with existing system account, if exists.
+     * If there is no non-temporary account with given email, system will create a temporary account for this parcel.
+     * Required data to be filled (other fields are optional):
+     * - for lockerbox: sender/recipient email, phone
+     * - for post office: ???
+     * - for address: name1, street, numbers, city,
+     * Data set in request will overwrite default values for the account.
+     * Note: this is *not* lockerbox's address nor post office's address. It is
+     * information about the *person* who delivers/picks the parcel.
+     * TODO(pawelb): check if doesn't need to be sent for sender sender=api_key.account
+     * </pre>
+     */
+    com.zpaslab.lockerbox.LockerboxProtos.Address getAddress();
+    /**
+     * <code>optional .lockerbox.Address address = 7;</code>
+     *
+     * <pre>
+     * Sender/Receiver contact and address information.
+     * address.email will be used to match the sender/receiver with existing system account, if exists.
+     * If there is no non-temporary account with given email, system will create a temporary account for this parcel.
+     * Required data to be filled (other fields are optional):
+     * - for lockerbox: sender/recipient email, phone
+     * - for post office: ???
+     * - for address: name1, street, numbers, city,
+     * Data set in request will overwrite default values for the account.
+     * Note: this is *not* lockerbox's address nor post office's address. It is
+     * information about the *person* who delivers/picks the parcel.
+     * TODO(pawelb): check if doesn't need to be sent for sender sender=api_key.account
+     * </pre>
+     */
+    com.zpaslab.lockerbox.LockerboxProtos.AddressOrBuilder getAddressOrBuilder();
+
+    /**
+     * <code>optional string start_date = 8;</code>
+     *
+     * <pre>
+     * Reservations fields.
+     * start_date = when the reservation begins (from the user perspective). Parcel cannot be loaded (by the user)
+     *      or picked up beforet the start_date
+     * due_date = when the reservation ends (from the user perspective). Parcel cannot be loaded (by the user)
+     *      or picked up after the due_date
+     * </pre>
+     */
+    boolean hasStartDate();
+    /**
+     * <code>optional string start_date = 8;</code>
+     *
+     * <pre>
+     * Reservations fields.
+     * start_date = when the reservation begins (from the user perspective). Parcel cannot be loaded (by the user)
+     *      or picked up beforet the start_date
+     * due_date = when the reservation ends (from the user perspective). Parcel cannot be loaded (by the user)
+     *      or picked up after the due_date
+     * </pre>
+     */
+    java.lang.String getStartDate();
+    /**
+     * <code>optional string start_date = 8;</code>
+     *
+     * <pre>
+     * Reservations fields.
+     * start_date = when the reservation begins (from the user perspective). Parcel cannot be loaded (by the user)
+     *      or picked up beforet the start_date
+     * due_date = when the reservation ends (from the user perspective). Parcel cannot be loaded (by the user)
+     *      or picked up after the due_date
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getStartDateBytes();
+
+    /**
+     * <code>optional string due_date = 9;</code>
+     */
+    boolean hasDueDate();
+    /**
+     * <code>optional string due_date = 9;</code>
+     */
+    java.lang.String getDueDate();
+    /**
+     * <code>optional string due_date = 9;</code>
+     */
+    com.google.protobuf.ByteString
+        getDueDateBytes();
+  }
+  /**
+   * Protobuf type {@code lockerbox.DeliveryPoint}
+   */
+  public static final class DeliveryPoint extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:lockerbox.DeliveryPoint)
+      DeliveryPointOrBuilder {
+    // Use DeliveryPoint.newBuilder() to construct.
+    private DeliveryPoint(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private DeliveryPoint(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final DeliveryPoint defaultInstance;
+    public static DeliveryPoint getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public DeliveryPoint getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private DeliveryPoint(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              int rawValue = input.readEnum();
+              com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Method value = com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Method.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(1, rawValue);
+              } else {
+                bitField0_ |= 0x00000001;
+                method_ = value;
+              }
+              break;
+            }
+            case 16: {
+              int rawValue = input.readEnum();
+              com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Role value = com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Role.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(2, rawValue);
+              } else {
+                bitField0_ |= 0x00000002;
+                role_ = value;
+              }
+              break;
+            }
+            case 34: {
+              com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Lockerbox.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000004) == 0x00000004)) {
+                subBuilder = lockerbox_.toBuilder();
+              }
+              lockerbox_ = input.readMessage(com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Lockerbox.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(lockerbox_);
+                lockerbox_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000004;
+              break;
+            }
+            case 42: {
+              com.zpaslab.lockerbox.LockerboxProtos.PostOffice.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000008) == 0x00000008)) {
+                subBuilder = postOffice_.toBuilder();
+              }
+              postOffice_ = input.readMessage(com.zpaslab.lockerbox.LockerboxProtos.PostOffice.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(postOffice_);
+                postOffice_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000008;
+              break;
+            }
+            case 50: {
+              com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Instructions.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000010) == 0x00000010)) {
+                subBuilder = instructions_.toBuilder();
+              }
+              instructions_ = input.readMessage(com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Instructions.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(instructions_);
+                instructions_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000010;
+              break;
+            }
+            case 58: {
+              com.zpaslab.lockerbox.LockerboxProtos.Address.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000020) == 0x00000020)) {
+                subBuilder = address_.toBuilder();
+              }
+              address_ = input.readMessage(com.zpaslab.lockerbox.LockerboxProtos.Address.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(address_);
+                address_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000020;
+              break;
+            }
+            case 66: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000040;
+              startDate_ = bs;
+              break;
+            }
+            case 74: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000080;
+              dueDate_ = bs;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.zpaslab.lockerbox.LockerboxProtos.internal_static_lockerbox_DeliveryPoint_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.zpaslab.lockerbox.LockerboxProtos.internal_static_lockerbox_DeliveryPoint_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.class, com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<DeliveryPoint> PARSER =
+        new com.google.protobuf.AbstractParser<DeliveryPoint>() {
+      public DeliveryPoint parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new DeliveryPoint(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DeliveryPoint> getParserForType() {
+      return PARSER;
+    }
+
+    /**
+     * Protobuf enum {@code lockerbox.DeliveryPoint.Role}
+     */
+    public enum Role
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>SENDER = 1;</code>
+       */
+      SENDER(0, 1),
+      /**
+       * <code>RECEIVER = 2;</code>
+       */
+      RECEIVER(1, 2),
+      ;
+
+      /**
+       * <code>SENDER = 1;</code>
+       */
+      public static final int SENDER_VALUE = 1;
+      /**
+       * <code>RECEIVER = 2;</code>
+       */
+      public static final int RECEIVER_VALUE = 2;
+
+
+      public final int getNumber() { return value; }
+
+      public static Role valueOf(int value) {
+        switch (value) {
+          case 1: return SENDER;
+          case 2: return RECEIVER;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<Role>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static com.google.protobuf.Internal.EnumLiteMap<Role>
+          internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<Role>() {
+              public Role findValueByNumber(int number) {
+                return Role.valueOf(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        return getDescriptor().getValues().get(index);
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final Role[] VALUES = values();
+
+      public static Role valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int index;
+      private final int value;
+
+      private Role(int index, int value) {
+        this.index = index;
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:lockerbox.DeliveryPoint.Role)
+    }
+
+    /**
+     * Protobuf enum {@code lockerbox.DeliveryPoint.Method}
+     */
+    public enum Method
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>LOCKERBOX = 1;</code>
+       */
+      LOCKERBOX(0, 1),
+      /**
+       * <code>POST_OFFICE = 2;</code>
+       */
+      POST_OFFICE(1, 2),
+      /**
+       * <code>ADDRESS = 3;</code>
+       */
+      ADDRESS(2, 3),
+      ;
+
+      /**
+       * <code>LOCKERBOX = 1;</code>
+       */
+      public static final int LOCKERBOX_VALUE = 1;
+      /**
+       * <code>POST_OFFICE = 2;</code>
+       */
+      public static final int POST_OFFICE_VALUE = 2;
+      /**
+       * <code>ADDRESS = 3;</code>
+       */
+      public static final int ADDRESS_VALUE = 3;
+
+
+      public final int getNumber() { return value; }
+
+      public static Method valueOf(int value) {
+        switch (value) {
+          case 1: return LOCKERBOX;
+          case 2: return POST_OFFICE;
+          case 3: return ADDRESS;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<Method>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static com.google.protobuf.Internal.EnumLiteMap<Method>
+          internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<Method>() {
+              public Method findValueByNumber(int number) {
+                return Method.valueOf(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        return getDescriptor().getValues().get(index);
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.getDescriptor().getEnumTypes().get(1);
+      }
+
+      private static final Method[] VALUES = values();
+
+      public static Method valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int index;
+      private final int value;
+
+      private Method(int index, int value) {
+        this.index = index;
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:lockerbox.DeliveryPoint.Method)
+    }
+
+    public interface LockerboxOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:lockerbox.DeliveryPoint.Lockerbox)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>optional string name = 1;</code>
+       */
+      boolean hasName();
+      /**
+       * <code>optional string name = 1;</code>
+       */
+      java.lang.String getName();
+      /**
+       * <code>optional string name = 1;</code>
+       */
+      com.google.protobuf.ByteString
+          getNameBytes();
+
+      /**
+       * <code>optional string pin = 2;</code>
+       *
+       * <pre>
+       * This field can be used only when lockerbox is used inside delivery point.
+       * (when box is used to tell about details of sender/receier delivery point).
+       * </pre>
+       */
+      boolean hasPin();
+      /**
+       * <code>optional string pin = 2;</code>
+       *
+       * <pre>
+       * This field can be used only when lockerbox is used inside delivery point.
+       * (when box is used to tell about details of sender/receier delivery point).
+       * </pre>
+       */
+      java.lang.String getPin();
+      /**
+       * <code>optional string pin = 2;</code>
+       *
+       * <pre>
+       * This field can be used only when lockerbox is used inside delivery point.
+       * (when box is used to tell about details of sender/receier delivery point).
+       * </pre>
+       */
+      com.google.protobuf.ByteString
+          getPinBytes();
+    }
+    /**
+     * Protobuf type {@code lockerbox.DeliveryPoint.Lockerbox}
+     */
+    public static final class Lockerbox extends
+        com.google.protobuf.GeneratedMessage implements
+        // @@protoc_insertion_point(message_implements:lockerbox.DeliveryPoint.Lockerbox)
+        LockerboxOrBuilder {
+      // Use Lockerbox.newBuilder() to construct.
+      private Lockerbox(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+        super(builder);
+        this.unknownFields = builder.getUnknownFields();
+      }
+      private Lockerbox(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+      private static final Lockerbox defaultInstance;
+      public static Lockerbox getDefaultInstance() {
+        return defaultInstance;
+      }
+
+      public Lockerbox getDefaultInstanceForType() {
+        return defaultInstance;
+      }
+
+      private final com.google.protobuf.UnknownFieldSet unknownFields;
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+          getUnknownFields() {
+        return this.unknownFields;
+      }
+      private Lockerbox(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        initFields();
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!parseUnknownField(input, unknownFields,
+                                       extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+              case 10: {
+                com.google.protobuf.ByteString bs = input.readBytes();
+                bitField0_ |= 0x00000001;
+                name_ = bs;
+                break;
+              }
+              case 18: {
+                com.google.protobuf.ByteString bs = input.readBytes();
+                bitField0_ |= 0x00000002;
+                pin_ = bs;
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e.getMessage()).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.zpaslab.lockerbox.LockerboxProtos.internal_static_lockerbox_DeliveryPoint_Lockerbox_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.zpaslab.lockerbox.LockerboxProtos.internal_static_lockerbox_DeliveryPoint_Lockerbox_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Lockerbox.class, com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Lockerbox.Builder.class);
+      }
+
+      public static com.google.protobuf.Parser<Lockerbox> PARSER =
+          new com.google.protobuf.AbstractParser<Lockerbox>() {
+        public Lockerbox parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new Lockerbox(input, extensionRegistry);
+        }
+      };
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<Lockerbox> getParserForType() {
+        return PARSER;
+      }
+
+      private int bitField0_;
+      public static final int NAME_FIELD_NUMBER = 1;
+      private java.lang.Object name_;
+      /**
+       * <code>optional string name = 1;</code>
+       */
+      public boolean hasName() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional string name = 1;</code>
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            name_ = s;
+          }
+          return s;
+        }
+      }
+      /**
+       * <code>optional string name = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int PIN_FIELD_NUMBER = 2;
+      private java.lang.Object pin_;
+      /**
+       * <code>optional string pin = 2;</code>
+       *
+       * <pre>
+       * This field can be used only when lockerbox is used inside delivery point.
+       * (when box is used to tell about details of sender/receier delivery point).
+       * </pre>
+       */
+      public boolean hasPin() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional string pin = 2;</code>
+       *
+       * <pre>
+       * This field can be used only when lockerbox is used inside delivery point.
+       * (when box is used to tell about details of sender/receier delivery point).
+       * </pre>
+       */
+      public java.lang.String getPin() {
+        java.lang.Object ref = pin_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            pin_ = s;
+          }
+          return s;
+        }
+      }
+      /**
+       * <code>optional string pin = 2;</code>
+       *
+       * <pre>
+       * This field can be used only when lockerbox is used inside delivery point.
+       * (when box is used to tell about details of sender/receier delivery point).
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getPinBytes() {
+        java.lang.Object ref = pin_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          pin_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      private void initFields() {
+        name_ = "";
+        pin_ = "";
+      }
+      private byte memoizedIsInitialized = -1;
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        getSerializedSize();
+        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          output.writeBytes(1, getNameBytes());
+        }
+        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          output.writeBytes(2, getPinBytes());
+        }
+        getUnknownFields().writeTo(output);
+      }
+
+      private int memoizedSerializedSize = -1;
+      public int getSerializedSize() {
+        int size = memoizedSerializedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBytesSize(1, getNameBytes());
+        }
+        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBytesSize(2, getPinBytes());
+        }
+        size += getUnknownFields().getSerializedSize();
+        memoizedSerializedSize = size;
+        return size;
+      }
+
+      private static final long serialVersionUID = 0L;
+      @java.lang.Override
+      protected java.lang.Object writeReplace()
+          throws java.io.ObjectStreamException {
+        return super.writeReplace();
+      }
+
+      public static com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Lockerbox parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Lockerbox parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Lockerbox parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Lockerbox parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Lockerbox parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input);
+      }
+      public static com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Lockerbox parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input, extensionRegistry);
+      }
+      public static com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Lockerbox parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return PARSER.parseDelimitedFrom(input);
+      }
+      public static com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Lockerbox parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      }
+      public static com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Lockerbox parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input);
+      }
+      public static com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Lockerbox parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input, extensionRegistry);
+      }
+
+      public static Builder newBuilder() { return Builder.create(); }
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder(com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Lockerbox prototype) {
+        return newBuilder().mergeFrom(prototype);
+      }
+      public Builder toBuilder() { return newBuilder(this); }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code lockerbox.DeliveryPoint.Lockerbox}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:lockerbox.DeliveryPoint.Lockerbox)
+          com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.LockerboxOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.zpaslab.lockerbox.LockerboxProtos.internal_static_lockerbox_DeliveryPoint_Lockerbox_descriptor;
+        }
+
+        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.zpaslab.lockerbox.LockerboxProtos.internal_static_lockerbox_DeliveryPoint_Lockerbox_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Lockerbox.class, com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Lockerbox.Builder.class);
+        }
+
+        // Construct using com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Lockerbox.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          }
+        }
+        private static Builder create() {
+          return new Builder();
+        }
+
+        public Builder clear() {
+          super.clear();
+          name_ = "";
+          bitField0_ = (bitField0_ & ~0x00000001);
+          pin_ = "";
+          bitField0_ = (bitField0_ & ~0x00000002);
+          return this;
+        }
+
+        public Builder clone() {
+          return create().mergeFrom(buildPartial());
+        }
+
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return com.zpaslab.lockerbox.LockerboxProtos.internal_static_lockerbox_DeliveryPoint_Lockerbox_descriptor;
+        }
+
+        public com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Lockerbox getDefaultInstanceForType() {
+          return com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Lockerbox.getDefaultInstance();
+        }
+
+        public com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Lockerbox build() {
+          com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Lockerbox result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        public com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Lockerbox buildPartial() {
+          com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Lockerbox result = new com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Lockerbox(this);
+          int from_bitField0_ = bitField0_;
+          int to_bitField0_ = 0;
+          if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+            to_bitField0_ |= 0x00000001;
+          }
+          result.name_ = name_;
+          if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+            to_bitField0_ |= 0x00000002;
+          }
+          result.pin_ = pin_;
+          result.bitField0_ = to_bitField0_;
+          onBuilt();
+          return result;
+        }
+
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Lockerbox) {
+            return mergeFrom((com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Lockerbox)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Lockerbox other) {
+          if (other == com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Lockerbox.getDefaultInstance()) return this;
+          if (other.hasName()) {
+            bitField0_ |= 0x00000001;
+            name_ = other.name_;
+            onChanged();
+          }
+          if (other.hasPin()) {
+            bitField0_ |= 0x00000002;
+            pin_ = other.pin_;
+            onChanged();
+          }
+          this.mergeUnknownFields(other.getUnknownFields());
+          return this;
+        }
+
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Lockerbox parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Lockerbox) e.getUnfinishedMessage();
+            throw e;
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        private int bitField0_;
+
+        private java.lang.Object name_ = "";
+        /**
+         * <code>optional string name = 1;</code>
+         */
+        public boolean hasName() {
+          return ((bitField0_ & 0x00000001) == 0x00000001);
+        }
+        /**
+         * <code>optional string name = 1;</code>
+         */
+        public java.lang.String getName() {
+          java.lang.Object ref = name_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            if (bs.isValidUtf8()) {
+              name_ = s;
+            }
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>optional string name = 1;</code>
+         */
+        public com.google.protobuf.ByteString
+            getNameBytes() {
+          java.lang.Object ref = name_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            name_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>optional string name = 1;</code>
+         */
+        public Builder setName(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+          name_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional string name = 1;</code>
+         */
+        public Builder clearName() {
+          bitField0_ = (bitField0_ & ~0x00000001);
+          name_ = getDefaultInstance().getName();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional string name = 1;</code>
+         */
+        public Builder setNameBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+          name_ = value;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object pin_ = "";
+        /**
+         * <code>optional string pin = 2;</code>
+         *
+         * <pre>
+         * This field can be used only when lockerbox is used inside delivery point.
+         * (when box is used to tell about details of sender/receier delivery point).
+         * </pre>
+         */
+        public boolean hasPin() {
+          return ((bitField0_ & 0x00000002) == 0x00000002);
+        }
+        /**
+         * <code>optional string pin = 2;</code>
+         *
+         * <pre>
+         * This field can be used only when lockerbox is used inside delivery point.
+         * (when box is used to tell about details of sender/receier delivery point).
+         * </pre>
+         */
+        public java.lang.String getPin() {
+          java.lang.Object ref = pin_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            if (bs.isValidUtf8()) {
+              pin_ = s;
+            }
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>optional string pin = 2;</code>
+         *
+         * <pre>
+         * This field can be used only when lockerbox is used inside delivery point.
+         * (when box is used to tell about details of sender/receier delivery point).
+         * </pre>
+         */
+        public com.google.protobuf.ByteString
+            getPinBytes() {
+          java.lang.Object ref = pin_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            pin_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>optional string pin = 2;</code>
+         *
+         * <pre>
+         * This field can be used only when lockerbox is used inside delivery point.
+         * (when box is used to tell about details of sender/receier delivery point).
+         * </pre>
+         */
+        public Builder setPin(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+          pin_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional string pin = 2;</code>
+         *
+         * <pre>
+         * This field can be used only when lockerbox is used inside delivery point.
+         * (when box is used to tell about details of sender/receier delivery point).
+         * </pre>
+         */
+        public Builder clearPin() {
+          bitField0_ = (bitField0_ & ~0x00000002);
+          pin_ = getDefaultInstance().getPin();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional string pin = 2;</code>
+         *
+         * <pre>
+         * This field can be used only when lockerbox is used inside delivery point.
+         * (when box is used to tell about details of sender/receier delivery point).
+         * </pre>
+         */
+        public Builder setPinBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+          pin_ = value;
+          onChanged();
+          return this;
+        }
+
+        // @@protoc_insertion_point(builder_scope:lockerbox.DeliveryPoint.Lockerbox)
+      }
+
+      static {
+        defaultInstance = new Lockerbox(true);
+        defaultInstance.initFields();
+      }
+
+      // @@protoc_insertion_point(class_scope:lockerbox.DeliveryPoint.Lockerbox)
+    }
+
+    public interface InstructionsOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:lockerbox.DeliveryPoint.Instructions)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>optional string hour_start = 1;</code>
+       *
+       * <pre>
+       * Should be HH:mm format (e.g. 10:00 or 11:30)
+       * </pre>
+       */
+      boolean hasHourStart();
+      /**
+       * <code>optional string hour_start = 1;</code>
+       *
+       * <pre>
+       * Should be HH:mm format (e.g. 10:00 or 11:30)
+       * </pre>
+       */
+      java.lang.String getHourStart();
+      /**
+       * <code>optional string hour_start = 1;</code>
+       *
+       * <pre>
+       * Should be HH:mm format (e.g. 10:00 or 11:30)
+       * </pre>
+       */
+      com.google.protobuf.ByteString
+          getHourStartBytes();
+
+      /**
+       * <code>optional string hour_due = 2;</code>
+       */
+      boolean hasHourDue();
+      /**
+       * <code>optional string hour_due = 2;</code>
+       */
+      java.lang.String getHourDue();
+      /**
+       * <code>optional string hour_due = 2;</code>
+       */
+      com.google.protobuf.ByteString
+          getHourDueBytes();
+
+      /**
+       * <code>optional string notes = 3;</code>
+       *
+       * <pre>
+       * Notes for courier.
+       * </pre>
+       */
+      boolean hasNotes();
+      /**
+       * <code>optional string notes = 3;</code>
+       *
+       * <pre>
+       * Notes for courier.
+       * </pre>
+       */
+      java.lang.String getNotes();
+      /**
+       * <code>optional string notes = 3;</code>
+       *
+       * <pre>
+       * Notes for courier.
+       * </pre>
+       */
+      com.google.protobuf.ByteString
+          getNotesBytes();
+    }
+    /**
+     * Protobuf type {@code lockerbox.DeliveryPoint.Instructions}
+     *
+     * <pre>
+     * Courier pickup/delivery details (when courier will come to collect / deliver the parcel)
+     * </pre>
+     */
+    public static final class Instructions extends
+        com.google.protobuf.GeneratedMessage implements
+        // @@protoc_insertion_point(message_implements:lockerbox.DeliveryPoint.Instructions)
+        InstructionsOrBuilder {
+      // Use Instructions.newBuilder() to construct.
+      private Instructions(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+        super(builder);
+        this.unknownFields = builder.getUnknownFields();
+      }
+      private Instructions(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+      private static final Instructions defaultInstance;
+      public static Instructions getDefaultInstance() {
+        return defaultInstance;
+      }
+
+      public Instructions getDefaultInstanceForType() {
+        return defaultInstance;
+      }
+
+      private final com.google.protobuf.UnknownFieldSet unknownFields;
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+          getUnknownFields() {
+        return this.unknownFields;
+      }
+      private Instructions(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        initFields();
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!parseUnknownField(input, unknownFields,
+                                       extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+              case 10: {
+                com.google.protobuf.ByteString bs = input.readBytes();
+                bitField0_ |= 0x00000001;
+                hourStart_ = bs;
+                break;
+              }
+              case 18: {
+                com.google.protobuf.ByteString bs = input.readBytes();
+                bitField0_ |= 0x00000002;
+                hourDue_ = bs;
+                break;
+              }
+              case 26: {
+                com.google.protobuf.ByteString bs = input.readBytes();
+                bitField0_ |= 0x00000004;
+                notes_ = bs;
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e.getMessage()).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.zpaslab.lockerbox.LockerboxProtos.internal_static_lockerbox_DeliveryPoint_Instructions_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.zpaslab.lockerbox.LockerboxProtos.internal_static_lockerbox_DeliveryPoint_Instructions_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Instructions.class, com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Instructions.Builder.class);
+      }
+
+      public static com.google.protobuf.Parser<Instructions> PARSER =
+          new com.google.protobuf.AbstractParser<Instructions>() {
+        public Instructions parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new Instructions(input, extensionRegistry);
+        }
+      };
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<Instructions> getParserForType() {
+        return PARSER;
+      }
+
+      private int bitField0_;
+      public static final int HOUR_START_FIELD_NUMBER = 1;
+      private java.lang.Object hourStart_;
+      /**
+       * <code>optional string hour_start = 1;</code>
+       *
+       * <pre>
+       * Should be HH:mm format (e.g. 10:00 or 11:30)
+       * </pre>
+       */
+      public boolean hasHourStart() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional string hour_start = 1;</code>
+       *
+       * <pre>
+       * Should be HH:mm format (e.g. 10:00 or 11:30)
+       * </pre>
+       */
+      public java.lang.String getHourStart() {
+        java.lang.Object ref = hourStart_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            hourStart_ = s;
+          }
+          return s;
+        }
+      }
+      /**
+       * <code>optional string hour_start = 1;</code>
+       *
+       * <pre>
+       * Should be HH:mm format (e.g. 10:00 or 11:30)
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getHourStartBytes() {
+        java.lang.Object ref = hourStart_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          hourStart_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int HOUR_DUE_FIELD_NUMBER = 2;
+      private java.lang.Object hourDue_;
+      /**
+       * <code>optional string hour_due = 2;</code>
+       */
+      public boolean hasHourDue() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional string hour_due = 2;</code>
+       */
+      public java.lang.String getHourDue() {
+        java.lang.Object ref = hourDue_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            hourDue_ = s;
+          }
+          return s;
+        }
+      }
+      /**
+       * <code>optional string hour_due = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getHourDueBytes() {
+        java.lang.Object ref = hourDue_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          hourDue_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int NOTES_FIELD_NUMBER = 3;
+      private java.lang.Object notes_;
+      /**
+       * <code>optional string notes = 3;</code>
+       *
+       * <pre>
+       * Notes for courier.
+       * </pre>
+       */
+      public boolean hasNotes() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional string notes = 3;</code>
+       *
+       * <pre>
+       * Notes for courier.
+       * </pre>
+       */
+      public java.lang.String getNotes() {
+        java.lang.Object ref = notes_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            notes_ = s;
+          }
+          return s;
+        }
+      }
+      /**
+       * <code>optional string notes = 3;</code>
+       *
+       * <pre>
+       * Notes for courier.
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getNotesBytes() {
+        java.lang.Object ref = notes_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          notes_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      private void initFields() {
+        hourStart_ = "";
+        hourDue_ = "";
+        notes_ = "";
+      }
+      private byte memoizedIsInitialized = -1;
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        getSerializedSize();
+        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          output.writeBytes(1, getHourStartBytes());
+        }
+        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          output.writeBytes(2, getHourDueBytes());
+        }
+        if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          output.writeBytes(3, getNotesBytes());
+        }
+        getUnknownFields().writeTo(output);
+      }
+
+      private int memoizedSerializedSize = -1;
+      public int getSerializedSize() {
+        int size = memoizedSerializedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBytesSize(1, getHourStartBytes());
+        }
+        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBytesSize(2, getHourDueBytes());
+        }
+        if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBytesSize(3, getNotesBytes());
+        }
+        size += getUnknownFields().getSerializedSize();
+        memoizedSerializedSize = size;
+        return size;
+      }
+
+      private static final long serialVersionUID = 0L;
+      @java.lang.Override
+      protected java.lang.Object writeReplace()
+          throws java.io.ObjectStreamException {
+        return super.writeReplace();
+      }
+
+      public static com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Instructions parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Instructions parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Instructions parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Instructions parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Instructions parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input);
+      }
+      public static com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Instructions parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input, extensionRegistry);
+      }
+      public static com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Instructions parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return PARSER.parseDelimitedFrom(input);
+      }
+      public static com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Instructions parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      }
+      public static com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Instructions parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input);
+      }
+      public static com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Instructions parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input, extensionRegistry);
+      }
+
+      public static Builder newBuilder() { return Builder.create(); }
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder(com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Instructions prototype) {
+        return newBuilder().mergeFrom(prototype);
+      }
+      public Builder toBuilder() { return newBuilder(this); }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code lockerbox.DeliveryPoint.Instructions}
+       *
+       * <pre>
+       * Courier pickup/delivery details (when courier will come to collect / deliver the parcel)
+       * </pre>
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:lockerbox.DeliveryPoint.Instructions)
+          com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.InstructionsOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.zpaslab.lockerbox.LockerboxProtos.internal_static_lockerbox_DeliveryPoint_Instructions_descriptor;
+        }
+
+        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.zpaslab.lockerbox.LockerboxProtos.internal_static_lockerbox_DeliveryPoint_Instructions_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Instructions.class, com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Instructions.Builder.class);
+        }
+
+        // Construct using com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Instructions.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          }
+        }
+        private static Builder create() {
+          return new Builder();
+        }
+
+        public Builder clear() {
+          super.clear();
+          hourStart_ = "";
+          bitField0_ = (bitField0_ & ~0x00000001);
+          hourDue_ = "";
+          bitField0_ = (bitField0_ & ~0x00000002);
+          notes_ = "";
+          bitField0_ = (bitField0_ & ~0x00000004);
+          return this;
+        }
+
+        public Builder clone() {
+          return create().mergeFrom(buildPartial());
+        }
+
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return com.zpaslab.lockerbox.LockerboxProtos.internal_static_lockerbox_DeliveryPoint_Instructions_descriptor;
+        }
+
+        public com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Instructions getDefaultInstanceForType() {
+          return com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Instructions.getDefaultInstance();
+        }
+
+        public com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Instructions build() {
+          com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Instructions result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        public com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Instructions buildPartial() {
+          com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Instructions result = new com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Instructions(this);
+          int from_bitField0_ = bitField0_;
+          int to_bitField0_ = 0;
+          if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+            to_bitField0_ |= 0x00000001;
+          }
+          result.hourStart_ = hourStart_;
+          if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+            to_bitField0_ |= 0x00000002;
+          }
+          result.hourDue_ = hourDue_;
+          if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+            to_bitField0_ |= 0x00000004;
+          }
+          result.notes_ = notes_;
+          result.bitField0_ = to_bitField0_;
+          onBuilt();
+          return result;
+        }
+
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Instructions) {
+            return mergeFrom((com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Instructions)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Instructions other) {
+          if (other == com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Instructions.getDefaultInstance()) return this;
+          if (other.hasHourStart()) {
+            bitField0_ |= 0x00000001;
+            hourStart_ = other.hourStart_;
+            onChanged();
+          }
+          if (other.hasHourDue()) {
+            bitField0_ |= 0x00000002;
+            hourDue_ = other.hourDue_;
+            onChanged();
+          }
+          if (other.hasNotes()) {
+            bitField0_ |= 0x00000004;
+            notes_ = other.notes_;
+            onChanged();
+          }
+          this.mergeUnknownFields(other.getUnknownFields());
+          return this;
+        }
+
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Instructions parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Instructions) e.getUnfinishedMessage();
+            throw e;
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        private int bitField0_;
+
+        private java.lang.Object hourStart_ = "";
+        /**
+         * <code>optional string hour_start = 1;</code>
+         *
+         * <pre>
+         * Should be HH:mm format (e.g. 10:00 or 11:30)
+         * </pre>
+         */
+        public boolean hasHourStart() {
+          return ((bitField0_ & 0x00000001) == 0x00000001);
+        }
+        /**
+         * <code>optional string hour_start = 1;</code>
+         *
+         * <pre>
+         * Should be HH:mm format (e.g. 10:00 or 11:30)
+         * </pre>
+         */
+        public java.lang.String getHourStart() {
+          java.lang.Object ref = hourStart_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            if (bs.isValidUtf8()) {
+              hourStart_ = s;
+            }
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>optional string hour_start = 1;</code>
+         *
+         * <pre>
+         * Should be HH:mm format (e.g. 10:00 or 11:30)
+         * </pre>
+         */
+        public com.google.protobuf.ByteString
+            getHourStartBytes() {
+          java.lang.Object ref = hourStart_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            hourStart_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>optional string hour_start = 1;</code>
+         *
+         * <pre>
+         * Should be HH:mm format (e.g. 10:00 or 11:30)
+         * </pre>
+         */
+        public Builder setHourStart(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+          hourStart_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional string hour_start = 1;</code>
+         *
+         * <pre>
+         * Should be HH:mm format (e.g. 10:00 or 11:30)
+         * </pre>
+         */
+        public Builder clearHourStart() {
+          bitField0_ = (bitField0_ & ~0x00000001);
+          hourStart_ = getDefaultInstance().getHourStart();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional string hour_start = 1;</code>
+         *
+         * <pre>
+         * Should be HH:mm format (e.g. 10:00 or 11:30)
+         * </pre>
+         */
+        public Builder setHourStartBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+          hourStart_ = value;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object hourDue_ = "";
+        /**
+         * <code>optional string hour_due = 2;</code>
+         */
+        public boolean hasHourDue() {
+          return ((bitField0_ & 0x00000002) == 0x00000002);
+        }
+        /**
+         * <code>optional string hour_due = 2;</code>
+         */
+        public java.lang.String getHourDue() {
+          java.lang.Object ref = hourDue_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            if (bs.isValidUtf8()) {
+              hourDue_ = s;
+            }
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>optional string hour_due = 2;</code>
+         */
+        public com.google.protobuf.ByteString
+            getHourDueBytes() {
+          java.lang.Object ref = hourDue_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            hourDue_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>optional string hour_due = 2;</code>
+         */
+        public Builder setHourDue(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+          hourDue_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional string hour_due = 2;</code>
+         */
+        public Builder clearHourDue() {
+          bitField0_ = (bitField0_ & ~0x00000002);
+          hourDue_ = getDefaultInstance().getHourDue();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional string hour_due = 2;</code>
+         */
+        public Builder setHourDueBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+          hourDue_ = value;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object notes_ = "";
+        /**
+         * <code>optional string notes = 3;</code>
+         *
+         * <pre>
+         * Notes for courier.
+         * </pre>
+         */
+        public boolean hasNotes() {
+          return ((bitField0_ & 0x00000004) == 0x00000004);
+        }
+        /**
+         * <code>optional string notes = 3;</code>
+         *
+         * <pre>
+         * Notes for courier.
+         * </pre>
+         */
+        public java.lang.String getNotes() {
+          java.lang.Object ref = notes_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            if (bs.isValidUtf8()) {
+              notes_ = s;
+            }
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>optional string notes = 3;</code>
+         *
+         * <pre>
+         * Notes for courier.
+         * </pre>
+         */
+        public com.google.protobuf.ByteString
+            getNotesBytes() {
+          java.lang.Object ref = notes_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            notes_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>optional string notes = 3;</code>
+         *
+         * <pre>
+         * Notes for courier.
+         * </pre>
+         */
+        public Builder setNotes(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+          notes_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional string notes = 3;</code>
+         *
+         * <pre>
+         * Notes for courier.
+         * </pre>
+         */
+        public Builder clearNotes() {
+          bitField0_ = (bitField0_ & ~0x00000004);
+          notes_ = getDefaultInstance().getNotes();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional string notes = 3;</code>
+         *
+         * <pre>
+         * Notes for courier.
+         * </pre>
+         */
+        public Builder setNotesBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+          notes_ = value;
+          onChanged();
+          return this;
+        }
+
+        // @@protoc_insertion_point(builder_scope:lockerbox.DeliveryPoint.Instructions)
+      }
+
+      static {
+        defaultInstance = new Instructions(true);
+        defaultInstance.initFields();
+      }
+
+      // @@protoc_insertion_point(class_scope:lockerbox.DeliveryPoint.Instructions)
+    }
+
+    private int bitField0_;
+    public static final int METHOD_FIELD_NUMBER = 1;
+    private com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Method method_;
+    /**
+     * <code>optional .lockerbox.DeliveryPoint.Method method = 1;</code>
+     */
+    public boolean hasMethod() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional .lockerbox.DeliveryPoint.Method method = 1;</code>
+     */
+    public com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Method getMethod() {
+      return method_;
+    }
+
+    public static final int ROLE_FIELD_NUMBER = 2;
+    private com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Role role_;
+    /**
+     * <code>optional .lockerbox.DeliveryPoint.Role role = 2;</code>
+     *
+     * <pre>
+     * TODO(pawelb): remove?
+     * </pre>
+     */
+    public boolean hasRole() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional .lockerbox.DeliveryPoint.Role role = 2;</code>
+     *
+     * <pre>
+     * TODO(pawelb): remove?
+     * </pre>
+     */
+    public com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Role getRole() {
+      return role_;
+    }
+
+    public static final int LOCKERBOX_FIELD_NUMBER = 4;
+    private com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Lockerbox lockerbox_;
+    /**
+     * <code>optional .lockerbox.DeliveryPoint.Lockerbox lockerbox = 4;</code>
+     *
+     * <pre>
+     * if type == LOCKERBOX
+     * </pre>
+     */
+    public boolean hasLockerbox() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>optional .lockerbox.DeliveryPoint.Lockerbox lockerbox = 4;</code>
+     *
+     * <pre>
+     * if type == LOCKERBOX
+     * </pre>
+     */
+    public com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Lockerbox getLockerbox() {
+      return lockerbox_;
+    }
+    /**
+     * <code>optional .lockerbox.DeliveryPoint.Lockerbox lockerbox = 4;</code>
+     *
+     * <pre>
+     * if type == LOCKERBOX
+     * </pre>
+     */
+    public com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.LockerboxOrBuilder getLockerboxOrBuilder() {
+      return lockerbox_;
+    }
+
+    public static final int POST_OFFICE_FIELD_NUMBER = 5;
+    private com.zpaslab.lockerbox.LockerboxProtos.PostOffice postOffice_;
+    /**
+     * <code>optional .lockerbox.PostOffice post_office = 5;</code>
+     *
+     * <pre>
+     * if type == POST_OFFICE
+     * </pre>
+     */
+    public boolean hasPostOffice() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
+    }
+    /**
+     * <code>optional .lockerbox.PostOffice post_office = 5;</code>
+     *
+     * <pre>
+     * if type == POST_OFFICE
+     * </pre>
+     */
+    public com.zpaslab.lockerbox.LockerboxProtos.PostOffice getPostOffice() {
+      return postOffice_;
+    }
+    /**
+     * <code>optional .lockerbox.PostOffice post_office = 5;</code>
+     *
+     * <pre>
+     * if type == POST_OFFICE
+     * </pre>
+     */
+    public com.zpaslab.lockerbox.LockerboxProtos.PostOfficeOrBuilder getPostOfficeOrBuilder() {
+      return postOffice_;
+    }
+
+    public static final int INSTRUCTIONS_FIELD_NUMBER = 6;
+    private com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Instructions instructions_;
+    /**
+     * <code>optional .lockerbox.DeliveryPoint.Instructions instructions = 6;</code>
+     *
+     * <pre>
+     * if type == ADDRESS
+     * Additional information to help the courier successfully obtain/deliver the parcel.
+     * </pre>
+     */
+    public boolean hasInstructions() {
+      return ((bitField0_ & 0x00000010) == 0x00000010);
+    }
+    /**
+     * <code>optional .lockerbox.DeliveryPoint.Instructions instructions = 6;</code>
+     *
+     * <pre>
+     * if type == ADDRESS
+     * Additional information to help the courier successfully obtain/deliver the parcel.
+     * </pre>
+     */
+    public com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Instructions getInstructions() {
+      return instructions_;
+    }
+    /**
+     * <code>optional .lockerbox.DeliveryPoint.Instructions instructions = 6;</code>
+     *
+     * <pre>
+     * if type == ADDRESS
+     * Additional information to help the courier successfully obtain/deliver the parcel.
+     * </pre>
+     */
+    public com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.InstructionsOrBuilder getInstructionsOrBuilder() {
+      return instructions_;
+    }
+
+    public static final int ADDRESS_FIELD_NUMBER = 7;
+    private com.zpaslab.lockerbox.LockerboxProtos.Address address_;
+    /**
+     * <code>optional .lockerbox.Address address = 7;</code>
+     *
+     * <pre>
+     * Sender/Receiver contact and address information.
+     * address.email will be used to match the sender/receiver with existing system account, if exists.
+     * If there is no non-temporary account with given email, system will create a temporary account for this parcel.
+     * Required data to be filled (other fields are optional):
+     * - for lockerbox: sender/recipient email, phone
+     * - for post office: ???
+     * - for address: name1, street, numbers, city,
+     * Data set in request will overwrite default values for the account.
+     * Note: this is *not* lockerbox's address nor post office's address. It is
+     * information about the *person* who delivers/picks the parcel.
+     * TODO(pawelb): check if doesn't need to be sent for sender sender=api_key.account
+     * </pre>
+     */
+    public boolean hasAddress() {
+      return ((bitField0_ & 0x00000020) == 0x00000020);
+    }
+    /**
+     * <code>optional .lockerbox.Address address = 7;</code>
+     *
+     * <pre>
+     * Sender/Receiver contact and address information.
+     * address.email will be used to match the sender/receiver with existing system account, if exists.
+     * If there is no non-temporary account with given email, system will create a temporary account for this parcel.
+     * Required data to be filled (other fields are optional):
+     * - for lockerbox: sender/recipient email, phone
+     * - for post office: ???
+     * - for address: name1, street, numbers, city,
+     * Data set in request will overwrite default values for the account.
+     * Note: this is *not* lockerbox's address nor post office's address. It is
+     * information about the *person* who delivers/picks the parcel.
+     * TODO(pawelb): check if doesn't need to be sent for sender sender=api_key.account
+     * </pre>
+     */
+    public com.zpaslab.lockerbox.LockerboxProtos.Address getAddress() {
+      return address_;
+    }
+    /**
+     * <code>optional .lockerbox.Address address = 7;</code>
+     *
+     * <pre>
+     * Sender/Receiver contact and address information.
+     * address.email will be used to match the sender/receiver with existing system account, if exists.
+     * If there is no non-temporary account with given email, system will create a temporary account for this parcel.
+     * Required data to be filled (other fields are optional):
+     * - for lockerbox: sender/recipient email, phone
+     * - for post office: ???
+     * - for address: name1, street, numbers, city,
+     * Data set in request will overwrite default values for the account.
+     * Note: this is *not* lockerbox's address nor post office's address. It is
+     * information about the *person* who delivers/picks the parcel.
+     * TODO(pawelb): check if doesn't need to be sent for sender sender=api_key.account
+     * </pre>
+     */
+    public com.zpaslab.lockerbox.LockerboxProtos.AddressOrBuilder getAddressOrBuilder() {
+      return address_;
+    }
+
+    public static final int START_DATE_FIELD_NUMBER = 8;
+    private java.lang.Object startDate_;
+    /**
+     * <code>optional string start_date = 8;</code>
+     *
+     * <pre>
+     * Reservations fields.
+     * start_date = when the reservation begins (from the user perspective). Parcel cannot be loaded (by the user)
+     *      or picked up beforet the start_date
+     * due_date = when the reservation ends (from the user perspective). Parcel cannot be loaded (by the user)
+     *      or picked up after the due_date
+     * </pre>
+     */
+    public boolean hasStartDate() {
+      return ((bitField0_ & 0x00000040) == 0x00000040);
+    }
+    /**
+     * <code>optional string start_date = 8;</code>
+     *
+     * <pre>
+     * Reservations fields.
+     * start_date = when the reservation begins (from the user perspective). Parcel cannot be loaded (by the user)
+     *      or picked up beforet the start_date
+     * due_date = when the reservation ends (from the user perspective). Parcel cannot be loaded (by the user)
+     *      or picked up after the due_date
+     * </pre>
+     */
+    public java.lang.String getStartDate() {
+      java.lang.Object ref = startDate_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          startDate_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string start_date = 8;</code>
+     *
+     * <pre>
+     * Reservations fields.
+     * start_date = when the reservation begins (from the user perspective). Parcel cannot be loaded (by the user)
+     *      or picked up beforet the start_date
+     * due_date = when the reservation ends (from the user perspective). Parcel cannot be loaded (by the user)
+     *      or picked up after the due_date
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getStartDateBytes() {
+      java.lang.Object ref = startDate_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        startDate_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DUE_DATE_FIELD_NUMBER = 9;
+    private java.lang.Object dueDate_;
+    /**
+     * <code>optional string due_date = 9;</code>
+     */
+    public boolean hasDueDate() {
+      return ((bitField0_ & 0x00000080) == 0x00000080);
+    }
+    /**
+     * <code>optional string due_date = 9;</code>
+     */
+    public java.lang.String getDueDate() {
+      java.lang.Object ref = dueDate_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          dueDate_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string due_date = 9;</code>
+     */
+    public com.google.protobuf.ByteString
+        getDueDateBytes() {
+      java.lang.Object ref = dueDate_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        dueDate_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private void initFields() {
+      method_ = com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Method.LOCKERBOX;
+      role_ = com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Role.SENDER;
+      lockerbox_ = com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Lockerbox.getDefaultInstance();
+      postOffice_ = com.zpaslab.lockerbox.LockerboxProtos.PostOffice.getDefaultInstance();
+      instructions_ = com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Instructions.getDefaultInstance();
+      address_ = com.zpaslab.lockerbox.LockerboxProtos.Address.getDefaultInstance();
+      startDate_ = "";
+      dueDate_ = "";
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeEnum(1, method_.getNumber());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeEnum(2, role_.getNumber());
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeMessage(4, lockerbox_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        output.writeMessage(5, postOffice_);
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        output.writeMessage(6, instructions_);
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        output.writeMessage(7, address_);
+      }
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        output.writeBytes(8, getStartDateBytes());
+      }
+      if (((bitField0_ & 0x00000080) == 0x00000080)) {
+        output.writeBytes(9, getDueDateBytes());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, method_.getNumber());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(2, role_.getNumber());
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, lockerbox_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, postOffice_);
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, instructions_);
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, address_);
+      }
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(8, getStartDateBytes());
+      }
+      if (((bitField0_ & 0x00000080) == 0x00000080)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(9, getDueDateBytes());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code lockerbox.DeliveryPoint}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:lockerbox.DeliveryPoint)
+        com.zpaslab.lockerbox.LockerboxProtos.DeliveryPointOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.zpaslab.lockerbox.LockerboxProtos.internal_static_lockerbox_DeliveryPoint_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.zpaslab.lockerbox.LockerboxProtos.internal_static_lockerbox_DeliveryPoint_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.class, com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Builder.class);
+      }
+
+      // Construct using com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getLockerboxFieldBuilder();
+          getPostOfficeFieldBuilder();
+          getInstructionsFieldBuilder();
+          getAddressFieldBuilder();
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        method_ = com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Method.LOCKERBOX;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        role_ = com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Role.SENDER;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        if (lockerboxBuilder_ == null) {
+          lockerbox_ = com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Lockerbox.getDefaultInstance();
+        } else {
+          lockerboxBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        if (postOfficeBuilder_ == null) {
+          postOffice_ = com.zpaslab.lockerbox.LockerboxProtos.PostOffice.getDefaultInstance();
+        } else {
+          postOfficeBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
+        if (instructionsBuilder_ == null) {
+          instructions_ = com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Instructions.getDefaultInstance();
+        } else {
+          instructionsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000010);
+        if (addressBuilder_ == null) {
+          address_ = com.zpaslab.lockerbox.LockerboxProtos.Address.getDefaultInstance();
+        } else {
+          addressBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000020);
+        startDate_ = "";
+        bitField0_ = (bitField0_ & ~0x00000040);
+        dueDate_ = "";
+        bitField0_ = (bitField0_ & ~0x00000080);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.zpaslab.lockerbox.LockerboxProtos.internal_static_lockerbox_DeliveryPoint_descriptor;
+      }
+
+      public com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint getDefaultInstanceForType() {
+        return com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.getDefaultInstance();
+      }
+
+      public com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint build() {
+        com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint buildPartial() {
+        com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint result = new com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.method_ = method_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.role_ = role_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        if (lockerboxBuilder_ == null) {
+          result.lockerbox_ = lockerbox_;
+        } else {
+          result.lockerbox_ = lockerboxBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        if (postOfficeBuilder_ == null) {
+          result.postOffice_ = postOffice_;
+        } else {
+          result.postOffice_ = postOfficeBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
+          to_bitField0_ |= 0x00000010;
+        }
+        if (instructionsBuilder_ == null) {
+          result.instructions_ = instructions_;
+        } else {
+          result.instructions_ = instructionsBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
+          to_bitField0_ |= 0x00000020;
+        }
+        if (addressBuilder_ == null) {
+          result.address_ = address_;
+        } else {
+          result.address_ = addressBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000040) == 0x00000040)) {
+          to_bitField0_ |= 0x00000040;
+        }
+        result.startDate_ = startDate_;
+        if (((from_bitField0_ & 0x00000080) == 0x00000080)) {
+          to_bitField0_ |= 0x00000080;
+        }
+        result.dueDate_ = dueDate_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint) {
+          return mergeFrom((com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint other) {
+        if (other == com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.getDefaultInstance()) return this;
+        if (other.hasMethod()) {
+          setMethod(other.getMethod());
+        }
+        if (other.hasRole()) {
+          setRole(other.getRole());
+        }
+        if (other.hasLockerbox()) {
+          mergeLockerbox(other.getLockerbox());
+        }
+        if (other.hasPostOffice()) {
+          mergePostOffice(other.getPostOffice());
+        }
+        if (other.hasInstructions()) {
+          mergeInstructions(other.getInstructions());
+        }
+        if (other.hasAddress()) {
+          mergeAddress(other.getAddress());
+        }
+        if (other.hasStartDate()) {
+          bitField0_ |= 0x00000040;
+          startDate_ = other.startDate_;
+          onChanged();
+        }
+        if (other.hasDueDate()) {
+          bitField0_ |= 0x00000080;
+          dueDate_ = other.dueDate_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Method method_ = com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Method.LOCKERBOX;
+      /**
+       * <code>optional .lockerbox.DeliveryPoint.Method method = 1;</code>
+       */
+      public boolean hasMethod() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional .lockerbox.DeliveryPoint.Method method = 1;</code>
+       */
+      public com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Method getMethod() {
+        return method_;
+      }
+      /**
+       * <code>optional .lockerbox.DeliveryPoint.Method method = 1;</code>
+       */
+      public Builder setMethod(com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Method value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000001;
+        method_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .lockerbox.DeliveryPoint.Method method = 1;</code>
+       */
+      public Builder clearMethod() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        method_ = com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Method.LOCKERBOX;
+        onChanged();
+        return this;
+      }
+
+      private com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Role role_ = com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Role.SENDER;
+      /**
+       * <code>optional .lockerbox.DeliveryPoint.Role role = 2;</code>
+       *
+       * <pre>
+       * TODO(pawelb): remove?
+       * </pre>
+       */
+      public boolean hasRole() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional .lockerbox.DeliveryPoint.Role role = 2;</code>
+       *
+       * <pre>
+       * TODO(pawelb): remove?
+       * </pre>
+       */
+      public com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Role getRole() {
+        return role_;
+      }
+      /**
+       * <code>optional .lockerbox.DeliveryPoint.Role role = 2;</code>
+       *
+       * <pre>
+       * TODO(pawelb): remove?
+       * </pre>
+       */
+      public Builder setRole(com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Role value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000002;
+        role_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .lockerbox.DeliveryPoint.Role role = 2;</code>
+       *
+       * <pre>
+       * TODO(pawelb): remove?
+       * </pre>
+       */
+      public Builder clearRole() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        role_ = com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Role.SENDER;
+        onChanged();
+        return this;
+      }
+
+      private com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Lockerbox lockerbox_ = com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Lockerbox.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Lockerbox, com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Lockerbox.Builder, com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.LockerboxOrBuilder> lockerboxBuilder_;
+      /**
+       * <code>optional .lockerbox.DeliveryPoint.Lockerbox lockerbox = 4;</code>
+       *
+       * <pre>
+       * if type == LOCKERBOX
+       * </pre>
+       */
+      public boolean hasLockerbox() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional .lockerbox.DeliveryPoint.Lockerbox lockerbox = 4;</code>
+       *
+       * <pre>
+       * if type == LOCKERBOX
+       * </pre>
+       */
+      public com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Lockerbox getLockerbox() {
+        if (lockerboxBuilder_ == null) {
+          return lockerbox_;
+        } else {
+          return lockerboxBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .lockerbox.DeliveryPoint.Lockerbox lockerbox = 4;</code>
+       *
+       * <pre>
+       * if type == LOCKERBOX
+       * </pre>
+       */
+      public Builder setLockerbox(com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Lockerbox value) {
+        if (lockerboxBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          lockerbox_ = value;
+          onChanged();
+        } else {
+          lockerboxBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        return this;
+      }
+      /**
+       * <code>optional .lockerbox.DeliveryPoint.Lockerbox lockerbox = 4;</code>
+       *
+       * <pre>
+       * if type == LOCKERBOX
+       * </pre>
+       */
+      public Builder setLockerbox(
+          com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Lockerbox.Builder builderForValue) {
+        if (lockerboxBuilder_ == null) {
+          lockerbox_ = builderForValue.build();
+          onChanged();
+        } else {
+          lockerboxBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        return this;
+      }
+      /**
+       * <code>optional .lockerbox.DeliveryPoint.Lockerbox lockerbox = 4;</code>
+       *
+       * <pre>
+       * if type == LOCKERBOX
+       * </pre>
+       */
+      public Builder mergeLockerbox(com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Lockerbox value) {
+        if (lockerboxBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) == 0x00000004) &&
+              lockerbox_ != com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Lockerbox.getDefaultInstance()) {
+            lockerbox_ =
+              com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Lockerbox.newBuilder(lockerbox_).mergeFrom(value).buildPartial();
+          } else {
+            lockerbox_ = value;
+          }
+          onChanged();
+        } else {
+          lockerboxBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        return this;
+      }
+      /**
+       * <code>optional .lockerbox.DeliveryPoint.Lockerbox lockerbox = 4;</code>
+       *
+       * <pre>
+       * if type == LOCKERBOX
+       * </pre>
+       */
+      public Builder clearLockerbox() {
+        if (lockerboxBuilder_ == null) {
+          lockerbox_ = com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Lockerbox.getDefaultInstance();
+          onChanged();
+        } else {
+          lockerboxBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+      /**
+       * <code>optional .lockerbox.DeliveryPoint.Lockerbox lockerbox = 4;</code>
+       *
+       * <pre>
+       * if type == LOCKERBOX
+       * </pre>
+       */
+      public com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Lockerbox.Builder getLockerboxBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getLockerboxFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .lockerbox.DeliveryPoint.Lockerbox lockerbox = 4;</code>
+       *
+       * <pre>
+       * if type == LOCKERBOX
+       * </pre>
+       */
+      public com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.LockerboxOrBuilder getLockerboxOrBuilder() {
+        if (lockerboxBuilder_ != null) {
+          return lockerboxBuilder_.getMessageOrBuilder();
+        } else {
+          return lockerbox_;
+        }
+      }
+      /**
+       * <code>optional .lockerbox.DeliveryPoint.Lockerbox lockerbox = 4;</code>
+       *
+       * <pre>
+       * if type == LOCKERBOX
+       * </pre>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Lockerbox, com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Lockerbox.Builder, com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.LockerboxOrBuilder> 
+          getLockerboxFieldBuilder() {
+        if (lockerboxBuilder_ == null) {
+          lockerboxBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Lockerbox, com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Lockerbox.Builder, com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.LockerboxOrBuilder>(
+                  getLockerbox(),
+                  getParentForChildren(),
+                  isClean());
+          lockerbox_ = null;
+        }
+        return lockerboxBuilder_;
+      }
+
+      private com.zpaslab.lockerbox.LockerboxProtos.PostOffice postOffice_ = com.zpaslab.lockerbox.LockerboxProtos.PostOffice.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          com.zpaslab.lockerbox.LockerboxProtos.PostOffice, com.zpaslab.lockerbox.LockerboxProtos.PostOffice.Builder, com.zpaslab.lockerbox.LockerboxProtos.PostOfficeOrBuilder> postOfficeBuilder_;
+      /**
+       * <code>optional .lockerbox.PostOffice post_office = 5;</code>
+       *
+       * <pre>
+       * if type == POST_OFFICE
+       * </pre>
+       */
+      public boolean hasPostOffice() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>optional .lockerbox.PostOffice post_office = 5;</code>
+       *
+       * <pre>
+       * if type == POST_OFFICE
+       * </pre>
+       */
+      public com.zpaslab.lockerbox.LockerboxProtos.PostOffice getPostOffice() {
+        if (postOfficeBuilder_ == null) {
+          return postOffice_;
+        } else {
+          return postOfficeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .lockerbox.PostOffice post_office = 5;</code>
+       *
+       * <pre>
+       * if type == POST_OFFICE
+       * </pre>
+       */
+      public Builder setPostOffice(com.zpaslab.lockerbox.LockerboxProtos.PostOffice value) {
+        if (postOfficeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          postOffice_ = value;
+          onChanged();
+        } else {
+          postOfficeBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        return this;
+      }
+      /**
+       * <code>optional .lockerbox.PostOffice post_office = 5;</code>
+       *
+       * <pre>
+       * if type == POST_OFFICE
+       * </pre>
+       */
+      public Builder setPostOffice(
+          com.zpaslab.lockerbox.LockerboxProtos.PostOffice.Builder builderForValue) {
+        if (postOfficeBuilder_ == null) {
+          postOffice_ = builderForValue.build();
+          onChanged();
+        } else {
+          postOfficeBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        return this;
+      }
+      /**
+       * <code>optional .lockerbox.PostOffice post_office = 5;</code>
+       *
+       * <pre>
+       * if type == POST_OFFICE
+       * </pre>
+       */
+      public Builder mergePostOffice(com.zpaslab.lockerbox.LockerboxProtos.PostOffice value) {
+        if (postOfficeBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) == 0x00000008) &&
+              postOffice_ != com.zpaslab.lockerbox.LockerboxProtos.PostOffice.getDefaultInstance()) {
+            postOffice_ =
+              com.zpaslab.lockerbox.LockerboxProtos.PostOffice.newBuilder(postOffice_).mergeFrom(value).buildPartial();
+          } else {
+            postOffice_ = value;
+          }
+          onChanged();
+        } else {
+          postOfficeBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000008;
+        return this;
+      }
+      /**
+       * <code>optional .lockerbox.PostOffice post_office = 5;</code>
+       *
+       * <pre>
+       * if type == POST_OFFICE
+       * </pre>
+       */
+      public Builder clearPostOffice() {
+        if (postOfficeBuilder_ == null) {
+          postOffice_ = com.zpaslab.lockerbox.LockerboxProtos.PostOffice.getDefaultInstance();
+          onChanged();
+        } else {
+          postOfficeBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
+        return this;
+      }
+      /**
+       * <code>optional .lockerbox.PostOffice post_office = 5;</code>
+       *
+       * <pre>
+       * if type == POST_OFFICE
+       * </pre>
+       */
+      public com.zpaslab.lockerbox.LockerboxProtos.PostOffice.Builder getPostOfficeBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getPostOfficeFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .lockerbox.PostOffice post_office = 5;</code>
+       *
+       * <pre>
+       * if type == POST_OFFICE
+       * </pre>
+       */
+      public com.zpaslab.lockerbox.LockerboxProtos.PostOfficeOrBuilder getPostOfficeOrBuilder() {
+        if (postOfficeBuilder_ != null) {
+          return postOfficeBuilder_.getMessageOrBuilder();
+        } else {
+          return postOffice_;
+        }
+      }
+      /**
+       * <code>optional .lockerbox.PostOffice post_office = 5;</code>
+       *
+       * <pre>
+       * if type == POST_OFFICE
+       * </pre>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          com.zpaslab.lockerbox.LockerboxProtos.PostOffice, com.zpaslab.lockerbox.LockerboxProtos.PostOffice.Builder, com.zpaslab.lockerbox.LockerboxProtos.PostOfficeOrBuilder> 
+          getPostOfficeFieldBuilder() {
+        if (postOfficeBuilder_ == null) {
+          postOfficeBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              com.zpaslab.lockerbox.LockerboxProtos.PostOffice, com.zpaslab.lockerbox.LockerboxProtos.PostOffice.Builder, com.zpaslab.lockerbox.LockerboxProtos.PostOfficeOrBuilder>(
+                  getPostOffice(),
+                  getParentForChildren(),
+                  isClean());
+          postOffice_ = null;
+        }
+        return postOfficeBuilder_;
+      }
+
+      private com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Instructions instructions_ = com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Instructions.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Instructions, com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Instructions.Builder, com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.InstructionsOrBuilder> instructionsBuilder_;
+      /**
+       * <code>optional .lockerbox.DeliveryPoint.Instructions instructions = 6;</code>
+       *
+       * <pre>
+       * if type == ADDRESS
+       * Additional information to help the courier successfully obtain/deliver the parcel.
+       * </pre>
+       */
+      public boolean hasInstructions() {
+        return ((bitField0_ & 0x00000010) == 0x00000010);
+      }
+      /**
+       * <code>optional .lockerbox.DeliveryPoint.Instructions instructions = 6;</code>
+       *
+       * <pre>
+       * if type == ADDRESS
+       * Additional information to help the courier successfully obtain/deliver the parcel.
+       * </pre>
+       */
+      public com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Instructions getInstructions() {
+        if (instructionsBuilder_ == null) {
+          return instructions_;
+        } else {
+          return instructionsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .lockerbox.DeliveryPoint.Instructions instructions = 6;</code>
+       *
+       * <pre>
+       * if type == ADDRESS
+       * Additional information to help the courier successfully obtain/deliver the parcel.
+       * </pre>
+       */
+      public Builder setInstructions(com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Instructions value) {
+        if (instructionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          instructions_ = value;
+          onChanged();
+        } else {
+          instructionsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000010;
+        return this;
+      }
+      /**
+       * <code>optional .lockerbox.DeliveryPoint.Instructions instructions = 6;</code>
+       *
+       * <pre>
+       * if type == ADDRESS
+       * Additional information to help the courier successfully obtain/deliver the parcel.
+       * </pre>
+       */
+      public Builder setInstructions(
+          com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Instructions.Builder builderForValue) {
+        if (instructionsBuilder_ == null) {
+          instructions_ = builderForValue.build();
+          onChanged();
+        } else {
+          instructionsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000010;
+        return this;
+      }
+      /**
+       * <code>optional .lockerbox.DeliveryPoint.Instructions instructions = 6;</code>
+       *
+       * <pre>
+       * if type == ADDRESS
+       * Additional information to help the courier successfully obtain/deliver the parcel.
+       * </pre>
+       */
+      public Builder mergeInstructions(com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Instructions value) {
+        if (instructionsBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) == 0x00000010) &&
+              instructions_ != com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Instructions.getDefaultInstance()) {
+            instructions_ =
+              com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Instructions.newBuilder(instructions_).mergeFrom(value).buildPartial();
+          } else {
+            instructions_ = value;
+          }
+          onChanged();
+        } else {
+          instructionsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000010;
+        return this;
+      }
+      /**
+       * <code>optional .lockerbox.DeliveryPoint.Instructions instructions = 6;</code>
+       *
+       * <pre>
+       * if type == ADDRESS
+       * Additional information to help the courier successfully obtain/deliver the parcel.
+       * </pre>
+       */
+      public Builder clearInstructions() {
+        if (instructionsBuilder_ == null) {
+          instructions_ = com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Instructions.getDefaultInstance();
+          onChanged();
+        } else {
+          instructionsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000010);
+        return this;
+      }
+      /**
+       * <code>optional .lockerbox.DeliveryPoint.Instructions instructions = 6;</code>
+       *
+       * <pre>
+       * if type == ADDRESS
+       * Additional information to help the courier successfully obtain/deliver the parcel.
+       * </pre>
+       */
+      public com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Instructions.Builder getInstructionsBuilder() {
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return getInstructionsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .lockerbox.DeliveryPoint.Instructions instructions = 6;</code>
+       *
+       * <pre>
+       * if type == ADDRESS
+       * Additional information to help the courier successfully obtain/deliver the parcel.
+       * </pre>
+       */
+      public com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.InstructionsOrBuilder getInstructionsOrBuilder() {
+        if (instructionsBuilder_ != null) {
+          return instructionsBuilder_.getMessageOrBuilder();
+        } else {
+          return instructions_;
+        }
+      }
+      /**
+       * <code>optional .lockerbox.DeliveryPoint.Instructions instructions = 6;</code>
+       *
+       * <pre>
+       * if type == ADDRESS
+       * Additional information to help the courier successfully obtain/deliver the parcel.
+       * </pre>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Instructions, com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Instructions.Builder, com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.InstructionsOrBuilder> 
+          getInstructionsFieldBuilder() {
+        if (instructionsBuilder_ == null) {
+          instructionsBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Instructions, com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.Instructions.Builder, com.zpaslab.lockerbox.LockerboxProtos.DeliveryPoint.InstructionsOrBuilder>(
+                  getInstructions(),
+                  getParentForChildren(),
+                  isClean());
+          instructions_ = null;
+        }
+        return instructionsBuilder_;
+      }
+
+      private com.zpaslab.lockerbox.LockerboxProtos.Address address_ = com.zpaslab.lockerbox.LockerboxProtos.Address.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          com.zpaslab.lockerbox.LockerboxProtos.Address, com.zpaslab.lockerbox.LockerboxProtos.Address.Builder, com.zpaslab.lockerbox.LockerboxProtos.AddressOrBuilder> addressBuilder_;
+      /**
+       * <code>optional .lockerbox.Address address = 7;</code>
+       *
+       * <pre>
+       * Sender/Receiver contact and address information.
+       * address.email will be used to match the sender/receiver with existing system account, if exists.
+       * If there is no non-temporary account with given email, system will create a temporary account for this parcel.
+       * Required data to be filled (other fields are optional):
+       * - for lockerbox: sender/recipient email, phone
+       * - for post office: ???
+       * - for address: name1, street, numbers, city,
+       * Data set in request will overwrite default values for the account.
+       * Note: this is *not* lockerbox's address nor post office's address. It is
+       * information about the *person* who delivers/picks the parcel.
+       * TODO(pawelb): check if doesn't need to be sent for sender sender=api_key.account
+       * </pre>
+       */
+      public boolean hasAddress() {
+        return ((bitField0_ & 0x00000020) == 0x00000020);
+      }
+      /**
+       * <code>optional .lockerbox.Address address = 7;</code>
+       *
+       * <pre>
+       * Sender/Receiver contact and address information.
+       * address.email will be used to match the sender/receiver with existing system account, if exists.
+       * If there is no non-temporary account with given email, system will create a temporary account for this parcel.
+       * Required data to be filled (other fields are optional):
+       * - for lockerbox: sender/recipient email, phone
+       * - for post office: ???
+       * - for address: name1, street, numbers, city,
+       * Data set in request will overwrite default values for the account.
+       * Note: this is *not* lockerbox's address nor post office's address. It is
+       * information about the *person* who delivers/picks the parcel.
+       * TODO(pawelb): check if doesn't need to be sent for sender sender=api_key.account
+       * </pre>
+       */
+      public com.zpaslab.lockerbox.LockerboxProtos.Address getAddress() {
+        if (addressBuilder_ == null) {
+          return address_;
+        } else {
+          return addressBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .lockerbox.Address address = 7;</code>
+       *
+       * <pre>
+       * Sender/Receiver contact and address information.
+       * address.email will be used to match the sender/receiver with existing system account, if exists.
+       * If there is no non-temporary account with given email, system will create a temporary account for this parcel.
+       * Required data to be filled (other fields are optional):
+       * - for lockerbox: sender/recipient email, phone
+       * - for post office: ???
+       * - for address: name1, street, numbers, city,
+       * Data set in request will overwrite default values for the account.
+       * Note: this is *not* lockerbox's address nor post office's address. It is
+       * information about the *person* who delivers/picks the parcel.
+       * TODO(pawelb): check if doesn't need to be sent for sender sender=api_key.account
+       * </pre>
+       */
+      public Builder setAddress(com.zpaslab.lockerbox.LockerboxProtos.Address value) {
+        if (addressBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          address_ = value;
+          onChanged();
+        } else {
+          addressBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000020;
+        return this;
+      }
+      /**
+       * <code>optional .lockerbox.Address address = 7;</code>
+       *
+       * <pre>
+       * Sender/Receiver contact and address information.
+       * address.email will be used to match the sender/receiver with existing system account, if exists.
+       * If there is no non-temporary account with given email, system will create a temporary account for this parcel.
+       * Required data to be filled (other fields are optional):
+       * - for lockerbox: sender/recipient email, phone
+       * - for post office: ???
+       * - for address: name1, street, numbers, city,
+       * Data set in request will overwrite default values for the account.
+       * Note: this is *not* lockerbox's address nor post office's address. It is
+       * information about the *person* who delivers/picks the parcel.
+       * TODO(pawelb): check if doesn't need to be sent for sender sender=api_key.account
+       * </pre>
+       */
+      public Builder setAddress(
+          com.zpaslab.lockerbox.LockerboxProtos.Address.Builder builderForValue) {
+        if (addressBuilder_ == null) {
+          address_ = builderForValue.build();
+          onChanged();
+        } else {
+          addressBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000020;
+        return this;
+      }
+      /**
+       * <code>optional .lockerbox.Address address = 7;</code>
+       *
+       * <pre>
+       * Sender/Receiver contact and address information.
+       * address.email will be used to match the sender/receiver with existing system account, if exists.
+       * If there is no non-temporary account with given email, system will create a temporary account for this parcel.
+       * Required data to be filled (other fields are optional):
+       * - for lockerbox: sender/recipient email, phone
+       * - for post office: ???
+       * - for address: name1, street, numbers, city,
+       * Data set in request will overwrite default values for the account.
+       * Note: this is *not* lockerbox's address nor post office's address. It is
+       * information about the *person* who delivers/picks the parcel.
+       * TODO(pawelb): check if doesn't need to be sent for sender sender=api_key.account
+       * </pre>
+       */
+      public Builder mergeAddress(com.zpaslab.lockerbox.LockerboxProtos.Address value) {
+        if (addressBuilder_ == null) {
+          if (((bitField0_ & 0x00000020) == 0x00000020) &&
+              address_ != com.zpaslab.lockerbox.LockerboxProtos.Address.getDefaultInstance()) {
+            address_ =
+              com.zpaslab.lockerbox.LockerboxProtos.Address.newBuilder(address_).mergeFrom(value).buildPartial();
+          } else {
+            address_ = value;
+          }
+          onChanged();
+        } else {
+          addressBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000020;
+        return this;
+      }
+      /**
+       * <code>optional .lockerbox.Address address = 7;</code>
+       *
+       * <pre>
+       * Sender/Receiver contact and address information.
+       * address.email will be used to match the sender/receiver with existing system account, if exists.
+       * If there is no non-temporary account with given email, system will create a temporary account for this parcel.
+       * Required data to be filled (other fields are optional):
+       * - for lockerbox: sender/recipient email, phone
+       * - for post office: ???
+       * - for address: name1, street, numbers, city,
+       * Data set in request will overwrite default values for the account.
+       * Note: this is *not* lockerbox's address nor post office's address. It is
+       * information about the *person* who delivers/picks the parcel.
+       * TODO(pawelb): check if doesn't need to be sent for sender sender=api_key.account
+       * </pre>
+       */
+      public Builder clearAddress() {
+        if (addressBuilder_ == null) {
+          address_ = com.zpaslab.lockerbox.LockerboxProtos.Address.getDefaultInstance();
+          onChanged();
+        } else {
+          addressBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000020);
+        return this;
+      }
+      /**
+       * <code>optional .lockerbox.Address address = 7;</code>
+       *
+       * <pre>
+       * Sender/Receiver contact and address information.
+       * address.email will be used to match the sender/receiver with existing system account, if exists.
+       * If there is no non-temporary account with given email, system will create a temporary account for this parcel.
+       * Required data to be filled (other fields are optional):
+       * - for lockerbox: sender/recipient email, phone
+       * - for post office: ???
+       * - for address: name1, street, numbers, city,
+       * Data set in request will overwrite default values for the account.
+       * Note: this is *not* lockerbox's address nor post office's address. It is
+       * information about the *person* who delivers/picks the parcel.
+       * TODO(pawelb): check if doesn't need to be sent for sender sender=api_key.account
+       * </pre>
+       */
+      public com.zpaslab.lockerbox.LockerboxProtos.Address.Builder getAddressBuilder() {
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return getAddressFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .lockerbox.Address address = 7;</code>
+       *
+       * <pre>
+       * Sender/Receiver contact and address information.
+       * address.email will be used to match the sender/receiver with existing system account, if exists.
+       * If there is no non-temporary account with given email, system will create a temporary account for this parcel.
+       * Required data to be filled (other fields are optional):
+       * - for lockerbox: sender/recipient email, phone
+       * - for post office: ???
+       * - for address: name1, street, numbers, city,
+       * Data set in request will overwrite default values for the account.
+       * Note: this is *not* lockerbox's address nor post office's address. It is
+       * information about the *person* who delivers/picks the parcel.
+       * TODO(pawelb): check if doesn't need to be sent for sender sender=api_key.account
+       * </pre>
+       */
+      public com.zpaslab.lockerbox.LockerboxProtos.AddressOrBuilder getAddressOrBuilder() {
+        if (addressBuilder_ != null) {
+          return addressBuilder_.getMessageOrBuilder();
+        } else {
+          return address_;
+        }
+      }
+      /**
+       * <code>optional .lockerbox.Address address = 7;</code>
+       *
+       * <pre>
+       * Sender/Receiver contact and address information.
+       * address.email will be used to match the sender/receiver with existing system account, if exists.
+       * If there is no non-temporary account with given email, system will create a temporary account for this parcel.
+       * Required data to be filled (other fields are optional):
+       * - for lockerbox: sender/recipient email, phone
+       * - for post office: ???
+       * - for address: name1, street, numbers, city,
+       * Data set in request will overwrite default values for the account.
+       * Note: this is *not* lockerbox's address nor post office's address. It is
+       * information about the *person* who delivers/picks the parcel.
+       * TODO(pawelb): check if doesn't need to be sent for sender sender=api_key.account
+       * </pre>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          com.zpaslab.lockerbox.LockerboxProtos.Address, com.zpaslab.lockerbox.LockerboxProtos.Address.Builder, com.zpaslab.lockerbox.LockerboxProtos.AddressOrBuilder> 
+          getAddressFieldBuilder() {
+        if (addressBuilder_ == null) {
+          addressBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              com.zpaslab.lockerbox.LockerboxProtos.Address, com.zpaslab.lockerbox.LockerboxProtos.Address.Builder, com.zpaslab.lockerbox.LockerboxProtos.AddressOrBuilder>(
+                  getAddress(),
+                  getParentForChildren(),
+                  isClean());
+          address_ = null;
+        }
+        return addressBuilder_;
+      }
+
+      private java.lang.Object startDate_ = "";
+      /**
+       * <code>optional string start_date = 8;</code>
+       *
+       * <pre>
+       * Reservations fields.
+       * start_date = when the reservation begins (from the user perspective). Parcel cannot be loaded (by the user)
+       *      or picked up beforet the start_date
+       * due_date = when the reservation ends (from the user perspective). Parcel cannot be loaded (by the user)
+       *      or picked up after the due_date
+       * </pre>
+       */
+      public boolean hasStartDate() {
+        return ((bitField0_ & 0x00000040) == 0x00000040);
+      }
+      /**
+       * <code>optional string start_date = 8;</code>
+       *
+       * <pre>
+       * Reservations fields.
+       * start_date = when the reservation begins (from the user perspective). Parcel cannot be loaded (by the user)
+       *      or picked up beforet the start_date
+       * due_date = when the reservation ends (from the user perspective). Parcel cannot be loaded (by the user)
+       *      or picked up after the due_date
+       * </pre>
+       */
+      public java.lang.String getStartDate() {
+        java.lang.Object ref = startDate_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            startDate_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string start_date = 8;</code>
+       *
+       * <pre>
+       * Reservations fields.
+       * start_date = when the reservation begins (from the user perspective). Parcel cannot be loaded (by the user)
+       *      or picked up beforet the start_date
+       * due_date = when the reservation ends (from the user perspective). Parcel cannot be loaded (by the user)
+       *      or picked up after the due_date
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getStartDateBytes() {
+        java.lang.Object ref = startDate_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          startDate_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string start_date = 8;</code>
+       *
+       * <pre>
+       * Reservations fields.
+       * start_date = when the reservation begins (from the user perspective). Parcel cannot be loaded (by the user)
+       *      or picked up beforet the start_date
+       * due_date = when the reservation ends (from the user perspective). Parcel cannot be loaded (by the user)
+       *      or picked up after the due_date
+       * </pre>
+       */
+      public Builder setStartDate(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000040;
+        startDate_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string start_date = 8;</code>
+       *
+       * <pre>
+       * Reservations fields.
+       * start_date = when the reservation begins (from the user perspective). Parcel cannot be loaded (by the user)
+       *      or picked up beforet the start_date
+       * due_date = when the reservation ends (from the user perspective). Parcel cannot be loaded (by the user)
+       *      or picked up after the due_date
+       * </pre>
+       */
+      public Builder clearStartDate() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        startDate_ = getDefaultInstance().getStartDate();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string start_date = 8;</code>
+       *
+       * <pre>
+       * Reservations fields.
+       * start_date = when the reservation begins (from the user perspective). Parcel cannot be loaded (by the user)
+       *      or picked up beforet the start_date
+       * due_date = when the reservation ends (from the user perspective). Parcel cannot be loaded (by the user)
+       *      or picked up after the due_date
+       * </pre>
+       */
+      public Builder setStartDateBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000040;
+        startDate_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object dueDate_ = "";
+      /**
+       * <code>optional string due_date = 9;</code>
+       */
+      public boolean hasDueDate() {
+        return ((bitField0_ & 0x00000080) == 0x00000080);
+      }
+      /**
+       * <code>optional string due_date = 9;</code>
+       */
+      public java.lang.String getDueDate() {
+        java.lang.Object ref = dueDate_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            dueDate_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string due_date = 9;</code>
+       */
+      public com.google.protobuf.ByteString
+          getDueDateBytes() {
+        java.lang.Object ref = dueDate_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          dueDate_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string due_date = 9;</code>
+       */
+      public Builder setDueDate(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000080;
+        dueDate_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string due_date = 9;</code>
+       */
+      public Builder clearDueDate() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        dueDate_ = getDefaultInstance().getDueDate();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string due_date = 9;</code>
+       */
+      public Builder setDueDateBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000080;
+        dueDate_ = value;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:lockerbox.DeliveryPoint)
+    }
+
+    static {
+      defaultInstance = new DeliveryPoint(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:lockerbox.DeliveryPoint)
+  }
+
+  public interface PostOfficeOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:lockerbox.PostOffice)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional string name = 1;</code>
+     */
+    boolean hasName();
+    /**
+     * <code>optional string name = 1;</code>
+     */
+    java.lang.String getName();
+    /**
+     * <code>optional string name = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <code>optional string description = 2;</code>
+     */
+    boolean hasDescription();
+    /**
+     * <code>optional string description = 2;</code>
+     */
+    java.lang.String getDescription();
+    /**
+     * <code>optional string description = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <code>optional string street = 3;</code>
+     */
+    boolean hasStreet();
+    /**
+     * <code>optional string street = 3;</code>
+     */
+    java.lang.String getStreet();
+    /**
+     * <code>optional string street = 3;</code>
+     */
+    com.google.protobuf.ByteString
+        getStreetBytes();
+
+    /**
+     * <code>optional string house_no = 4;</code>
+     */
+    boolean hasHouseNo();
+    /**
+     * <code>optional string house_no = 4;</code>
+     */
+    java.lang.String getHouseNo();
+    /**
+     * <code>optional string house_no = 4;</code>
+     */
+    com.google.protobuf.ByteString
+        getHouseNoBytes();
+
+    /**
+     * <code>optional string apartment_no = 5;</code>
+     */
+    boolean hasApartmentNo();
+    /**
+     * <code>optional string apartment_no = 5;</code>
+     */
+    java.lang.String getApartmentNo();
+    /**
+     * <code>optional string apartment_no = 5;</code>
+     */
+    com.google.protobuf.ByteString
+        getApartmentNoBytes();
+
+    /**
+     * <code>optional string city = 6;</code>
+     */
+    boolean hasCity();
+    /**
+     * <code>optional string city = 6;</code>
+     */
+    java.lang.String getCity();
+    /**
+     * <code>optional string city = 6;</code>
+     */
+    com.google.protobuf.ByteString
+        getCityBytes();
+
+    /**
+     * <code>optional string postal_code = 7;</code>
+     */
+    boolean hasPostalCode();
+    /**
+     * <code>optional string postal_code = 7;</code>
+     */
+    java.lang.String getPostalCode();
+    /**
+     * <code>optional string postal_code = 7;</code>
+     */
+    com.google.protobuf.ByteString
+        getPostalCodeBytes();
+  }
+  /**
+   * Protobuf type {@code lockerbox.PostOffice}
+   */
+  public static final class PostOffice extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:lockerbox.PostOffice)
+      PostOfficeOrBuilder {
+    // Use PostOffice.newBuilder() to construct.
+    private PostOffice(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private PostOffice(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final PostOffice defaultInstance;
+    public static PostOffice getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public PostOffice getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private PostOffice(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              name_ = bs;
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000002;
+              description_ = bs;
+              break;
+            }
+            case 26: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000004;
+              street_ = bs;
+              break;
+            }
+            case 34: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000008;
+              houseNo_ = bs;
+              break;
+            }
+            case 42: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000010;
+              apartmentNo_ = bs;
+              break;
+            }
+            case 50: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000020;
+              city_ = bs;
+              break;
+            }
+            case 58: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000040;
+              postalCode_ = bs;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.zpaslab.lockerbox.LockerboxProtos.internal_static_lockerbox_PostOffice_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.zpaslab.lockerbox.LockerboxProtos.internal_static_lockerbox_PostOffice_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.zpaslab.lockerbox.LockerboxProtos.PostOffice.class, com.zpaslab.lockerbox.LockerboxProtos.PostOffice.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<PostOffice> PARSER =
+        new com.google.protobuf.AbstractParser<PostOffice>() {
+      public PostOffice parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new PostOffice(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PostOffice> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    public static final int NAME_FIELD_NUMBER = 1;
+    private java.lang.Object name_;
+    /**
+     * <code>optional string name = 1;</code>
+     */
+    public boolean hasName() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional string name = 1;</code>
+     */
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          name_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string name = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 2;
+    private java.lang.Object description_;
+    /**
+     * <code>optional string description = 2;</code>
+     */
+    public boolean hasDescription() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional string description = 2;</code>
+     */
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          description_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string description = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int STREET_FIELD_NUMBER = 3;
+    private java.lang.Object street_;
+    /**
+     * <code>optional string street = 3;</code>
+     */
+    public boolean hasStreet() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>optional string street = 3;</code>
+     */
+    public java.lang.String getStreet() {
+      java.lang.Object ref = street_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          street_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string street = 3;</code>
+     */
+    public com.google.protobuf.ByteString
+        getStreetBytes() {
+      java.lang.Object ref = street_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        street_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int HOUSE_NO_FIELD_NUMBER = 4;
+    private java.lang.Object houseNo_;
+    /**
+     * <code>optional string house_no = 4;</code>
+     */
+    public boolean hasHouseNo() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
+    }
+    /**
+     * <code>optional string house_no = 4;</code>
+     */
+    public java.lang.String getHouseNo() {
+      java.lang.Object ref = houseNo_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          houseNo_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string house_no = 4;</code>
+     */
+    public com.google.protobuf.ByteString
+        getHouseNoBytes() {
+      java.lang.Object ref = houseNo_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        houseNo_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int APARTMENT_NO_FIELD_NUMBER = 5;
+    private java.lang.Object apartmentNo_;
+    /**
+     * <code>optional string apartment_no = 5;</code>
+     */
+    public boolean hasApartmentNo() {
+      return ((bitField0_ & 0x00000010) == 0x00000010);
+    }
+    /**
+     * <code>optional string apartment_no = 5;</code>
+     */
+    public java.lang.String getApartmentNo() {
+      java.lang.Object ref = apartmentNo_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          apartmentNo_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string apartment_no = 5;</code>
+     */
+    public com.google.protobuf.ByteString
+        getApartmentNoBytes() {
+      java.lang.Object ref = apartmentNo_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        apartmentNo_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CITY_FIELD_NUMBER = 6;
+    private java.lang.Object city_;
+    /**
+     * <code>optional string city = 6;</code>
+     */
+    public boolean hasCity() {
+      return ((bitField0_ & 0x00000020) == 0x00000020);
+    }
+    /**
+     * <code>optional string city = 6;</code>
+     */
+    public java.lang.String getCity() {
+      java.lang.Object ref = city_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          city_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string city = 6;</code>
+     */
+    public com.google.protobuf.ByteString
+        getCityBytes() {
+      java.lang.Object ref = city_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        city_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int POSTAL_CODE_FIELD_NUMBER = 7;
+    private java.lang.Object postalCode_;
+    /**
+     * <code>optional string postal_code = 7;</code>
+     */
+    public boolean hasPostalCode() {
+      return ((bitField0_ & 0x00000040) == 0x00000040);
+    }
+    /**
+     * <code>optional string postal_code = 7;</code>
+     */
+    public java.lang.String getPostalCode() {
+      java.lang.Object ref = postalCode_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          postalCode_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string postal_code = 7;</code>
+     */
+    public com.google.protobuf.ByteString
+        getPostalCodeBytes() {
+      java.lang.Object ref = postalCode_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        postalCode_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private void initFields() {
+      name_ = "";
+      description_ = "";
+      street_ = "";
+      houseNo_ = "";
+      apartmentNo_ = "";
+      city_ = "";
+      postalCode_ = "";
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeBytes(1, getNameBytes());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeBytes(2, getDescriptionBytes());
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeBytes(3, getStreetBytes());
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        output.writeBytes(4, getHouseNoBytes());
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        output.writeBytes(5, getApartmentNoBytes());
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        output.writeBytes(6, getCityBytes());
+      }
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        output.writeBytes(7, getPostalCodeBytes());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, getNameBytes());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, getDescriptionBytes());
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(3, getStreetBytes());
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(4, getHouseNoBytes());
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(5, getApartmentNoBytes());
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(6, getCityBytes());
+      }
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(7, getPostalCodeBytes());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static com.zpaslab.lockerbox.LockerboxProtos.PostOffice parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.zpaslab.lockerbox.LockerboxProtos.PostOffice parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.zpaslab.lockerbox.LockerboxProtos.PostOffice parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.zpaslab.lockerbox.LockerboxProtos.PostOffice parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.zpaslab.lockerbox.LockerboxProtos.PostOffice parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.zpaslab.lockerbox.LockerboxProtos.PostOffice parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.zpaslab.lockerbox.LockerboxProtos.PostOffice parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.zpaslab.lockerbox.LockerboxProtos.PostOffice parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.zpaslab.lockerbox.LockerboxProtos.PostOffice parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.zpaslab.lockerbox.LockerboxProtos.PostOffice parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(com.zpaslab.lockerbox.LockerboxProtos.PostOffice prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code lockerbox.PostOffice}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:lockerbox.PostOffice)
+        com.zpaslab.lockerbox.LockerboxProtos.PostOfficeOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.zpaslab.lockerbox.LockerboxProtos.internal_static_lockerbox_PostOffice_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.zpaslab.lockerbox.LockerboxProtos.internal_static_lockerbox_PostOffice_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.zpaslab.lockerbox.LockerboxProtos.PostOffice.class, com.zpaslab.lockerbox.LockerboxProtos.PostOffice.Builder.class);
+      }
+
+      // Construct using com.zpaslab.lockerbox.LockerboxProtos.PostOffice.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        name_ = "";
+        bitField0_ = (bitField0_ & ~0x00000001);
+        description_ = "";
+        bitField0_ = (bitField0_ & ~0x00000002);
+        street_ = "";
+        bitField0_ = (bitField0_ & ~0x00000004);
+        houseNo_ = "";
+        bitField0_ = (bitField0_ & ~0x00000008);
+        apartmentNo_ = "";
+        bitField0_ = (bitField0_ & ~0x00000010);
+        city_ = "";
+        bitField0_ = (bitField0_ & ~0x00000020);
+        postalCode_ = "";
+        bitField0_ = (bitField0_ & ~0x00000040);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.zpaslab.lockerbox.LockerboxProtos.internal_static_lockerbox_PostOffice_descriptor;
+      }
+
+      public com.zpaslab.lockerbox.LockerboxProtos.PostOffice getDefaultInstanceForType() {
+        return com.zpaslab.lockerbox.LockerboxProtos.PostOffice.getDefaultInstance();
+      }
+
+      public com.zpaslab.lockerbox.LockerboxProtos.PostOffice build() {
+        com.zpaslab.lockerbox.LockerboxProtos.PostOffice result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.zpaslab.lockerbox.LockerboxProtos.PostOffice buildPartial() {
+        com.zpaslab.lockerbox.LockerboxProtos.PostOffice result = new com.zpaslab.lockerbox.LockerboxProtos.PostOffice(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.name_ = name_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.description_ = description_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.street_ = street_;
+        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        result.houseNo_ = houseNo_;
+        if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
+          to_bitField0_ |= 0x00000010;
+        }
+        result.apartmentNo_ = apartmentNo_;
+        if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
+          to_bitField0_ |= 0x00000020;
+        }
+        result.city_ = city_;
+        if (((from_bitField0_ & 0x00000040) == 0x00000040)) {
+          to_bitField0_ |= 0x00000040;
+        }
+        result.postalCode_ = postalCode_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.zpaslab.lockerbox.LockerboxProtos.PostOffice) {
+          return mergeFrom((com.zpaslab.lockerbox.LockerboxProtos.PostOffice)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.zpaslab.lockerbox.LockerboxProtos.PostOffice other) {
+        if (other == com.zpaslab.lockerbox.LockerboxProtos.PostOffice.getDefaultInstance()) return this;
+        if (other.hasName()) {
+          bitField0_ |= 0x00000001;
+          name_ = other.name_;
+          onChanged();
+        }
+        if (other.hasDescription()) {
+          bitField0_ |= 0x00000002;
+          description_ = other.description_;
+          onChanged();
+        }
+        if (other.hasStreet()) {
+          bitField0_ |= 0x00000004;
+          street_ = other.street_;
+          onChanged();
+        }
+        if (other.hasHouseNo()) {
+          bitField0_ |= 0x00000008;
+          houseNo_ = other.houseNo_;
+          onChanged();
+        }
+        if (other.hasApartmentNo()) {
+          bitField0_ |= 0x00000010;
+          apartmentNo_ = other.apartmentNo_;
+          onChanged();
+        }
+        if (other.hasCity()) {
+          bitField0_ |= 0x00000020;
+          city_ = other.city_;
+          onChanged();
+        }
+        if (other.hasPostalCode()) {
+          bitField0_ |= 0x00000040;
+          postalCode_ = other.postalCode_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.zpaslab.lockerbox.LockerboxProtos.PostOffice parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.zpaslab.lockerbox.LockerboxProtos.PostOffice) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object name_ = "";
+      /**
+       * <code>optional string name = 1;</code>
+       */
+      public boolean hasName() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional string name = 1;</code>
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            name_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string name = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string name = 1;</code>
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        name_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string name = 1;</code>
+       */
+      public Builder clearName() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        name_ = getDefaultInstance().getName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string name = 1;</code>
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        name_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <code>optional string description = 2;</code>
+       */
+      public boolean hasDescription() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional string description = 2;</code>
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            description_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string description = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string description = 2;</code>
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        description_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string description = 2;</code>
+       */
+      public Builder clearDescription() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        description_ = getDefaultInstance().getDescription();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string description = 2;</code>
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        description_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object street_ = "";
+      /**
+       * <code>optional string street = 3;</code>
+       */
+      public boolean hasStreet() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional string street = 3;</code>
+       */
+      public java.lang.String getStreet() {
+        java.lang.Object ref = street_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            street_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string street = 3;</code>
+       */
+      public com.google.protobuf.ByteString
+          getStreetBytes() {
+        java.lang.Object ref = street_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          street_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string street = 3;</code>
+       */
+      public Builder setStreet(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        street_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string street = 3;</code>
+       */
+      public Builder clearStreet() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        street_ = getDefaultInstance().getStreet();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string street = 3;</code>
+       */
+      public Builder setStreetBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        street_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object houseNo_ = "";
+      /**
+       * <code>optional string house_no = 4;</code>
+       */
+      public boolean hasHouseNo() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>optional string house_no = 4;</code>
+       */
+      public java.lang.String getHouseNo() {
+        java.lang.Object ref = houseNo_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            houseNo_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string house_no = 4;</code>
+       */
+      public com.google.protobuf.ByteString
+          getHouseNoBytes() {
+        java.lang.Object ref = houseNo_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          houseNo_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string house_no = 4;</code>
+       */
+      public Builder setHouseNo(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
+        houseNo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string house_no = 4;</code>
+       */
+      public Builder clearHouseNo() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        houseNo_ = getDefaultInstance().getHouseNo();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string house_no = 4;</code>
+       */
+      public Builder setHouseNoBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
+        houseNo_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object apartmentNo_ = "";
+      /**
+       * <code>optional string apartment_no = 5;</code>
+       */
+      public boolean hasApartmentNo() {
+        return ((bitField0_ & 0x00000010) == 0x00000010);
+      }
+      /**
+       * <code>optional string apartment_no = 5;</code>
+       */
+      public java.lang.String getApartmentNo() {
+        java.lang.Object ref = apartmentNo_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            apartmentNo_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string apartment_no = 5;</code>
+       */
+      public com.google.protobuf.ByteString
+          getApartmentNoBytes() {
+        java.lang.Object ref = apartmentNo_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          apartmentNo_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string apartment_no = 5;</code>
+       */
+      public Builder setApartmentNo(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000010;
+        apartmentNo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string apartment_no = 5;</code>
+       */
+      public Builder clearApartmentNo() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        apartmentNo_ = getDefaultInstance().getApartmentNo();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string apartment_no = 5;</code>
+       */
+      public Builder setApartmentNoBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000010;
+        apartmentNo_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object city_ = "";
+      /**
+       * <code>optional string city = 6;</code>
+       */
+      public boolean hasCity() {
+        return ((bitField0_ & 0x00000020) == 0x00000020);
+      }
+      /**
+       * <code>optional string city = 6;</code>
+       */
+      public java.lang.String getCity() {
+        java.lang.Object ref = city_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            city_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string city = 6;</code>
+       */
+      public com.google.protobuf.ByteString
+          getCityBytes() {
+        java.lang.Object ref = city_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          city_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string city = 6;</code>
+       */
+      public Builder setCity(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000020;
+        city_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string city = 6;</code>
+       */
+      public Builder clearCity() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        city_ = getDefaultInstance().getCity();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string city = 6;</code>
+       */
+      public Builder setCityBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000020;
+        city_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object postalCode_ = "";
+      /**
+       * <code>optional string postal_code = 7;</code>
+       */
+      public boolean hasPostalCode() {
+        return ((bitField0_ & 0x00000040) == 0x00000040);
+      }
+      /**
+       * <code>optional string postal_code = 7;</code>
+       */
+      public java.lang.String getPostalCode() {
+        java.lang.Object ref = postalCode_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            postalCode_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string postal_code = 7;</code>
+       */
+      public com.google.protobuf.ByteString
+          getPostalCodeBytes() {
+        java.lang.Object ref = postalCode_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          postalCode_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string postal_code = 7;</code>
+       */
+      public Builder setPostalCode(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000040;
+        postalCode_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string postal_code = 7;</code>
+       */
+      public Builder clearPostalCode() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        postalCode_ = getDefaultInstance().getPostalCode();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string postal_code = 7;</code>
+       */
+      public Builder setPostalCodeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000040;
+        postalCode_ = value;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:lockerbox.PostOffice)
+    }
+
+    static {
+      defaultInstance = new PostOffice(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:lockerbox.PostOffice)
+  }
+
+  public interface ShipmentOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:lockerbox.Shipment)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional string tracking_code = 1;</code>
+     */
+    boolean hasTrackingCode();
+    /**
+     * <code>optional string tracking_code = 1;</code>
+     */
+    java.lang.String getTrackingCode();
+    /**
+     * <code>optional string tracking_code = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getTrackingCodeBytes();
+
+    /**
+     * <code>repeated .lockerbox.Shipment.Event event = 2;</code>
+     */
+    java.util.List<com.zpaslab.lockerbox.LockerboxProtos.Shipment.Event> 
+        getEventList();
+    /**
+     * <code>repeated .lockerbox.Shipment.Event event = 2;</code>
+     */
+    com.zpaslab.lockerbox.LockerboxProtos.Shipment.Event getEvent(int index);
+    /**
+     * <code>repeated .lockerbox.Shipment.Event event = 2;</code>
+     */
+    int getEventCount();
+    /**
+     * <code>repeated .lockerbox.Shipment.Event event = 2;</code>
+     */
+    java.util.List<? extends com.zpaslab.lockerbox.LockerboxProtos.Shipment.EventOrBuilder> 
+        getEventOrBuilderList();
+    /**
+     * <code>repeated .lockerbox.Shipment.Event event = 2;</code>
+     */
+    com.zpaslab.lockerbox.LockerboxProtos.Shipment.EventOrBuilder getEventOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code lockerbox.Shipment}
+   *
+   * <pre>
+   * Details about moving the parcel from sender to receiver delivery points.
+   * </pre>
+   */
+  public static final class Shipment extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:lockerbox.Shipment)
+      ShipmentOrBuilder {
+    // Use Shipment.newBuilder() to construct.
+    private Shipment(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private Shipment(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final Shipment defaultInstance;
+    public static Shipment getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public Shipment getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Shipment(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              trackingCode_ = bs;
+              break;
+            }
+            case 18: {
+              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+                event_ = new java.util.ArrayList<com.zpaslab.lockerbox.LockerboxProtos.Shipment.Event>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              event_.add(input.readMessage(com.zpaslab.lockerbox.LockerboxProtos.Shipment.Event.PARSER, extensionRegistry));
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+          event_ = java.util.Collections.unmodifiableList(event_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.zpaslab.lockerbox.LockerboxProtos.internal_static_lockerbox_Shipment_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.zpaslab.lockerbox.LockerboxProtos.internal_static_lockerbox_Shipment_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.zpaslab.lockerbox.LockerboxProtos.Shipment.class, com.zpaslab.lockerbox.LockerboxProtos.Shipment.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<Shipment> PARSER =
+        new com.google.protobuf.AbstractParser<Shipment>() {
+      public Shipment parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Shipment(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Shipment> getParserForType() {
+      return PARSER;
+    }
+
+    /**
+     * Protobuf enum {@code lockerbox.Shipment.EventType}
+     */
+    public enum EventType
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>SENDER_IN = 1;</code>
+       */
+      SENDER_IN(0, 1),
+      /**
+       * <code>SENDER_REOPEN = 2;</code>
+       *
+       * <pre>
+       * client decided to reopen the locker.
+       * </pre>
+       */
+      SENDER_REOPEN(1, 2),
+      /**
+       * <code>SENDER_OUT = 3;</code>
+       */
+      SENDER_OUT(2, 3),
+      /**
+       * <code>EN_ROUTE = 4;</code>
+       *
+       * <pre>
+       * general enroute event
+       * </pre>
+       */
+      EN_ROUTE(3, 4),
+      /**
+       * <code>RECEIVER_IN = 5;</code>
+       */
+      RECEIVER_IN(4, 5),
+      /**
+       * <code>RECEIVER_OUT = 6;</code>
+       */
+      RECEIVER_OUT(5, 6),
+      /**
+       * <code>RECEIVER_REOPEN = 7;</code>
+       */
+      RECEIVER_REOPEN(6, 7),
+      /**
+       * <code>RECEIVER_REMOVE = 8;</code>
+       */
+      RECEIVER_REMOVE(7, 8),
+      ;
+
+      /**
+       * <code>SENDER_IN = 1;</code>
+       */
+      public static final int SENDER_IN_VALUE = 1;
+      /**
+       * <code>SENDER_REOPEN = 2;</code>
+       *
+       * <pre>
+       * client decided to reopen the locker.
+       * </pre>
+       */
+      public static final int SENDER_REOPEN_VALUE = 2;
+      /**
+       * <code>SENDER_OUT = 3;</code>
+       */
+      public static final int SENDER_OUT_VALUE = 3;
+      /**
+       * <code>EN_ROUTE = 4;</code>
+       *
+       * <pre>
+       * general enroute event
+       * </pre>
+       */
+      public static final int EN_ROUTE_VALUE = 4;
+      /**
+       * <code>RECEIVER_IN = 5;</code>
+       */
+      public static final int RECEIVER_IN_VALUE = 5;
+      /**
+       * <code>RECEIVER_OUT = 6;</code>
+       */
+      public static final int RECEIVER_OUT_VALUE = 6;
+      /**
+       * <code>RECEIVER_REOPEN = 7;</code>
+       */
+      public static final int RECEIVER_REOPEN_VALUE = 7;
+      /**
+       * <code>RECEIVER_REMOVE = 8;</code>
+       */
+      public static final int RECEIVER_REMOVE_VALUE = 8;
+
+
+      public final int getNumber() { return value; }
+
+      public static EventType valueOf(int value) {
+        switch (value) {
+          case 1: return SENDER_IN;
+          case 2: return SENDER_REOPEN;
+          case 3: return SENDER_OUT;
+          case 4: return EN_ROUTE;
+          case 5: return RECEIVER_IN;
+          case 6: return RECEIVER_OUT;
+          case 7: return RECEIVER_REOPEN;
+          case 8: return RECEIVER_REMOVE;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<EventType>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static com.google.protobuf.Internal.EnumLiteMap<EventType>
+          internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<EventType>() {
+              public EventType findValueByNumber(int number) {
+                return EventType.valueOf(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        return getDescriptor().getValues().get(index);
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return com.zpaslab.lockerbox.LockerboxProtos.Shipment.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final EventType[] VALUES = values();
+
+      public static EventType valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int index;
+      private final int value;
+
+      private EventType(int index, int value) {
+        this.index = index;
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:lockerbox.Shipment.EventType)
+    }
+
+    /**
+     * Protobuf enum {@code lockerbox.Shipment.EventSubtype}
+     */
+    public enum EventSubtype
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>LOCKER_OPENING = 1;</code>
+       */
+      LOCKER_OPENING(0, 1),
+      /**
+       * <code>LOCKER_OPEN = 2;</code>
+       */
+      LOCKER_OPEN(1, 2),
+      /**
+       * <code>LOCKER_CLOSE = 3;</code>
+       */
+      LOCKER_CLOSE(2, 3),
+      /**
+       * <code>MAIL_CENTER_IN = 4;</code>
+       *
+       * <pre>
+       * mail center (sorting center, distribution center, logistics center) is a large unit/facility
+       * that sort mail/parcels into batches and send to delivery offices.
+       * </pre>
+       */
+      MAIL_CENTER_IN(3, 4),
+      /**
+       * <code>MAIL_CENTER_OUT = 5;</code>
+       */
+      MAIL_CENTER_OUT(4, 5),
+      /**
+       * <code>OTHER = 100;</code>
+       *
+       * <pre>
+       * Placeholder for all event subtypes that we didn't anticipate or didn't want to classify separately.
+       * TODO(pawelb): assign lower value once we figure out all 'typical' subtypes.
+       * </pre>
+       */
+      OTHER(5, 100),
+      ;
+
+      /**
+       * <code>LOCKER_OPENING = 1;</code>
+       */
+      public static final int LOCKER_OPENING_VALUE = 1;
+      /**
+       * <code>LOCKER_OPEN = 2;</code>
+       */
+      public static final int LOCKER_OPEN_VALUE = 2;
+      /**
+       * <code>LOCKER_CLOSE = 3;</code>
+       */
+      public static final int LOCKER_CLOSE_VALUE = 3;
+      /**
+       * <code>MAIL_CENTER_IN = 4;</code>
+       *
+       * <pre>
+       * mail center (sorting center, distribution center, logistics center) is a large unit/facility
+       * that sort mail/parcels into batches and send to delivery offices.
+       * </pre>
+       */
+      public static final int MAIL_CENTER_IN_VALUE = 4;
+      /**
+       * <code>MAIL_CENTER_OUT = 5;</code>
+       */
+      public static final int MAIL_CENTER_OUT_VALUE = 5;
+      /**
+       * <code>OTHER = 100;</code>
+       *
+       * <pre>
+       * Placeholder for all event subtypes that we didn't anticipate or didn't want to classify separately.
+       * TODO(pawelb): assign lower value once we figure out all 'typical' subtypes.
+       * </pre>
+       */
+      public static final int OTHER_VALUE = 100;
+
+
+      public final int getNumber() { return value; }
+
+      public static EventSubtype valueOf(int value) {
+        switch (value) {
+          case 1: return LOCKER_OPENING;
+          case 2: return LOCKER_OPEN;
+          case 3: return LOCKER_CLOSE;
+          case 4: return MAIL_CENTER_IN;
+          case 5: return MAIL_CENTER_OUT;
+          case 100: return OTHER;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<EventSubtype>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static com.google.protobuf.Internal.EnumLiteMap<EventSubtype>
+          internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<EventSubtype>() {
+              public EventSubtype findValueByNumber(int number) {
+                return EventSubtype.valueOf(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        return getDescriptor().getValues().get(index);
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return com.zpaslab.lockerbox.LockerboxProtos.Shipment.getDescriptor().getEnumTypes().get(1);
+      }
+
+      private static final EventSubtype[] VALUES = values();
+
+      public static EventSubtype valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int index;
+      private final int value;
+
+      private EventSubtype(int index, int value) {
+        this.index = index;
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:lockerbox.Shipment.EventSubtype)
+    }
+
+    public interface EventOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:lockerbox.Shipment.Event)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>optional .lockerbox.Shipment.EventType type = 1;</code>
+       */
+      boolean hasType();
+      /**
+       * <code>optional .lockerbox.Shipment.EventType type = 1;</code>
+       */
+      com.zpaslab.lockerbox.LockerboxProtos.Shipment.EventType getType();
+
+      /**
+       * <code>optional .lockerbox.Shipment.EventSubtype subtype = 2;</code>
+       */
+      boolean hasSubtype();
+      /**
+       * <code>optional .lockerbox.Shipment.EventSubtype subtype = 2;</code>
+       */
+      com.zpaslab.lockerbox.LockerboxProtos.Shipment.EventSubtype getSubtype();
+
+      /**
+       * <code>optional string date = 3;</code>
+       */
+      boolean hasDate();
+      /**
+       * <code>optional string date = 3;</code>
+       */
+      java.lang.String getDate();
+      /**
+       * <code>optional string date = 3;</code>
+       */
+      com.google.protobuf.ByteString
+          getDateBytes();
+
+      /**
+       * <code>optional string details = 4;</code>
+       */
+      boolean hasDetails();
+      /**
+       * <code>optional string details = 4;</code>
+       */
+      java.lang.String getDetails();
+      /**
+       * <code>optional string details = 4;</code>
+       */
+      com.google.protobuf.ByteString
+          getDetailsBytes();
+    }
+    /**
+     * Protobuf type {@code lockerbox.Shipment.Event}
+     */
+    public static final class Event extends
+        com.google.protobuf.GeneratedMessage implements
+        // @@protoc_insertion_point(message_implements:lockerbox.Shipment.Event)
+        EventOrBuilder {
+      // Use Event.newBuilder() to construct.
+      private Event(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+        super(builder);
+        this.unknownFields = builder.getUnknownFields();
+      }
+      private Event(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+      private static final Event defaultInstance;
+      public static Event getDefaultInstance() {
+        return defaultInstance;
+      }
+
+      public Event getDefaultInstanceForType() {
+        return defaultInstance;
+      }
+
+      private final com.google.protobuf.UnknownFieldSet unknownFields;
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+          getUnknownFields() {
+        return this.unknownFields;
+      }
+      private Event(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        initFields();
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!parseUnknownField(input, unknownFields,
+                                       extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+              case 8: {
+                int rawValue = input.readEnum();
+                com.zpaslab.lockerbox.LockerboxProtos.Shipment.EventType value = com.zpaslab.lockerbox.LockerboxProtos.Shipment.EventType.valueOf(rawValue);
+                if (value == null) {
+                  unknownFields.mergeVarintField(1, rawValue);
+                } else {
+                  bitField0_ |= 0x00000001;
+                  type_ = value;
+                }
+                break;
+              }
+              case 16: {
+                int rawValue = input.readEnum();
+                com.zpaslab.lockerbox.LockerboxProtos.Shipment.EventSubtype value = com.zpaslab.lockerbox.LockerboxProtos.Shipment.EventSubtype.valueOf(rawValue);
+                if (value == null) {
+                  unknownFields.mergeVarintField(2, rawValue);
+                } else {
+                  bitField0_ |= 0x00000002;
+                  subtype_ = value;
+                }
+                break;
+              }
+              case 26: {
+                com.google.protobuf.ByteString bs = input.readBytes();
+                bitField0_ |= 0x00000004;
+                date_ = bs;
+                break;
+              }
+              case 34: {
+                com.google.protobuf.ByteString bs = input.readBytes();
+                bitField0_ |= 0x00000008;
+                details_ = bs;
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e.getMessage()).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.zpaslab.lockerbox.LockerboxProtos.internal_static_lockerbox_Shipment_Event_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.zpaslab.lockerbox.LockerboxProtos.internal_static_lockerbox_Shipment_Event_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.zpaslab.lockerbox.LockerboxProtos.Shipment.Event.class, com.zpaslab.lockerbox.LockerboxProtos.Shipment.Event.Builder.class);
+      }
+
+      public static com.google.protobuf.Parser<Event> PARSER =
+          new com.google.protobuf.AbstractParser<Event>() {
+        public Event parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new Event(input, extensionRegistry);
+        }
+      };
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<Event> getParserForType() {
+        return PARSER;
+      }
+
+      private int bitField0_;
+      public static final int TYPE_FIELD_NUMBER = 1;
+      private com.zpaslab.lockerbox.LockerboxProtos.Shipment.EventType type_;
+      /**
+       * <code>optional .lockerbox.Shipment.EventType type = 1;</code>
+       */
+      public boolean hasType() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional .lockerbox.Shipment.EventType type = 1;</code>
+       */
+      public com.zpaslab.lockerbox.LockerboxProtos.Shipment.EventType getType() {
+        return type_;
+      }
+
+      public static final int SUBTYPE_FIELD_NUMBER = 2;
+      private com.zpaslab.lockerbox.LockerboxProtos.Shipment.EventSubtype subtype_;
+      /**
+       * <code>optional .lockerbox.Shipment.EventSubtype subtype = 2;</code>
+       */
+      public boolean hasSubtype() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional .lockerbox.Shipment.EventSubtype subtype = 2;</code>
+       */
+      public com.zpaslab.lockerbox.LockerboxProtos.Shipment.EventSubtype getSubtype() {
+        return subtype_;
+      }
+
+      public static final int DATE_FIELD_NUMBER = 3;
+      private java.lang.Object date_;
+      /**
+       * <code>optional string date = 3;</code>
+       */
+      public boolean hasDate() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional string date = 3;</code>
+       */
+      public java.lang.String getDate() {
+        java.lang.Object ref = date_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            date_ = s;
+          }
+          return s;
+        }
+      }
+      /**
+       * <code>optional string date = 3;</code>
+       */
+      public com.google.protobuf.ByteString
+          getDateBytes() {
+        java.lang.Object ref = date_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          date_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int DETAILS_FIELD_NUMBER = 4;
+      private java.lang.Object details_;
+      /**
+       * <code>optional string details = 4;</code>
+       */
+      public boolean hasDetails() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>optional string details = 4;</code>
+       */
+      public java.lang.String getDetails() {
+        java.lang.Object ref = details_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            details_ = s;
+          }
+          return s;
+        }
+      }
+      /**
+       * <code>optional string details = 4;</code>
+       */
+      public com.google.protobuf.ByteString
+          getDetailsBytes() {
+        java.lang.Object ref = details_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          details_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      private void initFields() {
+        type_ = com.zpaslab.lockerbox.LockerboxProtos.Shipment.EventType.SENDER_IN;
+        subtype_ = com.zpaslab.lockerbox.LockerboxProtos.Shipment.EventSubtype.LOCKER_OPENING;
+        date_ = "";
+        details_ = "";
+      }
+      private byte memoizedIsInitialized = -1;
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        getSerializedSize();
+        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          output.writeEnum(1, type_.getNumber());
+        }
+        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          output.writeEnum(2, subtype_.getNumber());
+        }
+        if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          output.writeBytes(3, getDateBytes());
+        }
+        if (((bitField0_ & 0x00000008) == 0x00000008)) {
+          output.writeBytes(4, getDetailsBytes());
+        }
+        getUnknownFields().writeTo(output);
+      }
+
+      private int memoizedSerializedSize = -1;
+      public int getSerializedSize() {
+        int size = memoizedSerializedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeEnumSize(1, type_.getNumber());
+        }
+        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeEnumSize(2, subtype_.getNumber());
+        }
+        if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBytesSize(3, getDateBytes());
+        }
+        if (((bitField0_ & 0x00000008) == 0x00000008)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBytesSize(4, getDetailsBytes());
+        }
+        size += getUnknownFields().getSerializedSize();
+        memoizedSerializedSize = size;
+        return size;
+      }
+
+      private static final long serialVersionUID = 0L;
+      @java.lang.Override
+      protected java.lang.Object writeReplace()
+          throws java.io.ObjectStreamException {
+        return super.writeReplace();
+      }
+
+      public static com.zpaslab.lockerbox.LockerboxProtos.Shipment.Event parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.zpaslab.lockerbox.LockerboxProtos.Shipment.Event parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.zpaslab.lockerbox.LockerboxProtos.Shipment.Event parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.zpaslab.lockerbox.LockerboxProtos.Shipment.Event parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.zpaslab.lockerbox.LockerboxProtos.Shipment.Event parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input);
+      }
+      public static com.zpaslab.lockerbox.LockerboxProtos.Shipment.Event parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input, extensionRegistry);
+      }
+      public static com.zpaslab.lockerbox.LockerboxProtos.Shipment.Event parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return PARSER.parseDelimitedFrom(input);
+      }
+      public static com.zpaslab.lockerbox.LockerboxProtos.Shipment.Event parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      }
+      public static com.zpaslab.lockerbox.LockerboxProtos.Shipment.Event parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input);
+      }
+      public static com.zpaslab.lockerbox.LockerboxProtos.Shipment.Event parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input, extensionRegistry);
+      }
+
+      public static Builder newBuilder() { return Builder.create(); }
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder(com.zpaslab.lockerbox.LockerboxProtos.Shipment.Event prototype) {
+        return newBuilder().mergeFrom(prototype);
+      }
+      public Builder toBuilder() { return newBuilder(this); }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code lockerbox.Shipment.Event}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:lockerbox.Shipment.Event)
+          com.zpaslab.lockerbox.LockerboxProtos.Shipment.EventOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.zpaslab.lockerbox.LockerboxProtos.internal_static_lockerbox_Shipment_Event_descriptor;
+        }
+
+        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.zpaslab.lockerbox.LockerboxProtos.internal_static_lockerbox_Shipment_Event_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.zpaslab.lockerbox.LockerboxProtos.Shipment.Event.class, com.zpaslab.lockerbox.LockerboxProtos.Shipment.Event.Builder.class);
+        }
+
+        // Construct using com.zpaslab.lockerbox.LockerboxProtos.Shipment.Event.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          }
+        }
+        private static Builder create() {
+          return new Builder();
+        }
+
+        public Builder clear() {
+          super.clear();
+          type_ = com.zpaslab.lockerbox.LockerboxProtos.Shipment.EventType.SENDER_IN;
+          bitField0_ = (bitField0_ & ~0x00000001);
+          subtype_ = com.zpaslab.lockerbox.LockerboxProtos.Shipment.EventSubtype.LOCKER_OPENING;
+          bitField0_ = (bitField0_ & ~0x00000002);
+          date_ = "";
+          bitField0_ = (bitField0_ & ~0x00000004);
+          details_ = "";
+          bitField0_ = (bitField0_ & ~0x00000008);
+          return this;
+        }
+
+        public Builder clone() {
+          return create().mergeFrom(buildPartial());
+        }
+
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return com.zpaslab.lockerbox.LockerboxProtos.internal_static_lockerbox_Shipment_Event_descriptor;
+        }
+
+        public com.zpaslab.lockerbox.LockerboxProtos.Shipment.Event getDefaultInstanceForType() {
+          return com.zpaslab.lockerbox.LockerboxProtos.Shipment.Event.getDefaultInstance();
+        }
+
+        public com.zpaslab.lockerbox.LockerboxProtos.Shipment.Event build() {
+          com.zpaslab.lockerbox.LockerboxProtos.Shipment.Event result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        public com.zpaslab.lockerbox.LockerboxProtos.Shipment.Event buildPartial() {
+          com.zpaslab.lockerbox.LockerboxProtos.Shipment.Event result = new com.zpaslab.lockerbox.LockerboxProtos.Shipment.Event(this);
+          int from_bitField0_ = bitField0_;
+          int to_bitField0_ = 0;
+          if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+            to_bitField0_ |= 0x00000001;
+          }
+          result.type_ = type_;
+          if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+            to_bitField0_ |= 0x00000002;
+          }
+          result.subtype_ = subtype_;
+          if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+            to_bitField0_ |= 0x00000004;
+          }
+          result.date_ = date_;
+          if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+            to_bitField0_ |= 0x00000008;
+          }
+          result.details_ = details_;
+          result.bitField0_ = to_bitField0_;
+          onBuilt();
+          return result;
+        }
+
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof com.zpaslab.lockerbox.LockerboxProtos.Shipment.Event) {
+            return mergeFrom((com.zpaslab.lockerbox.LockerboxProtos.Shipment.Event)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(com.zpaslab.lockerbox.LockerboxProtos.Shipment.Event other) {
+          if (other == com.zpaslab.lockerbox.LockerboxProtos.Shipment.Event.getDefaultInstance()) return this;
+          if (other.hasType()) {
+            setType(other.getType());
+          }
+          if (other.hasSubtype()) {
+            setSubtype(other.getSubtype());
+          }
+          if (other.hasDate()) {
+            bitField0_ |= 0x00000004;
+            date_ = other.date_;
+            onChanged();
+          }
+          if (other.hasDetails()) {
+            bitField0_ |= 0x00000008;
+            details_ = other.details_;
+            onChanged();
+          }
+          this.mergeUnknownFields(other.getUnknownFields());
+          return this;
+        }
+
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          com.zpaslab.lockerbox.LockerboxProtos.Shipment.Event parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (com.zpaslab.lockerbox.LockerboxProtos.Shipment.Event) e.getUnfinishedMessage();
+            throw e;
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        private int bitField0_;
+
+        private com.zpaslab.lockerbox.LockerboxProtos.Shipment.EventType type_ = com.zpaslab.lockerbox.LockerboxProtos.Shipment.EventType.SENDER_IN;
+        /**
+         * <code>optional .lockerbox.Shipment.EventType type = 1;</code>
+         */
+        public boolean hasType() {
+          return ((bitField0_ & 0x00000001) == 0x00000001);
+        }
+        /**
+         * <code>optional .lockerbox.Shipment.EventType type = 1;</code>
+         */
+        public com.zpaslab.lockerbox.LockerboxProtos.Shipment.EventType getType() {
+          return type_;
+        }
+        /**
+         * <code>optional .lockerbox.Shipment.EventType type = 1;</code>
+         */
+        public Builder setType(com.zpaslab.lockerbox.LockerboxProtos.Shipment.EventType value) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          bitField0_ |= 0x00000001;
+          type_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional .lockerbox.Shipment.EventType type = 1;</code>
+         */
+        public Builder clearType() {
+          bitField0_ = (bitField0_ & ~0x00000001);
+          type_ = com.zpaslab.lockerbox.LockerboxProtos.Shipment.EventType.SENDER_IN;
+          onChanged();
+          return this;
+        }
+
+        private com.zpaslab.lockerbox.LockerboxProtos.Shipment.EventSubtype subtype_ = com.zpaslab.lockerbox.LockerboxProtos.Shipment.EventSubtype.LOCKER_OPENING;
+        /**
+         * <code>optional .lockerbox.Shipment.EventSubtype subtype = 2;</code>
+         */
+        public boolean hasSubtype() {
+          return ((bitField0_ & 0x00000002) == 0x00000002);
+        }
+        /**
+         * <code>optional .lockerbox.Shipment.EventSubtype subtype = 2;</code>
+         */
+        public com.zpaslab.lockerbox.LockerboxProtos.Shipment.EventSubtype getSubtype() {
+          return subtype_;
+        }
+        /**
+         * <code>optional .lockerbox.Shipment.EventSubtype subtype = 2;</code>
+         */
+        public Builder setSubtype(com.zpaslab.lockerbox.LockerboxProtos.Shipment.EventSubtype value) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          bitField0_ |= 0x00000002;
+          subtype_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional .lockerbox.Shipment.EventSubtype subtype = 2;</code>
+         */
+        public Builder clearSubtype() {
+          bitField0_ = (bitField0_ & ~0x00000002);
+          subtype_ = com.zpaslab.lockerbox.LockerboxProtos.Shipment.EventSubtype.LOCKER_OPENING;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object date_ = "";
+        /**
+         * <code>optional string date = 3;</code>
+         */
+        public boolean hasDate() {
+          return ((bitField0_ & 0x00000004) == 0x00000004);
+        }
+        /**
+         * <code>optional string date = 3;</code>
+         */
+        public java.lang.String getDate() {
+          java.lang.Object ref = date_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            if (bs.isValidUtf8()) {
+              date_ = s;
+            }
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>optional string date = 3;</code>
+         */
+        public com.google.protobuf.ByteString
+            getDateBytes() {
+          java.lang.Object ref = date_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            date_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>optional string date = 3;</code>
+         */
+        public Builder setDate(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+          date_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional string date = 3;</code>
+         */
+        public Builder clearDate() {
+          bitField0_ = (bitField0_ & ~0x00000004);
+          date_ = getDefaultInstance().getDate();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional string date = 3;</code>
+         */
+        public Builder setDateBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+          date_ = value;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object details_ = "";
+        /**
+         * <code>optional string details = 4;</code>
+         */
+        public boolean hasDetails() {
+          return ((bitField0_ & 0x00000008) == 0x00000008);
+        }
+        /**
+         * <code>optional string details = 4;</code>
+         */
+        public java.lang.String getDetails() {
+          java.lang.Object ref = details_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            if (bs.isValidUtf8()) {
+              details_ = s;
+            }
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>optional string details = 4;</code>
+         */
+        public com.google.protobuf.ByteString
+            getDetailsBytes() {
+          java.lang.Object ref = details_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            details_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>optional string details = 4;</code>
+         */
+        public Builder setDetails(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
+          details_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional string details = 4;</code>
+         */
+        public Builder clearDetails() {
+          bitField0_ = (bitField0_ & ~0x00000008);
+          details_ = getDefaultInstance().getDetails();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional string details = 4;</code>
+         */
+        public Builder setDetailsBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
+          details_ = value;
+          onChanged();
+          return this;
+        }
+
+        // @@protoc_insertion_point(builder_scope:lockerbox.Shipment.Event)
+      }
+
+      static {
+        defaultInstance = new Event(true);
+        defaultInstance.initFields();
+      }
+
+      // @@protoc_insertion_point(class_scope:lockerbox.Shipment.Event)
+    }
+
+    private int bitField0_;
+    public static final int TRACKING_CODE_FIELD_NUMBER = 1;
+    private java.lang.Object trackingCode_;
+    /**
+     * <code>optional string tracking_code = 1;</code>
+     */
+    public boolean hasTrackingCode() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional string tracking_code = 1;</code>
+     */
+    public java.lang.String getTrackingCode() {
+      java.lang.Object ref = trackingCode_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          trackingCode_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string tracking_code = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getTrackingCodeBytes() {
+      java.lang.Object ref = trackingCode_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        trackingCode_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int EVENT_FIELD_NUMBER = 2;
+    private java.util.List<com.zpaslab.lockerbox.LockerboxProtos.Shipment.Event> event_;
+    /**
+     * <code>repeated .lockerbox.Shipment.Event event = 2;</code>
+     */
+    public java.util.List<com.zpaslab.lockerbox.LockerboxProtos.Shipment.Event> getEventList() {
+      return event_;
+    }
+    /**
+     * <code>repeated .lockerbox.Shipment.Event event = 2;</code>
+     */
+    public java.util.List<? extends com.zpaslab.lockerbox.LockerboxProtos.Shipment.EventOrBuilder> 
+        getEventOrBuilderList() {
+      return event_;
+    }
+    /**
+     * <code>repeated .lockerbox.Shipment.Event event = 2;</code>
+     */
+    public int getEventCount() {
+      return event_.size();
+    }
+    /**
+     * <code>repeated .lockerbox.Shipment.Event event = 2;</code>
+     */
+    public com.zpaslab.lockerbox.LockerboxProtos.Shipment.Event getEvent(int index) {
+      return event_.get(index);
+    }
+    /**
+     * <code>repeated .lockerbox.Shipment.Event event = 2;</code>
+     */
+    public com.zpaslab.lockerbox.LockerboxProtos.Shipment.EventOrBuilder getEventOrBuilder(
+        int index) {
+      return event_.get(index);
+    }
+
+    private void initFields() {
+      trackingCode_ = "";
+      event_ = java.util.Collections.emptyList();
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeBytes(1, getTrackingCodeBytes());
+      }
+      for (int i = 0; i < event_.size(); i++) {
+        output.writeMessage(2, event_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, getTrackingCodeBytes());
+      }
+      for (int i = 0; i < event_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, event_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static com.zpaslab.lockerbox.LockerboxProtos.Shipment parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.zpaslab.lockerbox.LockerboxProtos.Shipment parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.zpaslab.lockerbox.LockerboxProtos.Shipment parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.zpaslab.lockerbox.LockerboxProtos.Shipment parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.zpaslab.lockerbox.LockerboxProtos.Shipment parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.zpaslab.lockerbox.LockerboxProtos.Shipment parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.zpaslab.lockerbox.LockerboxProtos.Shipment parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.zpaslab.lockerbox.LockerboxProtos.Shipment parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.zpaslab.lockerbox.LockerboxProtos.Shipment parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.zpaslab.lockerbox.LockerboxProtos.Shipment parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(com.zpaslab.lockerbox.LockerboxProtos.Shipment prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code lockerbox.Shipment}
+     *
+     * <pre>
+     * Details about moving the parcel from sender to receiver delivery points.
+     * </pre>
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:lockerbox.Shipment)
+        com.zpaslab.lockerbox.LockerboxProtos.ShipmentOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.zpaslab.lockerbox.LockerboxProtos.internal_static_lockerbox_Shipment_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.zpaslab.lockerbox.LockerboxProtos.internal_static_lockerbox_Shipment_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.zpaslab.lockerbox.LockerboxProtos.Shipment.class, com.zpaslab.lockerbox.LockerboxProtos.Shipment.Builder.class);
+      }
+
+      // Construct using com.zpaslab.lockerbox.LockerboxProtos.Shipment.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getEventFieldBuilder();
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        trackingCode_ = "";
+        bitField0_ = (bitField0_ & ~0x00000001);
+        if (eventBuilder_ == null) {
+          event_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        } else {
+          eventBuilder_.clear();
+        }
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.zpaslab.lockerbox.LockerboxProtos.internal_static_lockerbox_Shipment_descriptor;
+      }
+
+      public com.zpaslab.lockerbox.LockerboxProtos.Shipment getDefaultInstanceForType() {
+        return com.zpaslab.lockerbox.LockerboxProtos.Shipment.getDefaultInstance();
+      }
+
+      public com.zpaslab.lockerbox.LockerboxProtos.Shipment build() {
+        com.zpaslab.lockerbox.LockerboxProtos.Shipment result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.zpaslab.lockerbox.LockerboxProtos.Shipment buildPartial() {
+        com.zpaslab.lockerbox.LockerboxProtos.Shipment result = new com.zpaslab.lockerbox.LockerboxProtos.Shipment(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.trackingCode_ = trackingCode_;
+        if (eventBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) == 0x00000002)) {
+            event_ = java.util.Collections.unmodifiableList(event_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.event_ = event_;
+        } else {
+          result.event_ = eventBuilder_.build();
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.zpaslab.lockerbox.LockerboxProtos.Shipment) {
+          return mergeFrom((com.zpaslab.lockerbox.LockerboxProtos.Shipment)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.zpaslab.lockerbox.LockerboxProtos.Shipment other) {
+        if (other == com.zpaslab.lockerbox.LockerboxProtos.Shipment.getDefaultInstance()) return this;
+        if (other.hasTrackingCode()) {
+          bitField0_ |= 0x00000001;
+          trackingCode_ = other.trackingCode_;
+          onChanged();
+        }
+        if (eventBuilder_ == null) {
+          if (!other.event_.isEmpty()) {
+            if (event_.isEmpty()) {
+              event_ = other.event_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureEventIsMutable();
+              event_.addAll(other.event_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.event_.isEmpty()) {
+            if (eventBuilder_.isEmpty()) {
+              eventBuilder_.dispose();
+              eventBuilder_ = null;
+              event_ = other.event_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              eventBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   getEventFieldBuilder() : null;
+            } else {
+              eventBuilder_.addAllMessages(other.event_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.zpaslab.lockerbox.LockerboxProtos.Shipment parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.zpaslab.lockerbox.LockerboxProtos.Shipment) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object trackingCode_ = "";
+      /**
+       * <code>optional string tracking_code = 1;</code>
+       */
+      public boolean hasTrackingCode() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional string tracking_code = 1;</code>
+       */
+      public java.lang.String getTrackingCode() {
+        java.lang.Object ref = trackingCode_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            trackingCode_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string tracking_code = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getTrackingCodeBytes() {
+        java.lang.Object ref = trackingCode_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          trackingCode_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string tracking_code = 1;</code>
+       */
+      public Builder setTrackingCode(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        trackingCode_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string tracking_code = 1;</code>
+       */
+      public Builder clearTrackingCode() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        trackingCode_ = getDefaultInstance().getTrackingCode();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string tracking_code = 1;</code>
+       */
+      public Builder setTrackingCodeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        trackingCode_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.zpaslab.lockerbox.LockerboxProtos.Shipment.Event> event_ =
+        java.util.Collections.emptyList();
+      private void ensureEventIsMutable() {
+        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+          event_ = new java.util.ArrayList<com.zpaslab.lockerbox.LockerboxProtos.Shipment.Event>(event_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          com.zpaslab.lockerbox.LockerboxProtos.Shipment.Event, com.zpaslab.lockerbox.LockerboxProtos.Shipment.Event.Builder, com.zpaslab.lockerbox.LockerboxProtos.Shipment.EventOrBuilder> eventBuilder_;
+
+      /**
+       * <code>repeated .lockerbox.Shipment.Event event = 2;</code>
+       */
+      public java.util.List<com.zpaslab.lockerbox.LockerboxProtos.Shipment.Event> getEventList() {
+        if (eventBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(event_);
+        } else {
+          return eventBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .lockerbox.Shipment.Event event = 2;</code>
+       */
+      public int getEventCount() {
+        if (eventBuilder_ == null) {
+          return event_.size();
+        } else {
+          return eventBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .lockerbox.Shipment.Event event = 2;</code>
+       */
+      public com.zpaslab.lockerbox.LockerboxProtos.Shipment.Event getEvent(int index) {
+        if (eventBuilder_ == null) {
+          return event_.get(index);
+        } else {
+          return eventBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .lockerbox.Shipment.Event event = 2;</code>
+       */
+      public Builder setEvent(
+          int index, com.zpaslab.lockerbox.LockerboxProtos.Shipment.Event value) {
+        if (eventBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEventIsMutable();
+          event_.set(index, value);
+          onChanged();
+        } else {
+          eventBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lockerbox.Shipment.Event event = 2;</code>
+       */
+      public Builder setEvent(
+          int index, com.zpaslab.lockerbox.LockerboxProtos.Shipment.Event.Builder builderForValue) {
+        if (eventBuilder_ == null) {
+          ensureEventIsMutable();
+          event_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          eventBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lockerbox.Shipment.Event event = 2;</code>
+       */
+      public Builder addEvent(com.zpaslab.lockerbox.LockerboxProtos.Shipment.Event value) {
+        if (eventBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEventIsMutable();
+          event_.add(value);
+          onChanged();
+        } else {
+          eventBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lockerbox.Shipment.Event event = 2;</code>
+       */
+      public Builder addEvent(
+          int index, com.zpaslab.lockerbox.LockerboxProtos.Shipment.Event value) {
+        if (eventBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEventIsMutable();
+          event_.add(index, value);
+          onChanged();
+        } else {
+          eventBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lockerbox.Shipment.Event event = 2;</code>
+       */
+      public Builder addEvent(
+          com.zpaslab.lockerbox.LockerboxProtos.Shipment.Event.Builder builderForValue) {
+        if (eventBuilder_ == null) {
+          ensureEventIsMutable();
+          event_.add(builderForValue.build());
+          onChanged();
+        } else {
+          eventBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lockerbox.Shipment.Event event = 2;</code>
+       */
+      public Builder addEvent(
+          int index, com.zpaslab.lockerbox.LockerboxProtos.Shipment.Event.Builder builderForValue) {
+        if (eventBuilder_ == null) {
+          ensureEventIsMutable();
+          event_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          eventBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lockerbox.Shipment.Event event = 2;</code>
+       */
+      public Builder addAllEvent(
+          java.lang.Iterable<? extends com.zpaslab.lockerbox.LockerboxProtos.Shipment.Event> values) {
+        if (eventBuilder_ == null) {
+          ensureEventIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, event_);
+          onChanged();
+        } else {
+          eventBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lockerbox.Shipment.Event event = 2;</code>
+       */
+      public Builder clearEvent() {
+        if (eventBuilder_ == null) {
+          event_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          eventBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lockerbox.Shipment.Event event = 2;</code>
+       */
+      public Builder removeEvent(int index) {
+        if (eventBuilder_ == null) {
+          ensureEventIsMutable();
+          event_.remove(index);
+          onChanged();
+        } else {
+          eventBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lockerbox.Shipment.Event event = 2;</code>
+       */
+      public com.zpaslab.lockerbox.LockerboxProtos.Shipment.Event.Builder getEventBuilder(
+          int index) {
+        return getEventFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .lockerbox.Shipment.Event event = 2;</code>
+       */
+      public com.zpaslab.lockerbox.LockerboxProtos.Shipment.EventOrBuilder getEventOrBuilder(
+          int index) {
+        if (eventBuilder_ == null) {
+          return event_.get(index);  } else {
+          return eventBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .lockerbox.Shipment.Event event = 2;</code>
+       */
+      public java.util.List<? extends com.zpaslab.lockerbox.LockerboxProtos.Shipment.EventOrBuilder> 
+           getEventOrBuilderList() {
+        if (eventBuilder_ != null) {
+          return eventBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(event_);
+        }
+      }
+      /**
+       * <code>repeated .lockerbox.Shipment.Event event = 2;</code>
+       */
+      public com.zpaslab.lockerbox.LockerboxProtos.Shipment.Event.Builder addEventBuilder() {
+        return getEventFieldBuilder().addBuilder(
+            com.zpaslab.lockerbox.LockerboxProtos.Shipment.Event.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .lockerbox.Shipment.Event event = 2;</code>
+       */
+      public com.zpaslab.lockerbox.LockerboxProtos.Shipment.Event.Builder addEventBuilder(
+          int index) {
+        return getEventFieldBuilder().addBuilder(
+            index, com.zpaslab.lockerbox.LockerboxProtos.Shipment.Event.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .lockerbox.Shipment.Event event = 2;</code>
+       */
+      public java.util.List<com.zpaslab.lockerbox.LockerboxProtos.Shipment.Event.Builder> 
+           getEventBuilderList() {
+        return getEventFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          com.zpaslab.lockerbox.LockerboxProtos.Shipment.Event, com.zpaslab.lockerbox.LockerboxProtos.Shipment.Event.Builder, com.zpaslab.lockerbox.LockerboxProtos.Shipment.EventOrBuilder> 
+          getEventFieldBuilder() {
+        if (eventBuilder_ == null) {
+          eventBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              com.zpaslab.lockerbox.LockerboxProtos.Shipment.Event, com.zpaslab.lockerbox.LockerboxProtos.Shipment.Event.Builder, com.zpaslab.lockerbox.LockerboxProtos.Shipment.EventOrBuilder>(
+                  event_,
+                  ((bitField0_ & 0x00000002) == 0x00000002),
+                  getParentForChildren(),
+                  isClean());
+          event_ = null;
+        }
+        return eventBuilder_;
+      }
+
+      // @@protoc_insertion_point(builder_scope:lockerbox.Shipment)
+    }
+
+    static {
+      defaultInstance = new Shipment(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:lockerbox.Shipment)
+  }
+
+  public interface LockerboxOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:lockerbox.Lockerbox)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional string name = 1;</code>
+     */
+    boolean hasName();
+    /**
+     * <code>optional string name = 1;</code>
+     */
+    java.lang.String getName();
+    /**
+     * <code>optional string name = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <code>optional string href = 2;</code>
+     */
+    boolean hasHref();
+    /**
+     * <code>optional string href = 2;</code>
+     */
+    java.lang.String getHref();
+    /**
+     * <code>optional string href = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getHrefBytes();
+
+    /**
+     * <code>optional .lockerbox.Lockerbox.State state = 3;</code>
+     */
+    boolean hasState();
+    /**
+     * <code>optional .lockerbox.Lockerbox.State state = 3;</code>
+     */
+    com.zpaslab.lockerbox.LockerboxProtos.Lockerbox.State getState();
+
+    /**
+     * <code>optional .lockerbox.Address address = 6;</code>
+     */
+    boolean hasAddress();
+    /**
+     * <code>optional .lockerbox.Address address = 6;</code>
+     */
+    com.zpaslab.lockerbox.LockerboxProtos.Address getAddress();
+    /**
+     * <code>optional .lockerbox.Address address = 6;</code>
+     */
+    com.zpaslab.lockerbox.LockerboxProtos.AddressOrBuilder getAddressOrBuilder();
+  }
+  /**
+   * Protobuf type {@code lockerbox.Lockerbox}
+   *
+   * <pre>
+   * Physical device that stores parcels.
+   * </pre>
+   */
+  public static final class Lockerbox extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:lockerbox.Lockerbox)
+      LockerboxOrBuilder {
+    // Use Lockerbox.newBuilder() to construct.
+    private Lockerbox(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private Lockerbox(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final Lockerbox defaultInstance;
+    public static Lockerbox getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public Lockerbox getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Lockerbox(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              name_ = bs;
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000002;
+              href_ = bs;
+              break;
+            }
+            case 24: {
+              int rawValue = input.readEnum();
+              com.zpaslab.lockerbox.LockerboxProtos.Lockerbox.State value = com.zpaslab.lockerbox.LockerboxProtos.Lockerbox.State.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(3, rawValue);
+              } else {
+                bitField0_ |= 0x00000004;
+                state_ = value;
+              }
+              break;
+            }
+            case 50: {
+              com.zpaslab.lockerbox.LockerboxProtos.Address.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000008) == 0x00000008)) {
+                subBuilder = address_.toBuilder();
+              }
+              address_ = input.readMessage(com.zpaslab.lockerbox.LockerboxProtos.Address.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(address_);
+                address_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000008;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.zpaslab.lockerbox.LockerboxProtos.internal_static_lockerbox_Lockerbox_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.zpaslab.lockerbox.LockerboxProtos.internal_static_lockerbox_Lockerbox_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.zpaslab.lockerbox.LockerboxProtos.Lockerbox.class, com.zpaslab.lockerbox.LockerboxProtos.Lockerbox.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<Lockerbox> PARSER =
+        new com.google.protobuf.AbstractParser<Lockerbox>() {
+      public Lockerbox parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Lockerbox(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Lockerbox> getParserForType() {
+      return PARSER;
+    }
+
+    /**
+     * Protobuf enum {@code lockerbox.Lockerbox.State}
+     */
+    public enum State
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>ACTIVE = 1;</code>
+       *
+       * <pre>
+       * Lockerbox is active and can be used for new reservations and res. updates
+       * </pre>
+       */
+      ACTIVE(0, 1),
+      /**
+       * <code>INACTIVE = 2;</code>
+       *
+       * <pre>
+       * Lockerbox is temporary inactive. Cannot be use for new reservations and updates.
+       * </pre>
+       */
+      INACTIVE(1, 2),
+      /**
+       * <code>OFF = 3;</code>
+       *
+       * <pre>
+       * Lockerbox is off. Kept in listing only for historic reasons (and only when asked explicitly).
+       * </pre>
+       */
+      OFF(2, 3),
+      ;
+
+      /**
+       * <code>ACTIVE = 1;</code>
+       *
+       * <pre>
+       * Lockerbox is active and can be used for new reservations and res. updates
+       * </pre>
+       */
+      public static final int ACTIVE_VALUE = 1;
+      /**
+       * <code>INACTIVE = 2;</code>
+       *
+       * <pre>
+       * Lockerbox is temporary inactive. Cannot be use for new reservations and updates.
+       * </pre>
+       */
+      public static final int INACTIVE_VALUE = 2;
+      /**
+       * <code>OFF = 3;</code>
+       *
+       * <pre>
+       * Lockerbox is off. Kept in listing only for historic reasons (and only when asked explicitly).
+       * </pre>
+       */
+      public static final int OFF_VALUE = 3;
+
+
+      public final int getNumber() { return value; }
+
+      public static State valueOf(int value) {
+        switch (value) {
+          case 1: return ACTIVE;
+          case 2: return INACTIVE;
+          case 3: return OFF;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<State>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static com.google.protobuf.Internal.EnumLiteMap<State>
+          internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<State>() {
+              public State findValueByNumber(int number) {
+                return State.valueOf(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        return getDescriptor().getValues().get(index);
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return com.zpaslab.lockerbox.LockerboxProtos.Lockerbox.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final State[] VALUES = values();
+
+      public static State valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int index;
+      private final int value;
+
+      private State(int index, int value) {
+        this.index = index;
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:lockerbox.Lockerbox.State)
+    }
+
+    private int bitField0_;
+    public static final int NAME_FIELD_NUMBER = 1;
+    private java.lang.Object name_;
+    /**
+     * <code>optional string name = 1;</code>
+     */
+    public boolean hasName() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional string name = 1;</code>
+     */
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          name_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string name = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int HREF_FIELD_NUMBER = 2;
+    private java.lang.Object href_;
+    /**
+     * <code>optional string href = 2;</code>
+     */
+    public boolean hasHref() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional string href = 2;</code>
+     */
+    public java.lang.String getHref() {
+      java.lang.Object ref = href_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          href_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string href = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getHrefBytes() {
+      java.lang.Object ref = href_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        href_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int STATE_FIELD_NUMBER = 3;
+    private com.zpaslab.lockerbox.LockerboxProtos.Lockerbox.State state_;
+    /**
+     * <code>optional .lockerbox.Lockerbox.State state = 3;</code>
+     */
+    public boolean hasState() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>optional .lockerbox.Lockerbox.State state = 3;</code>
+     */
+    public com.zpaslab.lockerbox.LockerboxProtos.Lockerbox.State getState() {
+      return state_;
+    }
+
+    public static final int ADDRESS_FIELD_NUMBER = 6;
+    private com.zpaslab.lockerbox.LockerboxProtos.Address address_;
+    /**
+     * <code>optional .lockerbox.Address address = 6;</code>
+     */
+    public boolean hasAddress() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
+    }
+    /**
+     * <code>optional .lockerbox.Address address = 6;</code>
+     */
+    public com.zpaslab.lockerbox.LockerboxProtos.Address getAddress() {
+      return address_;
+    }
+    /**
+     * <code>optional .lockerbox.Address address = 6;</code>
+     */
+    public com.zpaslab.lockerbox.LockerboxProtos.AddressOrBuilder getAddressOrBuilder() {
+      return address_;
+    }
+
+    private void initFields() {
+      name_ = "";
+      href_ = "";
+      state_ = com.zpaslab.lockerbox.LockerboxProtos.Lockerbox.State.ACTIVE;
+      address_ = com.zpaslab.lockerbox.LockerboxProtos.Address.getDefaultInstance();
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeBytes(1, getNameBytes());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeBytes(2, getHrefBytes());
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeEnum(3, state_.getNumber());
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        output.writeMessage(6, address_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, getNameBytes());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, getHrefBytes());
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(3, state_.getNumber());
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, address_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static com.zpaslab.lockerbox.LockerboxProtos.Lockerbox parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.zpaslab.lockerbox.LockerboxProtos.Lockerbox parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.zpaslab.lockerbox.LockerboxProtos.Lockerbox parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.zpaslab.lockerbox.LockerboxProtos.Lockerbox parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.zpaslab.lockerbox.LockerboxProtos.Lockerbox parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.zpaslab.lockerbox.LockerboxProtos.Lockerbox parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.zpaslab.lockerbox.LockerboxProtos.Lockerbox parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.zpaslab.lockerbox.LockerboxProtos.Lockerbox parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.zpaslab.lockerbox.LockerboxProtos.Lockerbox parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.zpaslab.lockerbox.LockerboxProtos.Lockerbox parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(com.zpaslab.lockerbox.LockerboxProtos.Lockerbox prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code lockerbox.Lockerbox}
+     *
+     * <pre>
+     * Physical device that stores parcels.
+     * </pre>
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:lockerbox.Lockerbox)
+        com.zpaslab.lockerbox.LockerboxProtos.LockerboxOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.zpaslab.lockerbox.LockerboxProtos.internal_static_lockerbox_Lockerbox_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.zpaslab.lockerbox.LockerboxProtos.internal_static_lockerbox_Lockerbox_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.zpaslab.lockerbox.LockerboxProtos.Lockerbox.class, com.zpaslab.lockerbox.LockerboxProtos.Lockerbox.Builder.class);
+      }
+
+      // Construct using com.zpaslab.lockerbox.LockerboxProtos.Lockerbox.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getAddressFieldBuilder();
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        name_ = "";
+        bitField0_ = (bitField0_ & ~0x00000001);
+        href_ = "";
+        bitField0_ = (bitField0_ & ~0x00000002);
+        state_ = com.zpaslab.lockerbox.LockerboxProtos.Lockerbox.State.ACTIVE;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        if (addressBuilder_ == null) {
+          address_ = com.zpaslab.lockerbox.LockerboxProtos.Address.getDefaultInstance();
+        } else {
+          addressBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.zpaslab.lockerbox.LockerboxProtos.internal_static_lockerbox_Lockerbox_descriptor;
+      }
+
+      public com.zpaslab.lockerbox.LockerboxProtos.Lockerbox getDefaultInstanceForType() {
+        return com.zpaslab.lockerbox.LockerboxProtos.Lockerbox.getDefaultInstance();
+      }
+
+      public com.zpaslab.lockerbox.LockerboxProtos.Lockerbox build() {
+        com.zpaslab.lockerbox.LockerboxProtos.Lockerbox result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.zpaslab.lockerbox.LockerboxProtos.Lockerbox buildPartial() {
+        com.zpaslab.lockerbox.LockerboxProtos.Lockerbox result = new com.zpaslab.lockerbox.LockerboxProtos.Lockerbox(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.name_ = name_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.href_ = href_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.state_ = state_;
+        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        if (addressBuilder_ == null) {
+          result.address_ = address_;
+        } else {
+          result.address_ = addressBuilder_.build();
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.zpaslab.lockerbox.LockerboxProtos.Lockerbox) {
+          return mergeFrom((com.zpaslab.lockerbox.LockerboxProtos.Lockerbox)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.zpaslab.lockerbox.LockerboxProtos.Lockerbox other) {
+        if (other == com.zpaslab.lockerbox.LockerboxProtos.Lockerbox.getDefaultInstance()) return this;
+        if (other.hasName()) {
+          bitField0_ |= 0x00000001;
+          name_ = other.name_;
+          onChanged();
+        }
+        if (other.hasHref()) {
+          bitField0_ |= 0x00000002;
+          href_ = other.href_;
+          onChanged();
+        }
+        if (other.hasState()) {
+          setState(other.getState());
+        }
+        if (other.hasAddress()) {
+          mergeAddress(other.getAddress());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.zpaslab.lockerbox.LockerboxProtos.Lockerbox parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.zpaslab.lockerbox.LockerboxProtos.Lockerbox) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object name_ = "";
+      /**
+       * <code>optional string name = 1;</code>
+       */
+      public boolean hasName() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional string name = 1;</code>
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            name_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string name = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string name = 1;</code>
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        name_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string name = 1;</code>
+       */
+      public Builder clearName() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        name_ = getDefaultInstance().getName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string name = 1;</code>
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        name_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object href_ = "";
+      /**
+       * <code>optional string href = 2;</code>
+       */
+      public boolean hasHref() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional string href = 2;</code>
+       */
+      public java.lang.String getHref() {
+        java.lang.Object ref = href_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            href_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string href = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getHrefBytes() {
+        java.lang.Object ref = href_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          href_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string href = 2;</code>
+       */
+      public Builder setHref(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        href_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string href = 2;</code>
+       */
+      public Builder clearHref() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        href_ = getDefaultInstance().getHref();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string href = 2;</code>
+       */
+      public Builder setHrefBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        href_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.zpaslab.lockerbox.LockerboxProtos.Lockerbox.State state_ = com.zpaslab.lockerbox.LockerboxProtos.Lockerbox.State.ACTIVE;
+      /**
+       * <code>optional .lockerbox.Lockerbox.State state = 3;</code>
+       */
+      public boolean hasState() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional .lockerbox.Lockerbox.State state = 3;</code>
+       */
+      public com.zpaslab.lockerbox.LockerboxProtos.Lockerbox.State getState() {
+        return state_;
+      }
+      /**
+       * <code>optional .lockerbox.Lockerbox.State state = 3;</code>
+       */
+      public Builder setState(com.zpaslab.lockerbox.LockerboxProtos.Lockerbox.State value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000004;
+        state_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .lockerbox.Lockerbox.State state = 3;</code>
+       */
+      public Builder clearState() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        state_ = com.zpaslab.lockerbox.LockerboxProtos.Lockerbox.State.ACTIVE;
+        onChanged();
+        return this;
+      }
+
+      private com.zpaslab.lockerbox.LockerboxProtos.Address address_ = com.zpaslab.lockerbox.LockerboxProtos.Address.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          com.zpaslab.lockerbox.LockerboxProtos.Address, com.zpaslab.lockerbox.LockerboxProtos.Address.Builder, com.zpaslab.lockerbox.LockerboxProtos.AddressOrBuilder> addressBuilder_;
+      /**
+       * <code>optional .lockerbox.Address address = 6;</code>
+       */
+      public boolean hasAddress() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>optional .lockerbox.Address address = 6;</code>
+       */
+      public com.zpaslab.lockerbox.LockerboxProtos.Address getAddress() {
+        if (addressBuilder_ == null) {
+          return address_;
+        } else {
+          return addressBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .lockerbox.Address address = 6;</code>
+       */
+      public Builder setAddress(com.zpaslab.lockerbox.LockerboxProtos.Address value) {
+        if (addressBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          address_ = value;
+          onChanged();
+        } else {
+          addressBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        return this;
+      }
+      /**
+       * <code>optional .lockerbox.Address address = 6;</code>
+       */
+      public Builder setAddress(
+          com.zpaslab.lockerbox.LockerboxProtos.Address.Builder builderForValue) {
+        if (addressBuilder_ == null) {
+          address_ = builderForValue.build();
+          onChanged();
+        } else {
+          addressBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        return this;
+      }
+      /**
+       * <code>optional .lockerbox.Address address = 6;</code>
+       */
+      public Builder mergeAddress(com.zpaslab.lockerbox.LockerboxProtos.Address value) {
+        if (addressBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) == 0x00000008) &&
+              address_ != com.zpaslab.lockerbox.LockerboxProtos.Address.getDefaultInstance()) {
+            address_ =
+              com.zpaslab.lockerbox.LockerboxProtos.Address.newBuilder(address_).mergeFrom(value).buildPartial();
+          } else {
+            address_ = value;
+          }
+          onChanged();
+        } else {
+          addressBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000008;
+        return this;
+      }
+      /**
+       * <code>optional .lockerbox.Address address = 6;</code>
+       */
+      public Builder clearAddress() {
+        if (addressBuilder_ == null) {
+          address_ = com.zpaslab.lockerbox.LockerboxProtos.Address.getDefaultInstance();
+          onChanged();
+        } else {
+          addressBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
+        return this;
+      }
+      /**
+       * <code>optional .lockerbox.Address address = 6;</code>
+       */
+      public com.zpaslab.lockerbox.LockerboxProtos.Address.Builder getAddressBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getAddressFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .lockerbox.Address address = 6;</code>
+       */
+      public com.zpaslab.lockerbox.LockerboxProtos.AddressOrBuilder getAddressOrBuilder() {
+        if (addressBuilder_ != null) {
+          return addressBuilder_.getMessageOrBuilder();
+        } else {
+          return address_;
+        }
+      }
+      /**
+       * <code>optional .lockerbox.Address address = 6;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          com.zpaslab.lockerbox.LockerboxProtos.Address, com.zpaslab.lockerbox.LockerboxProtos.Address.Builder, com.zpaslab.lockerbox.LockerboxProtos.AddressOrBuilder> 
+          getAddressFieldBuilder() {
+        if (addressBuilder_ == null) {
+          addressBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              com.zpaslab.lockerbox.LockerboxProtos.Address, com.zpaslab.lockerbox.LockerboxProtos.Address.Builder, com.zpaslab.lockerbox.LockerboxProtos.AddressOrBuilder>(
+                  getAddress(),
+                  getParentForChildren(),
+                  isClean());
+          address_ = null;
+        }
+        return addressBuilder_;
+      }
+
+      // @@protoc_insertion_point(builder_scope:lockerbox.Lockerbox)
+    }
+
+    static {
+      defaultInstance = new Lockerbox(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:lockerbox.Lockerbox)
+  }
+
+  public interface LockerboxListOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:lockerbox.LockerboxList)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .lockerbox.Lockerbox lockerbox = 1;</code>
+     */
+    java.util.List<com.zpaslab.lockerbox.LockerboxProtos.Lockerbox> 
+        getLockerboxList();
+    /**
+     * <code>repeated .lockerbox.Lockerbox lockerbox = 1;</code>
+     */
+    com.zpaslab.lockerbox.LockerboxProtos.Lockerbox getLockerbox(int index);
+    /**
+     * <code>repeated .lockerbox.Lockerbox lockerbox = 1;</code>
+     */
+    int getLockerboxCount();
+    /**
+     * <code>repeated .lockerbox.Lockerbox lockerbox = 1;</code>
+     */
+    java.util.List<? extends com.zpaslab.lockerbox.LockerboxProtos.LockerboxOrBuilder> 
+        getLockerboxOrBuilderList();
+    /**
+     * <code>repeated .lockerbox.Lockerbox lockerbox = 1;</code>
+     */
+    com.zpaslab.lockerbox.LockerboxProtos.LockerboxOrBuilder getLockerboxOrBuilder(
+        int index);
+
+    /**
+     * <code>optional int32 total = 2;</code>
+     */
+    boolean hasTotal();
+    /**
+     * <code>optional int32 total = 2;</code>
+     */
+    int getTotal();
+  }
+  /**
+   * Protobuf type {@code lockerbox.LockerboxList}
+   */
+  public static final class LockerboxList extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:lockerbox.LockerboxList)
+      LockerboxListOrBuilder {
+    // Use LockerboxList.newBuilder() to construct.
+    private LockerboxList(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private LockerboxList(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final LockerboxList defaultInstance;
+    public static LockerboxList getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public LockerboxList getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private LockerboxList(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                lockerbox_ = new java.util.ArrayList<com.zpaslab.lockerbox.LockerboxProtos.Lockerbox>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              lockerbox_.add(input.readMessage(com.zpaslab.lockerbox.LockerboxProtos.Lockerbox.PARSER, extensionRegistry));
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000001;
+              total_ = input.readInt32();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          lockerbox_ = java.util.Collections.unmodifiableList(lockerbox_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.zpaslab.lockerbox.LockerboxProtos.internal_static_lockerbox_LockerboxList_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.zpaslab.lockerbox.LockerboxProtos.internal_static_lockerbox_LockerboxList_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.zpaslab.lockerbox.LockerboxProtos.LockerboxList.class, com.zpaslab.lockerbox.LockerboxProtos.LockerboxList.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<LockerboxList> PARSER =
+        new com.google.protobuf.AbstractParser<LockerboxList>() {
+      public LockerboxList parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new LockerboxList(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<LockerboxList> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    public static final int LOCKERBOX_FIELD_NUMBER = 1;
+    private java.util.List<com.zpaslab.lockerbox.LockerboxProtos.Lockerbox> lockerbox_;
+    /**
+     * <code>repeated .lockerbox.Lockerbox lockerbox = 1;</code>
+     */
+    public java.util.List<com.zpaslab.lockerbox.LockerboxProtos.Lockerbox> getLockerboxList() {
+      return lockerbox_;
+    }
+    /**
+     * <code>repeated .lockerbox.Lockerbox lockerbox = 1;</code>
+     */
+    public java.util.List<? extends com.zpaslab.lockerbox.LockerboxProtos.LockerboxOrBuilder> 
+        getLockerboxOrBuilderList() {
+      return lockerbox_;
+    }
+    /**
+     * <code>repeated .lockerbox.Lockerbox lockerbox = 1;</code>
+     */
+    public int getLockerboxCount() {
+      return lockerbox_.size();
+    }
+    /**
+     * <code>repeated .lockerbox.Lockerbox lockerbox = 1;</code>
+     */
+    public com.zpaslab.lockerbox.LockerboxProtos.Lockerbox getLockerbox(int index) {
+      return lockerbox_.get(index);
+    }
+    /**
+     * <code>repeated .lockerbox.Lockerbox lockerbox = 1;</code>
+     */
+    public com.zpaslab.lockerbox.LockerboxProtos.LockerboxOrBuilder getLockerboxOrBuilder(
+        int index) {
+      return lockerbox_.get(index);
+    }
+
+    public static final int TOTAL_FIELD_NUMBER = 2;
+    private int total_;
+    /**
+     * <code>optional int32 total = 2;</code>
+     */
+    public boolean hasTotal() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional int32 total = 2;</code>
+     */
+    public int getTotal() {
+      return total_;
+    }
+
+    private void initFields() {
+      lockerbox_ = java.util.Collections.emptyList();
+      total_ = 0;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      for (int i = 0; i < lockerbox_.size(); i++) {
+        output.writeMessage(1, lockerbox_.get(i));
+      }
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeInt32(2, total_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < lockerbox_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, lockerbox_.get(i));
+      }
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, total_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static com.zpaslab.lockerbox.LockerboxProtos.LockerboxList parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.zpaslab.lockerbox.LockerboxProtos.LockerboxList parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.zpaslab.lockerbox.LockerboxProtos.LockerboxList parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.zpaslab.lockerbox.LockerboxProtos.LockerboxList parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.zpaslab.lockerbox.LockerboxProtos.LockerboxList parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.zpaslab.lockerbox.LockerboxProtos.LockerboxList parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.zpaslab.lockerbox.LockerboxProtos.LockerboxList parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.zpaslab.lockerbox.LockerboxProtos.LockerboxList parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.zpaslab.lockerbox.LockerboxProtos.LockerboxList parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.zpaslab.lockerbox.LockerboxProtos.LockerboxList parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(com.zpaslab.lockerbox.LockerboxProtos.LockerboxList prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code lockerbox.LockerboxList}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:lockerbox.LockerboxList)
+        com.zpaslab.lockerbox.LockerboxProtos.LockerboxListOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.zpaslab.lockerbox.LockerboxProtos.internal_static_lockerbox_LockerboxList_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.zpaslab.lockerbox.LockerboxProtos.internal_static_lockerbox_LockerboxList_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.zpaslab.lockerbox.LockerboxProtos.LockerboxList.class, com.zpaslab.lockerbox.LockerboxProtos.LockerboxList.Builder.class);
+      }
+
+      // Construct using com.zpaslab.lockerbox.LockerboxProtos.LockerboxList.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getLockerboxFieldBuilder();
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        if (lockerboxBuilder_ == null) {
+          lockerbox_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          lockerboxBuilder_.clear();
+        }
+        total_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.zpaslab.lockerbox.LockerboxProtos.internal_static_lockerbox_LockerboxList_descriptor;
+      }
+
+      public com.zpaslab.lockerbox.LockerboxProtos.LockerboxList getDefaultInstanceForType() {
+        return com.zpaslab.lockerbox.LockerboxProtos.LockerboxList.getDefaultInstance();
+      }
+
+      public com.zpaslab.lockerbox.LockerboxProtos.LockerboxList build() {
+        com.zpaslab.lockerbox.LockerboxProtos.LockerboxList result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.zpaslab.lockerbox.LockerboxProtos.LockerboxList buildPartial() {
+        com.zpaslab.lockerbox.LockerboxProtos.LockerboxList result = new com.zpaslab.lockerbox.LockerboxProtos.LockerboxList(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (lockerboxBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+            lockerbox_ = java.util.Collections.unmodifiableList(lockerbox_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.lockerbox_ = lockerbox_;
+        } else {
+          result.lockerbox_ = lockerboxBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.total_ = total_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.zpaslab.lockerbox.LockerboxProtos.LockerboxList) {
+          return mergeFrom((com.zpaslab.lockerbox.LockerboxProtos.LockerboxList)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.zpaslab.lockerbox.LockerboxProtos.LockerboxList other) {
+        if (other == com.zpaslab.lockerbox.LockerboxProtos.LockerboxList.getDefaultInstance()) return this;
+        if (lockerboxBuilder_ == null) {
+          if (!other.lockerbox_.isEmpty()) {
+            if (lockerbox_.isEmpty()) {
+              lockerbox_ = other.lockerbox_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureLockerboxIsMutable();
+              lockerbox_.addAll(other.lockerbox_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.lockerbox_.isEmpty()) {
+            if (lockerboxBuilder_.isEmpty()) {
+              lockerboxBuilder_.dispose();
+              lockerboxBuilder_ = null;
+              lockerbox_ = other.lockerbox_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              lockerboxBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   getLockerboxFieldBuilder() : null;
+            } else {
+              lockerboxBuilder_.addAllMessages(other.lockerbox_);
+            }
+          }
+        }
+        if (other.hasTotal()) {
+          setTotal(other.getTotal());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.zpaslab.lockerbox.LockerboxProtos.LockerboxList parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.zpaslab.lockerbox.LockerboxProtos.LockerboxList) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.zpaslab.lockerbox.LockerboxProtos.Lockerbox> lockerbox_ =
+        java.util.Collections.emptyList();
+      private void ensureLockerboxIsMutable() {
+        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+          lockerbox_ = new java.util.ArrayList<com.zpaslab.lockerbox.LockerboxProtos.Lockerbox>(lockerbox_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          com.zpaslab.lockerbox.LockerboxProtos.Lockerbox, com.zpaslab.lockerbox.LockerboxProtos.Lockerbox.Builder, com.zpaslab.lockerbox.LockerboxProtos.LockerboxOrBuilder> lockerboxBuilder_;
+
+      /**
+       * <code>repeated .lockerbox.Lockerbox lockerbox = 1;</code>
+       */
+      public java.util.List<com.zpaslab.lockerbox.LockerboxProtos.Lockerbox> getLockerboxList() {
+        if (lockerboxBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(lockerbox_);
+        } else {
+          return lockerboxBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .lockerbox.Lockerbox lockerbox = 1;</code>
+       */
+      public int getLockerboxCount() {
+        if (lockerboxBuilder_ == null) {
+          return lockerbox_.size();
+        } else {
+          return lockerboxBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .lockerbox.Lockerbox lockerbox = 1;</code>
+       */
+      public com.zpaslab.lockerbox.LockerboxProtos.Lockerbox getLockerbox(int index) {
+        if (lockerboxBuilder_ == null) {
+          return lockerbox_.get(index);
+        } else {
+          return lockerboxBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .lockerbox.Lockerbox lockerbox = 1;</code>
+       */
+      public Builder setLockerbox(
+          int index, com.zpaslab.lockerbox.LockerboxProtos.Lockerbox value) {
+        if (lockerboxBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLockerboxIsMutable();
+          lockerbox_.set(index, value);
+          onChanged();
+        } else {
+          lockerboxBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lockerbox.Lockerbox lockerbox = 1;</code>
+       */
+      public Builder setLockerbox(
+          int index, com.zpaslab.lockerbox.LockerboxProtos.Lockerbox.Builder builderForValue) {
+        if (lockerboxBuilder_ == null) {
+          ensureLockerboxIsMutable();
+          lockerbox_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          lockerboxBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lockerbox.Lockerbox lockerbox = 1;</code>
+       */
+      public Builder addLockerbox(com.zpaslab.lockerbox.LockerboxProtos.Lockerbox value) {
+        if (lockerboxBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLockerboxIsMutable();
+          lockerbox_.add(value);
+          onChanged();
+        } else {
+          lockerboxBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lockerbox.Lockerbox lockerbox = 1;</code>
+       */
+      public Builder addLockerbox(
+          int index, com.zpaslab.lockerbox.LockerboxProtos.Lockerbox value) {
+        if (lockerboxBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLockerboxIsMutable();
+          lockerbox_.add(index, value);
+          onChanged();
+        } else {
+          lockerboxBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lockerbox.Lockerbox lockerbox = 1;</code>
+       */
+      public Builder addLockerbox(
+          com.zpaslab.lockerbox.LockerboxProtos.Lockerbox.Builder builderForValue) {
+        if (lockerboxBuilder_ == null) {
+          ensureLockerboxIsMutable();
+          lockerbox_.add(builderForValue.build());
+          onChanged();
+        } else {
+          lockerboxBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lockerbox.Lockerbox lockerbox = 1;</code>
+       */
+      public Builder addLockerbox(
+          int index, com.zpaslab.lockerbox.LockerboxProtos.Lockerbox.Builder builderForValue) {
+        if (lockerboxBuilder_ == null) {
+          ensureLockerboxIsMutable();
+          lockerbox_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          lockerboxBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lockerbox.Lockerbox lockerbox = 1;</code>
+       */
+      public Builder addAllLockerbox(
+          java.lang.Iterable<? extends com.zpaslab.lockerbox.LockerboxProtos.Lockerbox> values) {
+        if (lockerboxBuilder_ == null) {
+          ensureLockerboxIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, lockerbox_);
+          onChanged();
+        } else {
+          lockerboxBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lockerbox.Lockerbox lockerbox = 1;</code>
+       */
+      public Builder clearLockerbox() {
+        if (lockerboxBuilder_ == null) {
+          lockerbox_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          lockerboxBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lockerbox.Lockerbox lockerbox = 1;</code>
+       */
+      public Builder removeLockerbox(int index) {
+        if (lockerboxBuilder_ == null) {
+          ensureLockerboxIsMutable();
+          lockerbox_.remove(index);
+          onChanged();
+        } else {
+          lockerboxBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lockerbox.Lockerbox lockerbox = 1;</code>
+       */
+      public com.zpaslab.lockerbox.LockerboxProtos.Lockerbox.Builder getLockerboxBuilder(
+          int index) {
+        return getLockerboxFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .lockerbox.Lockerbox lockerbox = 1;</code>
+       */
+      public com.zpaslab.lockerbox.LockerboxProtos.LockerboxOrBuilder getLockerboxOrBuilder(
+          int index) {
+        if (lockerboxBuilder_ == null) {
+          return lockerbox_.get(index);  } else {
+          return lockerboxBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .lockerbox.Lockerbox lockerbox = 1;</code>
+       */
+      public java.util.List<? extends com.zpaslab.lockerbox.LockerboxProtos.LockerboxOrBuilder> 
+           getLockerboxOrBuilderList() {
+        if (lockerboxBuilder_ != null) {
+          return lockerboxBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(lockerbox_);
+        }
+      }
+      /**
+       * <code>repeated .lockerbox.Lockerbox lockerbox = 1;</code>
+       */
+      public com.zpaslab.lockerbox.LockerboxProtos.Lockerbox.Builder addLockerboxBuilder() {
+        return getLockerboxFieldBuilder().addBuilder(
+            com.zpaslab.lockerbox.LockerboxProtos.Lockerbox.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .lockerbox.Lockerbox lockerbox = 1;</code>
+       */
+      public com.zpaslab.lockerbox.LockerboxProtos.Lockerbox.Builder addLockerboxBuilder(
+          int index) {
+        return getLockerboxFieldBuilder().addBuilder(
+            index, com.zpaslab.lockerbox.LockerboxProtos.Lockerbox.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .lockerbox.Lockerbox lockerbox = 1;</code>
+       */
+      public java.util.List<com.zpaslab.lockerbox.LockerboxProtos.Lockerbox.Builder> 
+           getLockerboxBuilderList() {
+        return getLockerboxFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          com.zpaslab.lockerbox.LockerboxProtos.Lockerbox, com.zpaslab.lockerbox.LockerboxProtos.Lockerbox.Builder, com.zpaslab.lockerbox.LockerboxProtos.LockerboxOrBuilder> 
+          getLockerboxFieldBuilder() {
+        if (lockerboxBuilder_ == null) {
+          lockerboxBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              com.zpaslab.lockerbox.LockerboxProtos.Lockerbox, com.zpaslab.lockerbox.LockerboxProtos.Lockerbox.Builder, com.zpaslab.lockerbox.LockerboxProtos.LockerboxOrBuilder>(
+                  lockerbox_,
+                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  getParentForChildren(),
+                  isClean());
+          lockerbox_ = null;
+        }
+        return lockerboxBuilder_;
+      }
+
+      private int total_ ;
+      /**
+       * <code>optional int32 total = 2;</code>
+       */
+      public boolean hasTotal() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional int32 total = 2;</code>
+       */
+      public int getTotal() {
+        return total_;
+      }
+      /**
+       * <code>optional int32 total = 2;</code>
+       */
+      public Builder setTotal(int value) {
+        bitField0_ |= 0x00000002;
+        total_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 total = 2;</code>
+       */
+      public Builder clearTotal() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        total_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:lockerbox.LockerboxList)
+    }
+
+    static {
+      defaultInstance = new LockerboxList(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:lockerbox.LockerboxList)
+  }
+
   public interface ChargeOrBuilder extends
       // @@protoc_insertion_point(interface_extends:lockerbox.Charge)
       com.google.protobuf.MessageOrBuilder {
@@ -2077,10 +18818,12 @@ public final class LockerboxProtos {
      *
      * <pre>
      * tag is used to match Charges with Payment.
-     * Tag value will be:
-     * - equal to Charge.Code, if there is 1-to-1 relationship between Charges and Payment
-     * - same, account-unique value in all Charges, if there is many-to-1 relationship between Charges and Payment
-     * Payment.charge_tag should be set to the final tag value (either unique or copied from Charge.code).
+     * For many-to-1 relationship between Charges and Payment, tag should be set to the same, account-unique value in every Charge.
+     * The same value should be then set in Payment.charge_tag. Once they Payment is successful, it will be applied to all Charges
+     * with the tag.
+     * For 1-to-1 relationship between Charge and Payment, tag can be either set to account-unique value or left empty.
+     * If left empty, tag value will be copied from Charge.code (making the 1-to-1 relationship the default one).
+     * Payment.charge_tag should be set to the final tag value (either assigned by user or copied from Charge.code).
      * </pre>
      */
     boolean hasTag();
@@ -2089,10 +18832,12 @@ public final class LockerboxProtos {
      *
      * <pre>
      * tag is used to match Charges with Payment.
-     * Tag value will be:
-     * - equal to Charge.Code, if there is 1-to-1 relationship between Charges and Payment
-     * - same, account-unique value in all Charges, if there is many-to-1 relationship between Charges and Payment
-     * Payment.charge_tag should be set to the final tag value (either unique or copied from Charge.code).
+     * For many-to-1 relationship between Charges and Payment, tag should be set to the same, account-unique value in every Charge.
+     * The same value should be then set in Payment.charge_tag. Once they Payment is successful, it will be applied to all Charges
+     * with the tag.
+     * For 1-to-1 relationship between Charge and Payment, tag can be either set to account-unique value or left empty.
+     * If left empty, tag value will be copied from Charge.code (making the 1-to-1 relationship the default one).
+     * Payment.charge_tag should be set to the final tag value (either assigned by user or copied from Charge.code).
      * </pre>
      */
     java.lang.String getTag();
@@ -2101,10 +18846,12 @@ public final class LockerboxProtos {
      *
      * <pre>
      * tag is used to match Charges with Payment.
-     * Tag value will be:
-     * - equal to Charge.Code, if there is 1-to-1 relationship between Charges and Payment
-     * - same, account-unique value in all Charges, if there is many-to-1 relationship between Charges and Payment
-     * Payment.charge_tag should be set to the final tag value (either unique or copied from Charge.code).
+     * For many-to-1 relationship between Charges and Payment, tag should be set to the same, account-unique value in every Charge.
+     * The same value should be then set in Payment.charge_tag. Once they Payment is successful, it will be applied to all Charges
+     * with the tag.
+     * For 1-to-1 relationship between Charge and Payment, tag can be either set to account-unique value or left empty.
+     * If left empty, tag value will be copied from Charge.code (making the 1-to-1 relationship the default one).
+     * Payment.charge_tag should be set to the final tag value (either assigned by user or copied from Charge.code).
      * </pre>
      */
     com.google.protobuf.ByteString
@@ -2184,7 +18931,7 @@ public final class LockerboxProtos {
      * <code>optional .lockerbox.Charge.Transferee transferee = 7;</code>
      *
      * <pre>
-     * required for category = COD, TAX, CUSTOMS, ACCOUNT_BALANCE, OVERPAY_MOBILE
+     * required for category = COD, TAX, CUSTOMS
      * </pre>
      */
     boolean hasTransferee();
@@ -2192,7 +18939,7 @@ public final class LockerboxProtos {
      * <code>optional .lockerbox.Charge.Transferee transferee = 7;</code>
      *
      * <pre>
-     * required for category = COD, TAX, CUSTOMS, ACCOUNT_BALANCE, OVERPAY_MOBILE
+     * required for category = COD, TAX, CUSTOMS
      * </pre>
      */
     com.zpaslab.lockerbox.LockerboxProtos.Charge.Transferee getTransferee();
@@ -2200,7 +18947,7 @@ public final class LockerboxProtos {
      * <code>optional .lockerbox.Charge.Transferee transferee = 7;</code>
      *
      * <pre>
-     * required for category = COD, TAX, CUSTOMS, ACCOUNT_BALANCE, OVERPAY_MOBILE
+     * required for category = COD, TAX, CUSTOMS
      * </pre>
      */
     com.zpaslab.lockerbox.LockerboxProtos.Charge.TransfereeOrBuilder getTransfereeOrBuilder();
@@ -2253,7 +19000,7 @@ public final class LockerboxProtos {
      * <code>optional string parcel_ref = 11;</code>
      *
      * <pre>
-     * if the Charge is created because of a parcel (charge for parcel or overpay), it should have the parcel_ref
+     * if the Charge is created because of parce (charge for parcel), it should have the parcel_ref
      * set to parcel.Code.
      * </pre>
      */
@@ -2262,7 +19009,7 @@ public final class LockerboxProtos {
      * <code>optional string parcel_ref = 11;</code>
      *
      * <pre>
-     * if the Charge is created because of a parcel (charge for parcel or overpay), it should have the parcel_ref
+     * if the Charge is created because of parce (charge for parcel), it should have the parcel_ref
      * set to parcel.Code.
      * </pre>
      */
@@ -2271,7 +19018,7 @@ public final class LockerboxProtos {
      * <code>optional string parcel_ref = 11;</code>
      *
      * <pre>
-     * if the Charge is created because of a parcel (charge for parcel or overpay), it should have the parcel_ref
+     * if the Charge is created because of parce (charge for parcel), it should have the parcel_ref
      * set to parcel.Code.
      * </pre>
      */
@@ -2524,21 +19271,6 @@ public final class LockerboxProtos {
        * </pre>
        */
       ACCOUNT_BALANCE(5, 6),
-      /**
-       * <code>OVERPAY_MOBILE = 7;</code>
-       *
-       * <pre>
-       * Represents money which was taken from user, although we didn't want to.
-       * The money is marked to be transferred to user's mobile phone account.
-       * Known cases include:
-       *  - user paid too much with cash but we couldn't return change
-       *  - user paid too little with cash but we couldn't return it
-       *  - user double-paid for a parcel (it was paid in overmind, but agent had no connection, then again
-       *    paid in agent while still disconnected)
-       * The Transferee.Account should be set.
-       * </pre>
-       */
-      OVERPAY_MOBILE(6, 7),
       ;
 
       /**
@@ -2591,21 +19323,6 @@ public final class LockerboxProtos {
        * </pre>
        */
       public static final int ACCOUNT_BALANCE_VALUE = 6;
-      /**
-       * <code>OVERPAY_MOBILE = 7;</code>
-       *
-       * <pre>
-       * Represents money which was taken from user, although we didn't want to.
-       * The money is marked to be transferred to user's mobile phone account.
-       * Known cases include:
-       *  - user paid too much with cash but we couldn't return change
-       *  - user paid too little with cash but we couldn't return it
-       *  - user double-paid for a parcel (it was paid in overmind, but agent had no connection, then again
-       *    paid in agent while still disconnected)
-       * The Transferee.Account should be set.
-       * </pre>
-       */
-      public static final int OVERPAY_MOBILE_VALUE = 7;
 
 
       public final int getNumber() { return value; }
@@ -2618,7 +19335,6 @@ public final class LockerboxProtos {
           case 4: return TAX;
           case 5: return CUSTOMS;
           case 6: return ACCOUNT_BALANCE;
-          case 7: return OVERPAY_MOBILE;
           default: return null;
         }
       }
@@ -2904,60 +19620,6 @@ public final class LockerboxProtos {
        */
       com.google.protobuf.ByteString
           getDetailsBytes();
-
-      /**
-       * <code>optional string name = 4;</code>
-       *
-       * <pre>
-       * phone information - to be used in OVERPAY_MOBILE
-       * </pre>
-       */
-      boolean hasName();
-      /**
-       * <code>optional string name = 4;</code>
-       *
-       * <pre>
-       * phone information - to be used in OVERPAY_MOBILE
-       * </pre>
-       */
-      java.lang.String getName();
-      /**
-       * <code>optional string name = 4;</code>
-       *
-       * <pre>
-       * phone information - to be used in OVERPAY_MOBILE
-       * </pre>
-       */
-      com.google.protobuf.ByteString
-          getNameBytes();
-
-      /**
-       * <code>optional string phone = 5;</code>
-       */
-      boolean hasPhone();
-      /**
-       * <code>optional string phone = 5;</code>
-       */
-      java.lang.String getPhone();
-      /**
-       * <code>optional string phone = 5;</code>
-       */
-      com.google.protobuf.ByteString
-          getPhoneBytes();
-
-      /**
-       * <code>optional string phone_carrier = 6;</code>
-       */
-      boolean hasPhoneCarrier();
-      /**
-       * <code>optional string phone_carrier = 6;</code>
-       */
-      java.lang.String getPhoneCarrier();
-      /**
-       * <code>optional string phone_carrier = 6;</code>
-       */
-      com.google.protobuf.ByteString
-          getPhoneCarrierBytes();
     }
     /**
      * Protobuf type {@code lockerbox.Charge.Transferee}
@@ -3027,24 +19689,6 @@ public final class LockerboxProtos {
                 com.google.protobuf.ByteString bs = input.readBytes();
                 bitField0_ |= 0x00000004;
                 details_ = bs;
-                break;
-              }
-              case 34: {
-                com.google.protobuf.ByteString bs = input.readBytes();
-                bitField0_ |= 0x00000008;
-                name_ = bs;
-                break;
-              }
-              case 42: {
-                com.google.protobuf.ByteString bs = input.readBytes();
-                bitField0_ |= 0x00000010;
-                phone_ = bs;
-                break;
-              }
-              case 50: {
-                com.google.protobuf.ByteString bs = input.readBytes();
-                bitField0_ |= 0x00000020;
-                phoneCarrier_ = bs;
                 break;
               }
             }
@@ -3249,151 +19893,10 @@ public final class LockerboxProtos {
         }
       }
 
-      public static final int NAME_FIELD_NUMBER = 4;
-      private java.lang.Object name_;
-      /**
-       * <code>optional string name = 4;</code>
-       *
-       * <pre>
-       * phone information - to be used in OVERPAY_MOBILE
-       * </pre>
-       */
-      public boolean hasName() {
-        return ((bitField0_ & 0x00000008) == 0x00000008);
-      }
-      /**
-       * <code>optional string name = 4;</code>
-       *
-       * <pre>
-       * phone information - to be used in OVERPAY_MOBILE
-       * </pre>
-       */
-      public java.lang.String getName() {
-        java.lang.Object ref = name_;
-        if (ref instanceof java.lang.String) {
-          return (java.lang.String) ref;
-        } else {
-          com.google.protobuf.ByteString bs = 
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            name_ = s;
-          }
-          return s;
-        }
-      }
-      /**
-       * <code>optional string name = 4;</code>
-       *
-       * <pre>
-       * phone information - to be used in OVERPAY_MOBILE
-       * </pre>
-       */
-      public com.google.protobuf.ByteString
-          getNameBytes() {
-        java.lang.Object ref = name_;
-        if (ref instanceof java.lang.String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          name_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-
-      public static final int PHONE_FIELD_NUMBER = 5;
-      private java.lang.Object phone_;
-      /**
-       * <code>optional string phone = 5;</code>
-       */
-      public boolean hasPhone() {
-        return ((bitField0_ & 0x00000010) == 0x00000010);
-      }
-      /**
-       * <code>optional string phone = 5;</code>
-       */
-      public java.lang.String getPhone() {
-        java.lang.Object ref = phone_;
-        if (ref instanceof java.lang.String) {
-          return (java.lang.String) ref;
-        } else {
-          com.google.protobuf.ByteString bs = 
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            phone_ = s;
-          }
-          return s;
-        }
-      }
-      /**
-       * <code>optional string phone = 5;</code>
-       */
-      public com.google.protobuf.ByteString
-          getPhoneBytes() {
-        java.lang.Object ref = phone_;
-        if (ref instanceof java.lang.String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          phone_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-
-      public static final int PHONE_CARRIER_FIELD_NUMBER = 6;
-      private java.lang.Object phoneCarrier_;
-      /**
-       * <code>optional string phone_carrier = 6;</code>
-       */
-      public boolean hasPhoneCarrier() {
-        return ((bitField0_ & 0x00000020) == 0x00000020);
-      }
-      /**
-       * <code>optional string phone_carrier = 6;</code>
-       */
-      public java.lang.String getPhoneCarrier() {
-        java.lang.Object ref = phoneCarrier_;
-        if (ref instanceof java.lang.String) {
-          return (java.lang.String) ref;
-        } else {
-          com.google.protobuf.ByteString bs = 
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            phoneCarrier_ = s;
-          }
-          return s;
-        }
-      }
-      /**
-       * <code>optional string phone_carrier = 6;</code>
-       */
-      public com.google.protobuf.ByteString
-          getPhoneCarrierBytes() {
-        java.lang.Object ref = phoneCarrier_;
-        if (ref instanceof java.lang.String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          phoneCarrier_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-
       private void initFields() {
         account_ = "";
         wire_ = "";
         details_ = "";
-        name_ = "";
-        phone_ = "";
-        phoneCarrier_ = "";
       }
       private byte memoizedIsInitialized = -1;
       public final boolean isInitialized() {
@@ -3417,15 +19920,6 @@ public final class LockerboxProtos {
         if (((bitField0_ & 0x00000004) == 0x00000004)) {
           output.writeBytes(3, getDetailsBytes());
         }
-        if (((bitField0_ & 0x00000008) == 0x00000008)) {
-          output.writeBytes(4, getNameBytes());
-        }
-        if (((bitField0_ & 0x00000010) == 0x00000010)) {
-          output.writeBytes(5, getPhoneBytes());
-        }
-        if (((bitField0_ & 0x00000020) == 0x00000020)) {
-          output.writeBytes(6, getPhoneCarrierBytes());
-        }
         getUnknownFields().writeTo(output);
       }
 
@@ -3446,18 +19940,6 @@ public final class LockerboxProtos {
         if (((bitField0_ & 0x00000004) == 0x00000004)) {
           size += com.google.protobuf.CodedOutputStream
             .computeBytesSize(3, getDetailsBytes());
-        }
-        if (((bitField0_ & 0x00000008) == 0x00000008)) {
-          size += com.google.protobuf.CodedOutputStream
-            .computeBytesSize(4, getNameBytes());
-        }
-        if (((bitField0_ & 0x00000010) == 0x00000010)) {
-          size += com.google.protobuf.CodedOutputStream
-            .computeBytesSize(5, getPhoneBytes());
-        }
-        if (((bitField0_ & 0x00000020) == 0x00000020)) {
-          size += com.google.protobuf.CodedOutputStream
-            .computeBytesSize(6, getPhoneCarrierBytes());
         }
         size += getUnknownFields().getSerializedSize();
         memoizedSerializedSize = size;
@@ -3582,12 +20064,6 @@ public final class LockerboxProtos {
           bitField0_ = (bitField0_ & ~0x00000002);
           details_ = "";
           bitField0_ = (bitField0_ & ~0x00000004);
-          name_ = "";
-          bitField0_ = (bitField0_ & ~0x00000008);
-          phone_ = "";
-          bitField0_ = (bitField0_ & ~0x00000010);
-          phoneCarrier_ = "";
-          bitField0_ = (bitField0_ & ~0x00000020);
           return this;
         }
 
@@ -3628,18 +20104,6 @@ public final class LockerboxProtos {
             to_bitField0_ |= 0x00000004;
           }
           result.details_ = details_;
-          if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
-            to_bitField0_ |= 0x00000008;
-          }
-          result.name_ = name_;
-          if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
-            to_bitField0_ |= 0x00000010;
-          }
-          result.phone_ = phone_;
-          if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
-            to_bitField0_ |= 0x00000020;
-          }
-          result.phoneCarrier_ = phoneCarrier_;
           result.bitField0_ = to_bitField0_;
           onBuilt();
           return result;
@@ -3669,21 +20133,6 @@ public final class LockerboxProtos {
           if (other.hasDetails()) {
             bitField0_ |= 0x00000004;
             details_ = other.details_;
-            onChanged();
-          }
-          if (other.hasName()) {
-            bitField0_ |= 0x00000008;
-            name_ = other.name_;
-            onChanged();
-          }
-          if (other.hasPhone()) {
-            bitField0_ |= 0x00000010;
-            phone_ = other.phone_;
-            onChanged();
-          }
-          if (other.hasPhoneCarrier()) {
-            bitField0_ |= 0x00000020;
-            phoneCarrier_ = other.phoneCarrier_;
             onChanged();
           }
           this.mergeUnknownFields(other.getUnknownFields());
@@ -4013,258 +20462,6 @@ public final class LockerboxProtos {
           return this;
         }
 
-        private java.lang.Object name_ = "";
-        /**
-         * <code>optional string name = 4;</code>
-         *
-         * <pre>
-         * phone information - to be used in OVERPAY_MOBILE
-         * </pre>
-         */
-        public boolean hasName() {
-          return ((bitField0_ & 0x00000008) == 0x00000008);
-        }
-        /**
-         * <code>optional string name = 4;</code>
-         *
-         * <pre>
-         * phone information - to be used in OVERPAY_MOBILE
-         * </pre>
-         */
-        public java.lang.String getName() {
-          java.lang.Object ref = name_;
-          if (!(ref instanceof java.lang.String)) {
-            com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
-            java.lang.String s = bs.toStringUtf8();
-            if (bs.isValidUtf8()) {
-              name_ = s;
-            }
-            return s;
-          } else {
-            return (java.lang.String) ref;
-          }
-        }
-        /**
-         * <code>optional string name = 4;</code>
-         *
-         * <pre>
-         * phone information - to be used in OVERPAY_MOBILE
-         * </pre>
-         */
-        public com.google.protobuf.ByteString
-            getNameBytes() {
-          java.lang.Object ref = name_;
-          if (ref instanceof String) {
-            com.google.protobuf.ByteString b = 
-                com.google.protobuf.ByteString.copyFromUtf8(
-                    (java.lang.String) ref);
-            name_ = b;
-            return b;
-          } else {
-            return (com.google.protobuf.ByteString) ref;
-          }
-        }
-        /**
-         * <code>optional string name = 4;</code>
-         *
-         * <pre>
-         * phone information - to be used in OVERPAY_MOBILE
-         * </pre>
-         */
-        public Builder setName(
-            java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000008;
-          name_ = value;
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>optional string name = 4;</code>
-         *
-         * <pre>
-         * phone information - to be used in OVERPAY_MOBILE
-         * </pre>
-         */
-        public Builder clearName() {
-          bitField0_ = (bitField0_ & ~0x00000008);
-          name_ = getDefaultInstance().getName();
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>optional string name = 4;</code>
-         *
-         * <pre>
-         * phone information - to be used in OVERPAY_MOBILE
-         * </pre>
-         */
-        public Builder setNameBytes(
-            com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000008;
-          name_ = value;
-          onChanged();
-          return this;
-        }
-
-        private java.lang.Object phone_ = "";
-        /**
-         * <code>optional string phone = 5;</code>
-         */
-        public boolean hasPhone() {
-          return ((bitField0_ & 0x00000010) == 0x00000010);
-        }
-        /**
-         * <code>optional string phone = 5;</code>
-         */
-        public java.lang.String getPhone() {
-          java.lang.Object ref = phone_;
-          if (!(ref instanceof java.lang.String)) {
-            com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
-            java.lang.String s = bs.toStringUtf8();
-            if (bs.isValidUtf8()) {
-              phone_ = s;
-            }
-            return s;
-          } else {
-            return (java.lang.String) ref;
-          }
-        }
-        /**
-         * <code>optional string phone = 5;</code>
-         */
-        public com.google.protobuf.ByteString
-            getPhoneBytes() {
-          java.lang.Object ref = phone_;
-          if (ref instanceof String) {
-            com.google.protobuf.ByteString b = 
-                com.google.protobuf.ByteString.copyFromUtf8(
-                    (java.lang.String) ref);
-            phone_ = b;
-            return b;
-          } else {
-            return (com.google.protobuf.ByteString) ref;
-          }
-        }
-        /**
-         * <code>optional string phone = 5;</code>
-         */
-        public Builder setPhone(
-            java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000010;
-          phone_ = value;
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>optional string phone = 5;</code>
-         */
-        public Builder clearPhone() {
-          bitField0_ = (bitField0_ & ~0x00000010);
-          phone_ = getDefaultInstance().getPhone();
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>optional string phone = 5;</code>
-         */
-        public Builder setPhoneBytes(
-            com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000010;
-          phone_ = value;
-          onChanged();
-          return this;
-        }
-
-        private java.lang.Object phoneCarrier_ = "";
-        /**
-         * <code>optional string phone_carrier = 6;</code>
-         */
-        public boolean hasPhoneCarrier() {
-          return ((bitField0_ & 0x00000020) == 0x00000020);
-        }
-        /**
-         * <code>optional string phone_carrier = 6;</code>
-         */
-        public java.lang.String getPhoneCarrier() {
-          java.lang.Object ref = phoneCarrier_;
-          if (!(ref instanceof java.lang.String)) {
-            com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
-            java.lang.String s = bs.toStringUtf8();
-            if (bs.isValidUtf8()) {
-              phoneCarrier_ = s;
-            }
-            return s;
-          } else {
-            return (java.lang.String) ref;
-          }
-        }
-        /**
-         * <code>optional string phone_carrier = 6;</code>
-         */
-        public com.google.protobuf.ByteString
-            getPhoneCarrierBytes() {
-          java.lang.Object ref = phoneCarrier_;
-          if (ref instanceof String) {
-            com.google.protobuf.ByteString b = 
-                com.google.protobuf.ByteString.copyFromUtf8(
-                    (java.lang.String) ref);
-            phoneCarrier_ = b;
-            return b;
-          } else {
-            return (com.google.protobuf.ByteString) ref;
-          }
-        }
-        /**
-         * <code>optional string phone_carrier = 6;</code>
-         */
-        public Builder setPhoneCarrier(
-            java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000020;
-          phoneCarrier_ = value;
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>optional string phone_carrier = 6;</code>
-         */
-        public Builder clearPhoneCarrier() {
-          bitField0_ = (bitField0_ & ~0x00000020);
-          phoneCarrier_ = getDefaultInstance().getPhoneCarrier();
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>optional string phone_carrier = 6;</code>
-         */
-        public Builder setPhoneCarrierBytes(
-            com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000020;
-          phoneCarrier_ = value;
-          onChanged();
-          return this;
-        }
-
         // @@protoc_insertion_point(builder_scope:lockerbox.Charge.Transferee)
       }
 
@@ -4380,10 +20577,12 @@ public final class LockerboxProtos {
      *
      * <pre>
      * tag is used to match Charges with Payment.
-     * Tag value will be:
-     * - equal to Charge.Code, if there is 1-to-1 relationship between Charges and Payment
-     * - same, account-unique value in all Charges, if there is many-to-1 relationship between Charges and Payment
-     * Payment.charge_tag should be set to the final tag value (either unique or copied from Charge.code).
+     * For many-to-1 relationship between Charges and Payment, tag should be set to the same, account-unique value in every Charge.
+     * The same value should be then set in Payment.charge_tag. Once they Payment is successful, it will be applied to all Charges
+     * with the tag.
+     * For 1-to-1 relationship between Charge and Payment, tag can be either set to account-unique value or left empty.
+     * If left empty, tag value will be copied from Charge.code (making the 1-to-1 relationship the default one).
+     * Payment.charge_tag should be set to the final tag value (either assigned by user or copied from Charge.code).
      * </pre>
      */
     public boolean hasTag() {
@@ -4394,10 +20593,12 @@ public final class LockerboxProtos {
      *
      * <pre>
      * tag is used to match Charges with Payment.
-     * Tag value will be:
-     * - equal to Charge.Code, if there is 1-to-1 relationship between Charges and Payment
-     * - same, account-unique value in all Charges, if there is many-to-1 relationship between Charges and Payment
-     * Payment.charge_tag should be set to the final tag value (either unique or copied from Charge.code).
+     * For many-to-1 relationship between Charges and Payment, tag should be set to the same, account-unique value in every Charge.
+     * The same value should be then set in Payment.charge_tag. Once they Payment is successful, it will be applied to all Charges
+     * with the tag.
+     * For 1-to-1 relationship between Charge and Payment, tag can be either set to account-unique value or left empty.
+     * If left empty, tag value will be copied from Charge.code (making the 1-to-1 relationship the default one).
+     * Payment.charge_tag should be set to the final tag value (either assigned by user or copied from Charge.code).
      * </pre>
      */
     public java.lang.String getTag() {
@@ -4419,10 +20620,12 @@ public final class LockerboxProtos {
      *
      * <pre>
      * tag is used to match Charges with Payment.
-     * Tag value will be:
-     * - equal to Charge.Code, if there is 1-to-1 relationship between Charges and Payment
-     * - same, account-unique value in all Charges, if there is many-to-1 relationship between Charges and Payment
-     * Payment.charge_tag should be set to the final tag value (either unique or copied from Charge.code).
+     * For many-to-1 relationship between Charges and Payment, tag should be set to the same, account-unique value in every Charge.
+     * The same value should be then set in Payment.charge_tag. Once they Payment is successful, it will be applied to all Charges
+     * with the tag.
+     * For 1-to-1 relationship between Charge and Payment, tag can be either set to account-unique value or left empty.
+     * If left empty, tag value will be copied from Charge.code (making the 1-to-1 relationship the default one).
+     * Payment.charge_tag should be set to the final tag value (either assigned by user or copied from Charge.code).
      * </pre>
      */
     public com.google.protobuf.ByteString
@@ -4577,7 +20780,7 @@ public final class LockerboxProtos {
      * <code>optional .lockerbox.Charge.Transferee transferee = 7;</code>
      *
      * <pre>
-     * required for category = COD, TAX, CUSTOMS, ACCOUNT_BALANCE, OVERPAY_MOBILE
+     * required for category = COD, TAX, CUSTOMS
      * </pre>
      */
     public boolean hasTransferee() {
@@ -4587,7 +20790,7 @@ public final class LockerboxProtos {
      * <code>optional .lockerbox.Charge.Transferee transferee = 7;</code>
      *
      * <pre>
-     * required for category = COD, TAX, CUSTOMS, ACCOUNT_BALANCE, OVERPAY_MOBILE
+     * required for category = COD, TAX, CUSTOMS
      * </pre>
      */
     public com.zpaslab.lockerbox.LockerboxProtos.Charge.Transferee getTransferee() {
@@ -4597,7 +20800,7 @@ public final class LockerboxProtos {
      * <code>optional .lockerbox.Charge.Transferee transferee = 7;</code>
      *
      * <pre>
-     * required for category = COD, TAX, CUSTOMS, ACCOUNT_BALANCE, OVERPAY_MOBILE
+     * required for category = COD, TAX, CUSTOMS
      * </pre>
      */
     public com.zpaslab.lockerbox.LockerboxProtos.Charge.TransfereeOrBuilder getTransfereeOrBuilder() {
@@ -4696,7 +20899,7 @@ public final class LockerboxProtos {
      * <code>optional string parcel_ref = 11;</code>
      *
      * <pre>
-     * if the Charge is created because of a parcel (charge for parcel or overpay), it should have the parcel_ref
+     * if the Charge is created because of parce (charge for parcel), it should have the parcel_ref
      * set to parcel.Code.
      * </pre>
      */
@@ -4707,7 +20910,7 @@ public final class LockerboxProtos {
      * <code>optional string parcel_ref = 11;</code>
      *
      * <pre>
-     * if the Charge is created because of a parcel (charge for parcel or overpay), it should have the parcel_ref
+     * if the Charge is created because of parce (charge for parcel), it should have the parcel_ref
      * set to parcel.Code.
      * </pre>
      */
@@ -4729,7 +20932,7 @@ public final class LockerboxProtos {
      * <code>optional string parcel_ref = 11;</code>
      *
      * <pre>
-     * if the Charge is created because of a parcel (charge for parcel or overpay), it should have the parcel_ref
+     * if the Charge is created because of parce (charge for parcel), it should have the parcel_ref
      * set to parcel.Code.
      * </pre>
      */
@@ -5370,10 +21573,12 @@ public final class LockerboxProtos {
        *
        * <pre>
        * tag is used to match Charges with Payment.
-       * Tag value will be:
-       * - equal to Charge.Code, if there is 1-to-1 relationship between Charges and Payment
-       * - same, account-unique value in all Charges, if there is many-to-1 relationship between Charges and Payment
-       * Payment.charge_tag should be set to the final tag value (either unique or copied from Charge.code).
+       * For many-to-1 relationship between Charges and Payment, tag should be set to the same, account-unique value in every Charge.
+       * The same value should be then set in Payment.charge_tag. Once they Payment is successful, it will be applied to all Charges
+       * with the tag.
+       * For 1-to-1 relationship between Charge and Payment, tag can be either set to account-unique value or left empty.
+       * If left empty, tag value will be copied from Charge.code (making the 1-to-1 relationship the default one).
+       * Payment.charge_tag should be set to the final tag value (either assigned by user or copied from Charge.code).
        * </pre>
        */
       public boolean hasTag() {
@@ -5384,10 +21589,12 @@ public final class LockerboxProtos {
        *
        * <pre>
        * tag is used to match Charges with Payment.
-       * Tag value will be:
-       * - equal to Charge.Code, if there is 1-to-1 relationship between Charges and Payment
-       * - same, account-unique value in all Charges, if there is many-to-1 relationship between Charges and Payment
-       * Payment.charge_tag should be set to the final tag value (either unique or copied from Charge.code).
+       * For many-to-1 relationship between Charges and Payment, tag should be set to the same, account-unique value in every Charge.
+       * The same value should be then set in Payment.charge_tag. Once they Payment is successful, it will be applied to all Charges
+       * with the tag.
+       * For 1-to-1 relationship between Charge and Payment, tag can be either set to account-unique value or left empty.
+       * If left empty, tag value will be copied from Charge.code (making the 1-to-1 relationship the default one).
+       * Payment.charge_tag should be set to the final tag value (either assigned by user or copied from Charge.code).
        * </pre>
        */
       public java.lang.String getTag() {
@@ -5409,10 +21616,12 @@ public final class LockerboxProtos {
        *
        * <pre>
        * tag is used to match Charges with Payment.
-       * Tag value will be:
-       * - equal to Charge.Code, if there is 1-to-1 relationship between Charges and Payment
-       * - same, account-unique value in all Charges, if there is many-to-1 relationship between Charges and Payment
-       * Payment.charge_tag should be set to the final tag value (either unique or copied from Charge.code).
+       * For many-to-1 relationship between Charges and Payment, tag should be set to the same, account-unique value in every Charge.
+       * The same value should be then set in Payment.charge_tag. Once they Payment is successful, it will be applied to all Charges
+       * with the tag.
+       * For 1-to-1 relationship between Charge and Payment, tag can be either set to account-unique value or left empty.
+       * If left empty, tag value will be copied from Charge.code (making the 1-to-1 relationship the default one).
+       * Payment.charge_tag should be set to the final tag value (either assigned by user or copied from Charge.code).
        * </pre>
        */
       public com.google.protobuf.ByteString
@@ -5433,10 +21642,12 @@ public final class LockerboxProtos {
        *
        * <pre>
        * tag is used to match Charges with Payment.
-       * Tag value will be:
-       * - equal to Charge.Code, if there is 1-to-1 relationship between Charges and Payment
-       * - same, account-unique value in all Charges, if there is many-to-1 relationship between Charges and Payment
-       * Payment.charge_tag should be set to the final tag value (either unique or copied from Charge.code).
+       * For many-to-1 relationship between Charges and Payment, tag should be set to the same, account-unique value in every Charge.
+       * The same value should be then set in Payment.charge_tag. Once they Payment is successful, it will be applied to all Charges
+       * with the tag.
+       * For 1-to-1 relationship between Charge and Payment, tag can be either set to account-unique value or left empty.
+       * If left empty, tag value will be copied from Charge.code (making the 1-to-1 relationship the default one).
+       * Payment.charge_tag should be set to the final tag value (either assigned by user or copied from Charge.code).
        * </pre>
        */
       public Builder setTag(
@@ -5454,10 +21665,12 @@ public final class LockerboxProtos {
        *
        * <pre>
        * tag is used to match Charges with Payment.
-       * Tag value will be:
-       * - equal to Charge.Code, if there is 1-to-1 relationship between Charges and Payment
-       * - same, account-unique value in all Charges, if there is many-to-1 relationship between Charges and Payment
-       * Payment.charge_tag should be set to the final tag value (either unique or copied from Charge.code).
+       * For many-to-1 relationship between Charges and Payment, tag should be set to the same, account-unique value in every Charge.
+       * The same value should be then set in Payment.charge_tag. Once they Payment is successful, it will be applied to all Charges
+       * with the tag.
+       * For 1-to-1 relationship between Charge and Payment, tag can be either set to account-unique value or left empty.
+       * If left empty, tag value will be copied from Charge.code (making the 1-to-1 relationship the default one).
+       * Payment.charge_tag should be set to the final tag value (either assigned by user or copied from Charge.code).
        * </pre>
        */
       public Builder clearTag() {
@@ -5471,10 +21684,12 @@ public final class LockerboxProtos {
        *
        * <pre>
        * tag is used to match Charges with Payment.
-       * Tag value will be:
-       * - equal to Charge.Code, if there is 1-to-1 relationship between Charges and Payment
-       * - same, account-unique value in all Charges, if there is many-to-1 relationship between Charges and Payment
-       * Payment.charge_tag should be set to the final tag value (either unique or copied from Charge.code).
+       * For many-to-1 relationship between Charges and Payment, tag should be set to the same, account-unique value in every Charge.
+       * The same value should be then set in Payment.charge_tag. Once they Payment is successful, it will be applied to all Charges
+       * with the tag.
+       * For 1-to-1 relationship between Charge and Payment, tag can be either set to account-unique value or left empty.
+       * If left empty, tag value will be copied from Charge.code (making the 1-to-1 relationship the default one).
+       * Payment.charge_tag should be set to the final tag value (either assigned by user or copied from Charge.code).
        * </pre>
        */
       public Builder setTagBytes(
@@ -5748,7 +21963,7 @@ public final class LockerboxProtos {
        * <code>optional .lockerbox.Charge.Transferee transferee = 7;</code>
        *
        * <pre>
-       * required for category = COD, TAX, CUSTOMS, ACCOUNT_BALANCE, OVERPAY_MOBILE
+       * required for category = COD, TAX, CUSTOMS
        * </pre>
        */
       public boolean hasTransferee() {
@@ -5758,7 +21973,7 @@ public final class LockerboxProtos {
        * <code>optional .lockerbox.Charge.Transferee transferee = 7;</code>
        *
        * <pre>
-       * required for category = COD, TAX, CUSTOMS, ACCOUNT_BALANCE, OVERPAY_MOBILE
+       * required for category = COD, TAX, CUSTOMS
        * </pre>
        */
       public com.zpaslab.lockerbox.LockerboxProtos.Charge.Transferee getTransferee() {
@@ -5772,7 +21987,7 @@ public final class LockerboxProtos {
        * <code>optional .lockerbox.Charge.Transferee transferee = 7;</code>
        *
        * <pre>
-       * required for category = COD, TAX, CUSTOMS, ACCOUNT_BALANCE, OVERPAY_MOBILE
+       * required for category = COD, TAX, CUSTOMS
        * </pre>
        */
       public Builder setTransferee(com.zpaslab.lockerbox.LockerboxProtos.Charge.Transferee value) {
@@ -5792,7 +22007,7 @@ public final class LockerboxProtos {
        * <code>optional .lockerbox.Charge.Transferee transferee = 7;</code>
        *
        * <pre>
-       * required for category = COD, TAX, CUSTOMS, ACCOUNT_BALANCE, OVERPAY_MOBILE
+       * required for category = COD, TAX, CUSTOMS
        * </pre>
        */
       public Builder setTransferee(
@@ -5810,7 +22025,7 @@ public final class LockerboxProtos {
        * <code>optional .lockerbox.Charge.Transferee transferee = 7;</code>
        *
        * <pre>
-       * required for category = COD, TAX, CUSTOMS, ACCOUNT_BALANCE, OVERPAY_MOBILE
+       * required for category = COD, TAX, CUSTOMS
        * </pre>
        */
       public Builder mergeTransferee(com.zpaslab.lockerbox.LockerboxProtos.Charge.Transferee value) {
@@ -5833,7 +22048,7 @@ public final class LockerboxProtos {
        * <code>optional .lockerbox.Charge.Transferee transferee = 7;</code>
        *
        * <pre>
-       * required for category = COD, TAX, CUSTOMS, ACCOUNT_BALANCE, OVERPAY_MOBILE
+       * required for category = COD, TAX, CUSTOMS
        * </pre>
        */
       public Builder clearTransferee() {
@@ -5850,7 +22065,7 @@ public final class LockerboxProtos {
        * <code>optional .lockerbox.Charge.Transferee transferee = 7;</code>
        *
        * <pre>
-       * required for category = COD, TAX, CUSTOMS, ACCOUNT_BALANCE, OVERPAY_MOBILE
+       * required for category = COD, TAX, CUSTOMS
        * </pre>
        */
       public com.zpaslab.lockerbox.LockerboxProtos.Charge.Transferee.Builder getTransfereeBuilder() {
@@ -5862,7 +22077,7 @@ public final class LockerboxProtos {
        * <code>optional .lockerbox.Charge.Transferee transferee = 7;</code>
        *
        * <pre>
-       * required for category = COD, TAX, CUSTOMS, ACCOUNT_BALANCE, OVERPAY_MOBILE
+       * required for category = COD, TAX, CUSTOMS
        * </pre>
        */
       public com.zpaslab.lockerbox.LockerboxProtos.Charge.TransfereeOrBuilder getTransfereeOrBuilder() {
@@ -5876,7 +22091,7 @@ public final class LockerboxProtos {
        * <code>optional .lockerbox.Charge.Transferee transferee = 7;</code>
        *
        * <pre>
-       * required for category = COD, TAX, CUSTOMS, ACCOUNT_BALANCE, OVERPAY_MOBILE
+       * required for category = COD, TAX, CUSTOMS
        * </pre>
        */
       private com.google.protobuf.SingleFieldBuilder<
@@ -6141,7 +22356,7 @@ public final class LockerboxProtos {
        * <code>optional string parcel_ref = 11;</code>
        *
        * <pre>
-       * if the Charge is created because of a parcel (charge for parcel or overpay), it should have the parcel_ref
+       * if the Charge is created because of parce (charge for parcel), it should have the parcel_ref
        * set to parcel.Code.
        * </pre>
        */
@@ -6152,7 +22367,7 @@ public final class LockerboxProtos {
        * <code>optional string parcel_ref = 11;</code>
        *
        * <pre>
-       * if the Charge is created because of a parcel (charge for parcel or overpay), it should have the parcel_ref
+       * if the Charge is created because of parce (charge for parcel), it should have the parcel_ref
        * set to parcel.Code.
        * </pre>
        */
@@ -6174,7 +22389,7 @@ public final class LockerboxProtos {
        * <code>optional string parcel_ref = 11;</code>
        *
        * <pre>
-       * if the Charge is created because of a parcel (charge for parcel or overpay), it should have the parcel_ref
+       * if the Charge is created because of parce (charge for parcel), it should have the parcel_ref
        * set to parcel.Code.
        * </pre>
        */
@@ -6195,7 +22410,7 @@ public final class LockerboxProtos {
        * <code>optional string parcel_ref = 11;</code>
        *
        * <pre>
-       * if the Charge is created because of a parcel (charge for parcel or overpay), it should have the parcel_ref
+       * if the Charge is created because of parce (charge for parcel), it should have the parcel_ref
        * set to parcel.Code.
        * </pre>
        */
@@ -6213,7 +22428,7 @@ public final class LockerboxProtos {
        * <code>optional string parcel_ref = 11;</code>
        *
        * <pre>
-       * if the Charge is created because of a parcel (charge for parcel or overpay), it should have the parcel_ref
+       * if the Charge is created because of parce (charge for parcel), it should have the parcel_ref
        * set to parcel.Code.
        * </pre>
        */
@@ -6227,7 +22442,7 @@ public final class LockerboxProtos {
        * <code>optional string parcel_ref = 11;</code>
        *
        * <pre>
-       * if the Charge is created because of a parcel (charge for parcel or overpay), it should have the parcel_ref
+       * if the Charge is created because of parce (charge for parcel), it should have the parcel_ref
        * set to parcel.Code.
        * </pre>
        */
@@ -7154,19 +23369,6 @@ public final class LockerboxProtos {
     com.zpaslab.lockerbox.LockerboxProtos.Payment.OnlineOrBuilder getOnlineOrBuilder();
 
     /**
-     * <code>optional .lockerbox.Payment.CreditCard credit_card = 12;</code>
-     */
-    boolean hasCreditCard();
-    /**
-     * <code>optional .lockerbox.Payment.CreditCard credit_card = 12;</code>
-     */
-    com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCard getCreditCard();
-    /**
-     * <code>optional .lockerbox.Payment.CreditCard credit_card = 12;</code>
-     */
-    com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCardOrBuilder getCreditCardOrBuilder();
-
-    /**
      * <code>optional .lockerbox.Payment.Status status = 8;</code>
      *
      * <pre>
@@ -7232,61 +23434,6 @@ public final class LockerboxProtos {
      */
     com.zpaslab.lockerbox.LockerboxProtos.Payment.HistoryItemOrBuilder getHistoryOrBuilder(
         int index);
-
-    /**
-     * <code>optional string deposit_date = 11;</code>
-     *
-     * <pre>
-     * Point in time when the payment was done by user (money was deposited).
-     * </pre>
-     */
-    boolean hasDepositDate();
-    /**
-     * <code>optional string deposit_date = 11;</code>
-     *
-     * <pre>
-     * Point in time when the payment was done by user (money was deposited).
-     * </pre>
-     */
-    java.lang.String getDepositDate();
-    /**
-     * <code>optional string deposit_date = 11;</code>
-     *
-     * <pre>
-     * Point in time when the payment was done by user (money was deposited).
-     * </pre>
-     */
-    com.google.protobuf.ByteString
-        getDepositDateBytes();
-
-    /**
-     * <code>optional string consolidation_date = 13;</code>
-     *
-     * <pre>
-     * Point in time when the payment was acknowledged by overmind
-     * conslidation_date will be set only for finalized payments (status = SUCCESS, APPLIED, FAILED, EXPIRED)
-     * </pre>
-     */
-    boolean hasConsolidationDate();
-    /**
-     * <code>optional string consolidation_date = 13;</code>
-     *
-     * <pre>
-     * Point in time when the payment was acknowledged by overmind
-     * conslidation_date will be set only for finalized payments (status = SUCCESS, APPLIED, FAILED, EXPIRED)
-     * </pre>
-     */
-    java.lang.String getConsolidationDate();
-    /**
-     * <code>optional string consolidation_date = 13;</code>
-     *
-     * <pre>
-     * Point in time when the payment was acknowledged by overmind
-     * conslidation_date will be set only for finalized payments (status = SUCCESS, APPLIED, FAILED, EXPIRED)
-     * </pre>
-     */
-    com.google.protobuf.ByteString
-        getConsolidationDateBytes();
   }
   /**
    * Protobuf type {@code lockerbox.Payment}
@@ -7302,7 +23449,6 @@ public final class LockerboxProtos {
    * - using prepaid account (amount will be subtracted from the account balance)
    * - paying online via online gateway (user will have to open given link in his browser and authorize the payment with online payment operator).
    * TODO(pawelb): embed matched Charges?
-   * Next id: 14
    * </pre>
    */
   public static final class Payment extends
@@ -7421,48 +23567,23 @@ public final class LockerboxProtos {
               if (value == null) {
                 unknownFields.mergeVarintField(8, rawValue);
               } else {
-                bitField0_ |= 0x00000100;
+                bitField0_ |= 0x00000080;
                 status_ = value;
               }
               break;
             }
             case 74: {
               com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000200;
+              bitField0_ |= 0x00000100;
               statusDetails_ = bs;
               break;
             }
             case 82: {
-              if (!((mutable_bitField0_ & 0x00000400) == 0x00000400)) {
+              if (!((mutable_bitField0_ & 0x00000200) == 0x00000200)) {
                 history_ = new java.util.ArrayList<com.zpaslab.lockerbox.LockerboxProtos.Payment.HistoryItem>();
-                mutable_bitField0_ |= 0x00000400;
+                mutable_bitField0_ |= 0x00000200;
               }
               history_.add(input.readMessage(com.zpaslab.lockerbox.LockerboxProtos.Payment.HistoryItem.PARSER, extensionRegistry));
-              break;
-            }
-            case 90: {
-              com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000400;
-              depositDate_ = bs;
-              break;
-            }
-            case 98: {
-              com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCard.Builder subBuilder = null;
-              if (((bitField0_ & 0x00000080) == 0x00000080)) {
-                subBuilder = creditCard_.toBuilder();
-              }
-              creditCard_ = input.readMessage(com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCard.PARSER, extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(creditCard_);
-                creditCard_ = subBuilder.buildPartial();
-              }
-              bitField0_ |= 0x00000080;
-              break;
-            }
-            case 106: {
-              com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000800;
-              consolidationDate_ = bs;
               break;
             }
           }
@@ -7473,7 +23594,7 @@ public final class LockerboxProtos {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000400) == 0x00000400)) {
+        if (((mutable_bitField0_ & 0x00000200) == 0x00000200)) {
           history_ = java.util.Collections.unmodifiableList(history_);
         }
         this.unknownFields = unknownFields.build();
@@ -7827,7 +23948,7 @@ public final class LockerboxProtos {
      * Protobuf type {@code lockerbox.Payment.Online}
      *
      * <pre>
-     * Details for ONLINE payment method.
+     * Details for Online payment method.
      * TODO(pawelb): so far, I am modelling this object using bluemedia workflow.
      * OTOH, browser_link and return_link seems quite general, so I am not creating separate subtype now.
      * </pre>
@@ -8231,7 +24352,7 @@ public final class LockerboxProtos {
        * Protobuf type {@code lockerbox.Payment.Online}
        *
        * <pre>
-       * Details for ONLINE payment method.
+       * Details for Online payment method.
        * TODO(pawelb): so far, I am modelling this object using bluemedia workflow.
        * OTOH, browser_link and return_link seems quite general, so I am not creating separate subtype now.
        * </pre>
@@ -8685,1286 +24806,6 @@ public final class LockerboxProtos {
       }
 
       // @@protoc_insertion_point(class_scope:lockerbox.Payment.Online)
-    }
-
-    public interface CreditCardOrBuilder extends
-        // @@protoc_insertion_point(interface_extends:lockerbox.Payment.CreditCard)
-        com.google.protobuf.MessageOrBuilder {
-
-      /**
-       * <code>optional string issuer = 1;</code>
-       *
-       * <pre>
-       * e.g. MasterCard, Visa (optionally issuer's code, e.g. 51 or 4)
-       * </pre>
-       */
-      boolean hasIssuer();
-      /**
-       * <code>optional string issuer = 1;</code>
-       *
-       * <pre>
-       * e.g. MasterCard, Visa (optionally issuer's code, e.g. 51 or 4)
-       * </pre>
-       */
-      java.lang.String getIssuer();
-      /**
-       * <code>optional string issuer = 1;</code>
-       *
-       * <pre>
-       * e.g. MasterCard, Visa (optionally issuer's code, e.g. 51 or 4)
-       * </pre>
-       */
-      com.google.protobuf.ByteString
-          getIssuerBytes();
-
-      /**
-       * <code>optional string card_number = 2;</code>
-       *
-       * <pre>
-       * Usually PAN (Primary Account Number), see e.g.:
-       * https://en.wikipedia.org/wiki/Primary_Account_Number
-       * </pre>
-       */
-      boolean hasCardNumber();
-      /**
-       * <code>optional string card_number = 2;</code>
-       *
-       * <pre>
-       * Usually PAN (Primary Account Number), see e.g.:
-       * https://en.wikipedia.org/wiki/Primary_Account_Number
-       * </pre>
-       */
-      java.lang.String getCardNumber();
-      /**
-       * <code>optional string card_number = 2;</code>
-       *
-       * <pre>
-       * Usually PAN (Primary Account Number), see e.g.:
-       * https://en.wikipedia.org/wiki/Primary_Account_Number
-       * </pre>
-       */
-      com.google.protobuf.ByteString
-          getCardNumberBytes();
-
-      /**
-       * <code>optional string terminal_id = 3;</code>
-       */
-      boolean hasTerminalId();
-      /**
-       * <code>optional string terminal_id = 3;</code>
-       */
-      java.lang.String getTerminalId();
-      /**
-       * <code>optional string terminal_id = 3;</code>
-       */
-      com.google.protobuf.ByteString
-          getTerminalIdBytes();
-
-      /**
-       * <code>optional string authorization_code = 4;</code>
-       */
-      boolean hasAuthorizationCode();
-      /**
-       * <code>optional string authorization_code = 4;</code>
-       */
-      java.lang.String getAuthorizationCode();
-      /**
-       * <code>optional string authorization_code = 4;</code>
-       */
-      com.google.protobuf.ByteString
-          getAuthorizationCodeBytes();
-
-      /**
-       * <code>optional string rrn = 5;</code>
-       *
-       * <pre>
-       * [Wikipedia: Retrieval Reference Number, a key to uniquely identify a
-       * card transaction based on the ISO 8583 standard]
-       * </pre>
-       */
-      boolean hasRrn();
-      /**
-       * <code>optional string rrn = 5;</code>
-       *
-       * <pre>
-       * [Wikipedia: Retrieval Reference Number, a key to uniquely identify a
-       * card transaction based on the ISO 8583 standard]
-       * </pre>
-       */
-      java.lang.String getRrn();
-      /**
-       * <code>optional string rrn = 5;</code>
-       *
-       * <pre>
-       * [Wikipedia: Retrieval Reference Number, a key to uniquely identify a
-       * card transaction based on the ISO 8583 standard]
-       * </pre>
-       */
-      com.google.protobuf.ByteString
-          getRrnBytes();
-    }
-    /**
-     * Protobuf type {@code lockerbox.Payment.CreditCard}
-     *
-     * <pre>
-     * Details for CREDIT_CARD payment method.
-     * </pre>
-     */
-    public static final class CreditCard extends
-        com.google.protobuf.GeneratedMessage implements
-        // @@protoc_insertion_point(message_implements:lockerbox.Payment.CreditCard)
-        CreditCardOrBuilder {
-      // Use CreditCard.newBuilder() to construct.
-      private CreditCard(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
-        super(builder);
-        this.unknownFields = builder.getUnknownFields();
-      }
-      private CreditCard(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
-
-      private static final CreditCard defaultInstance;
-      public static CreditCard getDefaultInstance() {
-        return defaultInstance;
-      }
-
-      public CreditCard getDefaultInstanceForType() {
-        return defaultInstance;
-      }
-
-      private final com.google.protobuf.UnknownFieldSet unknownFields;
-      @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet
-          getUnknownFields() {
-        return this.unknownFields;
-      }
-      private CreditCard(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        initFields();
-        int mutable_bitField0_ = 0;
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-            com.google.protobuf.UnknownFieldSet.newBuilder();
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              default: {
-                if (!parseUnknownField(input, unknownFields,
-                                       extensionRegistry, tag)) {
-                  done = true;
-                }
-                break;
-              }
-              case 10: {
-                com.google.protobuf.ByteString bs = input.readBytes();
-                bitField0_ |= 0x00000001;
-                issuer_ = bs;
-                break;
-              }
-              case 18: {
-                com.google.protobuf.ByteString bs = input.readBytes();
-                bitField0_ |= 0x00000002;
-                cardNumber_ = bs;
-                break;
-              }
-              case 26: {
-                com.google.protobuf.ByteString bs = input.readBytes();
-                bitField0_ |= 0x00000004;
-                terminalId_ = bs;
-                break;
-              }
-              case 34: {
-                com.google.protobuf.ByteString bs = input.readBytes();
-                bitField0_ |= 0x00000008;
-                authorizationCode_ = bs;
-                break;
-              }
-              case 42: {
-                com.google.protobuf.ByteString bs = input.readBytes();
-                bitField0_ |= 0x00000010;
-                rrn_ = bs;
-                break;
-              }
-            }
-          }
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(this);
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(
-              e.getMessage()).setUnfinishedMessage(this);
-        } finally {
-          this.unknownFields = unknownFields.build();
-          makeExtensionsImmutable();
-        }
-      }
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.zpaslab.lockerbox.LockerboxProtos.internal_static_lockerbox_Payment_CreditCard_descriptor;
-      }
-
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.zpaslab.lockerbox.LockerboxProtos.internal_static_lockerbox_Payment_CreditCard_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCard.class, com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCard.Builder.class);
-      }
-
-      public static com.google.protobuf.Parser<CreditCard> PARSER =
-          new com.google.protobuf.AbstractParser<CreditCard>() {
-        public CreditCard parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-          return new CreditCard(input, extensionRegistry);
-        }
-      };
-
-      @java.lang.Override
-      public com.google.protobuf.Parser<CreditCard> getParserForType() {
-        return PARSER;
-      }
-
-      private int bitField0_;
-      public static final int ISSUER_FIELD_NUMBER = 1;
-      private java.lang.Object issuer_;
-      /**
-       * <code>optional string issuer = 1;</code>
-       *
-       * <pre>
-       * e.g. MasterCard, Visa (optionally issuer's code, e.g. 51 or 4)
-       * </pre>
-       */
-      public boolean hasIssuer() {
-        return ((bitField0_ & 0x00000001) == 0x00000001);
-      }
-      /**
-       * <code>optional string issuer = 1;</code>
-       *
-       * <pre>
-       * e.g. MasterCard, Visa (optionally issuer's code, e.g. 51 or 4)
-       * </pre>
-       */
-      public java.lang.String getIssuer() {
-        java.lang.Object ref = issuer_;
-        if (ref instanceof java.lang.String) {
-          return (java.lang.String) ref;
-        } else {
-          com.google.protobuf.ByteString bs = 
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            issuer_ = s;
-          }
-          return s;
-        }
-      }
-      /**
-       * <code>optional string issuer = 1;</code>
-       *
-       * <pre>
-       * e.g. MasterCard, Visa (optionally issuer's code, e.g. 51 or 4)
-       * </pre>
-       */
-      public com.google.protobuf.ByteString
-          getIssuerBytes() {
-        java.lang.Object ref = issuer_;
-        if (ref instanceof java.lang.String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          issuer_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-
-      public static final int CARD_NUMBER_FIELD_NUMBER = 2;
-      private java.lang.Object cardNumber_;
-      /**
-       * <code>optional string card_number = 2;</code>
-       *
-       * <pre>
-       * Usually PAN (Primary Account Number), see e.g.:
-       * https://en.wikipedia.org/wiki/Primary_Account_Number
-       * </pre>
-       */
-      public boolean hasCardNumber() {
-        return ((bitField0_ & 0x00000002) == 0x00000002);
-      }
-      /**
-       * <code>optional string card_number = 2;</code>
-       *
-       * <pre>
-       * Usually PAN (Primary Account Number), see e.g.:
-       * https://en.wikipedia.org/wiki/Primary_Account_Number
-       * </pre>
-       */
-      public java.lang.String getCardNumber() {
-        java.lang.Object ref = cardNumber_;
-        if (ref instanceof java.lang.String) {
-          return (java.lang.String) ref;
-        } else {
-          com.google.protobuf.ByteString bs = 
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            cardNumber_ = s;
-          }
-          return s;
-        }
-      }
-      /**
-       * <code>optional string card_number = 2;</code>
-       *
-       * <pre>
-       * Usually PAN (Primary Account Number), see e.g.:
-       * https://en.wikipedia.org/wiki/Primary_Account_Number
-       * </pre>
-       */
-      public com.google.protobuf.ByteString
-          getCardNumberBytes() {
-        java.lang.Object ref = cardNumber_;
-        if (ref instanceof java.lang.String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          cardNumber_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-
-      public static final int TERMINAL_ID_FIELD_NUMBER = 3;
-      private java.lang.Object terminalId_;
-      /**
-       * <code>optional string terminal_id = 3;</code>
-       */
-      public boolean hasTerminalId() {
-        return ((bitField0_ & 0x00000004) == 0x00000004);
-      }
-      /**
-       * <code>optional string terminal_id = 3;</code>
-       */
-      public java.lang.String getTerminalId() {
-        java.lang.Object ref = terminalId_;
-        if (ref instanceof java.lang.String) {
-          return (java.lang.String) ref;
-        } else {
-          com.google.protobuf.ByteString bs = 
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            terminalId_ = s;
-          }
-          return s;
-        }
-      }
-      /**
-       * <code>optional string terminal_id = 3;</code>
-       */
-      public com.google.protobuf.ByteString
-          getTerminalIdBytes() {
-        java.lang.Object ref = terminalId_;
-        if (ref instanceof java.lang.String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          terminalId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-
-      public static final int AUTHORIZATION_CODE_FIELD_NUMBER = 4;
-      private java.lang.Object authorizationCode_;
-      /**
-       * <code>optional string authorization_code = 4;</code>
-       */
-      public boolean hasAuthorizationCode() {
-        return ((bitField0_ & 0x00000008) == 0x00000008);
-      }
-      /**
-       * <code>optional string authorization_code = 4;</code>
-       */
-      public java.lang.String getAuthorizationCode() {
-        java.lang.Object ref = authorizationCode_;
-        if (ref instanceof java.lang.String) {
-          return (java.lang.String) ref;
-        } else {
-          com.google.protobuf.ByteString bs = 
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            authorizationCode_ = s;
-          }
-          return s;
-        }
-      }
-      /**
-       * <code>optional string authorization_code = 4;</code>
-       */
-      public com.google.protobuf.ByteString
-          getAuthorizationCodeBytes() {
-        java.lang.Object ref = authorizationCode_;
-        if (ref instanceof java.lang.String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          authorizationCode_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-
-      public static final int RRN_FIELD_NUMBER = 5;
-      private java.lang.Object rrn_;
-      /**
-       * <code>optional string rrn = 5;</code>
-       *
-       * <pre>
-       * [Wikipedia: Retrieval Reference Number, a key to uniquely identify a
-       * card transaction based on the ISO 8583 standard]
-       * </pre>
-       */
-      public boolean hasRrn() {
-        return ((bitField0_ & 0x00000010) == 0x00000010);
-      }
-      /**
-       * <code>optional string rrn = 5;</code>
-       *
-       * <pre>
-       * [Wikipedia: Retrieval Reference Number, a key to uniquely identify a
-       * card transaction based on the ISO 8583 standard]
-       * </pre>
-       */
-      public java.lang.String getRrn() {
-        java.lang.Object ref = rrn_;
-        if (ref instanceof java.lang.String) {
-          return (java.lang.String) ref;
-        } else {
-          com.google.protobuf.ByteString bs = 
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            rrn_ = s;
-          }
-          return s;
-        }
-      }
-      /**
-       * <code>optional string rrn = 5;</code>
-       *
-       * <pre>
-       * [Wikipedia: Retrieval Reference Number, a key to uniquely identify a
-       * card transaction based on the ISO 8583 standard]
-       * </pre>
-       */
-      public com.google.protobuf.ByteString
-          getRrnBytes() {
-        java.lang.Object ref = rrn_;
-        if (ref instanceof java.lang.String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          rrn_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-
-      private void initFields() {
-        issuer_ = "";
-        cardNumber_ = "";
-        terminalId_ = "";
-        authorizationCode_ = "";
-        rrn_ = "";
-      }
-      private byte memoizedIsInitialized = -1;
-      public final boolean isInitialized() {
-        byte isInitialized = memoizedIsInitialized;
-        if (isInitialized == 1) return true;
-        if (isInitialized == 0) return false;
-
-        memoizedIsInitialized = 1;
-        return true;
-      }
-
-      public void writeTo(com.google.protobuf.CodedOutputStream output)
-                          throws java.io.IOException {
-        getSerializedSize();
-        if (((bitField0_ & 0x00000001) == 0x00000001)) {
-          output.writeBytes(1, getIssuerBytes());
-        }
-        if (((bitField0_ & 0x00000002) == 0x00000002)) {
-          output.writeBytes(2, getCardNumberBytes());
-        }
-        if (((bitField0_ & 0x00000004) == 0x00000004)) {
-          output.writeBytes(3, getTerminalIdBytes());
-        }
-        if (((bitField0_ & 0x00000008) == 0x00000008)) {
-          output.writeBytes(4, getAuthorizationCodeBytes());
-        }
-        if (((bitField0_ & 0x00000010) == 0x00000010)) {
-          output.writeBytes(5, getRrnBytes());
-        }
-        getUnknownFields().writeTo(output);
-      }
-
-      private int memoizedSerializedSize = -1;
-      public int getSerializedSize() {
-        int size = memoizedSerializedSize;
-        if (size != -1) return size;
-
-        size = 0;
-        if (((bitField0_ & 0x00000001) == 0x00000001)) {
-          size += com.google.protobuf.CodedOutputStream
-            .computeBytesSize(1, getIssuerBytes());
-        }
-        if (((bitField0_ & 0x00000002) == 0x00000002)) {
-          size += com.google.protobuf.CodedOutputStream
-            .computeBytesSize(2, getCardNumberBytes());
-        }
-        if (((bitField0_ & 0x00000004) == 0x00000004)) {
-          size += com.google.protobuf.CodedOutputStream
-            .computeBytesSize(3, getTerminalIdBytes());
-        }
-        if (((bitField0_ & 0x00000008) == 0x00000008)) {
-          size += com.google.protobuf.CodedOutputStream
-            .computeBytesSize(4, getAuthorizationCodeBytes());
-        }
-        if (((bitField0_ & 0x00000010) == 0x00000010)) {
-          size += com.google.protobuf.CodedOutputStream
-            .computeBytesSize(5, getRrnBytes());
-        }
-        size += getUnknownFields().getSerializedSize();
-        memoizedSerializedSize = size;
-        return size;
-      }
-
-      private static final long serialVersionUID = 0L;
-      @java.lang.Override
-      protected java.lang.Object writeReplace()
-          throws java.io.ObjectStreamException {
-        return super.writeReplace();
-      }
-
-      public static com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCard parseFrom(
-          com.google.protobuf.ByteString data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
-      }
-      public static com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCard parseFrom(
-          com.google.protobuf.ByteString data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
-      }
-      public static com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCard parseFrom(byte[] data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
-      }
-      public static com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCard parseFrom(
-          byte[] data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
-      }
-      public static com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCard parseFrom(java.io.InputStream input)
-          throws java.io.IOException {
-        return PARSER.parseFrom(input);
-      }
-      public static com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCard parseFrom(
-          java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
-      }
-      public static com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCard parseDelimitedFrom(java.io.InputStream input)
-          throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input);
-      }
-      public static com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCard parseDelimitedFrom(
-          java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input, extensionRegistry);
-      }
-      public static com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCard parseFrom(
-          com.google.protobuf.CodedInputStream input)
-          throws java.io.IOException {
-        return PARSER.parseFrom(input);
-      }
-      public static com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCard parseFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
-      }
-
-      public static Builder newBuilder() { return Builder.create(); }
-      public Builder newBuilderForType() { return newBuilder(); }
-      public static Builder newBuilder(com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCard prototype) {
-        return newBuilder().mergeFrom(prototype);
-      }
-      public Builder toBuilder() { return newBuilder(this); }
-
-      @java.lang.Override
-      protected Builder newBuilderForType(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-        Builder builder = new Builder(parent);
-        return builder;
-      }
-      /**
-       * Protobuf type {@code lockerbox.Payment.CreditCard}
-       *
-       * <pre>
-       * Details for CREDIT_CARD payment method.
-       * </pre>
-       */
-      public static final class Builder extends
-          com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-          // @@protoc_insertion_point(builder_implements:lockerbox.Payment.CreditCard)
-          com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCardOrBuilder {
-        public static final com.google.protobuf.Descriptors.Descriptor
-            getDescriptor() {
-          return com.zpaslab.lockerbox.LockerboxProtos.internal_static_lockerbox_Payment_CreditCard_descriptor;
-        }
-
-        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-            internalGetFieldAccessorTable() {
-          return com.zpaslab.lockerbox.LockerboxProtos.internal_static_lockerbox_Payment_CreditCard_fieldAccessorTable
-              .ensureFieldAccessorsInitialized(
-                  com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCard.class, com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCard.Builder.class);
-        }
-
-        // Construct using com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCard.newBuilder()
-        private Builder() {
-          maybeForceBuilderInitialization();
-        }
-
-        private Builder(
-            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-          super(parent);
-          maybeForceBuilderInitialization();
-        }
-        private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
-          }
-        }
-        private static Builder create() {
-          return new Builder();
-        }
-
-        public Builder clear() {
-          super.clear();
-          issuer_ = "";
-          bitField0_ = (bitField0_ & ~0x00000001);
-          cardNumber_ = "";
-          bitField0_ = (bitField0_ & ~0x00000002);
-          terminalId_ = "";
-          bitField0_ = (bitField0_ & ~0x00000004);
-          authorizationCode_ = "";
-          bitField0_ = (bitField0_ & ~0x00000008);
-          rrn_ = "";
-          bitField0_ = (bitField0_ & ~0x00000010);
-          return this;
-        }
-
-        public Builder clone() {
-          return create().mergeFrom(buildPartial());
-        }
-
-        public com.google.protobuf.Descriptors.Descriptor
-            getDescriptorForType() {
-          return com.zpaslab.lockerbox.LockerboxProtos.internal_static_lockerbox_Payment_CreditCard_descriptor;
-        }
-
-        public com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCard getDefaultInstanceForType() {
-          return com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCard.getDefaultInstance();
-        }
-
-        public com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCard build() {
-          com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCard result = buildPartial();
-          if (!result.isInitialized()) {
-            throw newUninitializedMessageException(result);
-          }
-          return result;
-        }
-
-        public com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCard buildPartial() {
-          com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCard result = new com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCard(this);
-          int from_bitField0_ = bitField0_;
-          int to_bitField0_ = 0;
-          if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
-            to_bitField0_ |= 0x00000001;
-          }
-          result.issuer_ = issuer_;
-          if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
-            to_bitField0_ |= 0x00000002;
-          }
-          result.cardNumber_ = cardNumber_;
-          if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
-            to_bitField0_ |= 0x00000004;
-          }
-          result.terminalId_ = terminalId_;
-          if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
-            to_bitField0_ |= 0x00000008;
-          }
-          result.authorizationCode_ = authorizationCode_;
-          if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
-            to_bitField0_ |= 0x00000010;
-          }
-          result.rrn_ = rrn_;
-          result.bitField0_ = to_bitField0_;
-          onBuilt();
-          return result;
-        }
-
-        public Builder mergeFrom(com.google.protobuf.Message other) {
-          if (other instanceof com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCard) {
-            return mergeFrom((com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCard)other);
-          } else {
-            super.mergeFrom(other);
-            return this;
-          }
-        }
-
-        public Builder mergeFrom(com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCard other) {
-          if (other == com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCard.getDefaultInstance()) return this;
-          if (other.hasIssuer()) {
-            bitField0_ |= 0x00000001;
-            issuer_ = other.issuer_;
-            onChanged();
-          }
-          if (other.hasCardNumber()) {
-            bitField0_ |= 0x00000002;
-            cardNumber_ = other.cardNumber_;
-            onChanged();
-          }
-          if (other.hasTerminalId()) {
-            bitField0_ |= 0x00000004;
-            terminalId_ = other.terminalId_;
-            onChanged();
-          }
-          if (other.hasAuthorizationCode()) {
-            bitField0_ |= 0x00000008;
-            authorizationCode_ = other.authorizationCode_;
-            onChanged();
-          }
-          if (other.hasRrn()) {
-            bitField0_ |= 0x00000010;
-            rrn_ = other.rrn_;
-            onChanged();
-          }
-          this.mergeUnknownFields(other.getUnknownFields());
-          return this;
-        }
-
-        public final boolean isInitialized() {
-          return true;
-        }
-
-        public Builder mergeFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws java.io.IOException {
-          com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCard parsedMessage = null;
-          try {
-            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            parsedMessage = (com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCard) e.getUnfinishedMessage();
-            throw e;
-          } finally {
-            if (parsedMessage != null) {
-              mergeFrom(parsedMessage);
-            }
-          }
-          return this;
-        }
-        private int bitField0_;
-
-        private java.lang.Object issuer_ = "";
-        /**
-         * <code>optional string issuer = 1;</code>
-         *
-         * <pre>
-         * e.g. MasterCard, Visa (optionally issuer's code, e.g. 51 or 4)
-         * </pre>
-         */
-        public boolean hasIssuer() {
-          return ((bitField0_ & 0x00000001) == 0x00000001);
-        }
-        /**
-         * <code>optional string issuer = 1;</code>
-         *
-         * <pre>
-         * e.g. MasterCard, Visa (optionally issuer's code, e.g. 51 or 4)
-         * </pre>
-         */
-        public java.lang.String getIssuer() {
-          java.lang.Object ref = issuer_;
-          if (!(ref instanceof java.lang.String)) {
-            com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
-            java.lang.String s = bs.toStringUtf8();
-            if (bs.isValidUtf8()) {
-              issuer_ = s;
-            }
-            return s;
-          } else {
-            return (java.lang.String) ref;
-          }
-        }
-        /**
-         * <code>optional string issuer = 1;</code>
-         *
-         * <pre>
-         * e.g. MasterCard, Visa (optionally issuer's code, e.g. 51 or 4)
-         * </pre>
-         */
-        public com.google.protobuf.ByteString
-            getIssuerBytes() {
-          java.lang.Object ref = issuer_;
-          if (ref instanceof String) {
-            com.google.protobuf.ByteString b = 
-                com.google.protobuf.ByteString.copyFromUtf8(
-                    (java.lang.String) ref);
-            issuer_ = b;
-            return b;
-          } else {
-            return (com.google.protobuf.ByteString) ref;
-          }
-        }
-        /**
-         * <code>optional string issuer = 1;</code>
-         *
-         * <pre>
-         * e.g. MasterCard, Visa (optionally issuer's code, e.g. 51 or 4)
-         * </pre>
-         */
-        public Builder setIssuer(
-            java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
-          issuer_ = value;
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>optional string issuer = 1;</code>
-         *
-         * <pre>
-         * e.g. MasterCard, Visa (optionally issuer's code, e.g. 51 or 4)
-         * </pre>
-         */
-        public Builder clearIssuer() {
-          bitField0_ = (bitField0_ & ~0x00000001);
-          issuer_ = getDefaultInstance().getIssuer();
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>optional string issuer = 1;</code>
-         *
-         * <pre>
-         * e.g. MasterCard, Visa (optionally issuer's code, e.g. 51 or 4)
-         * </pre>
-         */
-        public Builder setIssuerBytes(
-            com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
-          issuer_ = value;
-          onChanged();
-          return this;
-        }
-
-        private java.lang.Object cardNumber_ = "";
-        /**
-         * <code>optional string card_number = 2;</code>
-         *
-         * <pre>
-         * Usually PAN (Primary Account Number), see e.g.:
-         * https://en.wikipedia.org/wiki/Primary_Account_Number
-         * </pre>
-         */
-        public boolean hasCardNumber() {
-          return ((bitField0_ & 0x00000002) == 0x00000002);
-        }
-        /**
-         * <code>optional string card_number = 2;</code>
-         *
-         * <pre>
-         * Usually PAN (Primary Account Number), see e.g.:
-         * https://en.wikipedia.org/wiki/Primary_Account_Number
-         * </pre>
-         */
-        public java.lang.String getCardNumber() {
-          java.lang.Object ref = cardNumber_;
-          if (!(ref instanceof java.lang.String)) {
-            com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
-            java.lang.String s = bs.toStringUtf8();
-            if (bs.isValidUtf8()) {
-              cardNumber_ = s;
-            }
-            return s;
-          } else {
-            return (java.lang.String) ref;
-          }
-        }
-        /**
-         * <code>optional string card_number = 2;</code>
-         *
-         * <pre>
-         * Usually PAN (Primary Account Number), see e.g.:
-         * https://en.wikipedia.org/wiki/Primary_Account_Number
-         * </pre>
-         */
-        public com.google.protobuf.ByteString
-            getCardNumberBytes() {
-          java.lang.Object ref = cardNumber_;
-          if (ref instanceof String) {
-            com.google.protobuf.ByteString b = 
-                com.google.protobuf.ByteString.copyFromUtf8(
-                    (java.lang.String) ref);
-            cardNumber_ = b;
-            return b;
-          } else {
-            return (com.google.protobuf.ByteString) ref;
-          }
-        }
-        /**
-         * <code>optional string card_number = 2;</code>
-         *
-         * <pre>
-         * Usually PAN (Primary Account Number), see e.g.:
-         * https://en.wikipedia.org/wiki/Primary_Account_Number
-         * </pre>
-         */
-        public Builder setCardNumber(
-            java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
-          cardNumber_ = value;
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>optional string card_number = 2;</code>
-         *
-         * <pre>
-         * Usually PAN (Primary Account Number), see e.g.:
-         * https://en.wikipedia.org/wiki/Primary_Account_Number
-         * </pre>
-         */
-        public Builder clearCardNumber() {
-          bitField0_ = (bitField0_ & ~0x00000002);
-          cardNumber_ = getDefaultInstance().getCardNumber();
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>optional string card_number = 2;</code>
-         *
-         * <pre>
-         * Usually PAN (Primary Account Number), see e.g.:
-         * https://en.wikipedia.org/wiki/Primary_Account_Number
-         * </pre>
-         */
-        public Builder setCardNumberBytes(
-            com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
-          cardNumber_ = value;
-          onChanged();
-          return this;
-        }
-
-        private java.lang.Object terminalId_ = "";
-        /**
-         * <code>optional string terminal_id = 3;</code>
-         */
-        public boolean hasTerminalId() {
-          return ((bitField0_ & 0x00000004) == 0x00000004);
-        }
-        /**
-         * <code>optional string terminal_id = 3;</code>
-         */
-        public java.lang.String getTerminalId() {
-          java.lang.Object ref = terminalId_;
-          if (!(ref instanceof java.lang.String)) {
-            com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
-            java.lang.String s = bs.toStringUtf8();
-            if (bs.isValidUtf8()) {
-              terminalId_ = s;
-            }
-            return s;
-          } else {
-            return (java.lang.String) ref;
-          }
-        }
-        /**
-         * <code>optional string terminal_id = 3;</code>
-         */
-        public com.google.protobuf.ByteString
-            getTerminalIdBytes() {
-          java.lang.Object ref = terminalId_;
-          if (ref instanceof String) {
-            com.google.protobuf.ByteString b = 
-                com.google.protobuf.ByteString.copyFromUtf8(
-                    (java.lang.String) ref);
-            terminalId_ = b;
-            return b;
-          } else {
-            return (com.google.protobuf.ByteString) ref;
-          }
-        }
-        /**
-         * <code>optional string terminal_id = 3;</code>
-         */
-        public Builder setTerminalId(
-            java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000004;
-          terminalId_ = value;
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>optional string terminal_id = 3;</code>
-         */
-        public Builder clearTerminalId() {
-          bitField0_ = (bitField0_ & ~0x00000004);
-          terminalId_ = getDefaultInstance().getTerminalId();
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>optional string terminal_id = 3;</code>
-         */
-        public Builder setTerminalIdBytes(
-            com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000004;
-          terminalId_ = value;
-          onChanged();
-          return this;
-        }
-
-        private java.lang.Object authorizationCode_ = "";
-        /**
-         * <code>optional string authorization_code = 4;</code>
-         */
-        public boolean hasAuthorizationCode() {
-          return ((bitField0_ & 0x00000008) == 0x00000008);
-        }
-        /**
-         * <code>optional string authorization_code = 4;</code>
-         */
-        public java.lang.String getAuthorizationCode() {
-          java.lang.Object ref = authorizationCode_;
-          if (!(ref instanceof java.lang.String)) {
-            com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
-            java.lang.String s = bs.toStringUtf8();
-            if (bs.isValidUtf8()) {
-              authorizationCode_ = s;
-            }
-            return s;
-          } else {
-            return (java.lang.String) ref;
-          }
-        }
-        /**
-         * <code>optional string authorization_code = 4;</code>
-         */
-        public com.google.protobuf.ByteString
-            getAuthorizationCodeBytes() {
-          java.lang.Object ref = authorizationCode_;
-          if (ref instanceof String) {
-            com.google.protobuf.ByteString b = 
-                com.google.protobuf.ByteString.copyFromUtf8(
-                    (java.lang.String) ref);
-            authorizationCode_ = b;
-            return b;
-          } else {
-            return (com.google.protobuf.ByteString) ref;
-          }
-        }
-        /**
-         * <code>optional string authorization_code = 4;</code>
-         */
-        public Builder setAuthorizationCode(
-            java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000008;
-          authorizationCode_ = value;
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>optional string authorization_code = 4;</code>
-         */
-        public Builder clearAuthorizationCode() {
-          bitField0_ = (bitField0_ & ~0x00000008);
-          authorizationCode_ = getDefaultInstance().getAuthorizationCode();
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>optional string authorization_code = 4;</code>
-         */
-        public Builder setAuthorizationCodeBytes(
-            com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000008;
-          authorizationCode_ = value;
-          onChanged();
-          return this;
-        }
-
-        private java.lang.Object rrn_ = "";
-        /**
-         * <code>optional string rrn = 5;</code>
-         *
-         * <pre>
-         * [Wikipedia: Retrieval Reference Number, a key to uniquely identify a
-         * card transaction based on the ISO 8583 standard]
-         * </pre>
-         */
-        public boolean hasRrn() {
-          return ((bitField0_ & 0x00000010) == 0x00000010);
-        }
-        /**
-         * <code>optional string rrn = 5;</code>
-         *
-         * <pre>
-         * [Wikipedia: Retrieval Reference Number, a key to uniquely identify a
-         * card transaction based on the ISO 8583 standard]
-         * </pre>
-         */
-        public java.lang.String getRrn() {
-          java.lang.Object ref = rrn_;
-          if (!(ref instanceof java.lang.String)) {
-            com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
-            java.lang.String s = bs.toStringUtf8();
-            if (bs.isValidUtf8()) {
-              rrn_ = s;
-            }
-            return s;
-          } else {
-            return (java.lang.String) ref;
-          }
-        }
-        /**
-         * <code>optional string rrn = 5;</code>
-         *
-         * <pre>
-         * [Wikipedia: Retrieval Reference Number, a key to uniquely identify a
-         * card transaction based on the ISO 8583 standard]
-         * </pre>
-         */
-        public com.google.protobuf.ByteString
-            getRrnBytes() {
-          java.lang.Object ref = rrn_;
-          if (ref instanceof String) {
-            com.google.protobuf.ByteString b = 
-                com.google.protobuf.ByteString.copyFromUtf8(
-                    (java.lang.String) ref);
-            rrn_ = b;
-            return b;
-          } else {
-            return (com.google.protobuf.ByteString) ref;
-          }
-        }
-        /**
-         * <code>optional string rrn = 5;</code>
-         *
-         * <pre>
-         * [Wikipedia: Retrieval Reference Number, a key to uniquely identify a
-         * card transaction based on the ISO 8583 standard]
-         * </pre>
-         */
-        public Builder setRrn(
-            java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000010;
-          rrn_ = value;
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>optional string rrn = 5;</code>
-         *
-         * <pre>
-         * [Wikipedia: Retrieval Reference Number, a key to uniquely identify a
-         * card transaction based on the ISO 8583 standard]
-         * </pre>
-         */
-        public Builder clearRrn() {
-          bitField0_ = (bitField0_ & ~0x00000010);
-          rrn_ = getDefaultInstance().getRrn();
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>optional string rrn = 5;</code>
-         *
-         * <pre>
-         * [Wikipedia: Retrieval Reference Number, a key to uniquely identify a
-         * card transaction based on the ISO 8583 standard]
-         * </pre>
-         */
-        public Builder setRrnBytes(
-            com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000010;
-          rrn_ = value;
-          onChanged();
-          return this;
-        }
-
-        // @@protoc_insertion_point(builder_scope:lockerbox.Payment.CreditCard)
-      }
-
-      static {
-        defaultInstance = new CreditCard(true);
-        defaultInstance.initFields();
-      }
-
-      // @@protoc_insertion_point(class_scope:lockerbox.Payment.CreditCard)
     }
 
     public interface HistoryItemOrBuilder extends
@@ -11160,27 +26001,6 @@ public final class LockerboxProtos {
       return online_;
     }
 
-    public static final int CREDIT_CARD_FIELD_NUMBER = 12;
-    private com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCard creditCard_;
-    /**
-     * <code>optional .lockerbox.Payment.CreditCard credit_card = 12;</code>
-     */
-    public boolean hasCreditCard() {
-      return ((bitField0_ & 0x00000080) == 0x00000080);
-    }
-    /**
-     * <code>optional .lockerbox.Payment.CreditCard credit_card = 12;</code>
-     */
-    public com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCard getCreditCard() {
-      return creditCard_;
-    }
-    /**
-     * <code>optional .lockerbox.Payment.CreditCard credit_card = 12;</code>
-     */
-    public com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCardOrBuilder getCreditCardOrBuilder() {
-      return creditCard_;
-    }
-
     public static final int STATUS_FIELD_NUMBER = 8;
     private com.zpaslab.lockerbox.LockerboxProtos.Payment.Status status_;
     /**
@@ -11191,7 +26011,7 @@ public final class LockerboxProtos {
      * </pre>
      */
     public boolean hasStatus() {
-      return ((bitField0_ & 0x00000100) == 0x00000100);
+      return ((bitField0_ & 0x00000080) == 0x00000080);
     }
     /**
      * <code>optional .lockerbox.Payment.Status status = 8;</code>
@@ -11214,7 +26034,7 @@ public final class LockerboxProtos {
      * </pre>
      */
     public boolean hasStatusDetails() {
-      return ((bitField0_ & 0x00000200) == 0x00000200);
+      return ((bitField0_ & 0x00000100) == 0x00000100);
     }
     /**
      * <code>optional string status_details = 9;</code>
@@ -11293,117 +26113,6 @@ public final class LockerboxProtos {
       return history_.get(index);
     }
 
-    public static final int DEPOSIT_DATE_FIELD_NUMBER = 11;
-    private java.lang.Object depositDate_;
-    /**
-     * <code>optional string deposit_date = 11;</code>
-     *
-     * <pre>
-     * Point in time when the payment was done by user (money was deposited).
-     * </pre>
-     */
-    public boolean hasDepositDate() {
-      return ((bitField0_ & 0x00000400) == 0x00000400);
-    }
-    /**
-     * <code>optional string deposit_date = 11;</code>
-     *
-     * <pre>
-     * Point in time when the payment was done by user (money was deposited).
-     * </pre>
-     */
-    public java.lang.String getDepositDate() {
-      java.lang.Object ref = depositDate_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          depositDate_ = s;
-        }
-        return s;
-      }
-    }
-    /**
-     * <code>optional string deposit_date = 11;</code>
-     *
-     * <pre>
-     * Point in time when the payment was done by user (money was deposited).
-     * </pre>
-     */
-    public com.google.protobuf.ByteString
-        getDepositDateBytes() {
-      java.lang.Object ref = depositDate_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        depositDate_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int CONSOLIDATION_DATE_FIELD_NUMBER = 13;
-    private java.lang.Object consolidationDate_;
-    /**
-     * <code>optional string consolidation_date = 13;</code>
-     *
-     * <pre>
-     * Point in time when the payment was acknowledged by overmind
-     * conslidation_date will be set only for finalized payments (status = SUCCESS, APPLIED, FAILED, EXPIRED)
-     * </pre>
-     */
-    public boolean hasConsolidationDate() {
-      return ((bitField0_ & 0x00000800) == 0x00000800);
-    }
-    /**
-     * <code>optional string consolidation_date = 13;</code>
-     *
-     * <pre>
-     * Point in time when the payment was acknowledged by overmind
-     * conslidation_date will be set only for finalized payments (status = SUCCESS, APPLIED, FAILED, EXPIRED)
-     * </pre>
-     */
-    public java.lang.String getConsolidationDate() {
-      java.lang.Object ref = consolidationDate_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          consolidationDate_ = s;
-        }
-        return s;
-      }
-    }
-    /**
-     * <code>optional string consolidation_date = 13;</code>
-     *
-     * <pre>
-     * Point in time when the payment was acknowledged by overmind
-     * conslidation_date will be set only for finalized payments (status = SUCCESS, APPLIED, FAILED, EXPIRED)
-     * </pre>
-     */
-    public com.google.protobuf.ByteString
-        getConsolidationDateBytes() {
-      java.lang.Object ref = consolidationDate_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        consolidationDate_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
     private void initFields() {
       code_ = "";
       account_ = "";
@@ -11412,12 +26121,9 @@ public final class LockerboxProtos {
       amount_ = com.zpaslab.lockerbox.LockerboxProtos.Money.getDefaultInstance();
       method_ = com.zpaslab.lockerbox.LockerboxProtos.Payment.Method.BALANCE;
       online_ = com.zpaslab.lockerbox.LockerboxProtos.Payment.Online.getDefaultInstance();
-      creditCard_ = com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCard.getDefaultInstance();
       status_ = com.zpaslab.lockerbox.LockerboxProtos.Payment.Status.NOT_STARTED;
       statusDetails_ = "";
       history_ = java.util.Collections.emptyList();
-      depositDate_ = "";
-      consolidationDate_ = "";
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -11453,23 +26159,14 @@ public final class LockerboxProtos {
       if (((bitField0_ & 0x00000040) == 0x00000040)) {
         output.writeMessage(7, online_);
       }
-      if (((bitField0_ & 0x00000100) == 0x00000100)) {
+      if (((bitField0_ & 0x00000080) == 0x00000080)) {
         output.writeEnum(8, status_.getNumber());
       }
-      if (((bitField0_ & 0x00000200) == 0x00000200)) {
+      if (((bitField0_ & 0x00000100) == 0x00000100)) {
         output.writeBytes(9, getStatusDetailsBytes());
       }
       for (int i = 0; i < history_.size(); i++) {
         output.writeMessage(10, history_.get(i));
-      }
-      if (((bitField0_ & 0x00000400) == 0x00000400)) {
-        output.writeBytes(11, getDepositDateBytes());
-      }
-      if (((bitField0_ & 0x00000080) == 0x00000080)) {
-        output.writeMessage(12, creditCard_);
-      }
-      if (((bitField0_ & 0x00000800) == 0x00000800)) {
-        output.writeBytes(13, getConsolidationDateBytes());
       }
       getUnknownFields().writeTo(output);
     }
@@ -11508,29 +26205,17 @@ public final class LockerboxProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, online_);
       }
-      if (((bitField0_ & 0x00000100) == 0x00000100)) {
+      if (((bitField0_ & 0x00000080) == 0x00000080)) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(8, status_.getNumber());
       }
-      if (((bitField0_ & 0x00000200) == 0x00000200)) {
+      if (((bitField0_ & 0x00000100) == 0x00000100)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(9, getStatusDetailsBytes());
       }
       for (int i = 0; i < history_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(10, history_.get(i));
-      }
-      if (((bitField0_ & 0x00000400) == 0x00000400)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(11, getDepositDateBytes());
-      }
-      if (((bitField0_ & 0x00000080) == 0x00000080)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(12, creditCard_);
-      }
-      if (((bitField0_ & 0x00000800) == 0x00000800)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(13, getConsolidationDateBytes());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -11624,7 +26309,6 @@ public final class LockerboxProtos {
      * - using prepaid account (amount will be subtracted from the account balance)
      * - paying online via online gateway (user will have to open given link in his browser and authorize the payment with online payment operator).
      * TODO(pawelb): embed matched Charges?
-     * Next id: 14
      * </pre>
      */
     public static final class Builder extends
@@ -11657,7 +26341,6 @@ public final class LockerboxProtos {
         if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
           getAmountFieldBuilder();
           getOnlineFieldBuilder();
-          getCreditCardFieldBuilder();
           getHistoryFieldBuilder();
         }
       }
@@ -11689,26 +26372,16 @@ public final class LockerboxProtos {
           onlineBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000040);
-        if (creditCardBuilder_ == null) {
-          creditCard_ = com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCard.getDefaultInstance();
-        } else {
-          creditCardBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000080);
         status_ = com.zpaslab.lockerbox.LockerboxProtos.Payment.Status.NOT_STARTED;
-        bitField0_ = (bitField0_ & ~0x00000100);
+        bitField0_ = (bitField0_ & ~0x00000080);
         statusDetails_ = "";
-        bitField0_ = (bitField0_ & ~0x00000200);
+        bitField0_ = (bitField0_ & ~0x00000100);
         if (historyBuilder_ == null) {
           history_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000400);
+          bitField0_ = (bitField0_ & ~0x00000200);
         } else {
           historyBuilder_.clear();
         }
-        depositDate_ = "";
-        bitField0_ = (bitField0_ & ~0x00000800);
-        consolidationDate_ = "";
-        bitField0_ = (bitField0_ & ~0x00001000);
         return this;
       }
 
@@ -11776,36 +26449,20 @@ public final class LockerboxProtos {
         if (((from_bitField0_ & 0x00000080) == 0x00000080)) {
           to_bitField0_ |= 0x00000080;
         }
-        if (creditCardBuilder_ == null) {
-          result.creditCard_ = creditCard_;
-        } else {
-          result.creditCard_ = creditCardBuilder_.build();
-        }
+        result.status_ = status_;
         if (((from_bitField0_ & 0x00000100) == 0x00000100)) {
           to_bitField0_ |= 0x00000100;
         }
-        result.status_ = status_;
-        if (((from_bitField0_ & 0x00000200) == 0x00000200)) {
-          to_bitField0_ |= 0x00000200;
-        }
         result.statusDetails_ = statusDetails_;
         if (historyBuilder_ == null) {
-          if (((bitField0_ & 0x00000400) == 0x00000400)) {
+          if (((bitField0_ & 0x00000200) == 0x00000200)) {
             history_ = java.util.Collections.unmodifiableList(history_);
-            bitField0_ = (bitField0_ & ~0x00000400);
+            bitField0_ = (bitField0_ & ~0x00000200);
           }
           result.history_ = history_;
         } else {
           result.history_ = historyBuilder_.build();
         }
-        if (((from_bitField0_ & 0x00000800) == 0x00000800)) {
-          to_bitField0_ |= 0x00000400;
-        }
-        result.depositDate_ = depositDate_;
-        if (((from_bitField0_ & 0x00001000) == 0x00001000)) {
-          to_bitField0_ |= 0x00000800;
-        }
-        result.consolidationDate_ = consolidationDate_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -11851,14 +26508,11 @@ public final class LockerboxProtos {
         if (other.hasOnline()) {
           mergeOnline(other.getOnline());
         }
-        if (other.hasCreditCard()) {
-          mergeCreditCard(other.getCreditCard());
-        }
         if (other.hasStatus()) {
           setStatus(other.getStatus());
         }
         if (other.hasStatusDetails()) {
-          bitField0_ |= 0x00000200;
+          bitField0_ |= 0x00000100;
           statusDetails_ = other.statusDetails_;
           onChanged();
         }
@@ -11866,7 +26520,7 @@ public final class LockerboxProtos {
           if (!other.history_.isEmpty()) {
             if (history_.isEmpty()) {
               history_ = other.history_;
-              bitField0_ = (bitField0_ & ~0x00000400);
+              bitField0_ = (bitField0_ & ~0x00000200);
             } else {
               ensureHistoryIsMutable();
               history_.addAll(other.history_);
@@ -11879,7 +26533,7 @@ public final class LockerboxProtos {
               historyBuilder_.dispose();
               historyBuilder_ = null;
               history_ = other.history_;
-              bitField0_ = (bitField0_ & ~0x00000400);
+              bitField0_ = (bitField0_ & ~0x00000200);
               historyBuilder_ = 
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    getHistoryFieldBuilder() : null;
@@ -11887,16 +26541,6 @@ public final class LockerboxProtos {
               historyBuilder_.addAllMessages(other.history_);
             }
           }
-        }
-        if (other.hasDepositDate()) {
-          bitField0_ |= 0x00000800;
-          depositDate_ = other.depositDate_;
-          onChanged();
-        }
-        if (other.hasConsolidationDate()) {
-          bitField0_ |= 0x00001000;
-          consolidationDate_ = other.consolidationDate_;
-          onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -12610,122 +27254,6 @@ public final class LockerboxProtos {
         return onlineBuilder_;
       }
 
-      private com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCard creditCard_ = com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCard.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
-          com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCard, com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCard.Builder, com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCardOrBuilder> creditCardBuilder_;
-      /**
-       * <code>optional .lockerbox.Payment.CreditCard credit_card = 12;</code>
-       */
-      public boolean hasCreditCard() {
-        return ((bitField0_ & 0x00000080) == 0x00000080);
-      }
-      /**
-       * <code>optional .lockerbox.Payment.CreditCard credit_card = 12;</code>
-       */
-      public com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCard getCreditCard() {
-        if (creditCardBuilder_ == null) {
-          return creditCard_;
-        } else {
-          return creditCardBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>optional .lockerbox.Payment.CreditCard credit_card = 12;</code>
-       */
-      public Builder setCreditCard(com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCard value) {
-        if (creditCardBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          creditCard_ = value;
-          onChanged();
-        } else {
-          creditCardBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000080;
-        return this;
-      }
-      /**
-       * <code>optional .lockerbox.Payment.CreditCard credit_card = 12;</code>
-       */
-      public Builder setCreditCard(
-          com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCard.Builder builderForValue) {
-        if (creditCardBuilder_ == null) {
-          creditCard_ = builderForValue.build();
-          onChanged();
-        } else {
-          creditCardBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000080;
-        return this;
-      }
-      /**
-       * <code>optional .lockerbox.Payment.CreditCard credit_card = 12;</code>
-       */
-      public Builder mergeCreditCard(com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCard value) {
-        if (creditCardBuilder_ == null) {
-          if (((bitField0_ & 0x00000080) == 0x00000080) &&
-              creditCard_ != com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCard.getDefaultInstance()) {
-            creditCard_ =
-              com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCard.newBuilder(creditCard_).mergeFrom(value).buildPartial();
-          } else {
-            creditCard_ = value;
-          }
-          onChanged();
-        } else {
-          creditCardBuilder_.mergeFrom(value);
-        }
-        bitField0_ |= 0x00000080;
-        return this;
-      }
-      /**
-       * <code>optional .lockerbox.Payment.CreditCard credit_card = 12;</code>
-       */
-      public Builder clearCreditCard() {
-        if (creditCardBuilder_ == null) {
-          creditCard_ = com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCard.getDefaultInstance();
-          onChanged();
-        } else {
-          creditCardBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000080);
-        return this;
-      }
-      /**
-       * <code>optional .lockerbox.Payment.CreditCard credit_card = 12;</code>
-       */
-      public com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCard.Builder getCreditCardBuilder() {
-        bitField0_ |= 0x00000080;
-        onChanged();
-        return getCreditCardFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>optional .lockerbox.Payment.CreditCard credit_card = 12;</code>
-       */
-      public com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCardOrBuilder getCreditCardOrBuilder() {
-        if (creditCardBuilder_ != null) {
-          return creditCardBuilder_.getMessageOrBuilder();
-        } else {
-          return creditCard_;
-        }
-      }
-      /**
-       * <code>optional .lockerbox.Payment.CreditCard credit_card = 12;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilder<
-          com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCard, com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCard.Builder, com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCardOrBuilder> 
-          getCreditCardFieldBuilder() {
-        if (creditCardBuilder_ == null) {
-          creditCardBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCard, com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCard.Builder, com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCardOrBuilder>(
-                  getCreditCard(),
-                  getParentForChildren(),
-                  isClean());
-          creditCard_ = null;
-        }
-        return creditCardBuilder_;
-      }
-
       private com.zpaslab.lockerbox.LockerboxProtos.Payment.Status status_ = com.zpaslab.lockerbox.LockerboxProtos.Payment.Status.NOT_STARTED;
       /**
        * <code>optional .lockerbox.Payment.Status status = 8;</code>
@@ -12735,7 +27263,7 @@ public final class LockerboxProtos {
        * </pre>
        */
       public boolean hasStatus() {
-        return ((bitField0_ & 0x00000100) == 0x00000100);
+        return ((bitField0_ & 0x00000080) == 0x00000080);
       }
       /**
        * <code>optional .lockerbox.Payment.Status status = 8;</code>
@@ -12758,7 +27286,7 @@ public final class LockerboxProtos {
         if (value == null) {
           throw new NullPointerException();
         }
-        bitField0_ |= 0x00000100;
+        bitField0_ |= 0x00000080;
         status_ = value;
         onChanged();
         return this;
@@ -12771,7 +27299,7 @@ public final class LockerboxProtos {
        * </pre>
        */
       public Builder clearStatus() {
-        bitField0_ = (bitField0_ & ~0x00000100);
+        bitField0_ = (bitField0_ & ~0x00000080);
         status_ = com.zpaslab.lockerbox.LockerboxProtos.Payment.Status.NOT_STARTED;
         onChanged();
         return this;
@@ -12786,7 +27314,7 @@ public final class LockerboxProtos {
        * </pre>
        */
       public boolean hasStatusDetails() {
-        return ((bitField0_ & 0x00000200) == 0x00000200);
+        return ((bitField0_ & 0x00000100) == 0x00000100);
       }
       /**
        * <code>optional string status_details = 9;</code>
@@ -12841,7 +27369,7 @@ public final class LockerboxProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000200;
+  bitField0_ |= 0x00000100;
         statusDetails_ = value;
         onChanged();
         return this;
@@ -12854,7 +27382,7 @@ public final class LockerboxProtos {
        * </pre>
        */
       public Builder clearStatusDetails() {
-        bitField0_ = (bitField0_ & ~0x00000200);
+        bitField0_ = (bitField0_ & ~0x00000100);
         statusDetails_ = getDefaultInstance().getStatusDetails();
         onChanged();
         return this;
@@ -12871,7 +27399,7 @@ public final class LockerboxProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000200;
+  bitField0_ |= 0x00000100;
         statusDetails_ = value;
         onChanged();
         return this;
@@ -12880,9 +27408,9 @@ public final class LockerboxProtos {
       private java.util.List<com.zpaslab.lockerbox.LockerboxProtos.Payment.HistoryItem> history_ =
         java.util.Collections.emptyList();
       private void ensureHistoryIsMutable() {
-        if (!((bitField0_ & 0x00000400) == 0x00000400)) {
+        if (!((bitField0_ & 0x00000200) == 0x00000200)) {
           history_ = new java.util.ArrayList<com.zpaslab.lockerbox.LockerboxProtos.Payment.HistoryItem>(history_);
-          bitField0_ |= 0x00000400;
+          bitField0_ |= 0x00000200;
          }
       }
 
@@ -13032,7 +27560,7 @@ public final class LockerboxProtos {
       public Builder clearHistory() {
         if (historyBuilder_ == null) {
           history_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000400);
+          bitField0_ = (bitField0_ & ~0x00000200);
           onChanged();
         } else {
           historyBuilder_.clear();
@@ -13109,218 +27637,12 @@ public final class LockerboxProtos {
           historyBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
               com.zpaslab.lockerbox.LockerboxProtos.Payment.HistoryItem, com.zpaslab.lockerbox.LockerboxProtos.Payment.HistoryItem.Builder, com.zpaslab.lockerbox.LockerboxProtos.Payment.HistoryItemOrBuilder>(
                   history_,
-                  ((bitField0_ & 0x00000400) == 0x00000400),
+                  ((bitField0_ & 0x00000200) == 0x00000200),
                   getParentForChildren(),
                   isClean());
           history_ = null;
         }
         return historyBuilder_;
-      }
-
-      private java.lang.Object depositDate_ = "";
-      /**
-       * <code>optional string deposit_date = 11;</code>
-       *
-       * <pre>
-       * Point in time when the payment was done by user (money was deposited).
-       * </pre>
-       */
-      public boolean hasDepositDate() {
-        return ((bitField0_ & 0x00000800) == 0x00000800);
-      }
-      /**
-       * <code>optional string deposit_date = 11;</code>
-       *
-       * <pre>
-       * Point in time when the payment was done by user (money was deposited).
-       * </pre>
-       */
-      public java.lang.String getDepositDate() {
-        java.lang.Object ref = depositDate_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            depositDate_ = s;
-          }
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>optional string deposit_date = 11;</code>
-       *
-       * <pre>
-       * Point in time when the payment was done by user (money was deposited).
-       * </pre>
-       */
-      public com.google.protobuf.ByteString
-          getDepositDateBytes() {
-        java.lang.Object ref = depositDate_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          depositDate_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string deposit_date = 11;</code>
-       *
-       * <pre>
-       * Point in time when the payment was done by user (money was deposited).
-       * </pre>
-       */
-      public Builder setDepositDate(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000800;
-        depositDate_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string deposit_date = 11;</code>
-       *
-       * <pre>
-       * Point in time when the payment was done by user (money was deposited).
-       * </pre>
-       */
-      public Builder clearDepositDate() {
-        bitField0_ = (bitField0_ & ~0x00000800);
-        depositDate_ = getDefaultInstance().getDepositDate();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string deposit_date = 11;</code>
-       *
-       * <pre>
-       * Point in time when the payment was done by user (money was deposited).
-       * </pre>
-       */
-      public Builder setDepositDateBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000800;
-        depositDate_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object consolidationDate_ = "";
-      /**
-       * <code>optional string consolidation_date = 13;</code>
-       *
-       * <pre>
-       * Point in time when the payment was acknowledged by overmind
-       * conslidation_date will be set only for finalized payments (status = SUCCESS, APPLIED, FAILED, EXPIRED)
-       * </pre>
-       */
-      public boolean hasConsolidationDate() {
-        return ((bitField0_ & 0x00001000) == 0x00001000);
-      }
-      /**
-       * <code>optional string consolidation_date = 13;</code>
-       *
-       * <pre>
-       * Point in time when the payment was acknowledged by overmind
-       * conslidation_date will be set only for finalized payments (status = SUCCESS, APPLIED, FAILED, EXPIRED)
-       * </pre>
-       */
-      public java.lang.String getConsolidationDate() {
-        java.lang.Object ref = consolidationDate_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            consolidationDate_ = s;
-          }
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>optional string consolidation_date = 13;</code>
-       *
-       * <pre>
-       * Point in time when the payment was acknowledged by overmind
-       * conslidation_date will be set only for finalized payments (status = SUCCESS, APPLIED, FAILED, EXPIRED)
-       * </pre>
-       */
-      public com.google.protobuf.ByteString
-          getConsolidationDateBytes() {
-        java.lang.Object ref = consolidationDate_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          consolidationDate_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string consolidation_date = 13;</code>
-       *
-       * <pre>
-       * Point in time when the payment was acknowledged by overmind
-       * conslidation_date will be set only for finalized payments (status = SUCCESS, APPLIED, FAILED, EXPIRED)
-       * </pre>
-       */
-      public Builder setConsolidationDate(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00001000;
-        consolidationDate_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string consolidation_date = 13;</code>
-       *
-       * <pre>
-       * Point in time when the payment was acknowledged by overmind
-       * conslidation_date will be set only for finalized payments (status = SUCCESS, APPLIED, FAILED, EXPIRED)
-       * </pre>
-       */
-      public Builder clearConsolidationDate() {
-        bitField0_ = (bitField0_ & ~0x00001000);
-        consolidationDate_ = getDefaultInstance().getConsolidationDate();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string consolidation_date = 13;</code>
-       *
-       * <pre>
-       * Point in time when the payment was acknowledged by overmind
-       * conslidation_date will be set only for finalized payments (status = SUCCESS, APPLIED, FAILED, EXPIRED)
-       * </pre>
-       */
-      public Builder setConsolidationDateBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00001000;
-        consolidationDate_ = value;
-        onChanged();
-        return this;
       }
 
       // @@protoc_insertion_point(builder_scope:lockerbox.Payment)
@@ -14089,6 +28411,1195 @@ public final class LockerboxProtos {
     }
 
     // @@protoc_insertion_point(class_scope:lockerbox.PaymentList)
+  }
+
+  public interface PropertyOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:lockerbox.Property)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional string key = 1;</code>
+     *
+     * <pre>
+     * tag can be used as multiple-keys
+     * </pre>
+     */
+    boolean hasKey();
+    /**
+     * <code>optional string key = 1;</code>
+     *
+     * <pre>
+     * tag can be used as multiple-keys
+     * </pre>
+     */
+    java.lang.String getKey();
+    /**
+     * <code>optional string key = 1;</code>
+     *
+     * <pre>
+     * tag can be used as multiple-keys
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getKeyBytes();
+
+    /**
+     * <code>optional string value = 2;</code>
+     */
+    boolean hasValue();
+    /**
+     * <code>optional string value = 2;</code>
+     */
+    java.lang.String getValue();
+    /**
+     * <code>optional string value = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getValueBytes();
+
+    /**
+     * <code>repeated .lockerbox.Property prop = 3;</code>
+     *
+     * <pre>
+     * nested property allows to build multilayered structure with custom data
+     * that can be stored in general database, still modelling custom part of the system.
+     * </pre>
+     */
+    java.util.List<com.zpaslab.lockerbox.LockerboxProtos.Property> 
+        getPropList();
+    /**
+     * <code>repeated .lockerbox.Property prop = 3;</code>
+     *
+     * <pre>
+     * nested property allows to build multilayered structure with custom data
+     * that can be stored in general database, still modelling custom part of the system.
+     * </pre>
+     */
+    com.zpaslab.lockerbox.LockerboxProtos.Property getProp(int index);
+    /**
+     * <code>repeated .lockerbox.Property prop = 3;</code>
+     *
+     * <pre>
+     * nested property allows to build multilayered structure with custom data
+     * that can be stored in general database, still modelling custom part of the system.
+     * </pre>
+     */
+    int getPropCount();
+    /**
+     * <code>repeated .lockerbox.Property prop = 3;</code>
+     *
+     * <pre>
+     * nested property allows to build multilayered structure with custom data
+     * that can be stored in general database, still modelling custom part of the system.
+     * </pre>
+     */
+    java.util.List<? extends com.zpaslab.lockerbox.LockerboxProtos.PropertyOrBuilder> 
+        getPropOrBuilderList();
+    /**
+     * <code>repeated .lockerbox.Property prop = 3;</code>
+     *
+     * <pre>
+     * nested property allows to build multilayered structure with custom data
+     * that can be stored in general database, still modelling custom part of the system.
+     * </pre>
+     */
+    com.zpaslab.lockerbox.LockerboxProtos.PropertyOrBuilder getPropOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code lockerbox.Property}
+   *
+   * <pre>
+   * Property allows adding untyped metadata.
+   * </pre>
+   */
+  public static final class Property extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:lockerbox.Property)
+      PropertyOrBuilder {
+    // Use Property.newBuilder() to construct.
+    private Property(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private Property(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final Property defaultInstance;
+    public static Property getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public Property getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Property(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              key_ = bs;
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000002;
+              value_ = bs;
+              break;
+            }
+            case 26: {
+              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+                prop_ = new java.util.ArrayList<com.zpaslab.lockerbox.LockerboxProtos.Property>();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              prop_.add(input.readMessage(com.zpaslab.lockerbox.LockerboxProtos.Property.PARSER, extensionRegistry));
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+          prop_ = java.util.Collections.unmodifiableList(prop_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.zpaslab.lockerbox.LockerboxProtos.internal_static_lockerbox_Property_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.zpaslab.lockerbox.LockerboxProtos.internal_static_lockerbox_Property_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.zpaslab.lockerbox.LockerboxProtos.Property.class, com.zpaslab.lockerbox.LockerboxProtos.Property.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<Property> PARSER =
+        new com.google.protobuf.AbstractParser<Property>() {
+      public Property parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Property(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Property> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    public static final int KEY_FIELD_NUMBER = 1;
+    private java.lang.Object key_;
+    /**
+     * <code>optional string key = 1;</code>
+     *
+     * <pre>
+     * tag can be used as multiple-keys
+     * </pre>
+     */
+    public boolean hasKey() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional string key = 1;</code>
+     *
+     * <pre>
+     * tag can be used as multiple-keys
+     * </pre>
+     */
+    public java.lang.String getKey() {
+      java.lang.Object ref = key_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          key_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string key = 1;</code>
+     *
+     * <pre>
+     * tag can be used as multiple-keys
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getKeyBytes() {
+      java.lang.Object ref = key_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        key_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int VALUE_FIELD_NUMBER = 2;
+    private java.lang.Object value_;
+    /**
+     * <code>optional string value = 2;</code>
+     */
+    public boolean hasValue() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional string value = 2;</code>
+     */
+    public java.lang.String getValue() {
+      java.lang.Object ref = value_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          value_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string value = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getValueBytes() {
+      java.lang.Object ref = value_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        value_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PROP_FIELD_NUMBER = 3;
+    private java.util.List<com.zpaslab.lockerbox.LockerboxProtos.Property> prop_;
+    /**
+     * <code>repeated .lockerbox.Property prop = 3;</code>
+     *
+     * <pre>
+     * nested property allows to build multilayered structure with custom data
+     * that can be stored in general database, still modelling custom part of the system.
+     * </pre>
+     */
+    public java.util.List<com.zpaslab.lockerbox.LockerboxProtos.Property> getPropList() {
+      return prop_;
+    }
+    /**
+     * <code>repeated .lockerbox.Property prop = 3;</code>
+     *
+     * <pre>
+     * nested property allows to build multilayered structure with custom data
+     * that can be stored in general database, still modelling custom part of the system.
+     * </pre>
+     */
+    public java.util.List<? extends com.zpaslab.lockerbox.LockerboxProtos.PropertyOrBuilder> 
+        getPropOrBuilderList() {
+      return prop_;
+    }
+    /**
+     * <code>repeated .lockerbox.Property prop = 3;</code>
+     *
+     * <pre>
+     * nested property allows to build multilayered structure with custom data
+     * that can be stored in general database, still modelling custom part of the system.
+     * </pre>
+     */
+    public int getPropCount() {
+      return prop_.size();
+    }
+    /**
+     * <code>repeated .lockerbox.Property prop = 3;</code>
+     *
+     * <pre>
+     * nested property allows to build multilayered structure with custom data
+     * that can be stored in general database, still modelling custom part of the system.
+     * </pre>
+     */
+    public com.zpaslab.lockerbox.LockerboxProtos.Property getProp(int index) {
+      return prop_.get(index);
+    }
+    /**
+     * <code>repeated .lockerbox.Property prop = 3;</code>
+     *
+     * <pre>
+     * nested property allows to build multilayered structure with custom data
+     * that can be stored in general database, still modelling custom part of the system.
+     * </pre>
+     */
+    public com.zpaslab.lockerbox.LockerboxProtos.PropertyOrBuilder getPropOrBuilder(
+        int index) {
+      return prop_.get(index);
+    }
+
+    private void initFields() {
+      key_ = "";
+      value_ = "";
+      prop_ = java.util.Collections.emptyList();
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeBytes(1, getKeyBytes());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeBytes(2, getValueBytes());
+      }
+      for (int i = 0; i < prop_.size(); i++) {
+        output.writeMessage(3, prop_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, getKeyBytes());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, getValueBytes());
+      }
+      for (int i = 0; i < prop_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, prop_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static com.zpaslab.lockerbox.LockerboxProtos.Property parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.zpaslab.lockerbox.LockerboxProtos.Property parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.zpaslab.lockerbox.LockerboxProtos.Property parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.zpaslab.lockerbox.LockerboxProtos.Property parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.zpaslab.lockerbox.LockerboxProtos.Property parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.zpaslab.lockerbox.LockerboxProtos.Property parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.zpaslab.lockerbox.LockerboxProtos.Property parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.zpaslab.lockerbox.LockerboxProtos.Property parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.zpaslab.lockerbox.LockerboxProtos.Property parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.zpaslab.lockerbox.LockerboxProtos.Property parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(com.zpaslab.lockerbox.LockerboxProtos.Property prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code lockerbox.Property}
+     *
+     * <pre>
+     * Property allows adding untyped metadata.
+     * </pre>
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:lockerbox.Property)
+        com.zpaslab.lockerbox.LockerboxProtos.PropertyOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.zpaslab.lockerbox.LockerboxProtos.internal_static_lockerbox_Property_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.zpaslab.lockerbox.LockerboxProtos.internal_static_lockerbox_Property_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.zpaslab.lockerbox.LockerboxProtos.Property.class, com.zpaslab.lockerbox.LockerboxProtos.Property.Builder.class);
+      }
+
+      // Construct using com.zpaslab.lockerbox.LockerboxProtos.Property.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getPropFieldBuilder();
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        key_ = "";
+        bitField0_ = (bitField0_ & ~0x00000001);
+        value_ = "";
+        bitField0_ = (bitField0_ & ~0x00000002);
+        if (propBuilder_ == null) {
+          prop_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+        } else {
+          propBuilder_.clear();
+        }
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.zpaslab.lockerbox.LockerboxProtos.internal_static_lockerbox_Property_descriptor;
+      }
+
+      public com.zpaslab.lockerbox.LockerboxProtos.Property getDefaultInstanceForType() {
+        return com.zpaslab.lockerbox.LockerboxProtos.Property.getDefaultInstance();
+      }
+
+      public com.zpaslab.lockerbox.LockerboxProtos.Property build() {
+        com.zpaslab.lockerbox.LockerboxProtos.Property result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.zpaslab.lockerbox.LockerboxProtos.Property buildPartial() {
+        com.zpaslab.lockerbox.LockerboxProtos.Property result = new com.zpaslab.lockerbox.LockerboxProtos.Property(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.key_ = key_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.value_ = value_;
+        if (propBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) == 0x00000004)) {
+            prop_ = java.util.Collections.unmodifiableList(prop_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.prop_ = prop_;
+        } else {
+          result.prop_ = propBuilder_.build();
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.zpaslab.lockerbox.LockerboxProtos.Property) {
+          return mergeFrom((com.zpaslab.lockerbox.LockerboxProtos.Property)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.zpaslab.lockerbox.LockerboxProtos.Property other) {
+        if (other == com.zpaslab.lockerbox.LockerboxProtos.Property.getDefaultInstance()) return this;
+        if (other.hasKey()) {
+          bitField0_ |= 0x00000001;
+          key_ = other.key_;
+          onChanged();
+        }
+        if (other.hasValue()) {
+          bitField0_ |= 0x00000002;
+          value_ = other.value_;
+          onChanged();
+        }
+        if (propBuilder_ == null) {
+          if (!other.prop_.isEmpty()) {
+            if (prop_.isEmpty()) {
+              prop_ = other.prop_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensurePropIsMutable();
+              prop_.addAll(other.prop_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.prop_.isEmpty()) {
+            if (propBuilder_.isEmpty()) {
+              propBuilder_.dispose();
+              propBuilder_ = null;
+              prop_ = other.prop_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              propBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   getPropFieldBuilder() : null;
+            } else {
+              propBuilder_.addAllMessages(other.prop_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.zpaslab.lockerbox.LockerboxProtos.Property parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.zpaslab.lockerbox.LockerboxProtos.Property) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object key_ = "";
+      /**
+       * <code>optional string key = 1;</code>
+       *
+       * <pre>
+       * tag can be used as multiple-keys
+       * </pre>
+       */
+      public boolean hasKey() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional string key = 1;</code>
+       *
+       * <pre>
+       * tag can be used as multiple-keys
+       * </pre>
+       */
+      public java.lang.String getKey() {
+        java.lang.Object ref = key_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            key_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string key = 1;</code>
+       *
+       * <pre>
+       * tag can be used as multiple-keys
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getKeyBytes() {
+        java.lang.Object ref = key_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          key_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string key = 1;</code>
+       *
+       * <pre>
+       * tag can be used as multiple-keys
+       * </pre>
+       */
+      public Builder setKey(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        key_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string key = 1;</code>
+       *
+       * <pre>
+       * tag can be used as multiple-keys
+       * </pre>
+       */
+      public Builder clearKey() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        key_ = getDefaultInstance().getKey();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string key = 1;</code>
+       *
+       * <pre>
+       * tag can be used as multiple-keys
+       * </pre>
+       */
+      public Builder setKeyBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        key_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object value_ = "";
+      /**
+       * <code>optional string value = 2;</code>
+       */
+      public boolean hasValue() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional string value = 2;</code>
+       */
+      public java.lang.String getValue() {
+        java.lang.Object ref = value_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            value_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string value = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getValueBytes() {
+        java.lang.Object ref = value_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          value_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string value = 2;</code>
+       */
+      public Builder setValue(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        value_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string value = 2;</code>
+       */
+      public Builder clearValue() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        value_ = getDefaultInstance().getValue();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string value = 2;</code>
+       */
+      public Builder setValueBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        value_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.zpaslab.lockerbox.LockerboxProtos.Property> prop_ =
+        java.util.Collections.emptyList();
+      private void ensurePropIsMutable() {
+        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+          prop_ = new java.util.ArrayList<com.zpaslab.lockerbox.LockerboxProtos.Property>(prop_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          com.zpaslab.lockerbox.LockerboxProtos.Property, com.zpaslab.lockerbox.LockerboxProtos.Property.Builder, com.zpaslab.lockerbox.LockerboxProtos.PropertyOrBuilder> propBuilder_;
+
+      /**
+       * <code>repeated .lockerbox.Property prop = 3;</code>
+       *
+       * <pre>
+       * nested property allows to build multilayered structure with custom data
+       * that can be stored in general database, still modelling custom part of the system.
+       * </pre>
+       */
+      public java.util.List<com.zpaslab.lockerbox.LockerboxProtos.Property> getPropList() {
+        if (propBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(prop_);
+        } else {
+          return propBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .lockerbox.Property prop = 3;</code>
+       *
+       * <pre>
+       * nested property allows to build multilayered structure with custom data
+       * that can be stored in general database, still modelling custom part of the system.
+       * </pre>
+       */
+      public int getPropCount() {
+        if (propBuilder_ == null) {
+          return prop_.size();
+        } else {
+          return propBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .lockerbox.Property prop = 3;</code>
+       *
+       * <pre>
+       * nested property allows to build multilayered structure with custom data
+       * that can be stored in general database, still modelling custom part of the system.
+       * </pre>
+       */
+      public com.zpaslab.lockerbox.LockerboxProtos.Property getProp(int index) {
+        if (propBuilder_ == null) {
+          return prop_.get(index);
+        } else {
+          return propBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .lockerbox.Property prop = 3;</code>
+       *
+       * <pre>
+       * nested property allows to build multilayered structure with custom data
+       * that can be stored in general database, still modelling custom part of the system.
+       * </pre>
+       */
+      public Builder setProp(
+          int index, com.zpaslab.lockerbox.LockerboxProtos.Property value) {
+        if (propBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePropIsMutable();
+          prop_.set(index, value);
+          onChanged();
+        } else {
+          propBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lockerbox.Property prop = 3;</code>
+       *
+       * <pre>
+       * nested property allows to build multilayered structure with custom data
+       * that can be stored in general database, still modelling custom part of the system.
+       * </pre>
+       */
+      public Builder setProp(
+          int index, com.zpaslab.lockerbox.LockerboxProtos.Property.Builder builderForValue) {
+        if (propBuilder_ == null) {
+          ensurePropIsMutable();
+          prop_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          propBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lockerbox.Property prop = 3;</code>
+       *
+       * <pre>
+       * nested property allows to build multilayered structure with custom data
+       * that can be stored in general database, still modelling custom part of the system.
+       * </pre>
+       */
+      public Builder addProp(com.zpaslab.lockerbox.LockerboxProtos.Property value) {
+        if (propBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePropIsMutable();
+          prop_.add(value);
+          onChanged();
+        } else {
+          propBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lockerbox.Property prop = 3;</code>
+       *
+       * <pre>
+       * nested property allows to build multilayered structure with custom data
+       * that can be stored in general database, still modelling custom part of the system.
+       * </pre>
+       */
+      public Builder addProp(
+          int index, com.zpaslab.lockerbox.LockerboxProtos.Property value) {
+        if (propBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePropIsMutable();
+          prop_.add(index, value);
+          onChanged();
+        } else {
+          propBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lockerbox.Property prop = 3;</code>
+       *
+       * <pre>
+       * nested property allows to build multilayered structure with custom data
+       * that can be stored in general database, still modelling custom part of the system.
+       * </pre>
+       */
+      public Builder addProp(
+          com.zpaslab.lockerbox.LockerboxProtos.Property.Builder builderForValue) {
+        if (propBuilder_ == null) {
+          ensurePropIsMutable();
+          prop_.add(builderForValue.build());
+          onChanged();
+        } else {
+          propBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lockerbox.Property prop = 3;</code>
+       *
+       * <pre>
+       * nested property allows to build multilayered structure with custom data
+       * that can be stored in general database, still modelling custom part of the system.
+       * </pre>
+       */
+      public Builder addProp(
+          int index, com.zpaslab.lockerbox.LockerboxProtos.Property.Builder builderForValue) {
+        if (propBuilder_ == null) {
+          ensurePropIsMutable();
+          prop_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          propBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lockerbox.Property prop = 3;</code>
+       *
+       * <pre>
+       * nested property allows to build multilayered structure with custom data
+       * that can be stored in general database, still modelling custom part of the system.
+       * </pre>
+       */
+      public Builder addAllProp(
+          java.lang.Iterable<? extends com.zpaslab.lockerbox.LockerboxProtos.Property> values) {
+        if (propBuilder_ == null) {
+          ensurePropIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, prop_);
+          onChanged();
+        } else {
+          propBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lockerbox.Property prop = 3;</code>
+       *
+       * <pre>
+       * nested property allows to build multilayered structure with custom data
+       * that can be stored in general database, still modelling custom part of the system.
+       * </pre>
+       */
+      public Builder clearProp() {
+        if (propBuilder_ == null) {
+          prop_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          propBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lockerbox.Property prop = 3;</code>
+       *
+       * <pre>
+       * nested property allows to build multilayered structure with custom data
+       * that can be stored in general database, still modelling custom part of the system.
+       * </pre>
+       */
+      public Builder removeProp(int index) {
+        if (propBuilder_ == null) {
+          ensurePropIsMutable();
+          prop_.remove(index);
+          onChanged();
+        } else {
+          propBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lockerbox.Property prop = 3;</code>
+       *
+       * <pre>
+       * nested property allows to build multilayered structure with custom data
+       * that can be stored in general database, still modelling custom part of the system.
+       * </pre>
+       */
+      public com.zpaslab.lockerbox.LockerboxProtos.Property.Builder getPropBuilder(
+          int index) {
+        return getPropFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .lockerbox.Property prop = 3;</code>
+       *
+       * <pre>
+       * nested property allows to build multilayered structure with custom data
+       * that can be stored in general database, still modelling custom part of the system.
+       * </pre>
+       */
+      public com.zpaslab.lockerbox.LockerboxProtos.PropertyOrBuilder getPropOrBuilder(
+          int index) {
+        if (propBuilder_ == null) {
+          return prop_.get(index);  } else {
+          return propBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .lockerbox.Property prop = 3;</code>
+       *
+       * <pre>
+       * nested property allows to build multilayered structure with custom data
+       * that can be stored in general database, still modelling custom part of the system.
+       * </pre>
+       */
+      public java.util.List<? extends com.zpaslab.lockerbox.LockerboxProtos.PropertyOrBuilder> 
+           getPropOrBuilderList() {
+        if (propBuilder_ != null) {
+          return propBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(prop_);
+        }
+      }
+      /**
+       * <code>repeated .lockerbox.Property prop = 3;</code>
+       *
+       * <pre>
+       * nested property allows to build multilayered structure with custom data
+       * that can be stored in general database, still modelling custom part of the system.
+       * </pre>
+       */
+      public com.zpaslab.lockerbox.LockerboxProtos.Property.Builder addPropBuilder() {
+        return getPropFieldBuilder().addBuilder(
+            com.zpaslab.lockerbox.LockerboxProtos.Property.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .lockerbox.Property prop = 3;</code>
+       *
+       * <pre>
+       * nested property allows to build multilayered structure with custom data
+       * that can be stored in general database, still modelling custom part of the system.
+       * </pre>
+       */
+      public com.zpaslab.lockerbox.LockerboxProtos.Property.Builder addPropBuilder(
+          int index) {
+        return getPropFieldBuilder().addBuilder(
+            index, com.zpaslab.lockerbox.LockerboxProtos.Property.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .lockerbox.Property prop = 3;</code>
+       *
+       * <pre>
+       * nested property allows to build multilayered structure with custom data
+       * that can be stored in general database, still modelling custom part of the system.
+       * </pre>
+       */
+      public java.util.List<com.zpaslab.lockerbox.LockerboxProtos.Property.Builder> 
+           getPropBuilderList() {
+        return getPropFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          com.zpaslab.lockerbox.LockerboxProtos.Property, com.zpaslab.lockerbox.LockerboxProtos.Property.Builder, com.zpaslab.lockerbox.LockerboxProtos.PropertyOrBuilder> 
+          getPropFieldBuilder() {
+        if (propBuilder_ == null) {
+          propBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              com.zpaslab.lockerbox.LockerboxProtos.Property, com.zpaslab.lockerbox.LockerboxProtos.Property.Builder, com.zpaslab.lockerbox.LockerboxProtos.PropertyOrBuilder>(
+                  prop_,
+                  ((bitField0_ & 0x00000004) == 0x00000004),
+                  getParentForChildren(),
+                  isClean());
+          prop_ = null;
+        }
+        return propBuilder_;
+      }
+
+      // @@protoc_insertion_point(builder_scope:lockerbox.Property)
+    }
+
+    static {
+      defaultInstance = new Property(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:lockerbox.Property)
   }
 
   public interface ErrorOrBuilder extends
@@ -16918,6 +32429,11 @@ public final class LockerboxProtos {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_lockerbox_Address_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_lockerbox_Address_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_lockerbox_Money_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
@@ -16927,6 +32443,61 @@ public final class LockerboxProtos {
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_lockerbox_Charges_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_lockerbox_Parcel_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_lockerbox_Parcel_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_lockerbox_Weight_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_lockerbox_Weight_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_lockerbox_ParcelList_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_lockerbox_ParcelList_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_lockerbox_DeliveryPoint_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_lockerbox_DeliveryPoint_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_lockerbox_DeliveryPoint_Lockerbox_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_lockerbox_DeliveryPoint_Lockerbox_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_lockerbox_DeliveryPoint_Instructions_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_lockerbox_DeliveryPoint_Instructions_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_lockerbox_PostOffice_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_lockerbox_PostOffice_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_lockerbox_Shipment_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_lockerbox_Shipment_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_lockerbox_Shipment_Event_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_lockerbox_Shipment_Event_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_lockerbox_Lockerbox_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_lockerbox_Lockerbox_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_lockerbox_LockerboxList_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_lockerbox_LockerboxList_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_lockerbox_Charge_descriptor;
   private static
@@ -16953,11 +32524,6 @@ public final class LockerboxProtos {
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_lockerbox_Payment_Online_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_lockerbox_Payment_CreditCard_descriptor;
-  private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_lockerbox_Payment_CreditCard_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_lockerbox_Payment_HistoryItem_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
@@ -16967,6 +32533,11 @@ public final class LockerboxProtos {
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_lockerbox_PaymentList_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_lockerbox_Property_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_lockerbox_Property_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_lockerbox_Error_descriptor;
   private static
@@ -16991,65 +32562,126 @@ public final class LockerboxProtos {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\017lockerbox.proto\022\tlockerbox\"6\n\005Money\022\014\n" +
-      "\004atom\030\001 \001(\003\022\r\n\005value\030\002 \001(\t\022\020\n\010currency\030\003" +
-      " \001(\t\"y\n\007Charges\022!\n\006charge\030\001 \003(\0132\021.locker" +
-      "box.Charge\022&\n\014total_amount\030\002 \001(\0132\020.locke" +
-      "rbox.Money\022#\n\007payment\030\003 \001(\0132\022.lockerbox." +
-      "Payment\"\340\004\n\006Charge\022\014\n\004code\030\001 \001(\t\022\014\n\004href" +
-      "\030\002 \001(\t\022\013\n\003tag\030\003 \001(\t\022,\n\010category\030\004 \001(\0162\032." +
-      "lockerbox.Charge.Category\022\014\n\004type\030\005 \001(\t\022" +
-      "\023\n\013description\030\006 \001(\t\0220\n\ntransferee\030\007 \001(\013" +
-      "2\034.lockerbox.Charge.Transferee\022 \n\006amount",
-      "\030\010 \001(\0132\020.lockerbox.Money\022(\n\006status\030\t \001(\016" +
-      "2\030.lockerbox.Charge.Status\022\027\n\017expiration" +
-      "_date\030\n \001(\t\022\022\n\nparcel_ref\030\013 \001(\t\032p\n\nTrans" +
-      "feree\022\017\n\007account\030\001 \001(\t\022\014\n\004wire\030\002 \001(\t\022\017\n\007" +
-      "details\030\003 \001(\t\022\014\n\004name\030\004 \001(\t\022\r\n\005phone\030\005 \001" +
-      "(\t\022\025\n\rphone_carrier\030\006 \001(\t\"r\n\010Category\022\014\n" +
-      "\010SHIPMENT\020\001\022\020\n\014POST_SERVICE\020\002\022\007\n\003COD\020\003\022\007" +
-      "\n\003TAX\020\004\022\013\n\007CUSTOMS\020\005\022\023\n\017ACCOUNT_BALANCE\020" +
-      "\006\022\022\n\016OVERPAY_MOBILE\020\007\"K\n\006Status\022\013\n\007PENDI" +
-      "NG\020\001\022\013\n\007MATCHED\020\002\022\013\n\007APPLIED\020\003\022\013\n\007EXPIRE",
-      "D\020\004\022\r\n\tCANCELLED\020\005\">\n\nChargeList\022!\n\006char" +
-      "ge\030\001 \003(\0132\021.lockerbox.Charge\022\r\n\005total\030\002 \001" +
-      "(\005\"\306\006\n\007Payment\022\014\n\004code\030\001 \001(\t\022\017\n\007account\030" +
-      "\002 \001(\t\022\014\n\004href\030\003 \001(\t\022\023\n\013charges_tag\030\004 \001(\t" +
-      "\022 \n\006amount\030\005 \001(\0132\020.lockerbox.Money\022)\n\006me" +
-      "thod\030\006 \001(\0162\031.lockerbox.Payment.Method\022)\n" +
-      "\006online\030\007 \001(\0132\031.lockerbox.Payment.Online" +
-      "\0222\n\013credit_card\030\014 \001(\0132\035.lockerbox.Paymen" +
-      "t.CreditCard\022)\n\006status\030\010 \001(\0162\031.lockerbox" +
-      ".Payment.Status\022\026\n\016status_details\030\t \001(\t\022",
-      "/\n\007history\030\n \003(\0132\036.lockerbox.Payment.His" +
-      "toryItem\022\024\n\014deposit_date\030\013 \001(\t\022\032\n\022consol" +
-      "idation_date\030\r \001(\t\032C\n\006Online\022\020\n\010operator" +
-      "\030\001 \001(\t\022\023\n\013browser_url\030\002 \001(\t\022\022\n\nreturn_ur" +
-      "l\030\003 \001(\t\032o\n\nCreditCard\022\016\n\006issuer\030\001 \001(\t\022\023\n" +
-      "\013card_number\030\002 \001(\t\022\023\n\013terminal_id\030\003 \001(\t\022" +
-      "\032\n\022authorization_code\030\004 \001(\t\022\013\n\003rrn\030\005 \001(\t" +
-      "\032X\n\013HistoryItem\022\014\n\004date\030\001 \001(\t\022\023\n\013descrip" +
-      "tion\030\002 \001(\t\022\022\n\ndebug_type\030\003 \001(\t\022\022\n\ndebug_" +
-      "data\030\004 \001(\014\"<\n\006Method\022\013\n\007BALANCE\020\001\022\n\n\006ONL",
-      "INE\020\002\022\010\n\004CASH\020\003\022\017\n\013CREDIT_CARD\020\004\"Y\n\006Stat" +
-      "us\022\017\n\013NOT_STARTED\020\001\022\013\n\007PENDING\020\002\022\013\n\007SUCC" +
-      "ESS\020\003\022\013\n\007APPLIED\020\004\022\n\n\006FAILED\020\005\022\013\n\007EXPIRE" +
-      "D\020\006\"A\n\013PaymentList\022#\n\007payment\030\001 \003(\0132\022.lo" +
-      "ckerbox.Payment\022\r\n\005total\030\002 \001(\005\"\313\003\n\005Error" +
-      "\022#\n\004code\030\001 \001(\0162\025.lockerbox.Error.Code\022\020\n" +
-      "\010code_msg\030\002 \001(\t\0224\n\010user_msg\030\003 \003(\0132\".lock" +
-      "erbox.Error.TranslatedMessage\022\017\n\007dev_msg" +
-      "\030\004 \001(\t\022\016\n\006system\030\005 \001(\010\022\022\n\nvalidation\030\006 \001" +
-      "(\010\022\021\n\tretryable\030\007 \001(\010\0326\n\021TranslatedMessa",
-      "ge\022\014\n\004lang\030\001 \001(\t\022\023\n\013description\030\002 \001(\t\"\324\001" +
-      "\n\004Code\022\013\n\007UNKNOWN\020\001\022#\n\036VALIDATION_INVALI" +
-      "D_PARAM_VALUE\020\331\004\022\035\n\030VALIDATION_UNKNOWN_P" +
-      "ARAM\020\332\004\022&\n!VALIDATION_MISSING_REQUIRED_P" +
-      "ARAM\020\333\004\022\037\n\032VALIDATION_INVALID_REQUEST\020\351\004" +
-      "\022\031\n\024AUTH_INVALID_REQUEST\020\321\017\022\027\n\022AUTH_INVA" +
-      "LID_TOKEN\020\322\017\")\n\006Errors\022\037\n\005error\030\001 \003(\0132\020." +
-      "lockerbox.ErrorB(\n\025com.zpaslab.lockerbox" +
-      "B\017LockerboxProtos"
+      "\n\017lockerbox.proto\022\tlockerbox\"\330\002\n\007Address" +
+      "\022\014\n\004href\030\001 \001(\t\022\r\n\005name1\030\002 \001(\t\022\r\n\005name2\030\003" +
+      " \001(\t\022\024\n\014organization\030\004 \001(\010\022\016\n\006street\030\005 \001" +
+      "(\t\022\020\n\010house_no\030\006 \001(\t\022\024\n\014apartment_no\030\007 \001" +
+      "(\t\022\014\n\004city\030\010 \001(\t\022\023\n\013postal_code\030\t \001(\t\022\017\n" +
+      "\007adm_top\030\n \001(\t\022\022\n\nadm_second\030\013 \001(\t\022\021\n\tad" +
+      "m_third\030\014 \001(\t\022\022\n\nadm_fourth\030\r \001(\t\022\017\n\007cou" +
+      "ntry\030\016 \001(\t\022\023\n\013country_iso\030\017 \001(\t\022\r\n\005phone" +
+      "\030\020 \001(\t\022\r\n\005email\030\021 \001(\t\022\017\n\007gps_lat\030\022 \001(\001\022\017" +
+      "\n\007gps_lng\030\023 \001(\001\"6\n\005Money\022\014\n\004atom\030\001 \001(\003\022\r",
+      "\n\005value\030\002 \001(\t\022\020\n\010currency\030\003 \001(\t\"y\n\007Charg" +
+      "es\022!\n\006charge\030\001 \003(\0132\021.lockerbox.Charge\022&\n" +
+      "\014total_amount\030\002 \001(\0132\020.lockerbox.Money\022#\n" +
+      "\007payment\030\003 \001(\0132\022.lockerbox.Payment\"\240\005\n\006P" +
+      "arcel\022\014\n\004href\030\013 \001(\t\022\014\n\004code\030\001 \001(\t\022&\n\005sta" +
+      "te\030\002 \001(\0162\027.lockerbox.Parcel.State\022$\n\004siz" +
+      "e\030\003 \001(\0162\026.lockerbox.Parcel.Size\022!\n\006weigh" +
+      "t\030\004 \001(\0132\021.lockerbox.Weight\022(\n\006sender\030\005 \001" +
+      "(\0132\030.lockerbox.DeliveryPoint\022*\n\010receiver" +
+      "\030\006 \001(\0132\030.lockerbox.DeliveryPoint\022%\n\010ship",
+      "ment\030\007 \001(\0132\023.lockerbox.Shipment\022*\n\016sende" +
+      "r_charges\030\010 \001(\0132\022.lockerbox.Charges\022,\n\020r" +
+      "eceiver_charges\030\t \001(\0132\022.lockerbox.Charge" +
+      "s\022!\n\004prop\030\n \003(\0132\023.lockerbox.Property\"\352\001\n" +
+      "\005State\022\013\n\007CREATED\020\001\022\010\n\004PAID\020\002\022\014\n\010RESERVE" +
+      "D\020\003\022\027\n\023RESERVATION_EXPIRED\020\004\022\017\n\013HANDED_O" +
+      "VER\020\005\022\014\n\010EN_ROUTE\020\006\022\020\n\014PICKUP_READY\020\007\022\r\n" +
+      "\tPICKED_UP\020\010\022\013\n\007OVERDUE\020\t\022\027\n\023OVERDUE_POS" +
+      "T_OFFICE\020\n\022\021\n\rSENDER_RETURN\020\013\022\024\n\020SENDER_" +
+      "PICKED_UP\020\014\022\024\n\020SENDER_ABANDONED\020\r\"\"\n\004Siz",
+      "e\022\005\n\001A\020\001\022\005\n\001B\020\002\022\005\n\001C\020\003\022\005\n\001D\020\004\"\217\001\n\006Weight" +
+      "\022\016\n\006weight\030\001 \001(\003\022$\n\004unit\030\002 \001(\0162\026.lockerb" +
+      "ox.Weight.Unit\022\021\n\tweight_kg\030\003 \001(\001\"<\n\004Uni" +
+      "t\022\014\n\010KILOGRAM\020\001\022\010\n\004GRAM\020\002\022\r\n\tMILLIGRAM\020\003" +
+      "\022\r\n\tMICROGRAM\020\004\">\n\nParcelList\022!\n\006parcel\030" +
+      "\001 \003(\0132\021.lockerbox.Parcel\022\r\n\005total\030\002 \001(\005\"" +
+      "\236\004\n\rDeliveryPoint\022/\n\006method\030\001 \001(\0162\037.lock" +
+      "erbox.DeliveryPoint.Method\022+\n\004role\030\002 \001(\016" +
+      "2\035.lockerbox.DeliveryPoint.Role\0225\n\tlocke" +
+      "rbox\030\004 \001(\0132\".lockerbox.DeliveryPoint.Loc",
+      "kerbox\022*\n\013post_office\030\005 \001(\0132\025.lockerbox." +
+      "PostOffice\022;\n\014instructions\030\006 \001(\0132%.locke" +
+      "rbox.DeliveryPoint.Instructions\022#\n\007addre" +
+      "ss\030\007 \001(\0132\022.lockerbox.Address\022\022\n\nstart_da" +
+      "te\030\010 \001(\t\022\020\n\010due_date\030\t \001(\t\032&\n\tLockerbox\022" +
+      "\014\n\004name\030\001 \001(\t\022\013\n\003pin\030\002 \001(\t\032C\n\014Instructio" +
+      "ns\022\022\n\nhour_start\030\001 \001(\t\022\020\n\010hour_due\030\002 \001(\t" +
+      "\022\r\n\005notes\030\003 \001(\t\" \n\004Role\022\n\n\006SENDER\020\001\022\014\n\010R" +
+      "ECEIVER\020\002\"5\n\006Method\022\r\n\tLOCKERBOX\020\001\022\017\n\013PO" +
+      "ST_OFFICE\020\002\022\013\n\007ADDRESS\020\003\"\212\001\n\nPostOffice\022",
+      "\014\n\004name\030\001 \001(\t\022\023\n\013description\030\002 \001(\t\022\016\n\006st" +
+      "reet\030\003 \001(\t\022\020\n\010house_no\030\004 \001(\t\022\024\n\014apartmen" +
+      "t_no\030\005 \001(\t\022\014\n\004city\030\006 \001(\t\022\023\n\013postal_code\030" +
+      "\007 \001(\t\"\352\003\n\010Shipment\022\025\n\rtracking_code\030\001 \001(" +
+      "\t\022(\n\005event\030\002 \003(\0132\031.lockerbox.Shipment.Ev" +
+      "ent\032\206\001\n\005Event\022+\n\004type\030\001 \001(\0162\035.lockerbox." +
+      "Shipment.EventType\0221\n\007subtype\030\002 \001(\0162 .lo" +
+      "ckerbox.Shipment.EventSubtype\022\014\n\004date\030\003 " +
+      "\001(\t\022\017\n\007details\030\004 \001(\t\"\230\001\n\tEventType\022\r\n\tSE" +
+      "NDER_IN\020\001\022\021\n\rSENDER_REOPEN\020\002\022\016\n\nSENDER_O",
+      "UT\020\003\022\014\n\010EN_ROUTE\020\004\022\017\n\013RECEIVER_IN\020\005\022\020\n\014R" +
+      "ECEIVER_OUT\020\006\022\023\n\017RECEIVER_REOPEN\020\007\022\023\n\017RE" +
+      "CEIVER_REMOVE\020\010\"y\n\014EventSubtype\022\022\n\016LOCKE" +
+      "R_OPENING\020\001\022\017\n\013LOCKER_OPEN\020\002\022\020\n\014LOCKER_C" +
+      "LOSE\020\003\022\022\n\016MAIL_CENTER_IN\020\004\022\023\n\017MAIL_CENTE" +
+      "R_OUT\020\005\022\t\n\005OTHER\020d\"\243\001\n\tLockerbox\022\014\n\004name" +
+      "\030\001 \001(\t\022\014\n\004href\030\002 \001(\t\022)\n\005state\030\003 \001(\0162\032.lo" +
+      "ckerbox.Lockerbox.State\022#\n\007address\030\006 \001(\013" +
+      "2\022.lockerbox.Address\"*\n\005State\022\n\n\006ACTIVE\020" +
+      "\001\022\014\n\010INACTIVE\020\002\022\007\n\003OFF\020\003\"G\n\rLockerboxLis",
+      "t\022\'\n\tlockerbox\030\001 \003(\0132\024.lockerbox.Lockerb" +
+      "ox\022\r\n\005total\030\002 \001(\005\"\230\004\n\006Charge\022\014\n\004code\030\001 \001" +
+      "(\t\022\014\n\004href\030\002 \001(\t\022\013\n\003tag\030\003 \001(\t\022,\n\010categor" +
+      "y\030\004 \001(\0162\032.lockerbox.Charge.Category\022\014\n\004t" +
+      "ype\030\005 \001(\t\022\023\n\013description\030\006 \001(\t\0220\n\ntransf" +
+      "eree\030\007 \001(\0132\034.lockerbox.Charge.Transferee" +
+      "\022 \n\006amount\030\010 \001(\0132\020.lockerbox.Money\022(\n\006st" +
+      "atus\030\t \001(\0162\030.lockerbox.Charge.Status\022\027\n\017" +
+      "expiration_date\030\n \001(\t\022\022\n\nparcel_ref\030\013 \001(" +
+      "\t\032<\n\nTransferee\022\017\n\007account\030\001 \001(\t\022\014\n\004wire",
+      "\030\002 \001(\t\022\017\n\007details\030\003 \001(\t\"^\n\010Category\022\014\n\010S" +
+      "HIPMENT\020\001\022\020\n\014POST_SERVICE\020\002\022\007\n\003COD\020\003\022\007\n\003" +
+      "TAX\020\004\022\013\n\007CUSTOMS\020\005\022\023\n\017ACCOUNT_BALANCE\020\006\"" +
+      "K\n\006Status\022\013\n\007PENDING\020\001\022\013\n\007MATCHED\020\002\022\013\n\007A" +
+      "PPLIED\020\003\022\013\n\007EXPIRED\020\004\022\r\n\tCANCELLED\020\005\">\n\n" +
+      "ChargeList\022!\n\006charge\030\001 \003(\0132\021.lockerbox.C" +
+      "harge\022\r\n\005total\030\002 \001(\005\"\357\004\n\007Payment\022\014\n\004code" +
+      "\030\001 \001(\t\022\017\n\007account\030\002 \001(\t\022\014\n\004href\030\003 \001(\t\022\023\n" +
+      "\013charges_tag\030\004 \001(\t\022 \n\006amount\030\005 \001(\0132\020.loc" +
+      "kerbox.Money\022)\n\006method\030\006 \001(\0162\031.lockerbox",
+      ".Payment.Method\022)\n\006online\030\007 \001(\0132\031.locker" +
+      "box.Payment.Online\022)\n\006status\030\010 \001(\0162\031.loc" +
+      "kerbox.Payment.Status\022\026\n\016status_details\030" +
+      "\t \001(\t\022/\n\007history\030\n \003(\0132\036.lockerbox.Payme" +
+      "nt.HistoryItem\032C\n\006Online\022\020\n\010operator\030\001 \001" +
+      "(\t\022\023\n\013browser_url\030\002 \001(\t\022\022\n\nreturn_url\030\003 " +
+      "\001(\t\032X\n\013HistoryItem\022\014\n\004date\030\001 \001(\t\022\023\n\013desc" +
+      "ription\030\002 \001(\t\022\022\n\ndebug_type\030\003 \001(\t\022\022\n\ndeb" +
+      "ug_data\030\004 \001(\014\"<\n\006Method\022\013\n\007BALANCE\020\001\022\n\n\006" +
+      "ONLINE\020\002\022\010\n\004CASH\020\003\022\017\n\013CREDIT_CARD\020\004\"Y\n\006S",
+      "tatus\022\017\n\013NOT_STARTED\020\001\022\013\n\007PENDING\020\002\022\013\n\007S" +
+      "UCCESS\020\003\022\013\n\007APPLIED\020\004\022\n\n\006FAILED\020\005\022\013\n\007EXP" +
+      "IRED\020\006\"A\n\013PaymentList\022#\n\007payment\030\001 \003(\0132\022" +
+      ".lockerbox.Payment\022\r\n\005total\030\002 \001(\005\"I\n\010Pro" +
+      "perty\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t\022!\n\004pro" +
+      "p\030\003 \003(\0132\023.lockerbox.Property\"\313\003\n\005Error\022#" +
+      "\n\004code\030\001 \001(\0162\025.lockerbox.Error.Code\022\020\n\010c" +
+      "ode_msg\030\002 \001(\t\0224\n\010user_msg\030\003 \003(\0132\".locker" +
+      "box.Error.TranslatedMessage\022\017\n\007dev_msg\030\004" +
+      " \001(\t\022\016\n\006system\030\005 \001(\010\022\022\n\nvalidation\030\006 \001(\010",
+      "\022\021\n\tretryable\030\007 \001(\010\0326\n\021TranslatedMessage" +
+      "\022\014\n\004lang\030\001 \001(\t\022\023\n\013description\030\002 \001(\t\"\324\001\n\004" +
+      "Code\022\013\n\007UNKNOWN\020\001\022#\n\036VALIDATION_INVALID_" +
+      "PARAM_VALUE\020\331\004\022\035\n\030VALIDATION_UNKNOWN_PAR" +
+      "AM\020\332\004\022&\n!VALIDATION_MISSING_REQUIRED_PAR" +
+      "AM\020\333\004\022\037\n\032VALIDATION_INVALID_REQUEST\020\351\004\022\031" +
+      "\n\024AUTH_INVALID_REQUEST\020\321\017\022\027\n\022AUTH_INVALI" +
+      "D_TOKEN\020\322\017\")\n\006Errors\022\037\n\005error\030\001 \003(\0132\020.lo" +
+      "ckerbox.ErrorB(\n\025com.zpaslab.lockerboxB\017" +
+      "LockerboxProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -17063,20 +32695,92 @@ public final class LockerboxProtos {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         }, assigner);
-    internal_static_lockerbox_Money_descriptor =
+    internal_static_lockerbox_Address_descriptor =
       getDescriptor().getMessageTypes().get(0);
+    internal_static_lockerbox_Address_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_lockerbox_Address_descriptor,
+        new java.lang.String[] { "Href", "Name1", "Name2", "Organization", "Street", "HouseNo", "ApartmentNo", "City", "PostalCode", "AdmTop", "AdmSecond", "AdmThird", "AdmFourth", "Country", "CountryIso", "Phone", "Email", "GpsLat", "GpsLng", });
+    internal_static_lockerbox_Money_descriptor =
+      getDescriptor().getMessageTypes().get(1);
     internal_static_lockerbox_Money_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_lockerbox_Money_descriptor,
         new java.lang.String[] { "Atom", "Value", "Currency", });
     internal_static_lockerbox_Charges_descriptor =
-      getDescriptor().getMessageTypes().get(1);
+      getDescriptor().getMessageTypes().get(2);
     internal_static_lockerbox_Charges_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_lockerbox_Charges_descriptor,
         new java.lang.String[] { "Charge", "TotalAmount", "Payment", });
+    internal_static_lockerbox_Parcel_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_lockerbox_Parcel_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_lockerbox_Parcel_descriptor,
+        new java.lang.String[] { "Href", "Code", "State", "Size", "Weight", "Sender", "Receiver", "Shipment", "SenderCharges", "ReceiverCharges", "Prop", });
+    internal_static_lockerbox_Weight_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_lockerbox_Weight_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_lockerbox_Weight_descriptor,
+        new java.lang.String[] { "Weight", "Unit", "WeightKg", });
+    internal_static_lockerbox_ParcelList_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_lockerbox_ParcelList_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_lockerbox_ParcelList_descriptor,
+        new java.lang.String[] { "Parcel", "Total", });
+    internal_static_lockerbox_DeliveryPoint_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_lockerbox_DeliveryPoint_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_lockerbox_DeliveryPoint_descriptor,
+        new java.lang.String[] { "Method", "Role", "Lockerbox", "PostOffice", "Instructions", "Address", "StartDate", "DueDate", });
+    internal_static_lockerbox_DeliveryPoint_Lockerbox_descriptor =
+      internal_static_lockerbox_DeliveryPoint_descriptor.getNestedTypes().get(0);
+    internal_static_lockerbox_DeliveryPoint_Lockerbox_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_lockerbox_DeliveryPoint_Lockerbox_descriptor,
+        new java.lang.String[] { "Name", "Pin", });
+    internal_static_lockerbox_DeliveryPoint_Instructions_descriptor =
+      internal_static_lockerbox_DeliveryPoint_descriptor.getNestedTypes().get(1);
+    internal_static_lockerbox_DeliveryPoint_Instructions_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_lockerbox_DeliveryPoint_Instructions_descriptor,
+        new java.lang.String[] { "HourStart", "HourDue", "Notes", });
+    internal_static_lockerbox_PostOffice_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_lockerbox_PostOffice_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_lockerbox_PostOffice_descriptor,
+        new java.lang.String[] { "Name", "Description", "Street", "HouseNo", "ApartmentNo", "City", "PostalCode", });
+    internal_static_lockerbox_Shipment_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_lockerbox_Shipment_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_lockerbox_Shipment_descriptor,
+        new java.lang.String[] { "TrackingCode", "Event", });
+    internal_static_lockerbox_Shipment_Event_descriptor =
+      internal_static_lockerbox_Shipment_descriptor.getNestedTypes().get(0);
+    internal_static_lockerbox_Shipment_Event_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_lockerbox_Shipment_Event_descriptor,
+        new java.lang.String[] { "Type", "Subtype", "Date", "Details", });
+    internal_static_lockerbox_Lockerbox_descriptor =
+      getDescriptor().getMessageTypes().get(9);
+    internal_static_lockerbox_Lockerbox_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_lockerbox_Lockerbox_descriptor,
+        new java.lang.String[] { "Name", "Href", "State", "Address", });
+    internal_static_lockerbox_LockerboxList_descriptor =
+      getDescriptor().getMessageTypes().get(10);
+    internal_static_lockerbox_LockerboxList_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_lockerbox_LockerboxList_descriptor,
+        new java.lang.String[] { "Lockerbox", "Total", });
     internal_static_lockerbox_Charge_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_lockerbox_Charge_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_lockerbox_Charge_descriptor,
@@ -17086,45 +32790,45 @@ public final class LockerboxProtos {
     internal_static_lockerbox_Charge_Transferee_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_lockerbox_Charge_Transferee_descriptor,
-        new java.lang.String[] { "Account", "Wire", "Details", "Name", "Phone", "PhoneCarrier", });
+        new java.lang.String[] { "Account", "Wire", "Details", });
     internal_static_lockerbox_ChargeList_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_lockerbox_ChargeList_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_lockerbox_ChargeList_descriptor,
         new java.lang.String[] { "Charge", "Total", });
     internal_static_lockerbox_Payment_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_lockerbox_Payment_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_lockerbox_Payment_descriptor,
-        new java.lang.String[] { "Code", "Account", "Href", "ChargesTag", "Amount", "Method", "Online", "CreditCard", "Status", "StatusDetails", "History", "DepositDate", "ConsolidationDate", });
+        new java.lang.String[] { "Code", "Account", "Href", "ChargesTag", "Amount", "Method", "Online", "Status", "StatusDetails", "History", });
     internal_static_lockerbox_Payment_Online_descriptor =
       internal_static_lockerbox_Payment_descriptor.getNestedTypes().get(0);
     internal_static_lockerbox_Payment_Online_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_lockerbox_Payment_Online_descriptor,
         new java.lang.String[] { "Operator", "BrowserUrl", "ReturnUrl", });
-    internal_static_lockerbox_Payment_CreditCard_descriptor =
-      internal_static_lockerbox_Payment_descriptor.getNestedTypes().get(1);
-    internal_static_lockerbox_Payment_CreditCard_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_lockerbox_Payment_CreditCard_descriptor,
-        new java.lang.String[] { "Issuer", "CardNumber", "TerminalId", "AuthorizationCode", "Rrn", });
     internal_static_lockerbox_Payment_HistoryItem_descriptor =
-      internal_static_lockerbox_Payment_descriptor.getNestedTypes().get(2);
+      internal_static_lockerbox_Payment_descriptor.getNestedTypes().get(1);
     internal_static_lockerbox_Payment_HistoryItem_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_lockerbox_Payment_HistoryItem_descriptor,
         new java.lang.String[] { "Date", "Description", "DebugType", "DebugData", });
     internal_static_lockerbox_PaymentList_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_lockerbox_PaymentList_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_lockerbox_PaymentList_descriptor,
         new java.lang.String[] { "Payment", "Total", });
+    internal_static_lockerbox_Property_descriptor =
+      getDescriptor().getMessageTypes().get(15);
+    internal_static_lockerbox_Property_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_lockerbox_Property_descriptor,
+        new java.lang.String[] { "Key", "Value", "Prop", });
     internal_static_lockerbox_Error_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_lockerbox_Error_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_lockerbox_Error_descriptor,
@@ -17136,7 +32840,7 @@ public final class LockerboxProtos {
         internal_static_lockerbox_Error_TranslatedMessage_descriptor,
         new java.lang.String[] { "Lang", "Description", });
     internal_static_lockerbox_Errors_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(17);
     internal_static_lockerbox_Errors_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_lockerbox_Errors_descriptor,

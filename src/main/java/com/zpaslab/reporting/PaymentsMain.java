@@ -30,6 +30,7 @@ public class PaymentsMain {
 
     static final Pattern getPayments = Pattern.compile("/payment.*");
     static final Pattern getPaymentWithCharges = Pattern.compile("/payment/[a-zA-Z0-9]+/charge");
+    static final Pattern getParcel = Pattern.compile("/parcel/.*");
 
     public static void main(String[] args) {
         try {
@@ -165,6 +166,22 @@ public class PaymentsMain {
 
             return;
         }
+        if (getParcel.matcher(args[0]).find()) {
+            System.out.printf("\n---------------------------\nget parcel [%s]\n\n", args[0]);
+
+            String url = apiServer.concat(args[0]);
+            HttpResponse response = executeGet(new NetHttpTransport(), new JacksonFactory(), accessToken,
+                    new GenericUrl(url));
+            InputStream responseContent = response.getContent();
+
+            LockerboxProtos.Parcel.Builder parcel = LockerboxProtos.Parcel.newBuilder();
+            JsonFormat jsonFormat = new JsonFormat();
+            jsonFormat.merge(responseContent, parcel);
+
+            System.out.println(TextFormat.printToUnicodeString(parcel));
+            return;
+        }
+
         System.out.printf("\nInvalid API operation: %s\n", args[0]);
         System.exit(1);
     }
