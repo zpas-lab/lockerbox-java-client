@@ -1,6 +1,8 @@
 localdev.properties
 belpost.cert.properties
 
+build/
+
 .gradle/
 .idea/
 
