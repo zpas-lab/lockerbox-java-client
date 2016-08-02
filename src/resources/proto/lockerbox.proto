@@ -318,6 +318,23 @@ message Charge {
         // Charge used to increase internal account balance.
         // Requires the Transferee to be set to account.
         ACCOUNT_BALANCE = 6;
+        // Represents money which was taken from user, although we didn't want to.
+        // The money is marked to be transferred to user's mobile phone account.
+        // Known cases include:
+        //  - user paid too much with cash but we couldn't return change
+        //  - user paid too little with cash but we couldn't return it
+        //  - user double-paid for a parcel (it was paid in overmind, but agent had no connection, then again
+        //    paid in agent while still disconnected)
+        // The Transferee.Account should be set.
+        OVERPAY_MOBILE = 7;
+        // Temporary Charge, to be replaced with another Charge object in the future. Temporary Charges are
+        // created when WebPay transaction is initialized and are tagged with random charges_rag (the tag does not match
+        // the one related to the specific parcel). The reason for making a Charge temporary is the constraint,
+        // which prevents from saving more than one payment with the same charges_tag for single account
+        // (payment_charges_tag_per_account_unique). After finalizing WebPay transaction the temporary objects
+        // are going to be removed and replaced with the proper Charge (related to the specific parcel) with
+        // proper charges_tag.
+        PENDING_PARCEL_PAYMENT = 8;
     }
 
     message Transferee {
@@ -327,6 +344,10 @@ message Charge {
         optional string wire = 2;
         // additional details for the transfer
         optional string details = 3;
+        // phone information - to be used in OVERPAY_MOBILE
+        optional string name = 4;
+        optional string phone = 5;
+        optional string phone_carrier = 6;
     }
 
     enum Status {
@@ -430,6 +451,24 @@ message Payment {
         optional string return_url = 3;
     }
 
+    // Details for CREDIT_CARD payment method.
+    message CreditCard {
+        // e.g. MasterCard, Visa (optionally issuer's code, e.g. 51 or 4)
+        optional string issuer = 1;
+        // Usually PAN (Primary Account Number), see e.g.:
+        // https://en.wikipedia.org/wiki/Primary_Account_Number
+        optional string card_number = 2;
+        optional string terminal_id = 3;
+        optional string authorization_code = 4;
+        // [Wikipedia: Retrieval Reference Number, a key to uniquely identify a
+        // card transaction based on the ISO 8583 standard]
+        optional string rrn = 5;
+        // TODO(mateuszc): add 'ordinary_number'? or is it common counter with
+        // CASH payments? when should it be issued, on receipt printing or on
+        // money accepted? should failed transactions also be included in
+        // counting?
+    }
+
     message HistoryItem {
         optional string date = 1;
         // Human description of the item
@@ -456,6 +495,7 @@ message Payment {
 
     optional Method method = 6;
     optional Online online = 7;
+   optional CreditCard credit_card = 12;
 
     // Status of the payment
     optional Status status = 8;
@@ -463,6 +503,13 @@ message Payment {
     optional string status_details = 9;
 
     repeated HistoryItem history = 10;
+
+    // Point in time when the payment was done by user (money was deposited).
+    optional string deposit_date = 11;
+    // Point in time when the payment was acknowledged by overmind
+    //
+    // conslidation_date will be set only for finalized payments (status = SUCCESS, APPLIED, FAILED, EXPIRED)
+    optional string consolidation_date = 13;
 }
 
 message PaymentList {

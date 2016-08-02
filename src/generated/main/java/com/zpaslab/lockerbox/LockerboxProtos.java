@@ -19271,6 +19271,35 @@ public final class LockerboxProtos {
        * </pre>
        */
       ACCOUNT_BALANCE(5, 6),
+      /**
+       * <code>OVERPAY_MOBILE = 7;</code>
+       *
+       * <pre>
+       * Represents money which was taken from user, although we didn't want to.
+       * The money is marked to be transferred to user's mobile phone account.
+       * Known cases include:
+       *  - user paid too much with cash but we couldn't return change
+       *  - user paid too little with cash but we couldn't return it
+       *  - user double-paid for a parcel (it was paid in overmind, but agent had no connection, then again
+       *    paid in agent while still disconnected)
+       * The Transferee.Account should be set.
+       * </pre>
+       */
+      OVERPAY_MOBILE(6, 7),
+      /**
+       * <code>PENDING_PARCEL_PAYMENT = 8;</code>
+       *
+       * <pre>
+       * Temporary Charge, to be replaced with another Charge object in the future. Temporary Charges are
+       * created when WebPay transaction is initialized and are tagged with random charges_rag (the tag does not match
+       * the one related to the specific parcel). The reason for making a Charge temporary is the constraint,
+       * which prevents from saving more than one payment with the same charges_tag for single account
+       * (payment_charges_tag_per_account_unique). After finalizing WebPay transaction the temporary objects
+       * are going to be removed and replaced with the proper Charge (related to the specific parcel) with
+       * proper charges_tag.
+       * </pre>
+       */
+      PENDING_PARCEL_PAYMENT(7, 8),
       ;
 
       /**
@@ -19323,6 +19352,35 @@ public final class LockerboxProtos {
        * </pre>
        */
       public static final int ACCOUNT_BALANCE_VALUE = 6;
+      /**
+       * <code>OVERPAY_MOBILE = 7;</code>
+       *
+       * <pre>
+       * Represents money which was taken from user, although we didn't want to.
+       * The money is marked to be transferred to user's mobile phone account.
+       * Known cases include:
+       *  - user paid too much with cash but we couldn't return change
+       *  - user paid too little with cash but we couldn't return it
+       *  - user double-paid for a parcel (it was paid in overmind, but agent had no connection, then again
+       *    paid in agent while still disconnected)
+       * The Transferee.Account should be set.
+       * </pre>
+       */
+      public static final int OVERPAY_MOBILE_VALUE = 7;
+      /**
+       * <code>PENDING_PARCEL_PAYMENT = 8;</code>
+       *
+       * <pre>
+       * Temporary Charge, to be replaced with another Charge object in the future. Temporary Charges are
+       * created when WebPay transaction is initialized and are tagged with random charges_rag (the tag does not match
+       * the one related to the specific parcel). The reason for making a Charge temporary is the constraint,
+       * which prevents from saving more than one payment with the same charges_tag for single account
+       * (payment_charges_tag_per_account_unique). After finalizing WebPay transaction the temporary objects
+       * are going to be removed and replaced with the proper Charge (related to the specific parcel) with
+       * proper charges_tag.
+       * </pre>
+       */
+      public static final int PENDING_PARCEL_PAYMENT_VALUE = 8;
 
 
       public final int getNumber() { return value; }
@@ -19335,6 +19393,8 @@ public final class LockerboxProtos {
           case 4: return TAX;
           case 5: return CUSTOMS;
           case 6: return ACCOUNT_BALANCE;
+          case 7: return OVERPAY_MOBILE;
+          case 8: return PENDING_PARCEL_PAYMENT;
           default: return null;
         }
       }
@@ -19620,6 +19680,60 @@ public final class LockerboxProtos {
        */
       com.google.protobuf.ByteString
           getDetailsBytes();
+
+      /**
+       * <code>optional string name = 4;</code>
+       *
+       * <pre>
+       * phone information - to be used in OVERPAY_MOBILE
+       * </pre>
+       */
+      boolean hasName();
+      /**
+       * <code>optional string name = 4;</code>
+       *
+       * <pre>
+       * phone information - to be used in OVERPAY_MOBILE
+       * </pre>
+       */
+      java.lang.String getName();
+      /**
+       * <code>optional string name = 4;</code>
+       *
+       * <pre>
+       * phone information - to be used in OVERPAY_MOBILE
+       * </pre>
+       */
+      com.google.protobuf.ByteString
+          getNameBytes();
+
+      /**
+       * <code>optional string phone = 5;</code>
+       */
+      boolean hasPhone();
+      /**
+       * <code>optional string phone = 5;</code>
+       */
+      java.lang.String getPhone();
+      /**
+       * <code>optional string phone = 5;</code>
+       */
+      com.google.protobuf.ByteString
+          getPhoneBytes();
+
+      /**
+       * <code>optional string phone_carrier = 6;</code>
+       */
+      boolean hasPhoneCarrier();
+      /**
+       * <code>optional string phone_carrier = 6;</code>
+       */
+      java.lang.String getPhoneCarrier();
+      /**
+       * <code>optional string phone_carrier = 6;</code>
+       */
+      com.google.protobuf.ByteString
+          getPhoneCarrierBytes();
     }
     /**
      * Protobuf type {@code lockerbox.Charge.Transferee}
@@ -19689,6 +19803,24 @@ public final class LockerboxProtos {
                 com.google.protobuf.ByteString bs = input.readBytes();
                 bitField0_ |= 0x00000004;
                 details_ = bs;
+                break;
+              }
+              case 34: {
+                com.google.protobuf.ByteString bs = input.readBytes();
+                bitField0_ |= 0x00000008;
+                name_ = bs;
+                break;
+              }
+              case 42: {
+                com.google.protobuf.ByteString bs = input.readBytes();
+                bitField0_ |= 0x00000010;
+                phone_ = bs;
+                break;
+              }
+              case 50: {
+                com.google.protobuf.ByteString bs = input.readBytes();
+                bitField0_ |= 0x00000020;
+                phoneCarrier_ = bs;
                 break;
               }
             }
@@ -19893,10 +20025,151 @@ public final class LockerboxProtos {
         }
       }
 
+      public static final int NAME_FIELD_NUMBER = 4;
+      private java.lang.Object name_;
+      /**
+       * <code>optional string name = 4;</code>
+       *
+       * <pre>
+       * phone information - to be used in OVERPAY_MOBILE
+       * </pre>
+       */
+      public boolean hasName() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>optional string name = 4;</code>
+       *
+       * <pre>
+       * phone information - to be used in OVERPAY_MOBILE
+       * </pre>
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            name_ = s;
+          }
+          return s;
+        }
+      }
+      /**
+       * <code>optional string name = 4;</code>
+       *
+       * <pre>
+       * phone information - to be used in OVERPAY_MOBILE
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int PHONE_FIELD_NUMBER = 5;
+      private java.lang.Object phone_;
+      /**
+       * <code>optional string phone = 5;</code>
+       */
+      public boolean hasPhone() {
+        return ((bitField0_ & 0x00000010) == 0x00000010);
+      }
+      /**
+       * <code>optional string phone = 5;</code>
+       */
+      public java.lang.String getPhone() {
+        java.lang.Object ref = phone_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            phone_ = s;
+          }
+          return s;
+        }
+      }
+      /**
+       * <code>optional string phone = 5;</code>
+       */
+      public com.google.protobuf.ByteString
+          getPhoneBytes() {
+        java.lang.Object ref = phone_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          phone_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int PHONE_CARRIER_FIELD_NUMBER = 6;
+      private java.lang.Object phoneCarrier_;
+      /**
+       * <code>optional string phone_carrier = 6;</code>
+       */
+      public boolean hasPhoneCarrier() {
+        return ((bitField0_ & 0x00000020) == 0x00000020);
+      }
+      /**
+       * <code>optional string phone_carrier = 6;</code>
+       */
+      public java.lang.String getPhoneCarrier() {
+        java.lang.Object ref = phoneCarrier_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            phoneCarrier_ = s;
+          }
+          return s;
+        }
+      }
+      /**
+       * <code>optional string phone_carrier = 6;</code>
+       */
+      public com.google.protobuf.ByteString
+          getPhoneCarrierBytes() {
+        java.lang.Object ref = phoneCarrier_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          phoneCarrier_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
       private void initFields() {
         account_ = "";
         wire_ = "";
         details_ = "";
+        name_ = "";
+        phone_ = "";
+        phoneCarrier_ = "";
       }
       private byte memoizedIsInitialized = -1;
       public final boolean isInitialized() {
@@ -19920,6 +20193,15 @@ public final class LockerboxProtos {
         if (((bitField0_ & 0x00000004) == 0x00000004)) {
           output.writeBytes(3, getDetailsBytes());
         }
+        if (((bitField0_ & 0x00000008) == 0x00000008)) {
+          output.writeBytes(4, getNameBytes());
+        }
+        if (((bitField0_ & 0x00000010) == 0x00000010)) {
+          output.writeBytes(5, getPhoneBytes());
+        }
+        if (((bitField0_ & 0x00000020) == 0x00000020)) {
+          output.writeBytes(6, getPhoneCarrierBytes());
+        }
         getUnknownFields().writeTo(output);
       }
 
@@ -19940,6 +20222,18 @@ public final class LockerboxProtos {
         if (((bitField0_ & 0x00000004) == 0x00000004)) {
           size += com.google.protobuf.CodedOutputStream
             .computeBytesSize(3, getDetailsBytes());
+        }
+        if (((bitField0_ & 0x00000008) == 0x00000008)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBytesSize(4, getNameBytes());
+        }
+        if (((bitField0_ & 0x00000010) == 0x00000010)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBytesSize(5, getPhoneBytes());
+        }
+        if (((bitField0_ & 0x00000020) == 0x00000020)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBytesSize(6, getPhoneCarrierBytes());
         }
         size += getUnknownFields().getSerializedSize();
         memoizedSerializedSize = size;
@@ -20064,6 +20358,12 @@ public final class LockerboxProtos {
           bitField0_ = (bitField0_ & ~0x00000002);
           details_ = "";
           bitField0_ = (bitField0_ & ~0x00000004);
+          name_ = "";
+          bitField0_ = (bitField0_ & ~0x00000008);
+          phone_ = "";
+          bitField0_ = (bitField0_ & ~0x00000010);
+          phoneCarrier_ = "";
+          bitField0_ = (bitField0_ & ~0x00000020);
           return this;
         }
 
@@ -20104,6 +20404,18 @@ public final class LockerboxProtos {
             to_bitField0_ |= 0x00000004;
           }
           result.details_ = details_;
+          if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+            to_bitField0_ |= 0x00000008;
+          }
+          result.name_ = name_;
+          if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
+            to_bitField0_ |= 0x00000010;
+          }
+          result.phone_ = phone_;
+          if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
+            to_bitField0_ |= 0x00000020;
+          }
+          result.phoneCarrier_ = phoneCarrier_;
           result.bitField0_ = to_bitField0_;
           onBuilt();
           return result;
@@ -20133,6 +20445,21 @@ public final class LockerboxProtos {
           if (other.hasDetails()) {
             bitField0_ |= 0x00000004;
             details_ = other.details_;
+            onChanged();
+          }
+          if (other.hasName()) {
+            bitField0_ |= 0x00000008;
+            name_ = other.name_;
+            onChanged();
+          }
+          if (other.hasPhone()) {
+            bitField0_ |= 0x00000010;
+            phone_ = other.phone_;
+            onChanged();
+          }
+          if (other.hasPhoneCarrier()) {
+            bitField0_ |= 0x00000020;
+            phoneCarrier_ = other.phoneCarrier_;
             onChanged();
           }
           this.mergeUnknownFields(other.getUnknownFields());
@@ -20458,6 +20785,258 @@ public final class LockerboxProtos {
   }
   bitField0_ |= 0x00000004;
           details_ = value;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object name_ = "";
+        /**
+         * <code>optional string name = 4;</code>
+         *
+         * <pre>
+         * phone information - to be used in OVERPAY_MOBILE
+         * </pre>
+         */
+        public boolean hasName() {
+          return ((bitField0_ & 0x00000008) == 0x00000008);
+        }
+        /**
+         * <code>optional string name = 4;</code>
+         *
+         * <pre>
+         * phone information - to be used in OVERPAY_MOBILE
+         * </pre>
+         */
+        public java.lang.String getName() {
+          java.lang.Object ref = name_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            if (bs.isValidUtf8()) {
+              name_ = s;
+            }
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>optional string name = 4;</code>
+         *
+         * <pre>
+         * phone information - to be used in OVERPAY_MOBILE
+         * </pre>
+         */
+        public com.google.protobuf.ByteString
+            getNameBytes() {
+          java.lang.Object ref = name_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            name_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>optional string name = 4;</code>
+         *
+         * <pre>
+         * phone information - to be used in OVERPAY_MOBILE
+         * </pre>
+         */
+        public Builder setName(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
+          name_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional string name = 4;</code>
+         *
+         * <pre>
+         * phone information - to be used in OVERPAY_MOBILE
+         * </pre>
+         */
+        public Builder clearName() {
+          bitField0_ = (bitField0_ & ~0x00000008);
+          name_ = getDefaultInstance().getName();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional string name = 4;</code>
+         *
+         * <pre>
+         * phone information - to be used in OVERPAY_MOBILE
+         * </pre>
+         */
+        public Builder setNameBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
+          name_ = value;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object phone_ = "";
+        /**
+         * <code>optional string phone = 5;</code>
+         */
+        public boolean hasPhone() {
+          return ((bitField0_ & 0x00000010) == 0x00000010);
+        }
+        /**
+         * <code>optional string phone = 5;</code>
+         */
+        public java.lang.String getPhone() {
+          java.lang.Object ref = phone_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            if (bs.isValidUtf8()) {
+              phone_ = s;
+            }
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>optional string phone = 5;</code>
+         */
+        public com.google.protobuf.ByteString
+            getPhoneBytes() {
+          java.lang.Object ref = phone_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            phone_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>optional string phone = 5;</code>
+         */
+        public Builder setPhone(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000010;
+          phone_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional string phone = 5;</code>
+         */
+        public Builder clearPhone() {
+          bitField0_ = (bitField0_ & ~0x00000010);
+          phone_ = getDefaultInstance().getPhone();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional string phone = 5;</code>
+         */
+        public Builder setPhoneBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000010;
+          phone_ = value;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object phoneCarrier_ = "";
+        /**
+         * <code>optional string phone_carrier = 6;</code>
+         */
+        public boolean hasPhoneCarrier() {
+          return ((bitField0_ & 0x00000020) == 0x00000020);
+        }
+        /**
+         * <code>optional string phone_carrier = 6;</code>
+         */
+        public java.lang.String getPhoneCarrier() {
+          java.lang.Object ref = phoneCarrier_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            if (bs.isValidUtf8()) {
+              phoneCarrier_ = s;
+            }
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>optional string phone_carrier = 6;</code>
+         */
+        public com.google.protobuf.ByteString
+            getPhoneCarrierBytes() {
+          java.lang.Object ref = phoneCarrier_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            phoneCarrier_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>optional string phone_carrier = 6;</code>
+         */
+        public Builder setPhoneCarrier(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000020;
+          phoneCarrier_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional string phone_carrier = 6;</code>
+         */
+        public Builder clearPhoneCarrier() {
+          bitField0_ = (bitField0_ & ~0x00000020);
+          phoneCarrier_ = getDefaultInstance().getPhoneCarrier();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional string phone_carrier = 6;</code>
+         */
+        public Builder setPhoneCarrierBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000020;
+          phoneCarrier_ = value;
           onChanged();
           return this;
         }
@@ -23369,6 +23948,19 @@ public final class LockerboxProtos {
     com.zpaslab.lockerbox.LockerboxProtos.Payment.OnlineOrBuilder getOnlineOrBuilder();
 
     /**
+     * <code>optional .lockerbox.Payment.CreditCard credit_card = 12;</code>
+     */
+    boolean hasCreditCard();
+    /**
+     * <code>optional .lockerbox.Payment.CreditCard credit_card = 12;</code>
+     */
+    com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCard getCreditCard();
+    /**
+     * <code>optional .lockerbox.Payment.CreditCard credit_card = 12;</code>
+     */
+    com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCardOrBuilder getCreditCardOrBuilder();
+
+    /**
      * <code>optional .lockerbox.Payment.Status status = 8;</code>
      *
      * <pre>
@@ -23434,6 +24026,61 @@ public final class LockerboxProtos {
      */
     com.zpaslab.lockerbox.LockerboxProtos.Payment.HistoryItemOrBuilder getHistoryOrBuilder(
         int index);
+
+    /**
+     * <code>optional string deposit_date = 11;</code>
+     *
+     * <pre>
+     * Point in time when the payment was done by user (money was deposited).
+     * </pre>
+     */
+    boolean hasDepositDate();
+    /**
+     * <code>optional string deposit_date = 11;</code>
+     *
+     * <pre>
+     * Point in time when the payment was done by user (money was deposited).
+     * </pre>
+     */
+    java.lang.String getDepositDate();
+    /**
+     * <code>optional string deposit_date = 11;</code>
+     *
+     * <pre>
+     * Point in time when the payment was done by user (money was deposited).
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getDepositDateBytes();
+
+    /**
+     * <code>optional string consolidation_date = 13;</code>
+     *
+     * <pre>
+     * Point in time when the payment was acknowledged by overmind
+     * conslidation_date will be set only for finalized payments (status = SUCCESS, APPLIED, FAILED, EXPIRED)
+     * </pre>
+     */
+    boolean hasConsolidationDate();
+    /**
+     * <code>optional string consolidation_date = 13;</code>
+     *
+     * <pre>
+     * Point in time when the payment was acknowledged by overmind
+     * conslidation_date will be set only for finalized payments (status = SUCCESS, APPLIED, FAILED, EXPIRED)
+     * </pre>
+     */
+    java.lang.String getConsolidationDate();
+    /**
+     * <code>optional string consolidation_date = 13;</code>
+     *
+     * <pre>
+     * Point in time when the payment was acknowledged by overmind
+     * conslidation_date will be set only for finalized payments (status = SUCCESS, APPLIED, FAILED, EXPIRED)
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getConsolidationDateBytes();
   }
   /**
    * Protobuf type {@code lockerbox.Payment}
@@ -23567,23 +24214,48 @@ public final class LockerboxProtos {
               if (value == null) {
                 unknownFields.mergeVarintField(8, rawValue);
               } else {
-                bitField0_ |= 0x00000080;
+                bitField0_ |= 0x00000100;
                 status_ = value;
               }
               break;
             }
             case 74: {
               com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000100;
+              bitField0_ |= 0x00000200;
               statusDetails_ = bs;
               break;
             }
             case 82: {
-              if (!((mutable_bitField0_ & 0x00000200) == 0x00000200)) {
+              if (!((mutable_bitField0_ & 0x00000400) == 0x00000400)) {
                 history_ = new java.util.ArrayList<com.zpaslab.lockerbox.LockerboxProtos.Payment.HistoryItem>();
-                mutable_bitField0_ |= 0x00000200;
+                mutable_bitField0_ |= 0x00000400;
               }
               history_.add(input.readMessage(com.zpaslab.lockerbox.LockerboxProtos.Payment.HistoryItem.PARSER, extensionRegistry));
+              break;
+            }
+            case 90: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000400;
+              depositDate_ = bs;
+              break;
+            }
+            case 98: {
+              com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCard.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000080) == 0x00000080)) {
+                subBuilder = creditCard_.toBuilder();
+              }
+              creditCard_ = input.readMessage(com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCard.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(creditCard_);
+                creditCard_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000080;
+              break;
+            }
+            case 106: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000800;
+              consolidationDate_ = bs;
               break;
             }
           }
@@ -23594,7 +24266,7 @@ public final class LockerboxProtos {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000200) == 0x00000200)) {
+        if (((mutable_bitField0_ & 0x00000400) == 0x00000400)) {
           history_ = java.util.Collections.unmodifiableList(history_);
         }
         this.unknownFields = unknownFields.build();
@@ -24808,6 +25480,1286 @@ public final class LockerboxProtos {
       // @@protoc_insertion_point(class_scope:lockerbox.Payment.Online)
     }
 
+    public interface CreditCardOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:lockerbox.Payment.CreditCard)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>optional string issuer = 1;</code>
+       *
+       * <pre>
+       * e.g. MasterCard, Visa (optionally issuer's code, e.g. 51 or 4)
+       * </pre>
+       */
+      boolean hasIssuer();
+      /**
+       * <code>optional string issuer = 1;</code>
+       *
+       * <pre>
+       * e.g. MasterCard, Visa (optionally issuer's code, e.g. 51 or 4)
+       * </pre>
+       */
+      java.lang.String getIssuer();
+      /**
+       * <code>optional string issuer = 1;</code>
+       *
+       * <pre>
+       * e.g. MasterCard, Visa (optionally issuer's code, e.g. 51 or 4)
+       * </pre>
+       */
+      com.google.protobuf.ByteString
+          getIssuerBytes();
+
+      /**
+       * <code>optional string card_number = 2;</code>
+       *
+       * <pre>
+       * Usually PAN (Primary Account Number), see e.g.:
+       * https://en.wikipedia.org/wiki/Primary_Account_Number
+       * </pre>
+       */
+      boolean hasCardNumber();
+      /**
+       * <code>optional string card_number = 2;</code>
+       *
+       * <pre>
+       * Usually PAN (Primary Account Number), see e.g.:
+       * https://en.wikipedia.org/wiki/Primary_Account_Number
+       * </pre>
+       */
+      java.lang.String getCardNumber();
+      /**
+       * <code>optional string card_number = 2;</code>
+       *
+       * <pre>
+       * Usually PAN (Primary Account Number), see e.g.:
+       * https://en.wikipedia.org/wiki/Primary_Account_Number
+       * </pre>
+       */
+      com.google.protobuf.ByteString
+          getCardNumberBytes();
+
+      /**
+       * <code>optional string terminal_id = 3;</code>
+       */
+      boolean hasTerminalId();
+      /**
+       * <code>optional string terminal_id = 3;</code>
+       */
+      java.lang.String getTerminalId();
+      /**
+       * <code>optional string terminal_id = 3;</code>
+       */
+      com.google.protobuf.ByteString
+          getTerminalIdBytes();
+
+      /**
+       * <code>optional string authorization_code = 4;</code>
+       */
+      boolean hasAuthorizationCode();
+      /**
+       * <code>optional string authorization_code = 4;</code>
+       */
+      java.lang.String getAuthorizationCode();
+      /**
+       * <code>optional string authorization_code = 4;</code>
+       */
+      com.google.protobuf.ByteString
+          getAuthorizationCodeBytes();
+
+      /**
+       * <code>optional string rrn = 5;</code>
+       *
+       * <pre>
+       * [Wikipedia: Retrieval Reference Number, a key to uniquely identify a
+       * card transaction based on the ISO 8583 standard]
+       * </pre>
+       */
+      boolean hasRrn();
+      /**
+       * <code>optional string rrn = 5;</code>
+       *
+       * <pre>
+       * [Wikipedia: Retrieval Reference Number, a key to uniquely identify a
+       * card transaction based on the ISO 8583 standard]
+       * </pre>
+       */
+      java.lang.String getRrn();
+      /**
+       * <code>optional string rrn = 5;</code>
+       *
+       * <pre>
+       * [Wikipedia: Retrieval Reference Number, a key to uniquely identify a
+       * card transaction based on the ISO 8583 standard]
+       * </pre>
+       */
+      com.google.protobuf.ByteString
+          getRrnBytes();
+    }
+    /**
+     * Protobuf type {@code lockerbox.Payment.CreditCard}
+     *
+     * <pre>
+     * Details for CREDIT_CARD payment method.
+     * </pre>
+     */
+    public static final class CreditCard extends
+        com.google.protobuf.GeneratedMessage implements
+        // @@protoc_insertion_point(message_implements:lockerbox.Payment.CreditCard)
+        CreditCardOrBuilder {
+      // Use CreditCard.newBuilder() to construct.
+      private CreditCard(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+        super(builder);
+        this.unknownFields = builder.getUnknownFields();
+      }
+      private CreditCard(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+      private static final CreditCard defaultInstance;
+      public static CreditCard getDefaultInstance() {
+        return defaultInstance;
+      }
+
+      public CreditCard getDefaultInstanceForType() {
+        return defaultInstance;
+      }
+
+      private final com.google.protobuf.UnknownFieldSet unknownFields;
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+          getUnknownFields() {
+        return this.unknownFields;
+      }
+      private CreditCard(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        initFields();
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!parseUnknownField(input, unknownFields,
+                                       extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+              case 10: {
+                com.google.protobuf.ByteString bs = input.readBytes();
+                bitField0_ |= 0x00000001;
+                issuer_ = bs;
+                break;
+              }
+              case 18: {
+                com.google.protobuf.ByteString bs = input.readBytes();
+                bitField0_ |= 0x00000002;
+                cardNumber_ = bs;
+                break;
+              }
+              case 26: {
+                com.google.protobuf.ByteString bs = input.readBytes();
+                bitField0_ |= 0x00000004;
+                terminalId_ = bs;
+                break;
+              }
+              case 34: {
+                com.google.protobuf.ByteString bs = input.readBytes();
+                bitField0_ |= 0x00000008;
+                authorizationCode_ = bs;
+                break;
+              }
+              case 42: {
+                com.google.protobuf.ByteString bs = input.readBytes();
+                bitField0_ |= 0x00000010;
+                rrn_ = bs;
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e.getMessage()).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.zpaslab.lockerbox.LockerboxProtos.internal_static_lockerbox_Payment_CreditCard_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.zpaslab.lockerbox.LockerboxProtos.internal_static_lockerbox_Payment_CreditCard_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCard.class, com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCard.Builder.class);
+      }
+
+      public static com.google.protobuf.Parser<CreditCard> PARSER =
+          new com.google.protobuf.AbstractParser<CreditCard>() {
+        public CreditCard parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new CreditCard(input, extensionRegistry);
+        }
+      };
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<CreditCard> getParserForType() {
+        return PARSER;
+      }
+
+      private int bitField0_;
+      public static final int ISSUER_FIELD_NUMBER = 1;
+      private java.lang.Object issuer_;
+      /**
+       * <code>optional string issuer = 1;</code>
+       *
+       * <pre>
+       * e.g. MasterCard, Visa (optionally issuer's code, e.g. 51 or 4)
+       * </pre>
+       */
+      public boolean hasIssuer() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional string issuer = 1;</code>
+       *
+       * <pre>
+       * e.g. MasterCard, Visa (optionally issuer's code, e.g. 51 or 4)
+       * </pre>
+       */
+      public java.lang.String getIssuer() {
+        java.lang.Object ref = issuer_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            issuer_ = s;
+          }
+          return s;
+        }
+      }
+      /**
+       * <code>optional string issuer = 1;</code>
+       *
+       * <pre>
+       * e.g. MasterCard, Visa (optionally issuer's code, e.g. 51 or 4)
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getIssuerBytes() {
+        java.lang.Object ref = issuer_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          issuer_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int CARD_NUMBER_FIELD_NUMBER = 2;
+      private java.lang.Object cardNumber_;
+      /**
+       * <code>optional string card_number = 2;</code>
+       *
+       * <pre>
+       * Usually PAN (Primary Account Number), see e.g.:
+       * https://en.wikipedia.org/wiki/Primary_Account_Number
+       * </pre>
+       */
+      public boolean hasCardNumber() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional string card_number = 2;</code>
+       *
+       * <pre>
+       * Usually PAN (Primary Account Number), see e.g.:
+       * https://en.wikipedia.org/wiki/Primary_Account_Number
+       * </pre>
+       */
+      public java.lang.String getCardNumber() {
+        java.lang.Object ref = cardNumber_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            cardNumber_ = s;
+          }
+          return s;
+        }
+      }
+      /**
+       * <code>optional string card_number = 2;</code>
+       *
+       * <pre>
+       * Usually PAN (Primary Account Number), see e.g.:
+       * https://en.wikipedia.org/wiki/Primary_Account_Number
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getCardNumberBytes() {
+        java.lang.Object ref = cardNumber_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          cardNumber_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int TERMINAL_ID_FIELD_NUMBER = 3;
+      private java.lang.Object terminalId_;
+      /**
+       * <code>optional string terminal_id = 3;</code>
+       */
+      public boolean hasTerminalId() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional string terminal_id = 3;</code>
+       */
+      public java.lang.String getTerminalId() {
+        java.lang.Object ref = terminalId_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            terminalId_ = s;
+          }
+          return s;
+        }
+      }
+      /**
+       * <code>optional string terminal_id = 3;</code>
+       */
+      public com.google.protobuf.ByteString
+          getTerminalIdBytes() {
+        java.lang.Object ref = terminalId_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          terminalId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int AUTHORIZATION_CODE_FIELD_NUMBER = 4;
+      private java.lang.Object authorizationCode_;
+      /**
+       * <code>optional string authorization_code = 4;</code>
+       */
+      public boolean hasAuthorizationCode() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>optional string authorization_code = 4;</code>
+       */
+      public java.lang.String getAuthorizationCode() {
+        java.lang.Object ref = authorizationCode_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            authorizationCode_ = s;
+          }
+          return s;
+        }
+      }
+      /**
+       * <code>optional string authorization_code = 4;</code>
+       */
+      public com.google.protobuf.ByteString
+          getAuthorizationCodeBytes() {
+        java.lang.Object ref = authorizationCode_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          authorizationCode_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int RRN_FIELD_NUMBER = 5;
+      private java.lang.Object rrn_;
+      /**
+       * <code>optional string rrn = 5;</code>
+       *
+       * <pre>
+       * [Wikipedia: Retrieval Reference Number, a key to uniquely identify a
+       * card transaction based on the ISO 8583 standard]
+       * </pre>
+       */
+      public boolean hasRrn() {
+        return ((bitField0_ & 0x00000010) == 0x00000010);
+      }
+      /**
+       * <code>optional string rrn = 5;</code>
+       *
+       * <pre>
+       * [Wikipedia: Retrieval Reference Number, a key to uniquely identify a
+       * card transaction based on the ISO 8583 standard]
+       * </pre>
+       */
+      public java.lang.String getRrn() {
+        java.lang.Object ref = rrn_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            rrn_ = s;
+          }
+          return s;
+        }
+      }
+      /**
+       * <code>optional string rrn = 5;</code>
+       *
+       * <pre>
+       * [Wikipedia: Retrieval Reference Number, a key to uniquely identify a
+       * card transaction based on the ISO 8583 standard]
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getRrnBytes() {
+        java.lang.Object ref = rrn_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          rrn_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      private void initFields() {
+        issuer_ = "";
+        cardNumber_ = "";
+        terminalId_ = "";
+        authorizationCode_ = "";
+        rrn_ = "";
+      }
+      private byte memoizedIsInitialized = -1;
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        getSerializedSize();
+        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          output.writeBytes(1, getIssuerBytes());
+        }
+        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          output.writeBytes(2, getCardNumberBytes());
+        }
+        if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          output.writeBytes(3, getTerminalIdBytes());
+        }
+        if (((bitField0_ & 0x00000008) == 0x00000008)) {
+          output.writeBytes(4, getAuthorizationCodeBytes());
+        }
+        if (((bitField0_ & 0x00000010) == 0x00000010)) {
+          output.writeBytes(5, getRrnBytes());
+        }
+        getUnknownFields().writeTo(output);
+      }
+
+      private int memoizedSerializedSize = -1;
+      public int getSerializedSize() {
+        int size = memoizedSerializedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBytesSize(1, getIssuerBytes());
+        }
+        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBytesSize(2, getCardNumberBytes());
+        }
+        if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBytesSize(3, getTerminalIdBytes());
+        }
+        if (((bitField0_ & 0x00000008) == 0x00000008)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBytesSize(4, getAuthorizationCodeBytes());
+        }
+        if (((bitField0_ & 0x00000010) == 0x00000010)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBytesSize(5, getRrnBytes());
+        }
+        size += getUnknownFields().getSerializedSize();
+        memoizedSerializedSize = size;
+        return size;
+      }
+
+      private static final long serialVersionUID = 0L;
+      @java.lang.Override
+      protected java.lang.Object writeReplace()
+          throws java.io.ObjectStreamException {
+        return super.writeReplace();
+      }
+
+      public static com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCard parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCard parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCard parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCard parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCard parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input);
+      }
+      public static com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCard parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input, extensionRegistry);
+      }
+      public static com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCard parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return PARSER.parseDelimitedFrom(input);
+      }
+      public static com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCard parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      }
+      public static com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCard parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input);
+      }
+      public static com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCard parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input, extensionRegistry);
+      }
+
+      public static Builder newBuilder() { return Builder.create(); }
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder(com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCard prototype) {
+        return newBuilder().mergeFrom(prototype);
+      }
+      public Builder toBuilder() { return newBuilder(this); }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code lockerbox.Payment.CreditCard}
+       *
+       * <pre>
+       * Details for CREDIT_CARD payment method.
+       * </pre>
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:lockerbox.Payment.CreditCard)
+          com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCardOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.zpaslab.lockerbox.LockerboxProtos.internal_static_lockerbox_Payment_CreditCard_descriptor;
+        }
+
+        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.zpaslab.lockerbox.LockerboxProtos.internal_static_lockerbox_Payment_CreditCard_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCard.class, com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCard.Builder.class);
+        }
+
+        // Construct using com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCard.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          }
+        }
+        private static Builder create() {
+          return new Builder();
+        }
+
+        public Builder clear() {
+          super.clear();
+          issuer_ = "";
+          bitField0_ = (bitField0_ & ~0x00000001);
+          cardNumber_ = "";
+          bitField0_ = (bitField0_ & ~0x00000002);
+          terminalId_ = "";
+          bitField0_ = (bitField0_ & ~0x00000004);
+          authorizationCode_ = "";
+          bitField0_ = (bitField0_ & ~0x00000008);
+          rrn_ = "";
+          bitField0_ = (bitField0_ & ~0x00000010);
+          return this;
+        }
+
+        public Builder clone() {
+          return create().mergeFrom(buildPartial());
+        }
+
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return com.zpaslab.lockerbox.LockerboxProtos.internal_static_lockerbox_Payment_CreditCard_descriptor;
+        }
+
+        public com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCard getDefaultInstanceForType() {
+          return com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCard.getDefaultInstance();
+        }
+
+        public com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCard build() {
+          com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCard result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        public com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCard buildPartial() {
+          com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCard result = new com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCard(this);
+          int from_bitField0_ = bitField0_;
+          int to_bitField0_ = 0;
+          if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+            to_bitField0_ |= 0x00000001;
+          }
+          result.issuer_ = issuer_;
+          if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+            to_bitField0_ |= 0x00000002;
+          }
+          result.cardNumber_ = cardNumber_;
+          if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+            to_bitField0_ |= 0x00000004;
+          }
+          result.terminalId_ = terminalId_;
+          if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+            to_bitField0_ |= 0x00000008;
+          }
+          result.authorizationCode_ = authorizationCode_;
+          if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
+            to_bitField0_ |= 0x00000010;
+          }
+          result.rrn_ = rrn_;
+          result.bitField0_ = to_bitField0_;
+          onBuilt();
+          return result;
+        }
+
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCard) {
+            return mergeFrom((com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCard)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCard other) {
+          if (other == com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCard.getDefaultInstance()) return this;
+          if (other.hasIssuer()) {
+            bitField0_ |= 0x00000001;
+            issuer_ = other.issuer_;
+            onChanged();
+          }
+          if (other.hasCardNumber()) {
+            bitField0_ |= 0x00000002;
+            cardNumber_ = other.cardNumber_;
+            onChanged();
+          }
+          if (other.hasTerminalId()) {
+            bitField0_ |= 0x00000004;
+            terminalId_ = other.terminalId_;
+            onChanged();
+          }
+          if (other.hasAuthorizationCode()) {
+            bitField0_ |= 0x00000008;
+            authorizationCode_ = other.authorizationCode_;
+            onChanged();
+          }
+          if (other.hasRrn()) {
+            bitField0_ |= 0x00000010;
+            rrn_ = other.rrn_;
+            onChanged();
+          }
+          this.mergeUnknownFields(other.getUnknownFields());
+          return this;
+        }
+
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCard parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCard) e.getUnfinishedMessage();
+            throw e;
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        private int bitField0_;
+
+        private java.lang.Object issuer_ = "";
+        /**
+         * <code>optional string issuer = 1;</code>
+         *
+         * <pre>
+         * e.g. MasterCard, Visa (optionally issuer's code, e.g. 51 or 4)
+         * </pre>
+         */
+        public boolean hasIssuer() {
+          return ((bitField0_ & 0x00000001) == 0x00000001);
+        }
+        /**
+         * <code>optional string issuer = 1;</code>
+         *
+         * <pre>
+         * e.g. MasterCard, Visa (optionally issuer's code, e.g. 51 or 4)
+         * </pre>
+         */
+        public java.lang.String getIssuer() {
+          java.lang.Object ref = issuer_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            if (bs.isValidUtf8()) {
+              issuer_ = s;
+            }
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>optional string issuer = 1;</code>
+         *
+         * <pre>
+         * e.g. MasterCard, Visa (optionally issuer's code, e.g. 51 or 4)
+         * </pre>
+         */
+        public com.google.protobuf.ByteString
+            getIssuerBytes() {
+          java.lang.Object ref = issuer_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            issuer_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>optional string issuer = 1;</code>
+         *
+         * <pre>
+         * e.g. MasterCard, Visa (optionally issuer's code, e.g. 51 or 4)
+         * </pre>
+         */
+        public Builder setIssuer(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+          issuer_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional string issuer = 1;</code>
+         *
+         * <pre>
+         * e.g. MasterCard, Visa (optionally issuer's code, e.g. 51 or 4)
+         * </pre>
+         */
+        public Builder clearIssuer() {
+          bitField0_ = (bitField0_ & ~0x00000001);
+          issuer_ = getDefaultInstance().getIssuer();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional string issuer = 1;</code>
+         *
+         * <pre>
+         * e.g. MasterCard, Visa (optionally issuer's code, e.g. 51 or 4)
+         * </pre>
+         */
+        public Builder setIssuerBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+          issuer_ = value;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object cardNumber_ = "";
+        /**
+         * <code>optional string card_number = 2;</code>
+         *
+         * <pre>
+         * Usually PAN (Primary Account Number), see e.g.:
+         * https://en.wikipedia.org/wiki/Primary_Account_Number
+         * </pre>
+         */
+        public boolean hasCardNumber() {
+          return ((bitField0_ & 0x00000002) == 0x00000002);
+        }
+        /**
+         * <code>optional string card_number = 2;</code>
+         *
+         * <pre>
+         * Usually PAN (Primary Account Number), see e.g.:
+         * https://en.wikipedia.org/wiki/Primary_Account_Number
+         * </pre>
+         */
+        public java.lang.String getCardNumber() {
+          java.lang.Object ref = cardNumber_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            if (bs.isValidUtf8()) {
+              cardNumber_ = s;
+            }
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>optional string card_number = 2;</code>
+         *
+         * <pre>
+         * Usually PAN (Primary Account Number), see e.g.:
+         * https://en.wikipedia.org/wiki/Primary_Account_Number
+         * </pre>
+         */
+        public com.google.protobuf.ByteString
+            getCardNumberBytes() {
+          java.lang.Object ref = cardNumber_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            cardNumber_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>optional string card_number = 2;</code>
+         *
+         * <pre>
+         * Usually PAN (Primary Account Number), see e.g.:
+         * https://en.wikipedia.org/wiki/Primary_Account_Number
+         * </pre>
+         */
+        public Builder setCardNumber(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+          cardNumber_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional string card_number = 2;</code>
+         *
+         * <pre>
+         * Usually PAN (Primary Account Number), see e.g.:
+         * https://en.wikipedia.org/wiki/Primary_Account_Number
+         * </pre>
+         */
+        public Builder clearCardNumber() {
+          bitField0_ = (bitField0_ & ~0x00000002);
+          cardNumber_ = getDefaultInstance().getCardNumber();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional string card_number = 2;</code>
+         *
+         * <pre>
+         * Usually PAN (Primary Account Number), see e.g.:
+         * https://en.wikipedia.org/wiki/Primary_Account_Number
+         * </pre>
+         */
+        public Builder setCardNumberBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+          cardNumber_ = value;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object terminalId_ = "";
+        /**
+         * <code>optional string terminal_id = 3;</code>
+         */
+        public boolean hasTerminalId() {
+          return ((bitField0_ & 0x00000004) == 0x00000004);
+        }
+        /**
+         * <code>optional string terminal_id = 3;</code>
+         */
+        public java.lang.String getTerminalId() {
+          java.lang.Object ref = terminalId_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            if (bs.isValidUtf8()) {
+              terminalId_ = s;
+            }
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>optional string terminal_id = 3;</code>
+         */
+        public com.google.protobuf.ByteString
+            getTerminalIdBytes() {
+          java.lang.Object ref = terminalId_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            terminalId_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>optional string terminal_id = 3;</code>
+         */
+        public Builder setTerminalId(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+          terminalId_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional string terminal_id = 3;</code>
+         */
+        public Builder clearTerminalId() {
+          bitField0_ = (bitField0_ & ~0x00000004);
+          terminalId_ = getDefaultInstance().getTerminalId();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional string terminal_id = 3;</code>
+         */
+        public Builder setTerminalIdBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+          terminalId_ = value;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object authorizationCode_ = "";
+        /**
+         * <code>optional string authorization_code = 4;</code>
+         */
+        public boolean hasAuthorizationCode() {
+          return ((bitField0_ & 0x00000008) == 0x00000008);
+        }
+        /**
+         * <code>optional string authorization_code = 4;</code>
+         */
+        public java.lang.String getAuthorizationCode() {
+          java.lang.Object ref = authorizationCode_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            if (bs.isValidUtf8()) {
+              authorizationCode_ = s;
+            }
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>optional string authorization_code = 4;</code>
+         */
+        public com.google.protobuf.ByteString
+            getAuthorizationCodeBytes() {
+          java.lang.Object ref = authorizationCode_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            authorizationCode_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>optional string authorization_code = 4;</code>
+         */
+        public Builder setAuthorizationCode(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
+          authorizationCode_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional string authorization_code = 4;</code>
+         */
+        public Builder clearAuthorizationCode() {
+          bitField0_ = (bitField0_ & ~0x00000008);
+          authorizationCode_ = getDefaultInstance().getAuthorizationCode();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional string authorization_code = 4;</code>
+         */
+        public Builder setAuthorizationCodeBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
+          authorizationCode_ = value;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object rrn_ = "";
+        /**
+         * <code>optional string rrn = 5;</code>
+         *
+         * <pre>
+         * [Wikipedia: Retrieval Reference Number, a key to uniquely identify a
+         * card transaction based on the ISO 8583 standard]
+         * </pre>
+         */
+        public boolean hasRrn() {
+          return ((bitField0_ & 0x00000010) == 0x00000010);
+        }
+        /**
+         * <code>optional string rrn = 5;</code>
+         *
+         * <pre>
+         * [Wikipedia: Retrieval Reference Number, a key to uniquely identify a
+         * card transaction based on the ISO 8583 standard]
+         * </pre>
+         */
+        public java.lang.String getRrn() {
+          java.lang.Object ref = rrn_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            if (bs.isValidUtf8()) {
+              rrn_ = s;
+            }
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>optional string rrn = 5;</code>
+         *
+         * <pre>
+         * [Wikipedia: Retrieval Reference Number, a key to uniquely identify a
+         * card transaction based on the ISO 8583 standard]
+         * </pre>
+         */
+        public com.google.protobuf.ByteString
+            getRrnBytes() {
+          java.lang.Object ref = rrn_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            rrn_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>optional string rrn = 5;</code>
+         *
+         * <pre>
+         * [Wikipedia: Retrieval Reference Number, a key to uniquely identify a
+         * card transaction based on the ISO 8583 standard]
+         * </pre>
+         */
+        public Builder setRrn(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000010;
+          rrn_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional string rrn = 5;</code>
+         *
+         * <pre>
+         * [Wikipedia: Retrieval Reference Number, a key to uniquely identify a
+         * card transaction based on the ISO 8583 standard]
+         * </pre>
+         */
+        public Builder clearRrn() {
+          bitField0_ = (bitField0_ & ~0x00000010);
+          rrn_ = getDefaultInstance().getRrn();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional string rrn = 5;</code>
+         *
+         * <pre>
+         * [Wikipedia: Retrieval Reference Number, a key to uniquely identify a
+         * card transaction based on the ISO 8583 standard]
+         * </pre>
+         */
+        public Builder setRrnBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000010;
+          rrn_ = value;
+          onChanged();
+          return this;
+        }
+
+        // @@protoc_insertion_point(builder_scope:lockerbox.Payment.CreditCard)
+      }
+
+      static {
+        defaultInstance = new CreditCard(true);
+        defaultInstance.initFields();
+      }
+
+      // @@protoc_insertion_point(class_scope:lockerbox.Payment.CreditCard)
+    }
+
     public interface HistoryItemOrBuilder extends
         // @@protoc_insertion_point(interface_extends:lockerbox.Payment.HistoryItem)
         com.google.protobuf.MessageOrBuilder {
@@ -26001,6 +27953,27 @@ public final class LockerboxProtos {
       return online_;
     }
 
+    public static final int CREDIT_CARD_FIELD_NUMBER = 12;
+    private com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCard creditCard_;
+    /**
+     * <code>optional .lockerbox.Payment.CreditCard credit_card = 12;</code>
+     */
+    public boolean hasCreditCard() {
+      return ((bitField0_ & 0x00000080) == 0x00000080);
+    }
+    /**
+     * <code>optional .lockerbox.Payment.CreditCard credit_card = 12;</code>
+     */
+    public com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCard getCreditCard() {
+      return creditCard_;
+    }
+    /**
+     * <code>optional .lockerbox.Payment.CreditCard credit_card = 12;</code>
+     */
+    public com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCardOrBuilder getCreditCardOrBuilder() {
+      return creditCard_;
+    }
+
     public static final int STATUS_FIELD_NUMBER = 8;
     private com.zpaslab.lockerbox.LockerboxProtos.Payment.Status status_;
     /**
@@ -26011,7 +27984,7 @@ public final class LockerboxProtos {
      * </pre>
      */
     public boolean hasStatus() {
-      return ((bitField0_ & 0x00000080) == 0x00000080);
+      return ((bitField0_ & 0x00000100) == 0x00000100);
     }
     /**
      * <code>optional .lockerbox.Payment.Status status = 8;</code>
@@ -26034,7 +28007,7 @@ public final class LockerboxProtos {
      * </pre>
      */
     public boolean hasStatusDetails() {
-      return ((bitField0_ & 0x00000100) == 0x00000100);
+      return ((bitField0_ & 0x00000200) == 0x00000200);
     }
     /**
      * <code>optional string status_details = 9;</code>
@@ -26113,6 +28086,117 @@ public final class LockerboxProtos {
       return history_.get(index);
     }
 
+    public static final int DEPOSIT_DATE_FIELD_NUMBER = 11;
+    private java.lang.Object depositDate_;
+    /**
+     * <code>optional string deposit_date = 11;</code>
+     *
+     * <pre>
+     * Point in time when the payment was done by user (money was deposited).
+     * </pre>
+     */
+    public boolean hasDepositDate() {
+      return ((bitField0_ & 0x00000400) == 0x00000400);
+    }
+    /**
+     * <code>optional string deposit_date = 11;</code>
+     *
+     * <pre>
+     * Point in time when the payment was done by user (money was deposited).
+     * </pre>
+     */
+    public java.lang.String getDepositDate() {
+      java.lang.Object ref = depositDate_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          depositDate_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string deposit_date = 11;</code>
+     *
+     * <pre>
+     * Point in time when the payment was done by user (money was deposited).
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getDepositDateBytes() {
+      java.lang.Object ref = depositDate_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        depositDate_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CONSOLIDATION_DATE_FIELD_NUMBER = 13;
+    private java.lang.Object consolidationDate_;
+    /**
+     * <code>optional string consolidation_date = 13;</code>
+     *
+     * <pre>
+     * Point in time when the payment was acknowledged by overmind
+     * conslidation_date will be set only for finalized payments (status = SUCCESS, APPLIED, FAILED, EXPIRED)
+     * </pre>
+     */
+    public boolean hasConsolidationDate() {
+      return ((bitField0_ & 0x00000800) == 0x00000800);
+    }
+    /**
+     * <code>optional string consolidation_date = 13;</code>
+     *
+     * <pre>
+     * Point in time when the payment was acknowledged by overmind
+     * conslidation_date will be set only for finalized payments (status = SUCCESS, APPLIED, FAILED, EXPIRED)
+     * </pre>
+     */
+    public java.lang.String getConsolidationDate() {
+      java.lang.Object ref = consolidationDate_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          consolidationDate_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string consolidation_date = 13;</code>
+     *
+     * <pre>
+     * Point in time when the payment was acknowledged by overmind
+     * conslidation_date will be set only for finalized payments (status = SUCCESS, APPLIED, FAILED, EXPIRED)
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getConsolidationDateBytes() {
+      java.lang.Object ref = consolidationDate_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        consolidationDate_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private void initFields() {
       code_ = "";
       account_ = "";
@@ -26121,9 +28205,12 @@ public final class LockerboxProtos {
       amount_ = com.zpaslab.lockerbox.LockerboxProtos.Money.getDefaultInstance();
       method_ = com.zpaslab.lockerbox.LockerboxProtos.Payment.Method.BALANCE;
       online_ = com.zpaslab.lockerbox.LockerboxProtos.Payment.Online.getDefaultInstance();
+      creditCard_ = com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCard.getDefaultInstance();
       status_ = com.zpaslab.lockerbox.LockerboxProtos.Payment.Status.NOT_STARTED;
       statusDetails_ = "";
       history_ = java.util.Collections.emptyList();
+      depositDate_ = "";
+      consolidationDate_ = "";
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -26159,14 +28246,23 @@ public final class LockerboxProtos {
       if (((bitField0_ & 0x00000040) == 0x00000040)) {
         output.writeMessage(7, online_);
       }
-      if (((bitField0_ & 0x00000080) == 0x00000080)) {
+      if (((bitField0_ & 0x00000100) == 0x00000100)) {
         output.writeEnum(8, status_.getNumber());
       }
-      if (((bitField0_ & 0x00000100) == 0x00000100)) {
+      if (((bitField0_ & 0x00000200) == 0x00000200)) {
         output.writeBytes(9, getStatusDetailsBytes());
       }
       for (int i = 0; i < history_.size(); i++) {
         output.writeMessage(10, history_.get(i));
+      }
+      if (((bitField0_ & 0x00000400) == 0x00000400)) {
+        output.writeBytes(11, getDepositDateBytes());
+      }
+      if (((bitField0_ & 0x00000080) == 0x00000080)) {
+        output.writeMessage(12, creditCard_);
+      }
+      if (((bitField0_ & 0x00000800) == 0x00000800)) {
+        output.writeBytes(13, getConsolidationDateBytes());
       }
       getUnknownFields().writeTo(output);
     }
@@ -26205,17 +28301,29 @@ public final class LockerboxProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, online_);
       }
-      if (((bitField0_ & 0x00000080) == 0x00000080)) {
+      if (((bitField0_ & 0x00000100) == 0x00000100)) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(8, status_.getNumber());
       }
-      if (((bitField0_ & 0x00000100) == 0x00000100)) {
+      if (((bitField0_ & 0x00000200) == 0x00000200)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(9, getStatusDetailsBytes());
       }
       for (int i = 0; i < history_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(10, history_.get(i));
+      }
+      if (((bitField0_ & 0x00000400) == 0x00000400)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(11, getDepositDateBytes());
+      }
+      if (((bitField0_ & 0x00000080) == 0x00000080)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(12, creditCard_);
+      }
+      if (((bitField0_ & 0x00000800) == 0x00000800)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(13, getConsolidationDateBytes());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -26341,6 +28449,7 @@ public final class LockerboxProtos {
         if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
           getAmountFieldBuilder();
           getOnlineFieldBuilder();
+          getCreditCardFieldBuilder();
           getHistoryFieldBuilder();
         }
       }
@@ -26372,16 +28481,26 @@ public final class LockerboxProtos {
           onlineBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000040);
-        status_ = com.zpaslab.lockerbox.LockerboxProtos.Payment.Status.NOT_STARTED;
+        if (creditCardBuilder_ == null) {
+          creditCard_ = com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCard.getDefaultInstance();
+        } else {
+          creditCardBuilder_.clear();
+        }
         bitField0_ = (bitField0_ & ~0x00000080);
-        statusDetails_ = "";
+        status_ = com.zpaslab.lockerbox.LockerboxProtos.Payment.Status.NOT_STARTED;
         bitField0_ = (bitField0_ & ~0x00000100);
+        statusDetails_ = "";
+        bitField0_ = (bitField0_ & ~0x00000200);
         if (historyBuilder_ == null) {
           history_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000200);
+          bitField0_ = (bitField0_ & ~0x00000400);
         } else {
           historyBuilder_.clear();
         }
+        depositDate_ = "";
+        bitField0_ = (bitField0_ & ~0x00000800);
+        consolidationDate_ = "";
+        bitField0_ = (bitField0_ & ~0x00001000);
         return this;
       }
 
@@ -26449,20 +28568,36 @@ public final class LockerboxProtos {
         if (((from_bitField0_ & 0x00000080) == 0x00000080)) {
           to_bitField0_ |= 0x00000080;
         }
-        result.status_ = status_;
+        if (creditCardBuilder_ == null) {
+          result.creditCard_ = creditCard_;
+        } else {
+          result.creditCard_ = creditCardBuilder_.build();
+        }
         if (((from_bitField0_ & 0x00000100) == 0x00000100)) {
           to_bitField0_ |= 0x00000100;
         }
+        result.status_ = status_;
+        if (((from_bitField0_ & 0x00000200) == 0x00000200)) {
+          to_bitField0_ |= 0x00000200;
+        }
         result.statusDetails_ = statusDetails_;
         if (historyBuilder_ == null) {
-          if (((bitField0_ & 0x00000200) == 0x00000200)) {
+          if (((bitField0_ & 0x00000400) == 0x00000400)) {
             history_ = java.util.Collections.unmodifiableList(history_);
-            bitField0_ = (bitField0_ & ~0x00000200);
+            bitField0_ = (bitField0_ & ~0x00000400);
           }
           result.history_ = history_;
         } else {
           result.history_ = historyBuilder_.build();
         }
+        if (((from_bitField0_ & 0x00000800) == 0x00000800)) {
+          to_bitField0_ |= 0x00000400;
+        }
+        result.depositDate_ = depositDate_;
+        if (((from_bitField0_ & 0x00001000) == 0x00001000)) {
+          to_bitField0_ |= 0x00000800;
+        }
+        result.consolidationDate_ = consolidationDate_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -26508,11 +28643,14 @@ public final class LockerboxProtos {
         if (other.hasOnline()) {
           mergeOnline(other.getOnline());
         }
+        if (other.hasCreditCard()) {
+          mergeCreditCard(other.getCreditCard());
+        }
         if (other.hasStatus()) {
           setStatus(other.getStatus());
         }
         if (other.hasStatusDetails()) {
-          bitField0_ |= 0x00000100;
+          bitField0_ |= 0x00000200;
           statusDetails_ = other.statusDetails_;
           onChanged();
         }
@@ -26520,7 +28658,7 @@ public final class LockerboxProtos {
           if (!other.history_.isEmpty()) {
             if (history_.isEmpty()) {
               history_ = other.history_;
-              bitField0_ = (bitField0_ & ~0x00000200);
+              bitField0_ = (bitField0_ & ~0x00000400);
             } else {
               ensureHistoryIsMutable();
               history_.addAll(other.history_);
@@ -26533,7 +28671,7 @@ public final class LockerboxProtos {
               historyBuilder_.dispose();
               historyBuilder_ = null;
               history_ = other.history_;
-              bitField0_ = (bitField0_ & ~0x00000200);
+              bitField0_ = (bitField0_ & ~0x00000400);
               historyBuilder_ = 
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    getHistoryFieldBuilder() : null;
@@ -26541,6 +28679,16 @@ public final class LockerboxProtos {
               historyBuilder_.addAllMessages(other.history_);
             }
           }
+        }
+        if (other.hasDepositDate()) {
+          bitField0_ |= 0x00000800;
+          depositDate_ = other.depositDate_;
+          onChanged();
+        }
+        if (other.hasConsolidationDate()) {
+          bitField0_ |= 0x00001000;
+          consolidationDate_ = other.consolidationDate_;
+          onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -27254,6 +29402,122 @@ public final class LockerboxProtos {
         return onlineBuilder_;
       }
 
+      private com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCard creditCard_ = com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCard.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCard, com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCard.Builder, com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCardOrBuilder> creditCardBuilder_;
+      /**
+       * <code>optional .lockerbox.Payment.CreditCard credit_card = 12;</code>
+       */
+      public boolean hasCreditCard() {
+        return ((bitField0_ & 0x00000080) == 0x00000080);
+      }
+      /**
+       * <code>optional .lockerbox.Payment.CreditCard credit_card = 12;</code>
+       */
+      public com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCard getCreditCard() {
+        if (creditCardBuilder_ == null) {
+          return creditCard_;
+        } else {
+          return creditCardBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .lockerbox.Payment.CreditCard credit_card = 12;</code>
+       */
+      public Builder setCreditCard(com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCard value) {
+        if (creditCardBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          creditCard_ = value;
+          onChanged();
+        } else {
+          creditCardBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000080;
+        return this;
+      }
+      /**
+       * <code>optional .lockerbox.Payment.CreditCard credit_card = 12;</code>
+       */
+      public Builder setCreditCard(
+          com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCard.Builder builderForValue) {
+        if (creditCardBuilder_ == null) {
+          creditCard_ = builderForValue.build();
+          onChanged();
+        } else {
+          creditCardBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000080;
+        return this;
+      }
+      /**
+       * <code>optional .lockerbox.Payment.CreditCard credit_card = 12;</code>
+       */
+      public Builder mergeCreditCard(com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCard value) {
+        if (creditCardBuilder_ == null) {
+          if (((bitField0_ & 0x00000080) == 0x00000080) &&
+              creditCard_ != com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCard.getDefaultInstance()) {
+            creditCard_ =
+              com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCard.newBuilder(creditCard_).mergeFrom(value).buildPartial();
+          } else {
+            creditCard_ = value;
+          }
+          onChanged();
+        } else {
+          creditCardBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000080;
+        return this;
+      }
+      /**
+       * <code>optional .lockerbox.Payment.CreditCard credit_card = 12;</code>
+       */
+      public Builder clearCreditCard() {
+        if (creditCardBuilder_ == null) {
+          creditCard_ = com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCard.getDefaultInstance();
+          onChanged();
+        } else {
+          creditCardBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000080);
+        return this;
+      }
+      /**
+       * <code>optional .lockerbox.Payment.CreditCard credit_card = 12;</code>
+       */
+      public com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCard.Builder getCreditCardBuilder() {
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return getCreditCardFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .lockerbox.Payment.CreditCard credit_card = 12;</code>
+       */
+      public com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCardOrBuilder getCreditCardOrBuilder() {
+        if (creditCardBuilder_ != null) {
+          return creditCardBuilder_.getMessageOrBuilder();
+        } else {
+          return creditCard_;
+        }
+      }
+      /**
+       * <code>optional .lockerbox.Payment.CreditCard credit_card = 12;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCard, com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCard.Builder, com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCardOrBuilder> 
+          getCreditCardFieldBuilder() {
+        if (creditCardBuilder_ == null) {
+          creditCardBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCard, com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCard.Builder, com.zpaslab.lockerbox.LockerboxProtos.Payment.CreditCardOrBuilder>(
+                  getCreditCard(),
+                  getParentForChildren(),
+                  isClean());
+          creditCard_ = null;
+        }
+        return creditCardBuilder_;
+      }
+
       private com.zpaslab.lockerbox.LockerboxProtos.Payment.Status status_ = com.zpaslab.lockerbox.LockerboxProtos.Payment.Status.NOT_STARTED;
       /**
        * <code>optional .lockerbox.Payment.Status status = 8;</code>
@@ -27263,7 +29527,7 @@ public final class LockerboxProtos {
        * </pre>
        */
       public boolean hasStatus() {
-        return ((bitField0_ & 0x00000080) == 0x00000080);
+        return ((bitField0_ & 0x00000100) == 0x00000100);
       }
       /**
        * <code>optional .lockerbox.Payment.Status status = 8;</code>
@@ -27286,7 +29550,7 @@ public final class LockerboxProtos {
         if (value == null) {
           throw new NullPointerException();
         }
-        bitField0_ |= 0x00000080;
+        bitField0_ |= 0x00000100;
         status_ = value;
         onChanged();
         return this;
@@ -27299,7 +29563,7 @@ public final class LockerboxProtos {
        * </pre>
        */
       public Builder clearStatus() {
-        bitField0_ = (bitField0_ & ~0x00000080);
+        bitField0_ = (bitField0_ & ~0x00000100);
         status_ = com.zpaslab.lockerbox.LockerboxProtos.Payment.Status.NOT_STARTED;
         onChanged();
         return this;
@@ -27314,7 +29578,7 @@ public final class LockerboxProtos {
        * </pre>
        */
       public boolean hasStatusDetails() {
-        return ((bitField0_ & 0x00000100) == 0x00000100);
+        return ((bitField0_ & 0x00000200) == 0x00000200);
       }
       /**
        * <code>optional string status_details = 9;</code>
@@ -27369,7 +29633,7 @@ public final class LockerboxProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000100;
+  bitField0_ |= 0x00000200;
         statusDetails_ = value;
         onChanged();
         return this;
@@ -27382,7 +29646,7 @@ public final class LockerboxProtos {
        * </pre>
        */
       public Builder clearStatusDetails() {
-        bitField0_ = (bitField0_ & ~0x00000100);
+        bitField0_ = (bitField0_ & ~0x00000200);
         statusDetails_ = getDefaultInstance().getStatusDetails();
         onChanged();
         return this;
@@ -27399,7 +29663,7 @@ public final class LockerboxProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000100;
+  bitField0_ |= 0x00000200;
         statusDetails_ = value;
         onChanged();
         return this;
@@ -27408,9 +29672,9 @@ public final class LockerboxProtos {
       private java.util.List<com.zpaslab.lockerbox.LockerboxProtos.Payment.HistoryItem> history_ =
         java.util.Collections.emptyList();
       private void ensureHistoryIsMutable() {
-        if (!((bitField0_ & 0x00000200) == 0x00000200)) {
+        if (!((bitField0_ & 0x00000400) == 0x00000400)) {
           history_ = new java.util.ArrayList<com.zpaslab.lockerbox.LockerboxProtos.Payment.HistoryItem>(history_);
-          bitField0_ |= 0x00000200;
+          bitField0_ |= 0x00000400;
          }
       }
 
@@ -27560,7 +29824,7 @@ public final class LockerboxProtos {
       public Builder clearHistory() {
         if (historyBuilder_ == null) {
           history_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000200);
+          bitField0_ = (bitField0_ & ~0x00000400);
           onChanged();
         } else {
           historyBuilder_.clear();
@@ -27637,12 +29901,218 @@ public final class LockerboxProtos {
           historyBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
               com.zpaslab.lockerbox.LockerboxProtos.Payment.HistoryItem, com.zpaslab.lockerbox.LockerboxProtos.Payment.HistoryItem.Builder, com.zpaslab.lockerbox.LockerboxProtos.Payment.HistoryItemOrBuilder>(
                   history_,
-                  ((bitField0_ & 0x00000200) == 0x00000200),
+                  ((bitField0_ & 0x00000400) == 0x00000400),
                   getParentForChildren(),
                   isClean());
           history_ = null;
         }
         return historyBuilder_;
+      }
+
+      private java.lang.Object depositDate_ = "";
+      /**
+       * <code>optional string deposit_date = 11;</code>
+       *
+       * <pre>
+       * Point in time when the payment was done by user (money was deposited).
+       * </pre>
+       */
+      public boolean hasDepositDate() {
+        return ((bitField0_ & 0x00000800) == 0x00000800);
+      }
+      /**
+       * <code>optional string deposit_date = 11;</code>
+       *
+       * <pre>
+       * Point in time when the payment was done by user (money was deposited).
+       * </pre>
+       */
+      public java.lang.String getDepositDate() {
+        java.lang.Object ref = depositDate_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            depositDate_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string deposit_date = 11;</code>
+       *
+       * <pre>
+       * Point in time when the payment was done by user (money was deposited).
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getDepositDateBytes() {
+        java.lang.Object ref = depositDate_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          depositDate_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string deposit_date = 11;</code>
+       *
+       * <pre>
+       * Point in time when the payment was done by user (money was deposited).
+       * </pre>
+       */
+      public Builder setDepositDate(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000800;
+        depositDate_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string deposit_date = 11;</code>
+       *
+       * <pre>
+       * Point in time when the payment was done by user (money was deposited).
+       * </pre>
+       */
+      public Builder clearDepositDate() {
+        bitField0_ = (bitField0_ & ~0x00000800);
+        depositDate_ = getDefaultInstance().getDepositDate();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string deposit_date = 11;</code>
+       *
+       * <pre>
+       * Point in time when the payment was done by user (money was deposited).
+       * </pre>
+       */
+      public Builder setDepositDateBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000800;
+        depositDate_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object consolidationDate_ = "";
+      /**
+       * <code>optional string consolidation_date = 13;</code>
+       *
+       * <pre>
+       * Point in time when the payment was acknowledged by overmind
+       * conslidation_date will be set only for finalized payments (status = SUCCESS, APPLIED, FAILED, EXPIRED)
+       * </pre>
+       */
+      public boolean hasConsolidationDate() {
+        return ((bitField0_ & 0x00001000) == 0x00001000);
+      }
+      /**
+       * <code>optional string consolidation_date = 13;</code>
+       *
+       * <pre>
+       * Point in time when the payment was acknowledged by overmind
+       * conslidation_date will be set only for finalized payments (status = SUCCESS, APPLIED, FAILED, EXPIRED)
+       * </pre>
+       */
+      public java.lang.String getConsolidationDate() {
+        java.lang.Object ref = consolidationDate_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            consolidationDate_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string consolidation_date = 13;</code>
+       *
+       * <pre>
+       * Point in time when the payment was acknowledged by overmind
+       * conslidation_date will be set only for finalized payments (status = SUCCESS, APPLIED, FAILED, EXPIRED)
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getConsolidationDateBytes() {
+        java.lang.Object ref = consolidationDate_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          consolidationDate_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string consolidation_date = 13;</code>
+       *
+       * <pre>
+       * Point in time when the payment was acknowledged by overmind
+       * conslidation_date will be set only for finalized payments (status = SUCCESS, APPLIED, FAILED, EXPIRED)
+       * </pre>
+       */
+      public Builder setConsolidationDate(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00001000;
+        consolidationDate_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string consolidation_date = 13;</code>
+       *
+       * <pre>
+       * Point in time when the payment was acknowledged by overmind
+       * conslidation_date will be set only for finalized payments (status = SUCCESS, APPLIED, FAILED, EXPIRED)
+       * </pre>
+       */
+      public Builder clearConsolidationDate() {
+        bitField0_ = (bitField0_ & ~0x00001000);
+        consolidationDate_ = getDefaultInstance().getConsolidationDate();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string consolidation_date = 13;</code>
+       *
+       * <pre>
+       * Point in time when the payment was acknowledged by overmind
+       * conslidation_date will be set only for finalized payments (status = SUCCESS, APPLIED, FAILED, EXPIRED)
+       * </pre>
+       */
+      public Builder setConsolidationDateBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00001000;
+        consolidationDate_ = value;
+        onChanged();
+        return this;
       }
 
       // @@protoc_insertion_point(builder_scope:lockerbox.Payment)
@@ -32524,6 +34994,11 @@ public final class LockerboxProtos {
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_lockerbox_Payment_Online_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_lockerbox_Payment_CreditCard_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_lockerbox_Payment_CreditCard_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_lockerbox_Payment_HistoryItem_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
@@ -32633,7 +35108,7 @@ public final class LockerboxProtos {
       "2\022.lockerbox.Address\"*\n\005State\022\n\n\006ACTIVE\020" +
       "\001\022\014\n\010INACTIVE\020\002\022\007\n\003OFF\020\003\"G\n\rLockerboxLis",
       "t\022\'\n\tlockerbox\030\001 \003(\0132\024.lockerbox.Lockerb" +
-      "ox\022\r\n\005total\030\002 \001(\005\"\230\004\n\006Charge\022\014\n\004code\030\001 \001" +
+      "ox\022\r\n\005total\030\002 \001(\005\"\375\004\n\006Charge\022\014\n\004code\030\001 \001" +
       "(\t\022\014\n\004href\030\002 \001(\t\022\013\n\003tag\030\003 \001(\t\022,\n\010categor" +
       "y\030\004 \001(\0162\032.lockerbox.Charge.Category\022\014\n\004t" +
       "ype\030\005 \001(\t\022\023\n\013description\030\006 \001(\t\0220\n\ntransf" +
@@ -32641,47 +35116,55 @@ public final class LockerboxProtos {
       "\022 \n\006amount\030\010 \001(\0132\020.lockerbox.Money\022(\n\006st" +
       "atus\030\t \001(\0162\030.lockerbox.Charge.Status\022\027\n\017" +
       "expiration_date\030\n \001(\t\022\022\n\nparcel_ref\030\013 \001(" +
-      "\t\032<\n\nTransferee\022\017\n\007account\030\001 \001(\t\022\014\n\004wire",
-      "\030\002 \001(\t\022\017\n\007details\030\003 \001(\t\"^\n\010Category\022\014\n\010S" +
-      "HIPMENT\020\001\022\020\n\014POST_SERVICE\020\002\022\007\n\003COD\020\003\022\007\n\003" +
-      "TAX\020\004\022\013\n\007CUSTOMS\020\005\022\023\n\017ACCOUNT_BALANCE\020\006\"" +
-      "K\n\006Status\022\013\n\007PENDING\020\001\022\013\n\007MATCHED\020\002\022\013\n\007A" +
-      "PPLIED\020\003\022\013\n\007EXPIRED\020\004\022\r\n\tCANCELLED\020\005\">\n\n" +
-      "ChargeList\022!\n\006charge\030\001 \003(\0132\021.lockerbox.C" +
-      "harge\022\r\n\005total\030\002 \001(\005\"\357\004\n\007Payment\022\014\n\004code" +
-      "\030\001 \001(\t\022\017\n\007account\030\002 \001(\t\022\014\n\004href\030\003 \001(\t\022\023\n" +
-      "\013charges_tag\030\004 \001(\t\022 \n\006amount\030\005 \001(\0132\020.loc" +
-      "kerbox.Money\022)\n\006method\030\006 \001(\0162\031.lockerbox",
-      ".Payment.Method\022)\n\006online\030\007 \001(\0132\031.locker" +
-      "box.Payment.Online\022)\n\006status\030\010 \001(\0162\031.loc" +
-      "kerbox.Payment.Status\022\026\n\016status_details\030" +
-      "\t \001(\t\022/\n\007history\030\n \003(\0132\036.lockerbox.Payme" +
-      "nt.HistoryItem\032C\n\006Online\022\020\n\010operator\030\001 \001" +
-      "(\t\022\023\n\013browser_url\030\002 \001(\t\022\022\n\nreturn_url\030\003 " +
-      "\001(\t\032X\n\013HistoryItem\022\014\n\004date\030\001 \001(\t\022\023\n\013desc" +
-      "ription\030\002 \001(\t\022\022\n\ndebug_type\030\003 \001(\t\022\022\n\ndeb" +
-      "ug_data\030\004 \001(\014\"<\n\006Method\022\013\n\007BALANCE\020\001\022\n\n\006" +
-      "ONLINE\020\002\022\010\n\004CASH\020\003\022\017\n\013CREDIT_CARD\020\004\"Y\n\006S",
-      "tatus\022\017\n\013NOT_STARTED\020\001\022\013\n\007PENDING\020\002\022\013\n\007S" +
-      "UCCESS\020\003\022\013\n\007APPLIED\020\004\022\n\n\006FAILED\020\005\022\013\n\007EXP" +
-      "IRED\020\006\"A\n\013PaymentList\022#\n\007payment\030\001 \003(\0132\022" +
-      ".lockerbox.Payment\022\r\n\005total\030\002 \001(\005\"I\n\010Pro" +
-      "perty\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t\022!\n\004pro" +
-      "p\030\003 \003(\0132\023.lockerbox.Property\"\313\003\n\005Error\022#" +
-      "\n\004code\030\001 \001(\0162\025.lockerbox.Error.Code\022\020\n\010c" +
-      "ode_msg\030\002 \001(\t\0224\n\010user_msg\030\003 \003(\0132\".locker" +
-      "box.Error.TranslatedMessage\022\017\n\007dev_msg\030\004" +
-      " \001(\t\022\016\n\006system\030\005 \001(\010\022\022\n\nvalidation\030\006 \001(\010",
-      "\022\021\n\tretryable\030\007 \001(\010\0326\n\021TranslatedMessage" +
-      "\022\014\n\004lang\030\001 \001(\t\022\023\n\013description\030\002 \001(\t\"\324\001\n\004" +
-      "Code\022\013\n\007UNKNOWN\020\001\022#\n\036VALIDATION_INVALID_" +
-      "PARAM_VALUE\020\331\004\022\035\n\030VALIDATION_UNKNOWN_PAR" +
-      "AM\020\332\004\022&\n!VALIDATION_MISSING_REQUIRED_PAR" +
-      "AM\020\333\004\022\037\n\032VALIDATION_INVALID_REQUEST\020\351\004\022\031" +
-      "\n\024AUTH_INVALID_REQUEST\020\321\017\022\027\n\022AUTH_INVALI" +
-      "D_TOKEN\020\322\017\")\n\006Errors\022\037\n\005error\030\001 \003(\0132\020.lo" +
-      "ckerbox.ErrorB(\n\025com.zpaslab.lockerboxB\017" +
-      "LockerboxProtos"
+      "\t\032p\n\nTransferee\022\017\n\007account\030\001 \001(\t\022\014\n\004wire",
+      "\030\002 \001(\t\022\017\n\007details\030\003 \001(\t\022\014\n\004name\030\004 \001(\t\022\r\n" +
+      "\005phone\030\005 \001(\t\022\025\n\rphone_carrier\030\006 \001(\t\"\216\001\n\010" +
+      "Category\022\014\n\010SHIPMENT\020\001\022\020\n\014POST_SERVICE\020\002" +
+      "\022\007\n\003COD\020\003\022\007\n\003TAX\020\004\022\013\n\007CUSTOMS\020\005\022\023\n\017ACCOU" +
+      "NT_BALANCE\020\006\022\022\n\016OVERPAY_MOBILE\020\007\022\032\n\026PEND" +
+      "ING_PARCEL_PAYMENT\020\010\"K\n\006Status\022\013\n\007PENDIN" +
+      "G\020\001\022\013\n\007MATCHED\020\002\022\013\n\007APPLIED\020\003\022\013\n\007EXPIRED" +
+      "\020\004\022\r\n\tCANCELLED\020\005\">\n\nChargeList\022!\n\006charg" +
+      "e\030\001 \003(\0132\021.lockerbox.Charge\022\r\n\005total\030\002 \001(" +
+      "\005\"\306\006\n\007Payment\022\014\n\004code\030\001 \001(\t\022\017\n\007account\030\002",
+      " \001(\t\022\014\n\004href\030\003 \001(\t\022\023\n\013charges_tag\030\004 \001(\t\022" +
+      " \n\006amount\030\005 \001(\0132\020.lockerbox.Money\022)\n\006met" +
+      "hod\030\006 \001(\0162\031.lockerbox.Payment.Method\022)\n\006" +
+      "online\030\007 \001(\0132\031.lockerbox.Payment.Online\022" +
+      "2\n\013credit_card\030\014 \001(\0132\035.lockerbox.Payment" +
+      ".CreditCard\022)\n\006status\030\010 \001(\0162\031.lockerbox." +
+      "Payment.Status\022\026\n\016status_details\030\t \001(\t\022/" +
+      "\n\007history\030\n \003(\0132\036.lockerbox.Payment.Hist" +
+      "oryItem\022\024\n\014deposit_date\030\013 \001(\t\022\032\n\022consoli" +
+      "dation_date\030\r \001(\t\032C\n\006Online\022\020\n\010operator\030",
+      "\001 \001(\t\022\023\n\013browser_url\030\002 \001(\t\022\022\n\nreturn_url" +
+      "\030\003 \001(\t\032o\n\nCreditCard\022\016\n\006issuer\030\001 \001(\t\022\023\n\013" +
+      "card_number\030\002 \001(\t\022\023\n\013terminal_id\030\003 \001(\t\022\032" +
+      "\n\022authorization_code\030\004 \001(\t\022\013\n\003rrn\030\005 \001(\t\032" +
+      "X\n\013HistoryItem\022\014\n\004date\030\001 \001(\t\022\023\n\013descript" +
+      "ion\030\002 \001(\t\022\022\n\ndebug_type\030\003 \001(\t\022\022\n\ndebug_d" +
+      "ata\030\004 \001(\014\"<\n\006Method\022\013\n\007BALANCE\020\001\022\n\n\006ONLI" +
+      "NE\020\002\022\010\n\004CASH\020\003\022\017\n\013CREDIT_CARD\020\004\"Y\n\006Statu" +
+      "s\022\017\n\013NOT_STARTED\020\001\022\013\n\007PENDING\020\002\022\013\n\007SUCCE" +
+      "SS\020\003\022\013\n\007APPLIED\020\004\022\n\n\006FAILED\020\005\022\013\n\007EXPIRED",
+      "\020\006\"A\n\013PaymentList\022#\n\007payment\030\001 \003(\0132\022.loc" +
+      "kerbox.Payment\022\r\n\005total\030\002 \001(\005\"I\n\010Propert" +
+      "y\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t\022!\n\004prop\030\003 " +
+      "\003(\0132\023.lockerbox.Property\"\313\003\n\005Error\022#\n\004co" +
+      "de\030\001 \001(\0162\025.lockerbox.Error.Code\022\020\n\010code_" +
+      "msg\030\002 \001(\t\0224\n\010user_msg\030\003 \003(\0132\".lockerbox." +
+      "Error.TranslatedMessage\022\017\n\007dev_msg\030\004 \001(\t" +
+      "\022\016\n\006system\030\005 \001(\010\022\022\n\nvalidation\030\006 \001(\010\022\021\n\t" +
+      "retryable\030\007 \001(\010\0326\n\021TranslatedMessage\022\014\n\004" +
+      "lang\030\001 \001(\t\022\023\n\013description\030\002 \001(\t\"\324\001\n\004Code",
+      "\022\013\n\007UNKNOWN\020\001\022#\n\036VALIDATION_INVALID_PARA" +
+      "M_VALUE\020\331\004\022\035\n\030VALIDATION_UNKNOWN_PARAM\020\332" +
+      "\004\022&\n!VALIDATION_MISSING_REQUIRED_PARAM\020\333" +
+      "\004\022\037\n\032VALIDATION_INVALID_REQUEST\020\351\004\022\031\n\024AU" +
+      "TH_INVALID_REQUEST\020\321\017\022\027\n\022AUTH_INVALID_TO" +
+      "KEN\020\322\017\")\n\006Errors\022\037\n\005error\030\001 \003(\0132\020.locker" +
+      "box.ErrorB(\n\025com.zpaslab.lockerboxB\017Lock" +
+      "erboxProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -32790,7 +35273,7 @@ public final class LockerboxProtos {
     internal_static_lockerbox_Charge_Transferee_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_lockerbox_Charge_Transferee_descriptor,
-        new java.lang.String[] { "Account", "Wire", "Details", });
+        new java.lang.String[] { "Account", "Wire", "Details", "Name", "Phone", "PhoneCarrier", });
     internal_static_lockerbox_ChargeList_descriptor =
       getDescriptor().getMessageTypes().get(12);
     internal_static_lockerbox_ChargeList_fieldAccessorTable = new
@@ -32802,15 +35285,21 @@ public final class LockerboxProtos {
     internal_static_lockerbox_Payment_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_lockerbox_Payment_descriptor,
-        new java.lang.String[] { "Code", "Account", "Href", "ChargesTag", "Amount", "Method", "Online", "Status", "StatusDetails", "History", });
+        new java.lang.String[] { "Code", "Account", "Href", "ChargesTag", "Amount", "Method", "Online", "CreditCard", "Status", "StatusDetails", "History", "DepositDate", "ConsolidationDate", });
     internal_static_lockerbox_Payment_Online_descriptor =
       internal_static_lockerbox_Payment_descriptor.getNestedTypes().get(0);
     internal_static_lockerbox_Payment_Online_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_lockerbox_Payment_Online_descriptor,
         new java.lang.String[] { "Operator", "BrowserUrl", "ReturnUrl", });
-    internal_static_lockerbox_Payment_HistoryItem_descriptor =
+    internal_static_lockerbox_Payment_CreditCard_descriptor =
       internal_static_lockerbox_Payment_descriptor.getNestedTypes().get(1);
+    internal_static_lockerbox_Payment_CreditCard_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_lockerbox_Payment_CreditCard_descriptor,
+        new java.lang.String[] { "Issuer", "CardNumber", "TerminalId", "AuthorizationCode", "Rrn", });
+    internal_static_lockerbox_Payment_HistoryItem_descriptor =
+      internal_static_lockerbox_Payment_descriptor.getNestedTypes().get(2);
     internal_static_lockerbox_Payment_HistoryItem_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_lockerbox_Payment_HistoryItem_descriptor,
