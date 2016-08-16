@@ -9,6 +9,7 @@ import com.google.api.client.json.jackson2.JacksonFactory;
 import com.google.protobuf.TextFormat;
 import com.googlecode.protobuf.format.HtmlFormat;
 import com.googlecode.protobuf.format.JsonFormat;
+import com.zpaslab.lockerbox.LockerboxInternalProtos;
 import com.zpaslab.lockerbox.LockerboxProtos;
 
 import javax.net.ssl.HttpsURLConnection;
@@ -31,6 +32,7 @@ public class PaymentsMain {
     static final Pattern getPayments = Pattern.compile("/payment.*");
     static final Pattern getPaymentWithCharges = Pattern.compile("/payment/[a-zA-Z0-9]+/charge");
     static final Pattern getParcel = Pattern.compile("/parcel/.*");
+    static final Pattern getCassetteEvent = Pattern.compile("/collector/event.*");
 
     public static void main(String[] args) {
         try {
@@ -179,6 +181,29 @@ public class PaymentsMain {
             jsonFormat.merge(responseContent, parcel);
 
             System.out.println(TextFormat.printToUnicodeString(parcel));
+            return;
+        }
+        if (getCassetteEvent.matcher(args[0]).find()) {
+            // API params:
+            // - start (default value: now - 7 days); show only events with date >= start
+            // - end   (default value: now); show only events with date <= end
+            // - lockerbox (repeated string, default value = "" (ALL)); show only pochtomat with given name
+            // - type (repeated string, default value = "" (ALL)); show only events with given type
+            // - limit (int, default value = 100); limit number of records
+            //
+            // Results are sorted ASC by date
+            System.out.printf("\n---------------------------\nget cash cassette event [%s]\n\n", args[0]);
+
+            String url = apiServer.concat(args[0]);
+            HttpResponse response = executeGet(new NetHttpTransport(), new JacksonFactory(), accessToken,
+                    new GenericUrl(url));
+            InputStream responseContent = response.getContent();
+
+            LockerboxInternalProtos.CashCassetteEventList.Builder eventList = LockerboxInternalProtos.CashCassetteEventList.newBuilder();
+            JsonFormat jsonFormat = new JsonFormat();
+            jsonFormat.merge(responseContent, eventList);
+
+            System.out.println(TextFormat.printToUnicodeString(eventList));
             return;
         }
 

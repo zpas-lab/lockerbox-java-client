@@ -38,6 +38,10 @@ Generated Java file: src/generated/main/java/com/zpaslab/lockerbox/LockerboxProt
 
     # List details of single parcel ABC1235 (value of charge.parcel_ref):
     gradle run -PappArgs="['/parcel/ABC1235']"
+        
+    # List collector events (optional arguments for filtering and pagination in PaymentsMain.java)
+    gradle run -PappArgs="['/collector/event']"
+
     ```
 
     ```

@@ -1,0 +1,42 @@
+package lockerbox;
+
+// To generate go objects:
+// protoc --go_out=.. *.proto
+
+option java_package = "com.zpaslab.lockerbox";
+option java_outer_classname = "LockerboxInternalProtos";
+
+// CashCassetteEvent describes a noteworthy event in lifetime of a cash terminal's bill collecting cassette.
+// Full history of events enables calculating current status and contents of a CashCassette, while also
+// allowing for historical monitoring/tracking.
+// Next id: 6
+message CashCassetteEvent {
+    enum Type {
+        // "Detected" events are auto-detected via hardware channels.
+        DETECTED_REMOVED = 1;
+        DETECTED_INSERTED = 2;
+        DETECTED_ERROR = 3;
+        // "Claimed" events are reported by user/collector, because we don't
+        // have a way to confirm/detect them via hardware.
+        CLAIMED_EMPTIED = 4;
+        CLAIMED_NON_EMPTIED = 5;
+        CLAIMED_TAKEN = 6;
+        CLAIMED_ERROR = 7;
+    }
+
+    optional string code = 5;
+    optional Type type = 1;
+    optional string date = 2;
+    // capacity must be set only for CLAIMED_EMPTIED and CLAIMED_NON_EMPTIED
+    // TODO(mateuszc): ideally, capacity would be set only for DETECTED_INSERTED
+    optional int32 capacity = 3;
+    optional string lockerbox_name = 4;
+    // TODO(mateuszc): repeated PaymentInstrumentCount { PaymentInstrument; count; }
+    // TODO(mateuszc): optional string collector_name;
+    // TODO(mateuszc): optional string slot; // e.g. "ccnet_bv", "coin-o-matic left", "supercoin 5-10 BYN"
+}
+
+message CashCassetteEventList {
+    repeated CashCassetteEvent event = 1;
+    optional int32 total = 2;
+}
