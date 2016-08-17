@@ -8,6 +8,755 @@ public final class LockerboxInternalProtos {
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistry registry) {
   }
+  public interface PaymentInstrumentCountOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:lockerbox.PaymentInstrumentCount)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional .lockerbox.Payment.Method method = 1;</code>
+     *
+     * <pre>
+     * Method and amount of all instruments in this group.
+     * </pre>
+     */
+    boolean hasMethod();
+    /**
+     * <code>optional .lockerbox.Payment.Method method = 1;</code>
+     *
+     * <pre>
+     * Method and amount of all instruments in this group.
+     * </pre>
+     */
+    com.zpaslab.lockerbox.LockerboxProtos.Payment.Method getMethod();
+
+    /**
+     * <code>optional .lockerbox.Money amount = 2;</code>
+     */
+    boolean hasAmount();
+    /**
+     * <code>optional .lockerbox.Money amount = 2;</code>
+     */
+    com.zpaslab.lockerbox.LockerboxProtos.Money getAmount();
+    /**
+     * <code>optional .lockerbox.Money amount = 2;</code>
+     */
+    com.zpaslab.lockerbox.LockerboxProtos.MoneyOrBuilder getAmountOrBuilder();
+
+    /**
+     * <code>optional int32 count = 3;</code>
+     *
+     * <pre>
+     * Number of instruments in this group.
+     * </pre>
+     */
+    boolean hasCount();
+    /**
+     * <code>optional int32 count = 3;</code>
+     *
+     * <pre>
+     * Number of instruments in this group.
+     * </pre>
+     */
+    int getCount();
+  }
+  /**
+   * Protobuf type {@code lockerbox.PaymentInstrumentCount}
+   *
+   * <pre>
+   * PaymentInstrumentCount represents a group of PaymentInstrument instances with the same method and amount.
+   * NOTE(pawelb): instead of embedding full PaymentInstrument object, we build a separate object which has
+   * fields, that make sense as aggregation of PaymentInstruments for the sake of prettier API.
+   * </pre>
+   */
+  public static final class PaymentInstrumentCount extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:lockerbox.PaymentInstrumentCount)
+      PaymentInstrumentCountOrBuilder {
+    // Use PaymentInstrumentCount.newBuilder() to construct.
+    private PaymentInstrumentCount(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private PaymentInstrumentCount(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final PaymentInstrumentCount defaultInstance;
+    public static PaymentInstrumentCount getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public PaymentInstrumentCount getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private PaymentInstrumentCount(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              int rawValue = input.readEnum();
+              com.zpaslab.lockerbox.LockerboxProtos.Payment.Method value = com.zpaslab.lockerbox.LockerboxProtos.Payment.Method.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(1, rawValue);
+              } else {
+                bitField0_ |= 0x00000001;
+                method_ = value;
+              }
+              break;
+            }
+            case 18: {
+              com.zpaslab.lockerbox.LockerboxProtos.Money.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000002) == 0x00000002)) {
+                subBuilder = amount_.toBuilder();
+              }
+              amount_ = input.readMessage(com.zpaslab.lockerbox.LockerboxProtos.Money.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(amount_);
+                amount_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000002;
+              break;
+            }
+            case 24: {
+              bitField0_ |= 0x00000004;
+              count_ = input.readInt32();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.zpaslab.lockerbox.LockerboxInternalProtos.internal_static_lockerbox_PaymentInstrumentCount_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.zpaslab.lockerbox.LockerboxInternalProtos.internal_static_lockerbox_PaymentInstrumentCount_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.zpaslab.lockerbox.LockerboxInternalProtos.PaymentInstrumentCount.class, com.zpaslab.lockerbox.LockerboxInternalProtos.PaymentInstrumentCount.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<PaymentInstrumentCount> PARSER =
+        new com.google.protobuf.AbstractParser<PaymentInstrumentCount>() {
+      public PaymentInstrumentCount parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new PaymentInstrumentCount(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PaymentInstrumentCount> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    public static final int METHOD_FIELD_NUMBER = 1;
+    private com.zpaslab.lockerbox.LockerboxProtos.Payment.Method method_;
+    /**
+     * <code>optional .lockerbox.Payment.Method method = 1;</code>
+     *
+     * <pre>
+     * Method and amount of all instruments in this group.
+     * </pre>
+     */
+    public boolean hasMethod() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional .lockerbox.Payment.Method method = 1;</code>
+     *
+     * <pre>
+     * Method and amount of all instruments in this group.
+     * </pre>
+     */
+    public com.zpaslab.lockerbox.LockerboxProtos.Payment.Method getMethod() {
+      return method_;
+    }
+
+    public static final int AMOUNT_FIELD_NUMBER = 2;
+    private com.zpaslab.lockerbox.LockerboxProtos.Money amount_;
+    /**
+     * <code>optional .lockerbox.Money amount = 2;</code>
+     */
+    public boolean hasAmount() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional .lockerbox.Money amount = 2;</code>
+     */
+    public com.zpaslab.lockerbox.LockerboxProtos.Money getAmount() {
+      return amount_;
+    }
+    /**
+     * <code>optional .lockerbox.Money amount = 2;</code>
+     */
+    public com.zpaslab.lockerbox.LockerboxProtos.MoneyOrBuilder getAmountOrBuilder() {
+      return amount_;
+    }
+
+    public static final int COUNT_FIELD_NUMBER = 3;
+    private int count_;
+    /**
+     * <code>optional int32 count = 3;</code>
+     *
+     * <pre>
+     * Number of instruments in this group.
+     * </pre>
+     */
+    public boolean hasCount() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>optional int32 count = 3;</code>
+     *
+     * <pre>
+     * Number of instruments in this group.
+     * </pre>
+     */
+    public int getCount() {
+      return count_;
+    }
+
+    private void initFields() {
+      method_ = com.zpaslab.lockerbox.LockerboxProtos.Payment.Method.BALANCE;
+      amount_ = com.zpaslab.lockerbox.LockerboxProtos.Money.getDefaultInstance();
+      count_ = 0;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeEnum(1, method_.getNumber());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeMessage(2, amount_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeInt32(3, count_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, method_.getNumber());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, amount_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(3, count_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static com.zpaslab.lockerbox.LockerboxInternalProtos.PaymentInstrumentCount parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.zpaslab.lockerbox.LockerboxInternalProtos.PaymentInstrumentCount parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.zpaslab.lockerbox.LockerboxInternalProtos.PaymentInstrumentCount parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.zpaslab.lockerbox.LockerboxInternalProtos.PaymentInstrumentCount parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.zpaslab.lockerbox.LockerboxInternalProtos.PaymentInstrumentCount parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.zpaslab.lockerbox.LockerboxInternalProtos.PaymentInstrumentCount parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.zpaslab.lockerbox.LockerboxInternalProtos.PaymentInstrumentCount parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.zpaslab.lockerbox.LockerboxInternalProtos.PaymentInstrumentCount parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.zpaslab.lockerbox.LockerboxInternalProtos.PaymentInstrumentCount parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.zpaslab.lockerbox.LockerboxInternalProtos.PaymentInstrumentCount parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(com.zpaslab.lockerbox.LockerboxInternalProtos.PaymentInstrumentCount prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code lockerbox.PaymentInstrumentCount}
+     *
+     * <pre>
+     * PaymentInstrumentCount represents a group of PaymentInstrument instances with the same method and amount.
+     * NOTE(pawelb): instead of embedding full PaymentInstrument object, we build a separate object which has
+     * fields, that make sense as aggregation of PaymentInstruments for the sake of prettier API.
+     * </pre>
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:lockerbox.PaymentInstrumentCount)
+        com.zpaslab.lockerbox.LockerboxInternalProtos.PaymentInstrumentCountOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.zpaslab.lockerbox.LockerboxInternalProtos.internal_static_lockerbox_PaymentInstrumentCount_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.zpaslab.lockerbox.LockerboxInternalProtos.internal_static_lockerbox_PaymentInstrumentCount_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.zpaslab.lockerbox.LockerboxInternalProtos.PaymentInstrumentCount.class, com.zpaslab.lockerbox.LockerboxInternalProtos.PaymentInstrumentCount.Builder.class);
+      }
+
+      // Construct using com.zpaslab.lockerbox.LockerboxInternalProtos.PaymentInstrumentCount.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getAmountFieldBuilder();
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        method_ = com.zpaslab.lockerbox.LockerboxProtos.Payment.Method.BALANCE;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        if (amountBuilder_ == null) {
+          amount_ = com.zpaslab.lockerbox.LockerboxProtos.Money.getDefaultInstance();
+        } else {
+          amountBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        count_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.zpaslab.lockerbox.LockerboxInternalProtos.internal_static_lockerbox_PaymentInstrumentCount_descriptor;
+      }
+
+      public com.zpaslab.lockerbox.LockerboxInternalProtos.PaymentInstrumentCount getDefaultInstanceForType() {
+        return com.zpaslab.lockerbox.LockerboxInternalProtos.PaymentInstrumentCount.getDefaultInstance();
+      }
+
+      public com.zpaslab.lockerbox.LockerboxInternalProtos.PaymentInstrumentCount build() {
+        com.zpaslab.lockerbox.LockerboxInternalProtos.PaymentInstrumentCount result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.zpaslab.lockerbox.LockerboxInternalProtos.PaymentInstrumentCount buildPartial() {
+        com.zpaslab.lockerbox.LockerboxInternalProtos.PaymentInstrumentCount result = new com.zpaslab.lockerbox.LockerboxInternalProtos.PaymentInstrumentCount(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.method_ = method_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        if (amountBuilder_ == null) {
+          result.amount_ = amount_;
+        } else {
+          result.amount_ = amountBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.count_ = count_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.zpaslab.lockerbox.LockerboxInternalProtos.PaymentInstrumentCount) {
+          return mergeFrom((com.zpaslab.lockerbox.LockerboxInternalProtos.PaymentInstrumentCount)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.zpaslab.lockerbox.LockerboxInternalProtos.PaymentInstrumentCount other) {
+        if (other == com.zpaslab.lockerbox.LockerboxInternalProtos.PaymentInstrumentCount.getDefaultInstance()) return this;
+        if (other.hasMethod()) {
+          setMethod(other.getMethod());
+        }
+        if (other.hasAmount()) {
+          mergeAmount(other.getAmount());
+        }
+        if (other.hasCount()) {
+          setCount(other.getCount());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.zpaslab.lockerbox.LockerboxInternalProtos.PaymentInstrumentCount parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.zpaslab.lockerbox.LockerboxInternalProtos.PaymentInstrumentCount) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private com.zpaslab.lockerbox.LockerboxProtos.Payment.Method method_ = com.zpaslab.lockerbox.LockerboxProtos.Payment.Method.BALANCE;
+      /**
+       * <code>optional .lockerbox.Payment.Method method = 1;</code>
+       *
+       * <pre>
+       * Method and amount of all instruments in this group.
+       * </pre>
+       */
+      public boolean hasMethod() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional .lockerbox.Payment.Method method = 1;</code>
+       *
+       * <pre>
+       * Method and amount of all instruments in this group.
+       * </pre>
+       */
+      public com.zpaslab.lockerbox.LockerboxProtos.Payment.Method getMethod() {
+        return method_;
+      }
+      /**
+       * <code>optional .lockerbox.Payment.Method method = 1;</code>
+       *
+       * <pre>
+       * Method and amount of all instruments in this group.
+       * </pre>
+       */
+      public Builder setMethod(com.zpaslab.lockerbox.LockerboxProtos.Payment.Method value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000001;
+        method_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .lockerbox.Payment.Method method = 1;</code>
+       *
+       * <pre>
+       * Method and amount of all instruments in this group.
+       * </pre>
+       */
+      public Builder clearMethod() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        method_ = com.zpaslab.lockerbox.LockerboxProtos.Payment.Method.BALANCE;
+        onChanged();
+        return this;
+      }
+
+      private com.zpaslab.lockerbox.LockerboxProtos.Money amount_ = com.zpaslab.lockerbox.LockerboxProtos.Money.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          com.zpaslab.lockerbox.LockerboxProtos.Money, com.zpaslab.lockerbox.LockerboxProtos.Money.Builder, com.zpaslab.lockerbox.LockerboxProtos.MoneyOrBuilder> amountBuilder_;
+      /**
+       * <code>optional .lockerbox.Money amount = 2;</code>
+       */
+      public boolean hasAmount() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional .lockerbox.Money amount = 2;</code>
+       */
+      public com.zpaslab.lockerbox.LockerboxProtos.Money getAmount() {
+        if (amountBuilder_ == null) {
+          return amount_;
+        } else {
+          return amountBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .lockerbox.Money amount = 2;</code>
+       */
+      public Builder setAmount(com.zpaslab.lockerbox.LockerboxProtos.Money value) {
+        if (amountBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          amount_ = value;
+          onChanged();
+        } else {
+          amountBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        return this;
+      }
+      /**
+       * <code>optional .lockerbox.Money amount = 2;</code>
+       */
+      public Builder setAmount(
+          com.zpaslab.lockerbox.LockerboxProtos.Money.Builder builderForValue) {
+        if (amountBuilder_ == null) {
+          amount_ = builderForValue.build();
+          onChanged();
+        } else {
+          amountBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        return this;
+      }
+      /**
+       * <code>optional .lockerbox.Money amount = 2;</code>
+       */
+      public Builder mergeAmount(com.zpaslab.lockerbox.LockerboxProtos.Money value) {
+        if (amountBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) == 0x00000002) &&
+              amount_ != com.zpaslab.lockerbox.LockerboxProtos.Money.getDefaultInstance()) {
+            amount_ =
+              com.zpaslab.lockerbox.LockerboxProtos.Money.newBuilder(amount_).mergeFrom(value).buildPartial();
+          } else {
+            amount_ = value;
+          }
+          onChanged();
+        } else {
+          amountBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        return this;
+      }
+      /**
+       * <code>optional .lockerbox.Money amount = 2;</code>
+       */
+      public Builder clearAmount() {
+        if (amountBuilder_ == null) {
+          amount_ = com.zpaslab.lockerbox.LockerboxProtos.Money.getDefaultInstance();
+          onChanged();
+        } else {
+          amountBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+      /**
+       * <code>optional .lockerbox.Money amount = 2;</code>
+       */
+      public com.zpaslab.lockerbox.LockerboxProtos.Money.Builder getAmountBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getAmountFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .lockerbox.Money amount = 2;</code>
+       */
+      public com.zpaslab.lockerbox.LockerboxProtos.MoneyOrBuilder getAmountOrBuilder() {
+        if (amountBuilder_ != null) {
+          return amountBuilder_.getMessageOrBuilder();
+        } else {
+          return amount_;
+        }
+      }
+      /**
+       * <code>optional .lockerbox.Money amount = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          com.zpaslab.lockerbox.LockerboxProtos.Money, com.zpaslab.lockerbox.LockerboxProtos.Money.Builder, com.zpaslab.lockerbox.LockerboxProtos.MoneyOrBuilder> 
+          getAmountFieldBuilder() {
+        if (amountBuilder_ == null) {
+          amountBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              com.zpaslab.lockerbox.LockerboxProtos.Money, com.zpaslab.lockerbox.LockerboxProtos.Money.Builder, com.zpaslab.lockerbox.LockerboxProtos.MoneyOrBuilder>(
+                  getAmount(),
+                  getParentForChildren(),
+                  isClean());
+          amount_ = null;
+        }
+        return amountBuilder_;
+      }
+
+      private int count_ ;
+      /**
+       * <code>optional int32 count = 3;</code>
+       *
+       * <pre>
+       * Number of instruments in this group.
+       * </pre>
+       */
+      public boolean hasCount() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional int32 count = 3;</code>
+       *
+       * <pre>
+       * Number of instruments in this group.
+       * </pre>
+       */
+      public int getCount() {
+        return count_;
+      }
+      /**
+       * <code>optional int32 count = 3;</code>
+       *
+       * <pre>
+       * Number of instruments in this group.
+       * </pre>
+       */
+      public Builder setCount(int value) {
+        bitField0_ |= 0x00000004;
+        count_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 count = 3;</code>
+       *
+       * <pre>
+       * Number of instruments in this group.
+       * </pre>
+       */
+      public Builder clearCount() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        count_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:lockerbox.PaymentInstrumentCount)
+    }
+
+    static {
+      defaultInstance = new PaymentInstrumentCount(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:lockerbox.PaymentInstrumentCount)
+  }
+
   public interface CashCassetteEventOrBuilder extends
       // @@protoc_insertion_point(interface_extends:lockerbox.CashCassetteEvent)
       com.google.protobuf.MessageOrBuilder {
@@ -70,35 +819,94 @@ public final class LockerboxInternalProtos {
 
     /**
      * <code>optional string lockerbox_name = 4;</code>
-     *
-     * <pre>
-     * TODO(mateuszc): repeated PaymentInstrumentCount { PaymentInstrument; count; }
-     * TODO(mateuszc): optional string collector_name;
-     * TODO(mateuszc): optional string slot; // e.g. "ccnet_bv", "coin-o-matic left", "supercoin 5-10 BYN"
-     * </pre>
      */
     boolean hasLockerboxName();
     /**
      * <code>optional string lockerbox_name = 4;</code>
-     *
-     * <pre>
-     * TODO(mateuszc): repeated PaymentInstrumentCount { PaymentInstrument; count; }
-     * TODO(mateuszc): optional string collector_name;
-     * TODO(mateuszc): optional string slot; // e.g. "ccnet_bv", "coin-o-matic left", "supercoin 5-10 BYN"
-     * </pre>
      */
     java.lang.String getLockerboxName();
     /**
      * <code>optional string lockerbox_name = 4;</code>
+     */
+    com.google.protobuf.ByteString
+        getLockerboxNameBytes();
+
+    /**
+     * <code>repeated .lockerbox.PaymentInstrumentCount instrument_count = 6;</code>
      *
      * <pre>
-     * TODO(mateuszc): repeated PaymentInstrumentCount { PaymentInstrument; count; }
+     * instrument_count and total contain details about bills in the cassette.
+     * Filled if type == CLAIMED_EMPTIED.
+     * </pre>
+     */
+    java.util.List<com.zpaslab.lockerbox.LockerboxInternalProtos.PaymentInstrumentCount> 
+        getInstrumentCountList();
+    /**
+     * <code>repeated .lockerbox.PaymentInstrumentCount instrument_count = 6;</code>
+     *
+     * <pre>
+     * instrument_count and total contain details about bills in the cassette.
+     * Filled if type == CLAIMED_EMPTIED.
+     * </pre>
+     */
+    com.zpaslab.lockerbox.LockerboxInternalProtos.PaymentInstrumentCount getInstrumentCount(int index);
+    /**
+     * <code>repeated .lockerbox.PaymentInstrumentCount instrument_count = 6;</code>
+     *
+     * <pre>
+     * instrument_count and total contain details about bills in the cassette.
+     * Filled if type == CLAIMED_EMPTIED.
+     * </pre>
+     */
+    int getInstrumentCountCount();
+    /**
+     * <code>repeated .lockerbox.PaymentInstrumentCount instrument_count = 6;</code>
+     *
+     * <pre>
+     * instrument_count and total contain details about bills in the cassette.
+     * Filled if type == CLAIMED_EMPTIED.
+     * </pre>
+     */
+    java.util.List<? extends com.zpaslab.lockerbox.LockerboxInternalProtos.PaymentInstrumentCountOrBuilder> 
+        getInstrumentCountOrBuilderList();
+    /**
+     * <code>repeated .lockerbox.PaymentInstrumentCount instrument_count = 6;</code>
+     *
+     * <pre>
+     * instrument_count and total contain details about bills in the cassette.
+     * Filled if type == CLAIMED_EMPTIED.
+     * </pre>
+     */
+    com.zpaslab.lockerbox.LockerboxInternalProtos.PaymentInstrumentCountOrBuilder getInstrumentCountOrBuilder(
+        int index);
+
+    /**
+     * <code>optional .lockerbox.Money total = 7;</code>
+     *
+     * <pre>
      * TODO(mateuszc): optional string collector_name;
      * TODO(mateuszc): optional string slot; // e.g. "ccnet_bv", "coin-o-matic left", "supercoin 5-10 BYN"
      * </pre>
      */
-    com.google.protobuf.ByteString
-        getLockerboxNameBytes();
+    boolean hasTotal();
+    /**
+     * <code>optional .lockerbox.Money total = 7;</code>
+     *
+     * <pre>
+     * TODO(mateuszc): optional string collector_name;
+     * TODO(mateuszc): optional string slot; // e.g. "ccnet_bv", "coin-o-matic left", "supercoin 5-10 BYN"
+     * </pre>
+     */
+    com.zpaslab.lockerbox.LockerboxProtos.Money getTotal();
+    /**
+     * <code>optional .lockerbox.Money total = 7;</code>
+     *
+     * <pre>
+     * TODO(mateuszc): optional string collector_name;
+     * TODO(mateuszc): optional string slot; // e.g. "ccnet_bv", "coin-o-matic left", "supercoin 5-10 BYN"
+     * </pre>
+     */
+    com.zpaslab.lockerbox.LockerboxProtos.MoneyOrBuilder getTotalOrBuilder();
   }
   /**
    * Protobuf type {@code lockerbox.CashCassetteEvent}
@@ -107,7 +915,7 @@ public final class LockerboxInternalProtos {
    * CashCassetteEvent describes a noteworthy event in lifetime of a cash terminal's bill collecting cassette.
    * Full history of events enables calculating current status and contents of a CashCassette, while also
    * allowing for historical monitoring/tracking.
-   * Next id: 6
+   * Next id: 8
    * </pre>
    */
   public static final class CashCassetteEvent extends
@@ -193,6 +1001,27 @@ public final class LockerboxInternalProtos {
               code_ = bs;
               break;
             }
+            case 50: {
+              if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+                instrumentCount_ = new java.util.ArrayList<com.zpaslab.lockerbox.LockerboxInternalProtos.PaymentInstrumentCount>();
+                mutable_bitField0_ |= 0x00000020;
+              }
+              instrumentCount_.add(input.readMessage(com.zpaslab.lockerbox.LockerboxInternalProtos.PaymentInstrumentCount.PARSER, extensionRegistry));
+              break;
+            }
+            case 58: {
+              com.zpaslab.lockerbox.LockerboxProtos.Money.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000020) == 0x00000020)) {
+                subBuilder = total_.toBuilder();
+              }
+              total_ = input.readMessage(com.zpaslab.lockerbox.LockerboxProtos.Money.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(total_);
+                total_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000020;
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -201,6 +1030,9 @@ public final class LockerboxInternalProtos {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+          instrumentCount_ = java.util.Collections.unmodifiableList(instrumentCount_);
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -506,24 +1338,12 @@ public final class LockerboxInternalProtos {
     private java.lang.Object lockerboxName_;
     /**
      * <code>optional string lockerbox_name = 4;</code>
-     *
-     * <pre>
-     * TODO(mateuszc): repeated PaymentInstrumentCount { PaymentInstrument; count; }
-     * TODO(mateuszc): optional string collector_name;
-     * TODO(mateuszc): optional string slot; // e.g. "ccnet_bv", "coin-o-matic left", "supercoin 5-10 BYN"
-     * </pre>
      */
     public boolean hasLockerboxName() {
       return ((bitField0_ & 0x00000010) == 0x00000010);
     }
     /**
      * <code>optional string lockerbox_name = 4;</code>
-     *
-     * <pre>
-     * TODO(mateuszc): repeated PaymentInstrumentCount { PaymentInstrument; count; }
-     * TODO(mateuszc): optional string collector_name;
-     * TODO(mateuszc): optional string slot; // e.g. "ccnet_bv", "coin-o-matic left", "supercoin 5-10 BYN"
-     * </pre>
      */
     public java.lang.String getLockerboxName() {
       java.lang.Object ref = lockerboxName_;
@@ -541,12 +1361,6 @@ public final class LockerboxInternalProtos {
     }
     /**
      * <code>optional string lockerbox_name = 4;</code>
-     *
-     * <pre>
-     * TODO(mateuszc): repeated PaymentInstrumentCount { PaymentInstrument; count; }
-     * TODO(mateuszc): optional string collector_name;
-     * TODO(mateuszc): optional string slot; // e.g. "ccnet_bv", "coin-o-matic left", "supercoin 5-10 BYN"
-     * </pre>
      */
     public com.google.protobuf.ByteString
         getLockerboxNameBytes() {
@@ -562,12 +1376,110 @@ public final class LockerboxInternalProtos {
       }
     }
 
+    public static final int INSTRUMENT_COUNT_FIELD_NUMBER = 6;
+    private java.util.List<com.zpaslab.lockerbox.LockerboxInternalProtos.PaymentInstrumentCount> instrumentCount_;
+    /**
+     * <code>repeated .lockerbox.PaymentInstrumentCount instrument_count = 6;</code>
+     *
+     * <pre>
+     * instrument_count and total contain details about bills in the cassette.
+     * Filled if type == CLAIMED_EMPTIED.
+     * </pre>
+     */
+    public java.util.List<com.zpaslab.lockerbox.LockerboxInternalProtos.PaymentInstrumentCount> getInstrumentCountList() {
+      return instrumentCount_;
+    }
+    /**
+     * <code>repeated .lockerbox.PaymentInstrumentCount instrument_count = 6;</code>
+     *
+     * <pre>
+     * instrument_count and total contain details about bills in the cassette.
+     * Filled if type == CLAIMED_EMPTIED.
+     * </pre>
+     */
+    public java.util.List<? extends com.zpaslab.lockerbox.LockerboxInternalProtos.PaymentInstrumentCountOrBuilder> 
+        getInstrumentCountOrBuilderList() {
+      return instrumentCount_;
+    }
+    /**
+     * <code>repeated .lockerbox.PaymentInstrumentCount instrument_count = 6;</code>
+     *
+     * <pre>
+     * instrument_count and total contain details about bills in the cassette.
+     * Filled if type == CLAIMED_EMPTIED.
+     * </pre>
+     */
+    public int getInstrumentCountCount() {
+      return instrumentCount_.size();
+    }
+    /**
+     * <code>repeated .lockerbox.PaymentInstrumentCount instrument_count = 6;</code>
+     *
+     * <pre>
+     * instrument_count and total contain details about bills in the cassette.
+     * Filled if type == CLAIMED_EMPTIED.
+     * </pre>
+     */
+    public com.zpaslab.lockerbox.LockerboxInternalProtos.PaymentInstrumentCount getInstrumentCount(int index) {
+      return instrumentCount_.get(index);
+    }
+    /**
+     * <code>repeated .lockerbox.PaymentInstrumentCount instrument_count = 6;</code>
+     *
+     * <pre>
+     * instrument_count and total contain details about bills in the cassette.
+     * Filled if type == CLAIMED_EMPTIED.
+     * </pre>
+     */
+    public com.zpaslab.lockerbox.LockerboxInternalProtos.PaymentInstrumentCountOrBuilder getInstrumentCountOrBuilder(
+        int index) {
+      return instrumentCount_.get(index);
+    }
+
+    public static final int TOTAL_FIELD_NUMBER = 7;
+    private com.zpaslab.lockerbox.LockerboxProtos.Money total_;
+    /**
+     * <code>optional .lockerbox.Money total = 7;</code>
+     *
+     * <pre>
+     * TODO(mateuszc): optional string collector_name;
+     * TODO(mateuszc): optional string slot; // e.g. "ccnet_bv", "coin-o-matic left", "supercoin 5-10 BYN"
+     * </pre>
+     */
+    public boolean hasTotal() {
+      return ((bitField0_ & 0x00000020) == 0x00000020);
+    }
+    /**
+     * <code>optional .lockerbox.Money total = 7;</code>
+     *
+     * <pre>
+     * TODO(mateuszc): optional string collector_name;
+     * TODO(mateuszc): optional string slot; // e.g. "ccnet_bv", "coin-o-matic left", "supercoin 5-10 BYN"
+     * </pre>
+     */
+    public com.zpaslab.lockerbox.LockerboxProtos.Money getTotal() {
+      return total_;
+    }
+    /**
+     * <code>optional .lockerbox.Money total = 7;</code>
+     *
+     * <pre>
+     * TODO(mateuszc): optional string collector_name;
+     * TODO(mateuszc): optional string slot; // e.g. "ccnet_bv", "coin-o-matic left", "supercoin 5-10 BYN"
+     * </pre>
+     */
+    public com.zpaslab.lockerbox.LockerboxProtos.MoneyOrBuilder getTotalOrBuilder() {
+      return total_;
+    }
+
     private void initFields() {
       code_ = "";
       type_ = com.zpaslab.lockerbox.LockerboxInternalProtos.CashCassetteEvent.Type.DETECTED_REMOVED;
       date_ = "";
       capacity_ = 0;
       lockerboxName_ = "";
+      instrumentCount_ = java.util.Collections.emptyList();
+      total_ = com.zpaslab.lockerbox.LockerboxProtos.Money.getDefaultInstance();
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -597,6 +1509,12 @@ public final class LockerboxInternalProtos {
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         output.writeBytes(5, getCodeBytes());
       }
+      for (int i = 0; i < instrumentCount_.size(); i++) {
+        output.writeMessage(6, instrumentCount_.get(i));
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        output.writeMessage(7, total_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -625,6 +1543,14 @@ public final class LockerboxInternalProtos {
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(5, getCodeBytes());
+      }
+      for (int i = 0; i < instrumentCount_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, instrumentCount_.get(i));
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, total_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -711,7 +1637,7 @@ public final class LockerboxInternalProtos {
      * CashCassetteEvent describes a noteworthy event in lifetime of a cash terminal's bill collecting cassette.
      * Full history of events enables calculating current status and contents of a CashCassette, while also
      * allowing for historical monitoring/tracking.
-     * Next id: 6
+     * Next id: 8
      * </pre>
      */
     public static final class Builder extends
@@ -742,6 +1668,8 @@ public final class LockerboxInternalProtos {
       }
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getInstrumentCountFieldBuilder();
+          getTotalFieldBuilder();
         }
       }
       private static Builder create() {
@@ -760,6 +1688,18 @@ public final class LockerboxInternalProtos {
         bitField0_ = (bitField0_ & ~0x00000008);
         lockerboxName_ = "";
         bitField0_ = (bitField0_ & ~0x00000010);
+        if (instrumentCountBuilder_ == null) {
+          instrumentCount_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000020);
+        } else {
+          instrumentCountBuilder_.clear();
+        }
+        if (totalBuilder_ == null) {
+          total_ = com.zpaslab.lockerbox.LockerboxProtos.Money.getDefaultInstance();
+        } else {
+          totalBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000040);
         return this;
       }
 
@@ -808,6 +1748,23 @@ public final class LockerboxInternalProtos {
           to_bitField0_ |= 0x00000010;
         }
         result.lockerboxName_ = lockerboxName_;
+        if (instrumentCountBuilder_ == null) {
+          if (((bitField0_ & 0x00000020) == 0x00000020)) {
+            instrumentCount_ = java.util.Collections.unmodifiableList(instrumentCount_);
+            bitField0_ = (bitField0_ & ~0x00000020);
+          }
+          result.instrumentCount_ = instrumentCount_;
+        } else {
+          result.instrumentCount_ = instrumentCountBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000040) == 0x00000040)) {
+          to_bitField0_ |= 0x00000020;
+        }
+        if (totalBuilder_ == null) {
+          result.total_ = total_;
+        } else {
+          result.total_ = totalBuilder_.build();
+        }
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -844,6 +1801,35 @@ public final class LockerboxInternalProtos {
           bitField0_ |= 0x00000010;
           lockerboxName_ = other.lockerboxName_;
           onChanged();
+        }
+        if (instrumentCountBuilder_ == null) {
+          if (!other.instrumentCount_.isEmpty()) {
+            if (instrumentCount_.isEmpty()) {
+              instrumentCount_ = other.instrumentCount_;
+              bitField0_ = (bitField0_ & ~0x00000020);
+            } else {
+              ensureInstrumentCountIsMutable();
+              instrumentCount_.addAll(other.instrumentCount_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.instrumentCount_.isEmpty()) {
+            if (instrumentCountBuilder_.isEmpty()) {
+              instrumentCountBuilder_.dispose();
+              instrumentCountBuilder_ = null;
+              instrumentCount_ = other.instrumentCount_;
+              bitField0_ = (bitField0_ & ~0x00000020);
+              instrumentCountBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   getInstrumentCountFieldBuilder() : null;
+            } else {
+              instrumentCountBuilder_.addAllMessages(other.instrumentCount_);
+            }
+          }
+        }
+        if (other.hasTotal()) {
+          mergeTotal(other.getTotal());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -1114,24 +2100,12 @@ public final class LockerboxInternalProtos {
       private java.lang.Object lockerboxName_ = "";
       /**
        * <code>optional string lockerbox_name = 4;</code>
-       *
-       * <pre>
-       * TODO(mateuszc): repeated PaymentInstrumentCount { PaymentInstrument; count; }
-       * TODO(mateuszc): optional string collector_name;
-       * TODO(mateuszc): optional string slot; // e.g. "ccnet_bv", "coin-o-matic left", "supercoin 5-10 BYN"
-       * </pre>
        */
       public boolean hasLockerboxName() {
         return ((bitField0_ & 0x00000010) == 0x00000010);
       }
       /**
        * <code>optional string lockerbox_name = 4;</code>
-       *
-       * <pre>
-       * TODO(mateuszc): repeated PaymentInstrumentCount { PaymentInstrument; count; }
-       * TODO(mateuszc): optional string collector_name;
-       * TODO(mateuszc): optional string slot; // e.g. "ccnet_bv", "coin-o-matic left", "supercoin 5-10 BYN"
-       * </pre>
        */
       public java.lang.String getLockerboxName() {
         java.lang.Object ref = lockerboxName_;
@@ -1149,12 +2123,6 @@ public final class LockerboxInternalProtos {
       }
       /**
        * <code>optional string lockerbox_name = 4;</code>
-       *
-       * <pre>
-       * TODO(mateuszc): repeated PaymentInstrumentCount { PaymentInstrument; count; }
-       * TODO(mateuszc): optional string collector_name;
-       * TODO(mateuszc): optional string slot; // e.g. "ccnet_bv", "coin-o-matic left", "supercoin 5-10 BYN"
-       * </pre>
        */
       public com.google.protobuf.ByteString
           getLockerboxNameBytes() {
@@ -1171,12 +2139,6 @@ public final class LockerboxInternalProtos {
       }
       /**
        * <code>optional string lockerbox_name = 4;</code>
-       *
-       * <pre>
-       * TODO(mateuszc): repeated PaymentInstrumentCount { PaymentInstrument; count; }
-       * TODO(mateuszc): optional string collector_name;
-       * TODO(mateuszc): optional string slot; // e.g. "ccnet_bv", "coin-o-matic left", "supercoin 5-10 BYN"
-       * </pre>
        */
       public Builder setLockerboxName(
           java.lang.String value) {
@@ -1190,12 +2152,6 @@ public final class LockerboxInternalProtos {
       }
       /**
        * <code>optional string lockerbox_name = 4;</code>
-       *
-       * <pre>
-       * TODO(mateuszc): repeated PaymentInstrumentCount { PaymentInstrument; count; }
-       * TODO(mateuszc): optional string collector_name;
-       * TODO(mateuszc): optional string slot; // e.g. "ccnet_bv", "coin-o-matic left", "supercoin 5-10 BYN"
-       * </pre>
        */
       public Builder clearLockerboxName() {
         bitField0_ = (bitField0_ & ~0x00000010);
@@ -1205,12 +2161,6 @@ public final class LockerboxInternalProtos {
       }
       /**
        * <code>optional string lockerbox_name = 4;</code>
-       *
-       * <pre>
-       * TODO(mateuszc): repeated PaymentInstrumentCount { PaymentInstrument; count; }
-       * TODO(mateuszc): optional string collector_name;
-       * TODO(mateuszc): optional string slot; // e.g. "ccnet_bv", "coin-o-matic left", "supercoin 5-10 BYN"
-       * </pre>
        */
       public Builder setLockerboxNameBytes(
           com.google.protobuf.ByteString value) {
@@ -1221,6 +2171,497 @@ public final class LockerboxInternalProtos {
         lockerboxName_ = value;
         onChanged();
         return this;
+      }
+
+      private java.util.List<com.zpaslab.lockerbox.LockerboxInternalProtos.PaymentInstrumentCount> instrumentCount_ =
+        java.util.Collections.emptyList();
+      private void ensureInstrumentCountIsMutable() {
+        if (!((bitField0_ & 0x00000020) == 0x00000020)) {
+          instrumentCount_ = new java.util.ArrayList<com.zpaslab.lockerbox.LockerboxInternalProtos.PaymentInstrumentCount>(instrumentCount_);
+          bitField0_ |= 0x00000020;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          com.zpaslab.lockerbox.LockerboxInternalProtos.PaymentInstrumentCount, com.zpaslab.lockerbox.LockerboxInternalProtos.PaymentInstrumentCount.Builder, com.zpaslab.lockerbox.LockerboxInternalProtos.PaymentInstrumentCountOrBuilder> instrumentCountBuilder_;
+
+      /**
+       * <code>repeated .lockerbox.PaymentInstrumentCount instrument_count = 6;</code>
+       *
+       * <pre>
+       * instrument_count and total contain details about bills in the cassette.
+       * Filled if type == CLAIMED_EMPTIED.
+       * </pre>
+       */
+      public java.util.List<com.zpaslab.lockerbox.LockerboxInternalProtos.PaymentInstrumentCount> getInstrumentCountList() {
+        if (instrumentCountBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(instrumentCount_);
+        } else {
+          return instrumentCountBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .lockerbox.PaymentInstrumentCount instrument_count = 6;</code>
+       *
+       * <pre>
+       * instrument_count and total contain details about bills in the cassette.
+       * Filled if type == CLAIMED_EMPTIED.
+       * </pre>
+       */
+      public int getInstrumentCountCount() {
+        if (instrumentCountBuilder_ == null) {
+          return instrumentCount_.size();
+        } else {
+          return instrumentCountBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .lockerbox.PaymentInstrumentCount instrument_count = 6;</code>
+       *
+       * <pre>
+       * instrument_count and total contain details about bills in the cassette.
+       * Filled if type == CLAIMED_EMPTIED.
+       * </pre>
+       */
+      public com.zpaslab.lockerbox.LockerboxInternalProtos.PaymentInstrumentCount getInstrumentCount(int index) {
+        if (instrumentCountBuilder_ == null) {
+          return instrumentCount_.get(index);
+        } else {
+          return instrumentCountBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .lockerbox.PaymentInstrumentCount instrument_count = 6;</code>
+       *
+       * <pre>
+       * instrument_count and total contain details about bills in the cassette.
+       * Filled if type == CLAIMED_EMPTIED.
+       * </pre>
+       */
+      public Builder setInstrumentCount(
+          int index, com.zpaslab.lockerbox.LockerboxInternalProtos.PaymentInstrumentCount value) {
+        if (instrumentCountBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureInstrumentCountIsMutable();
+          instrumentCount_.set(index, value);
+          onChanged();
+        } else {
+          instrumentCountBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lockerbox.PaymentInstrumentCount instrument_count = 6;</code>
+       *
+       * <pre>
+       * instrument_count and total contain details about bills in the cassette.
+       * Filled if type == CLAIMED_EMPTIED.
+       * </pre>
+       */
+      public Builder setInstrumentCount(
+          int index, com.zpaslab.lockerbox.LockerboxInternalProtos.PaymentInstrumentCount.Builder builderForValue) {
+        if (instrumentCountBuilder_ == null) {
+          ensureInstrumentCountIsMutable();
+          instrumentCount_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          instrumentCountBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lockerbox.PaymentInstrumentCount instrument_count = 6;</code>
+       *
+       * <pre>
+       * instrument_count and total contain details about bills in the cassette.
+       * Filled if type == CLAIMED_EMPTIED.
+       * </pre>
+       */
+      public Builder addInstrumentCount(com.zpaslab.lockerbox.LockerboxInternalProtos.PaymentInstrumentCount value) {
+        if (instrumentCountBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureInstrumentCountIsMutable();
+          instrumentCount_.add(value);
+          onChanged();
+        } else {
+          instrumentCountBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lockerbox.PaymentInstrumentCount instrument_count = 6;</code>
+       *
+       * <pre>
+       * instrument_count and total contain details about bills in the cassette.
+       * Filled if type == CLAIMED_EMPTIED.
+       * </pre>
+       */
+      public Builder addInstrumentCount(
+          int index, com.zpaslab.lockerbox.LockerboxInternalProtos.PaymentInstrumentCount value) {
+        if (instrumentCountBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureInstrumentCountIsMutable();
+          instrumentCount_.add(index, value);
+          onChanged();
+        } else {
+          instrumentCountBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lockerbox.PaymentInstrumentCount instrument_count = 6;</code>
+       *
+       * <pre>
+       * instrument_count and total contain details about bills in the cassette.
+       * Filled if type == CLAIMED_EMPTIED.
+       * </pre>
+       */
+      public Builder addInstrumentCount(
+          com.zpaslab.lockerbox.LockerboxInternalProtos.PaymentInstrumentCount.Builder builderForValue) {
+        if (instrumentCountBuilder_ == null) {
+          ensureInstrumentCountIsMutable();
+          instrumentCount_.add(builderForValue.build());
+          onChanged();
+        } else {
+          instrumentCountBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lockerbox.PaymentInstrumentCount instrument_count = 6;</code>
+       *
+       * <pre>
+       * instrument_count and total contain details about bills in the cassette.
+       * Filled if type == CLAIMED_EMPTIED.
+       * </pre>
+       */
+      public Builder addInstrumentCount(
+          int index, com.zpaslab.lockerbox.LockerboxInternalProtos.PaymentInstrumentCount.Builder builderForValue) {
+        if (instrumentCountBuilder_ == null) {
+          ensureInstrumentCountIsMutable();
+          instrumentCount_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          instrumentCountBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lockerbox.PaymentInstrumentCount instrument_count = 6;</code>
+       *
+       * <pre>
+       * instrument_count and total contain details about bills in the cassette.
+       * Filled if type == CLAIMED_EMPTIED.
+       * </pre>
+       */
+      public Builder addAllInstrumentCount(
+          java.lang.Iterable<? extends com.zpaslab.lockerbox.LockerboxInternalProtos.PaymentInstrumentCount> values) {
+        if (instrumentCountBuilder_ == null) {
+          ensureInstrumentCountIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, instrumentCount_);
+          onChanged();
+        } else {
+          instrumentCountBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lockerbox.PaymentInstrumentCount instrument_count = 6;</code>
+       *
+       * <pre>
+       * instrument_count and total contain details about bills in the cassette.
+       * Filled if type == CLAIMED_EMPTIED.
+       * </pre>
+       */
+      public Builder clearInstrumentCount() {
+        if (instrumentCountBuilder_ == null) {
+          instrumentCount_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000020);
+          onChanged();
+        } else {
+          instrumentCountBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lockerbox.PaymentInstrumentCount instrument_count = 6;</code>
+       *
+       * <pre>
+       * instrument_count and total contain details about bills in the cassette.
+       * Filled if type == CLAIMED_EMPTIED.
+       * </pre>
+       */
+      public Builder removeInstrumentCount(int index) {
+        if (instrumentCountBuilder_ == null) {
+          ensureInstrumentCountIsMutable();
+          instrumentCount_.remove(index);
+          onChanged();
+        } else {
+          instrumentCountBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lockerbox.PaymentInstrumentCount instrument_count = 6;</code>
+       *
+       * <pre>
+       * instrument_count and total contain details about bills in the cassette.
+       * Filled if type == CLAIMED_EMPTIED.
+       * </pre>
+       */
+      public com.zpaslab.lockerbox.LockerboxInternalProtos.PaymentInstrumentCount.Builder getInstrumentCountBuilder(
+          int index) {
+        return getInstrumentCountFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .lockerbox.PaymentInstrumentCount instrument_count = 6;</code>
+       *
+       * <pre>
+       * instrument_count and total contain details about bills in the cassette.
+       * Filled if type == CLAIMED_EMPTIED.
+       * </pre>
+       */
+      public com.zpaslab.lockerbox.LockerboxInternalProtos.PaymentInstrumentCountOrBuilder getInstrumentCountOrBuilder(
+          int index) {
+        if (instrumentCountBuilder_ == null) {
+          return instrumentCount_.get(index);  } else {
+          return instrumentCountBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .lockerbox.PaymentInstrumentCount instrument_count = 6;</code>
+       *
+       * <pre>
+       * instrument_count and total contain details about bills in the cassette.
+       * Filled if type == CLAIMED_EMPTIED.
+       * </pre>
+       */
+      public java.util.List<? extends com.zpaslab.lockerbox.LockerboxInternalProtos.PaymentInstrumentCountOrBuilder> 
+           getInstrumentCountOrBuilderList() {
+        if (instrumentCountBuilder_ != null) {
+          return instrumentCountBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(instrumentCount_);
+        }
+      }
+      /**
+       * <code>repeated .lockerbox.PaymentInstrumentCount instrument_count = 6;</code>
+       *
+       * <pre>
+       * instrument_count and total contain details about bills in the cassette.
+       * Filled if type == CLAIMED_EMPTIED.
+       * </pre>
+       */
+      public com.zpaslab.lockerbox.LockerboxInternalProtos.PaymentInstrumentCount.Builder addInstrumentCountBuilder() {
+        return getInstrumentCountFieldBuilder().addBuilder(
+            com.zpaslab.lockerbox.LockerboxInternalProtos.PaymentInstrumentCount.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .lockerbox.PaymentInstrumentCount instrument_count = 6;</code>
+       *
+       * <pre>
+       * instrument_count and total contain details about bills in the cassette.
+       * Filled if type == CLAIMED_EMPTIED.
+       * </pre>
+       */
+      public com.zpaslab.lockerbox.LockerboxInternalProtos.PaymentInstrumentCount.Builder addInstrumentCountBuilder(
+          int index) {
+        return getInstrumentCountFieldBuilder().addBuilder(
+            index, com.zpaslab.lockerbox.LockerboxInternalProtos.PaymentInstrumentCount.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .lockerbox.PaymentInstrumentCount instrument_count = 6;</code>
+       *
+       * <pre>
+       * instrument_count and total contain details about bills in the cassette.
+       * Filled if type == CLAIMED_EMPTIED.
+       * </pre>
+       */
+      public java.util.List<com.zpaslab.lockerbox.LockerboxInternalProtos.PaymentInstrumentCount.Builder> 
+           getInstrumentCountBuilderList() {
+        return getInstrumentCountFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          com.zpaslab.lockerbox.LockerboxInternalProtos.PaymentInstrumentCount, com.zpaslab.lockerbox.LockerboxInternalProtos.PaymentInstrumentCount.Builder, com.zpaslab.lockerbox.LockerboxInternalProtos.PaymentInstrumentCountOrBuilder> 
+          getInstrumentCountFieldBuilder() {
+        if (instrumentCountBuilder_ == null) {
+          instrumentCountBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              com.zpaslab.lockerbox.LockerboxInternalProtos.PaymentInstrumentCount, com.zpaslab.lockerbox.LockerboxInternalProtos.PaymentInstrumentCount.Builder, com.zpaslab.lockerbox.LockerboxInternalProtos.PaymentInstrumentCountOrBuilder>(
+                  instrumentCount_,
+                  ((bitField0_ & 0x00000020) == 0x00000020),
+                  getParentForChildren(),
+                  isClean());
+          instrumentCount_ = null;
+        }
+        return instrumentCountBuilder_;
+      }
+
+      private com.zpaslab.lockerbox.LockerboxProtos.Money total_ = com.zpaslab.lockerbox.LockerboxProtos.Money.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          com.zpaslab.lockerbox.LockerboxProtos.Money, com.zpaslab.lockerbox.LockerboxProtos.Money.Builder, com.zpaslab.lockerbox.LockerboxProtos.MoneyOrBuilder> totalBuilder_;
+      /**
+       * <code>optional .lockerbox.Money total = 7;</code>
+       *
+       * <pre>
+       * TODO(mateuszc): optional string collector_name;
+       * TODO(mateuszc): optional string slot; // e.g. "ccnet_bv", "coin-o-matic left", "supercoin 5-10 BYN"
+       * </pre>
+       */
+      public boolean hasTotal() {
+        return ((bitField0_ & 0x00000040) == 0x00000040);
+      }
+      /**
+       * <code>optional .lockerbox.Money total = 7;</code>
+       *
+       * <pre>
+       * TODO(mateuszc): optional string collector_name;
+       * TODO(mateuszc): optional string slot; // e.g. "ccnet_bv", "coin-o-matic left", "supercoin 5-10 BYN"
+       * </pre>
+       */
+      public com.zpaslab.lockerbox.LockerboxProtos.Money getTotal() {
+        if (totalBuilder_ == null) {
+          return total_;
+        } else {
+          return totalBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .lockerbox.Money total = 7;</code>
+       *
+       * <pre>
+       * TODO(mateuszc): optional string collector_name;
+       * TODO(mateuszc): optional string slot; // e.g. "ccnet_bv", "coin-o-matic left", "supercoin 5-10 BYN"
+       * </pre>
+       */
+      public Builder setTotal(com.zpaslab.lockerbox.LockerboxProtos.Money value) {
+        if (totalBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          total_ = value;
+          onChanged();
+        } else {
+          totalBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000040;
+        return this;
+      }
+      /**
+       * <code>optional .lockerbox.Money total = 7;</code>
+       *
+       * <pre>
+       * TODO(mateuszc): optional string collector_name;
+       * TODO(mateuszc): optional string slot; // e.g. "ccnet_bv", "coin-o-matic left", "supercoin 5-10 BYN"
+       * </pre>
+       */
+      public Builder setTotal(
+          com.zpaslab.lockerbox.LockerboxProtos.Money.Builder builderForValue) {
+        if (totalBuilder_ == null) {
+          total_ = builderForValue.build();
+          onChanged();
+        } else {
+          totalBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000040;
+        return this;
+      }
+      /**
+       * <code>optional .lockerbox.Money total = 7;</code>
+       *
+       * <pre>
+       * TODO(mateuszc): optional string collector_name;
+       * TODO(mateuszc): optional string slot; // e.g. "ccnet_bv", "coin-o-matic left", "supercoin 5-10 BYN"
+       * </pre>
+       */
+      public Builder mergeTotal(com.zpaslab.lockerbox.LockerboxProtos.Money value) {
+        if (totalBuilder_ == null) {
+          if (((bitField0_ & 0x00000040) == 0x00000040) &&
+              total_ != com.zpaslab.lockerbox.LockerboxProtos.Money.getDefaultInstance()) {
+            total_ =
+              com.zpaslab.lockerbox.LockerboxProtos.Money.newBuilder(total_).mergeFrom(value).buildPartial();
+          } else {
+            total_ = value;
+          }
+          onChanged();
+        } else {
+          totalBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000040;
+        return this;
+      }
+      /**
+       * <code>optional .lockerbox.Money total = 7;</code>
+       *
+       * <pre>
+       * TODO(mateuszc): optional string collector_name;
+       * TODO(mateuszc): optional string slot; // e.g. "ccnet_bv", "coin-o-matic left", "supercoin 5-10 BYN"
+       * </pre>
+       */
+      public Builder clearTotal() {
+        if (totalBuilder_ == null) {
+          total_ = com.zpaslab.lockerbox.LockerboxProtos.Money.getDefaultInstance();
+          onChanged();
+        } else {
+          totalBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000040);
+        return this;
+      }
+      /**
+       * <code>optional .lockerbox.Money total = 7;</code>
+       *
+       * <pre>
+       * TODO(mateuszc): optional string collector_name;
+       * TODO(mateuszc): optional string slot; // e.g. "ccnet_bv", "coin-o-matic left", "supercoin 5-10 BYN"
+       * </pre>
+       */
+      public com.zpaslab.lockerbox.LockerboxProtos.Money.Builder getTotalBuilder() {
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return getTotalFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .lockerbox.Money total = 7;</code>
+       *
+       * <pre>
+       * TODO(mateuszc): optional string collector_name;
+       * TODO(mateuszc): optional string slot; // e.g. "ccnet_bv", "coin-o-matic left", "supercoin 5-10 BYN"
+       * </pre>
+       */
+      public com.zpaslab.lockerbox.LockerboxProtos.MoneyOrBuilder getTotalOrBuilder() {
+        if (totalBuilder_ != null) {
+          return totalBuilder_.getMessageOrBuilder();
+        } else {
+          return total_;
+        }
+      }
+      /**
+       * <code>optional .lockerbox.Money total = 7;</code>
+       *
+       * <pre>
+       * TODO(mateuszc): optional string collector_name;
+       * TODO(mateuszc): optional string slot; // e.g. "ccnet_bv", "coin-o-matic left", "supercoin 5-10 BYN"
+       * </pre>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          com.zpaslab.lockerbox.LockerboxProtos.Money, com.zpaslab.lockerbox.LockerboxProtos.Money.Builder, com.zpaslab.lockerbox.LockerboxProtos.MoneyOrBuilder> 
+          getTotalFieldBuilder() {
+        if (totalBuilder_ == null) {
+          totalBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              com.zpaslab.lockerbox.LockerboxProtos.Money, com.zpaslab.lockerbox.LockerboxProtos.Money.Builder, com.zpaslab.lockerbox.LockerboxProtos.MoneyOrBuilder>(
+                  getTotal(),
+                  getParentForChildren(),
+                  isClean());
+          total_ = null;
+        }
+        return totalBuilder_;
       }
 
       // @@protoc_insertion_point(builder_scope:lockerbox.CashCassetteEvent)
@@ -1992,6 +3433,11 @@ public final class LockerboxInternalProtos {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_lockerbox_PaymentInstrumentCount_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_lockerbox_PaymentInstrumentCount_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_lockerbox_CashCassetteEvent_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
@@ -2010,18 +3456,24 @@ public final class LockerboxInternalProtos {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\016internal.proto\022\tlockerbox\"\250\002\n\021CashCass" +
-      "etteEvent\022\014\n\004code\030\005 \001(\t\022/\n\004type\030\001 \001(\0162!." +
-      "lockerbox.CashCassetteEvent.Type\022\014\n\004date" +
-      "\030\002 \001(\t\022\020\n\010capacity\030\003 \001(\005\022\026\n\016lockerbox_na" +
-      "me\030\004 \001(\t\"\233\001\n\004Type\022\024\n\020DETECTED_REMOVED\020\001\022" +
-      "\025\n\021DETECTED_INSERTED\020\002\022\022\n\016DETECTED_ERROR" +
-      "\020\003\022\023\n\017CLAIMED_EMPTIED\020\004\022\027\n\023CLAIMED_NON_E" +
-      "MPTIED\020\005\022\021\n\rCLAIMED_TAKEN\020\006\022\021\n\rCLAIMED_E" +
-      "RROR\020\007\"S\n\025CashCassetteEventList\022+\n\005event" +
-      "\030\001 \003(\0132\034.lockerbox.CashCassetteEvent\022\r\n\005",
-      "total\030\002 \001(\005B0\n\025com.zpaslab.lockerboxB\027Lo" +
-      "ckerboxInternalProtos"
+      "\n\016internal.proto\022\tlockerbox\032\017lockerbox.p" +
+      "roto\"t\n\026PaymentInstrumentCount\022)\n\006method" +
+      "\030\001 \001(\0162\031.lockerbox.Payment.Method\022 \n\006amo" +
+      "unt\030\002 \001(\0132\020.lockerbox.Money\022\r\n\005count\030\003 \001" +
+      "(\005\"\206\003\n\021CashCassetteEvent\022\014\n\004code\030\005 \001(\t\022/" +
+      "\n\004type\030\001 \001(\0162!.lockerbox.CashCassetteEve" +
+      "nt.Type\022\014\n\004date\030\002 \001(\t\022\020\n\010capacity\030\003 \001(\005\022" +
+      "\026\n\016lockerbox_name\030\004 \001(\t\022;\n\020instrument_co" +
+      "unt\030\006 \003(\0132!.lockerbox.PaymentInstrumentC" +
+      "ount\022\037\n\005total\030\007 \001(\0132\020.lockerbox.Money\"\233\001",
+      "\n\004Type\022\024\n\020DETECTED_REMOVED\020\001\022\025\n\021DETECTED" +
+      "_INSERTED\020\002\022\022\n\016DETECTED_ERROR\020\003\022\023\n\017CLAIM" +
+      "ED_EMPTIED\020\004\022\027\n\023CLAIMED_NON_EMPTIED\020\005\022\021\n" +
+      "\rCLAIMED_TAKEN\020\006\022\021\n\rCLAIMED_ERROR\020\007\"S\n\025C" +
+      "ashCassetteEventList\022+\n\005event\030\001 \003(\0132\034.lo" +
+      "ckerbox.CashCassetteEvent\022\r\n\005total\030\002 \001(\005" +
+      "B0\n\025com.zpaslab.lockerboxB\027LockerboxInte" +
+      "rnalProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -2034,19 +3486,27 @@ public final class LockerboxInternalProtos {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.zpaslab.lockerbox.LockerboxProtos.getDescriptor(),
         }, assigner);
-    internal_static_lockerbox_CashCassetteEvent_descriptor =
+    internal_static_lockerbox_PaymentInstrumentCount_descriptor =
       getDescriptor().getMessageTypes().get(0);
+    internal_static_lockerbox_PaymentInstrumentCount_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_lockerbox_PaymentInstrumentCount_descriptor,
+        new java.lang.String[] { "Method", "Amount", "Count", });
+    internal_static_lockerbox_CashCassetteEvent_descriptor =
+      getDescriptor().getMessageTypes().get(1);
     internal_static_lockerbox_CashCassetteEvent_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_lockerbox_CashCassetteEvent_descriptor,
-        new java.lang.String[] { "Code", "Type", "Date", "Capacity", "LockerboxName", });
+        new java.lang.String[] { "Code", "Type", "Date", "Capacity", "LockerboxName", "InstrumentCount", "Total", });
     internal_static_lockerbox_CashCassetteEventList_descriptor =
-      getDescriptor().getMessageTypes().get(1);
+      getDescriptor().getMessageTypes().get(2);
     internal_static_lockerbox_CashCassetteEventList_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_lockerbox_CashCassetteEventList_descriptor,
         new java.lang.String[] { "Event", "Total", });
+    com.zpaslab.lockerbox.LockerboxProtos.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

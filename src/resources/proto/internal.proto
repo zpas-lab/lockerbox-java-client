@@ -2,14 +2,28 @@ package lockerbox;
 
 // To generate go objects:
 // protoc --go_out=.. *.proto
+import "lockerbox.proto";
 
 option java_package = "com.zpaslab.lockerbox";
 option java_outer_classname = "LockerboxInternalProtos";
 
+
+// PaymentInstrumentCount represents a group of PaymentInstrument instances with the same method and amount.
+//
+// NOTE(pawelb): instead of embedding full PaymentInstrument object, we build a separate object which has
+// fields, that make sense as aggregation of PaymentInstruments for the sake of prettier API.
+message PaymentInstrumentCount {
+    // Method and amount of all instruments in this group.
+    optional Payment.Method method = 1;
+    optional Money amount = 2;
+    // Number of instruments in this group.
+    optional int32 count = 3;
+}
+
 // CashCassetteEvent describes a noteworthy event in lifetime of a cash terminal's bill collecting cassette.
 // Full history of events enables calculating current status and contents of a CashCassette, while also
 // allowing for historical monitoring/tracking.
-// Next id: 6
+// Next id: 8
 message CashCassetteEvent {
     enum Type {
         // "Detected" events are auto-detected via hardware channels.
@@ -31,7 +45,10 @@ message CashCassetteEvent {
     // TODO(mateuszc): ideally, capacity would be set only for DETECTED_INSERTED
     optional int32 capacity = 3;
     optional string lockerbox_name = 4;
-    // TODO(mateuszc): repeated PaymentInstrumentCount { PaymentInstrument; count; }
+    // instrument_count and total contain details about bills in the cassette.
+    // Filled if type == CLAIMED_EMPTIED.
+    repeated PaymentInstrumentCount instrument_count = 6;
+    optional Money total = 7;
     // TODO(mateuszc): optional string collector_name;
     // TODO(mateuszc): optional string slot; // e.g. "ccnet_bv", "coin-o-matic left", "supercoin 5-10 BYN"
 }
