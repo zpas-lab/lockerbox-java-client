@@ -41,11 +41,12 @@ message Address {
 
     // phone and email to reach the person or organization
     optional string phone = 16;
-    optional string email = 17;
+    optional string phone_carrier = 17;
+    optional string email = 18;
 
     // gps coordinates
-    optional double gps_lat = 18;
-    optional double gps_lng = 19;
+    optional double gps_lat = 19;
+    optional double gps_lng = 20;
 }
 
 // Represents amount of money.
@@ -328,12 +329,13 @@ message Charge {
         // The Transferee.Account should be set.
         OVERPAY_MOBILE = 7;
         // Temporary Charge, to be replaced with another Charge object in the future. Temporary Charges are
-        // created when WebPay transaction is initialized and are tagged with random charges_rag (the tag does not match
+        // created when WebPay transaction is initialized and are tagged with random charges_tag (the tag does not match
         // the one related to the specific parcel). The reason for making a Charge temporary is the constraint,
         // which prevents from saving more than one payment with the same charges_tag for single account
         // (payment_charges_tag_per_account_unique). After finalizing WebPay transaction the temporary objects
         // are going to be removed and replaced with the proper Charge (related to the specific parcel) with
         // proper charges_tag.
+        // Transferee.Account must be set to the user who pays for the parcel.
         PENDING_PARCEL_PAYMENT = 8;
     }
 
@@ -371,13 +373,11 @@ message Charge {
     optional string href = 2;
     // tag is used to match Charges with Payment.
     //
-    // For many-to-1 relationship between Charges and Payment, tag should be set to the same, account-unique value in every Charge.
-    // The same value should be then set in Payment.charge_tag. Once they Payment is successful, it will be applied to all Charges
-    // with the tag.
+    // Tag value will be:
+    // - equal to Charge.Code, if there is 1-to-1 relationship between Charges and Payment
+    // - same, account-unique value in all Charges, if there is many-to-1 relationship between Charges and Payment
     //
-    // For 1-to-1 relationship between Charge and Payment, tag can be either set to account-unique value or left empty.
-    // If left empty, tag value will be copied from Charge.code (making the 1-to-1 relationship the default one).
-    // Payment.charge_tag should be set to the final tag value (either assigned by user or copied from Charge.code).
+    // Payment.charge_tag should be set to the final tag value (either unique or copied from Charge.code).
     optional string tag = 3;
     optional Category category = 4;
 
@@ -389,7 +389,7 @@ message Charge {
     optional string type = 5;
     // human readable description of type
     optional string description = 6;
-    // required for category = COD, TAX, CUSTOMS
+    // required for category = COD, TAX, CUSTOMS, ACCOUNT_BALANCE, OVERPAY_MOBILE, PENDING_PARCEL_PAYMENT
     optional Transferee transferee = 7;
 
     optional Money amount = 8;
@@ -398,9 +398,12 @@ message Charge {
     optional Status status = 9;
     optional string expiration_date = 10;
 
-    // if the Charge is created because of parce (charge for parcel), it should have the parcel_ref
+    // if the Charge is created because of a parcel (charge for parcel or overpay), it should have the parcel_ref
     // set to parcel.Code.
     optional string parcel_ref = 11;
+
+    // accounting_refno is a reference number of the object for external use in accounting
+    optional string accounting_refno = 12;
 }
 
 message ChargeList {
@@ -420,6 +423,7 @@ message ChargeList {
 // - using prepaid account (amount will be subtracted from the account balance)
 // - paying online via online gateway (user will have to open given link in his browser and authorize the payment with online payment operator).
 // TODO(pawelb): embed matched Charges?
+// Next id: 14
 message Payment {
     enum Method {
         BALANCE = 1;
@@ -439,7 +443,7 @@ message Payment {
         EXPIRED = 6;
     }
 
-    // Details for Online payment method.
+    // Details for ONLINE payment method.
     // TODO(pawelb): so far, I am modelling this object using bluemedia workflow.
     // OTOH, browser_link and return_link seems quite general, so I am not creating separate subtype now.
     message Online {
@@ -495,7 +499,7 @@ message Payment {
 
     optional Method method = 6;
     optional Online online = 7;
-   optional CreditCard credit_card = 12;
+    optional CreditCard credit_card = 12;
 
     // Status of the payment
     optional Status status = 8;
@@ -510,6 +514,9 @@ message Payment {
     //
     // conslidation_date will be set only for finalized payments (status = SUCCESS, APPLIED, FAILED, EXPIRED)
     optional string consolidation_date = 13;
+
+    // accounting_refno is a reference number of the object for external use in accounting
+    optional string accounting_refno = 14;
 }
 
 message PaymentList {
